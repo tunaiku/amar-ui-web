@@ -1,0 +1,9 @@
+{
+  "name": "tunaiku-ui-css",
+  "version": "1.0.0",
+  "description": "Tunaiku CSS library",
+  "main": "index.js",
+  "repository": "git@bitbucket.org:tunaiku/tunaiku-ui-css.git",
+  "author": "dkk94 <davidkurniakristiadi@gmail.com>",
+  "license": "MIT"
+}
