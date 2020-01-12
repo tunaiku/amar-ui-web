@@ -1,0 +1,10 @@
+$tnk-text-transforms: () !default;
+$tnk-text-transforms: map-merge(
+  (
+    "none": none,
+    "uppercase": uppercase,
+    "lowercase": lowercase,
+    "capitalize": capitalize
+  ),
+  $tnk-text-transforms
+);

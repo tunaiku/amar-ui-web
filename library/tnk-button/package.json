@@ -1,0 +1,13 @@
+{
+  "name": "@tunaiku-ui/button",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@tunaiku-ui/color": "^1.0.0",
+    "@tunaiku-ui/elevation": "^1.0.0",
+    "@tunaiku-ui/shape": "^1.0.0",
+    "@tunaiku-ui/spacing": "^1.0.0",
+    "@tunaiku-ui/typography": "^1.0.0"
+  }
+}

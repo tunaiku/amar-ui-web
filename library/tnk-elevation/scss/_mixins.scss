@@ -1,0 +1,40 @@
+@import './variables';
+
+@mixin tnk-create-elevation-classes() {
+  @for $i from 1 through $tnk-elevation-max-level {
+    $elevation-level: $i;
+
+    .Elevation-#{$i} {
+      @include tnk-create-elevation($elevation-level);
+    }
+  }
+}
+
+@mixin tnk-create-elevation(
+  $level: $tnk-elevation-level,
+  $opacity: $tnk-elevation-box-shadow-color-opacity,
+  $color: $tnk-elevation-box-shadow-color-value
+) {
+  $elevation-color: $color;
+  $elevation-level: $level;
+  $elevation-opacity: $opacity;
+
+  $elevation-offset-x: $tnk-elevation-box-shadow-offset-x;
+  $elevation-offset-y: $tnk-elevation-box-shadow-offset-y;
+  $elevation-spread: $tnk-elevation-box-shadow-spread;
+  $elevation-blur: $tnk-elevation-box-shadow-blur;
+
+  $elevation-values-list: $elevation-offset-x $elevation-offset-y $elevation-blur $elevation-spread;
+
+  $updated-elevation-values: () !default;
+  @each $var in $elevation-values-list {
+    $var: $var * $elevation-level;
+    $updated-elevation-values: append($updated-elevation-values, $var);
+  }
+
+  $elevation-box-shadow-color: rgba(black, $elevation-opacity);
+  $elevation-box-shadow: append($updated-elevation-values, $elevation-box-shadow-color) !default;
+
+  // Generate the correct box-shadow value based on the calculation above
+  box-shadow: $elevation-box-shadow;
+}

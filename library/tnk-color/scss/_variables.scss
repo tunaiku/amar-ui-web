@@ -1,0 +1,49 @@
+/**
+ *  🎨 Formare's default color palletes
+ */
+
+@import './color-palletes';
+@import './functions';
+
+// Color themes
+$primary-color: $violet-blue !default;
+$secondary-color: $jaffa !default;
+$tertiary-color: $trinidad !default;
+$success-color: $mountain-meadow !default;
+$warning-color: $maximum-green-yellow !default;
+$danger-color: $medium-vermillion !default;
+$info-color: $cello !default;
+$gray-color: $sirocco !default;
+
+// Neutral color declaration
+$black: black;
+$white: white;
+$light: tint($gray-color, 80%);
+$lighter: tint($gray-color, 90%);
+$dark: shade($gray-color, 80%);
+$darker: shade($gray-color, 90%);
+
+/** 
+ * 🌈 Default Formare's color themes.
+ * Fully mapped and configurable.
+ */
+
+$tnk-color-themes: () !default;
+$tnk-color-themes: map-merge(
+  (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'success': $success-color,
+    'warning': $warning-color,
+    'danger': $danger-color,
+    'info': $info-color,
+    'gray': $gray-color,
+    'light': $light,
+    'lighter': $lighter,
+    'dark': $dark,
+    'darker': $darker,
+    'black': $black,
+    'white': $white,
+  ),
+  $tnk-color-themes
+);

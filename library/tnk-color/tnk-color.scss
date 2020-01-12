@@ -1,0 +1,4 @@
+@import './scss/mixins';
+
+@include tnk-create-text-color-classes();
+@include tnk-create-bg-color-classes();

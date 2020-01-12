@@ -1,0 +1,73 @@
+@import '@formare/color/scss/variables';
+@import './variables';
+
+/**
+ * Generate .Border-* classes.
+ */
+@mixin tnk-create-border-classes($border-side: '') {
+  $border-base-selector: 'Border' !default;
+  @if $border-side {
+    $capitalized-border-side: capitalize($border-side);
+    $border-base-selector: 'Border#{$capitalized-border-side}';
+  }
+
+  .#{$border-base-selector} {
+    @include tnk-border-base-styles();
+    @include tnk-create-border-width-classes($border-side);
+    @include tnk-create-border-color-theme-classes($border-side);
+  }
+}
+
+/**
+ * Base styles of a standard border class.
+ */
+@mixin tnk-border-base-styles() {
+  border-style: solid;
+  border-color: tnk-color-gray-shade(100);
+}
+
+@mixin tnk-create-border-color-theme-classes($border-side) {
+  @each $color-theme, $color-hex-value in $tnk-color-themes {
+    $border-color-selector: $color-theme;
+
+    $border-color-property: 'border-color' !default;
+    @if $border-side != '' {
+      $border-color-property: 'border-#{$border-side}-color';
+    }
+
+    &-#{$border-color-selector} {
+      #{$border-color-property}: $color-hex-value !important;
+    }
+  }
+}
+
+/**
+ * Generates border width value classes.
+ *
+ * Ranges from 1 to 10 by default. You can change the max number of value classes by changing
+ * the $tnk-border-width-max-value variable.
+ */
+@mixin tnk-create-border-width-classes($border-side: '') {
+  @for $border-width-value from 1 through $tnk-border-width-max-value {
+    $border-width-selector: $border-width-value;
+
+    // Changes the border width default selector according to $border-side that is passed.
+    // If $border-side is not passed, generates a standard border-width instead.
+    $border-width-property: 'border-width' !default;
+    @if $border-side != '' {
+      $border-width-property: 'border-#{$border-side}-width';
+    }
+
+    &-#{$border-width-selector} {
+      #{$border-width-property}: $border-width-value + px !important;
+    }
+  }
+}
+
+@mixin tnk-create-border-side-classes() {
+  $border-sides: ('top', 'right', 'bottom', 'right');
+
+  @each $border-side in $border-sides {
+    @include tnk-create-border-classes($border-side);
+  }
+}

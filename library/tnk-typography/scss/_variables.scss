@@ -1,0 +1,115 @@
+@import './functions';
+@import './typefaces';
+
+$tnk-font-family-sans-serif: $tnk-typeface-system-stack !default;
+$tnk-font-family-serif: $tnk-typeface-georgia-stack !default;
+$tnk-font-family-monospace: $tnk-typeface-sf-mono-stack !default;
+
+$tnk-font-families: () !default;
+$tnk-font-families: map-merge(
+  (
+    'sans-serif': $tnk-font-family-sans-serif,
+    'serif': $tnk-font-family-serif,
+    'monospace': $tnk-font-family-monospace,
+  ),
+  $tnk-font-families
+);
+
+$tnk-font-size: 1rem !default;
+$tnk-font-sizes: () !default;
+$tnk-font-sizes: map-merge(
+  (
+    '4xsmall': $tnk-font-size * 0.402,
+    '3xsmall': $tnk-font-size * 0.482,
+    '2xsmall': $tnk-font-size * 0.579,
+    'xsmall': $tnk-font-size * 0.694,
+    'small': $tnk-font-size * 0.833,
+    'base': $tnk-font-size,
+    'large': $tnk-font-size * 1.2,
+    'xlarge': $tnk-font-size * 1.44,
+    '2xlarge': $tnk-font-size * 1.728,
+    '3xlarge': $tnk-font-size * 2.074,
+    '4xlarge': $tnk-font-size * 2.488,
+    '5xlarge': $tnk-font-size * 2.986,
+  ),
+  $tnk-font-sizes
+);
+
+$tnk-headings: () !default;
+$tnk-headings: map-merge(
+  (
+    'h1': tnk-font-size('5xlarge'),
+    'h2': tnk-font-size('4xlarge'),
+    'h3': tnk-font-size('3xlarge'),
+    'h4': tnk-font-size('2xlarge'),
+    'h5': tnk-font-size('xlarge'),
+    'h6': tnk-font-size('large'),
+  ),
+  $tnk-headings
+);
+
+$tnk-font-weight: 400 !default;
+$tnk-font-weights: () !default;
+$tnk-font-weights: map-merge(
+  (
+    'thin': 100,
+    'extra-light': 200,
+    'ultra-light': 200,
+    'light': 300,
+    'normal': 400,
+    'book': 400,
+    'regular': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'semibold': 600,
+    'demi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'ultra-bold': 900,
+    'heavy': 900,
+    'black': 900,
+    'ultra': 900,
+    'ultra-black': 900,
+    'extra-ultra': 900,
+  ),
+  $tnk-font-weights
+);
+
+$tnk-line-height: 1.5 !default;
+$tnk-line-heights: () !default;
+$tnk-line-heights: map-merge(
+  (
+    'xsmall': $tnk-line-height * 0.5,
+    'small': $tnk-line-height * 0.75,
+    'base': $tnk-line-height * 1,
+    'large': $tnk-line-height * 1.25,
+    'xlarge': $tnk-line-height * 1.5,
+  ),
+  $tnk-line-heights
+);
+
+$tnk-letter-spacing: 0px !default;
+$tnk-letter-spacings: () !default;
+$tnk-letter-spacings: map-merge(
+  (
+    '2xtight': $tnk-letter-spacing - 1.5,
+    'xtight': $tnk-letter-spacing - 1,
+    'tight': $tnk-letter-spacing - 0.5,
+    'base': $tnk-letter-spacing,
+    'loose': $tnk-letter-spacing + 1,
+    'xloose': $tnk-letter-spacing + 1.5,
+    '2xloose': $tnk-letter-spacing + 2,
+  ),
+  $tnk-letter-spacings
+);
+
+$tnk-text-transforms: () !default;
+$tnk-text-transforms: map-merge(
+  (
+    'none': none,
+    'uppercase': uppercase,
+    'lowercase': lowercase,
+    'capitalize': capitalize,
+  ),
+  $tnk-text-transforms
+);

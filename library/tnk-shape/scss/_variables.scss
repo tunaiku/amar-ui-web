@@ -1,0 +1,22 @@
+@import './functions';
+
+$tnk-border-radius: 4px !default;
+$tnk-border-radius-rounded: 50px;
+$tnk-border-radius-circle: 100%;
+$tnk-border-radius-sizes: () !default;
+$tnk-border-radius-sizes: map-merge(
+  (
+    'base': $tnk-border-radius,
+    'large': $tnk-border-radius * 1.5,
+    'xlarge': $tnk-border-radius * 2,
+    '2xlarge': $tnk-border-radius * 3,
+    'rounded': $tnk-border-radius-rounded,
+    'circle': $tnk-border-radius-circle,
+  ),
+  $tnk-border-radius-sizes
+);
+
+$tnk-border-position-map: ();
+
+// Change this variable value if you'd like to generate border-width values more than 10.
+$tnk-border-width-max-value: 10 !default;

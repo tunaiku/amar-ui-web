@@ -1,0 +1,9 @@
+{
+  "name": "@tunaiku-ui/spacing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@tunaiku-ui/styles": "^1.0.0"
+  }
+}

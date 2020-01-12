@@ -1,9 +1,42 @@
 {
-  "name": "tunaiku-ui-css",
+  "name": "tunaiku-ui",
   "version": "1.0.0",
-  "description": "Tunaiku CSS library",
+  "description": "Tunaiku UI is an interface and CSS library that follows Tunaiku Design System.",
   "main": "index.js",
-  "repository": "git@bitbucket.org:tunaiku/tunaiku-ui-css.git",
   "author": "dkk94 <davidkurniakristiadi@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "library/*"
+  ],
+  "private": true,
+  "scripts": {
+    "start:docs": "lerna exec --scope=@tunaiku-ui/docs -- yarn start",
+    "build:dev": "webpack --mode=development --env.NODE_ENV=development",
+    "build:prod": "webpack --mode=production --env.NODE_ENV=production"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "compression-webpack-plugin": "^3.1.0",
+    "css-loader": "^3.4.1",
+    "cz-conventional-changelog": "^3.0.2",
+    "gatsby-plugin-sass": "^2.1.27",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "path": "^0.12.7",
+    "postcss-cli": "^6.0.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "prettier-webpack-plugin": "^1.2.0",
+    "sass-loader": "^8.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
 }

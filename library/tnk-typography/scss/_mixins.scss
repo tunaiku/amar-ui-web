@@ -1,0 +1,77 @@
+@import './variables';
+
+@mixin tnk-create-typography-classes() {
+  @include tnk-create-font-size-classes();
+  @include tnk-create-font-weight-classes();
+  @include tnk-create-heading-classes();
+}
+
+@mixin tnk-create-text-classes() {
+  @include tnk-create-text-transform-classes();
+  @include tnk-create-line-height-classes();
+  @include tnk-create-letter-spacing-classes();
+}
+
+@mixin tnk-create-text-transform-classes() {
+  @each $text-transform, $text-transform-value in $tnk-text-transforms {
+    .Text-#{$text-transform} {
+      text-transform: $text-transform-value !important;
+    }
+  }
+}
+
+@mixin tnk-create-letter-spacing-classes() {
+  @each $letter-spacing, $letter-spacing-value in $tnk-letter-spacings {
+    .Tracking-#{$letter-spacing} {
+      letter-spacing: $letter-spacing-value !important;
+    }
+  }
+}
+
+@mixin tnk-create-line-height-classes() {
+  @each $line-height, $line-height-value in $tnk-line-heights {
+    .Leading-#{$line-height} {
+      line-height: $line-height-value !important;
+    }
+  }
+}
+
+/**
+ * Create font size classes.
+ *
+ * Example:
+ * - .FontSize or .FontSize-base -> Applies base font size
+ * - .FontSize-2xsmall or .FontSize-3xlarge -> Applies different size font classes
+ */
+@mixin tnk-create-font-size-classes() {
+  .FontSize {
+    @each $font-size, $font-size-value in $tnk-font-sizes {
+      &-#{$font-size} {
+        font-size: $font-size-value !important;
+      }
+    }
+
+    font-size: $tnk-font-size !important;
+  }
+}
+
+@mixin tnk-create-heading-classes() {
+  @each $heading, $heading-size in $tnk-headings {
+    $heading-index: index($tnk-headings, ($heading $heading-size));
+
+    h#{$heading-index},
+    .Heading-#{$heading-index} {
+      font-size: $heading-size !important;
+    }
+  }
+}
+
+@mixin tnk-create-font-weight-classes() {
+  .FontWeight {
+    @each $font-weight, $font-weight-value in $tnk-font-weights {
+      &-#{$font-weight} {
+        font-weight: $font-weight-value !important;
+      }
+    }
+  }
+}

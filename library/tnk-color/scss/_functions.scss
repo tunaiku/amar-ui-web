@@ -1,0 +1,103 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/**
+ * Returns the color value of the given color theme.
+ * e.g: tnk-color-theme("primary") or tnk-color-theme(primary)
+ *
+ * @param {$color-theme} | e.g "primary", "secondary"
+ */
+@function tnk-color-theme($color-theme) {
+  // returns an error if $color-theme isn't found inside $tnk-color-themes map.
+  @if not map-has-key($tnk-color-themes, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$tnk-color-themes' variable map!";
+  }
+
+  @return map-get($tnk-color-themes, $color-theme);
+}
+
+/**
+ * Returns a different shade variant from the given color value.
+ * e.g: tnk-color-shade(#abc123, 50)
+ *
+ * @param {$color-value} | e.g #ffffff, #ff0000
+ */
+@function tnk-color-shade($color-value, $shade-level: 0) {
+  // returns the absolute value of $shade-level and round it to the nearest multiple of 10.
+  $shade-percentage: abs($shade-level) * 1%;
+  // $shade-percentage: round($shade-percentage * 500) * 500;
+
+  @if $shade-level > 100 or $shade-level < -100 {
+    @error "$shade-level value cannot exceed 100 or less than -100!";
+  }
+
+  @if $shade-level > 0 {
+    @return shade($color-value, $shade-percentage);
+  } @else {
+    @return tint($color-value, $shade-percentage);
+  }
+}
+
+/**
+ * The shorthand version of tnk-color-theme and tnk-color-shade functions.
+ *
+ * Gets the color value from the given color theme (e.g primary) and returns a different shade variant
+ * of the color value using the tinter shader method from the specified shade level.
+ *
+ * Color theme should be available in $tnk-color-themes variable map, otherwise it will return an error.
+ *
+ * e.g: tnk-color-theme-shade("primary", 50)
+ *
+ * @param {$color-theme} | "primary", "danger"
+ * @param {$shade-level} | range -100 to 100
+ */
+@function tnk-color-theme-shade($color-theme, $shade-level: 0) {
+  $color-value: tnk-color-theme($color-theme);
+  @return tnk-color-shade($color-value, $shade-level);
+}
+
+/**
+ * A shorthand function to get a specific opacity level of the selected color theme.
+ * e.g: tnk-color-theme-opacity("primary", 0.9)
+ *
+ * @param {$color-theme} | "primary", "danger"
+ * @param {$opacity-level} | range 0 to 1
+ */
+@function tnk-color-theme-opacity($color-theme, $opacity-level: 1) {
+  $color-value: tnk-color-theme($color-theme);
+  @return rgba($color-value, $opacity-level);
+}
+
+/**
+ * Returns an accessible contrasting color against the given color value.
+ *
+ * TO-DO: Since this function is literally taken from Bootstrap, create a custom function
+ * for this.
+ */
+@function tnk-color-contrast($color) {
+  $color-contrast-threshold: 200;
+  $color-contrast-dark-text: $darker;
+  $color-contrast-light-text: $lighter;
+
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @return if($yiq >= $color-contrast-threshold, $darker, $lighter);
+}
+
+@function tnk-color-theme-contrast($color-theme) {
+  @if not map-has-key($tnk-color-themes, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$tnk-color-themes' variable map!";
+  }
+
+  $color-value: tnk-color-theme($color-theme);
+  @return tnk-color-contrast($color-value);
+}

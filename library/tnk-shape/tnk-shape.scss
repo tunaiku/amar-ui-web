@@ -1,0 +1,4 @@
+@import './scss/mixins';
+
+@include tnk-create-border-classes();
+@include tnk-create-border-side-classes();

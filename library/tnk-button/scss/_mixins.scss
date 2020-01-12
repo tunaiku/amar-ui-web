@@ -1,0 +1,377 @@
+@import '@tunaiku-ui/elevation/scss/mixins';
+@import '@tunaiku-ui/spacing/scss/variables';
+@import '@tunaiku-ui/color/scss/variables';
+@import './variables';
+
+@mixin tnk-create-button-classes() {
+  .Button {
+    @include tnk-add-button-base-styles();
+    @include tnk-add-button-base-state-classes();
+
+    @include tnk-create-button-variant-classes();
+    @include tnk-create-button-size-classes();
+    @include tnk-create-button-shape-classes();
+    @include tnk-create-button-elevated-class();
+  }
+}
+
+@mixin tnk-add-button-base-styles() {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+
+  font-size: $tnk-button-font-size;
+  font-weight: $tnk-button-font-weight;
+  font-family: $tnk-button-font-family;
+  line-height: $tnk-button-line-height;
+  text-align: center;
+
+  padding: $tnk-button-spacing;
+  min-width: $tnk-button-min-width;
+
+  color: $tnk-button-fg-color;
+  background-color: $tnk-button-bg-color;
+
+  border-style: $tnk-button-border-style;
+  border-width: $tnk-button-border-width;
+  border-color: $tnk-button-border-color;
+  // border-color: $tnk-button-border-color;
+  border-radius: $tnk-button-border-radius;
+
+  transition: $tnk-button-transition;
+  white-space: nowrap;
+  outline: none;
+  -webkit-appearance: none;
+
+  /* Apply pointer cursor on non-disabled buttons */
+  @include tnk-button-is-not-disabled() {
+    cursor: pointer !important;
+  }
+}
+
+@mixin tnk-add-button-base-state-classes() {
+  @include tnk-button-is-disabled() {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    /* Retains 'pointer-events: auto' stylerule to elements aside from link tag */
+    &:not(a) {
+      pointer-events: auto;
+    }
+  }
+
+  @include tnk-button-is-not-disabled() {
+    /* Reset outline on every state classes to remove collision with border styling */
+    @include tnk-button-is-hovered() {
+      border-color: $tnk-button-border-color--is-hovered;
+      color: $tnk-button-fg-color--is-hovered;
+      outline: none;
+    }
+
+    @include tnk-button-is-focused() {
+      box-shadow: $tnk-button-box-shadow--is-focused;
+      border-color: $tnk-button-border-color--is-focused;
+      color: $tnk-button-fg-color--is-focused;
+      outline: none;
+    }
+
+    @include tnk-button-is-active() {
+      outline: none;
+    }
+  }
+}
+
+/**
+ * Generate different button variants that depend on color themes.
+ */
+@mixin tnk-create-button-variant-classes() {
+  @each $color-theme, $color-theme-value in $tnk-color-themes {
+    &--#{$color-theme} {
+      @include tnk-add-button-filled-styles($color-theme);
+      @include tnk-create-button-text-class($color-theme);
+      @include tnk-create-button-outlined-class($color-theme);
+      @include tnk-create-button-raised-class($color-theme);
+    }
+  }
+}
+
+@mixin tnk-add-button-filled-styles($color-theme) {
+  @include tnk-button-is-not-disabled() {
+    $box-shadow-values: $tnk-button-box-shadow-values;
+
+    @include tnk-button-is-hovered() {
+      $bg-color-hovered: tnk-color-theme-shade($color-theme, -15);
+      $fg-color-hovered: tnk-color-contrast($bg-color-hovered);
+      $border-color-hovered: $bg-color-hovered;
+
+      color: $fg-color-hovered;
+      background-color: $bg-color-hovered;
+      border-color: $border-color-hovered;
+      // box-shadow: none;
+    }
+
+    @include tnk-button-is-focused() {
+      $bg-color-focused: tnk-color-theme-shade($color-theme, -30);
+      $fg-color-focused: tnk-color-contrast($bg-color-focused);
+      $border-color-focused: $bg-color-focused;
+      $box-shadow-color-focused: tnk-color-theme-opacity($color-theme, 0.3);
+      $box-shadow-focused: $box-shadow-values $box-shadow-color-focused;
+
+      color: $fg-color-focused;
+      background-color: $bg-color-focused;
+      border-color: $border-color-focused;
+      box-shadow: $box-shadow-focused;
+    }
+
+    @include tnk-button-is-active() {
+      $bg-color-active: tnk-color-theme-shade($color-theme, -45);
+      $fg-color-active: tnk-color-contrast($bg-color-active);
+      $border-color-active: $bg-color-active;
+
+      color: $fg-color-active;
+      background-color: $bg-color-active;
+      border-color: $border-color-active;
+
+      // box-shadow: none;
+    }
+  }
+
+  background-color: tnk-color-theme($color-theme);
+  color: tnk-color-theme-contrast($color-theme);
+  border-color: tnk-color-theme($color-theme);
+}
+
+/**
+ * Generates outlined button classes reduce its emphasis compared to a standard button.
+ * This will remove the background color (fill) of a button component.
+ */
+@mixin tnk-create-button-outlined-class($color-theme) {
+  &.Button--outlined {
+    @include tnk-button-is-not-disabled() {
+      color: tnk-color-theme($color-theme);
+      border-color: tnk-color-theme($color-theme);
+      background-color: tnk-color-theme-opacity($color-theme, 0);
+
+      @include tnk-button-is-hovered() {
+        color: tnk-color-theme($color-theme);
+        border-color: tnk-color-theme-opacity($color-theme, 1);
+        background-color: tnk-color-theme-opacity($color-theme, 0.1);
+      }
+
+      @include tnk-button-is-focused() {
+        color: tnk-color-theme($color-theme);
+        background-color: tnk-color-theme-opacity($color-theme, 0.2);
+        border-color: tnk-color-theme-opacity($color-theme, 1);
+        outline: none;
+      }
+
+      @include tnk-button-is-active() {
+        color: tnk-color-theme($color-theme);
+        background-color: tnk-color-theme-opacity($color-theme, 0.3);
+        border-color: tnk-color-theme-opacity($color-theme, 1);
+      }
+    }
+  }
+}
+
+/**
+ * Generates text button classes further reduce its emphasis to the lowest.
+ * This will remove the border and background color of a button. leaving only an interactible text.
+ */
+@mixin tnk-create-button-text-class($color-theme) {
+  &.Button--text {
+    @include tnk-button-is-not-disabled() {
+      color: tnk-color-theme($color-theme);
+      border-color: tnk-color-theme-opacity($color-theme, 0);
+      box-shadow: none;
+      background-color: transparent;
+
+      @include tnk-button-is-hovered() {
+        background-color: tnk-color-theme-opacity($color-theme, 0.15);
+      }
+
+      @include tnk-button-is-focused() {
+        background-color: tnk-color-theme-opacity($color-theme, 0.25);
+      }
+
+      @include tnk-button-is-active() {
+        background-color: tnk-color-theme-opacity($color-theme, 0.35);
+      }
+    }
+  }
+}
+
+/**
+ * Append elevated variant class to a standard button component.
+ *
+ * {$elevation-opacity} | 0 to 1
+ */
+@mixin tnk-create-button-elevated-class() {
+  &--elevated {
+    @include tnk-create-elevation(2);
+
+    @include tnk-button-is-not-disabled() {
+      @include tnk-button-is-hovered() {
+        @include tnk-create-elevation(3);
+      }
+
+      @include tnk-button-is-focused() {
+        @include tnk-create-elevation(3);
+      }
+
+      @include tnk-button-is-active() {
+        @include tnk-create-elevation(2);
+      }
+    }
+  }
+}
+
+/** 
+ * Appends a modifier class to generate a raised button components.
+ *
+ * NOTE: This is still an experimental API. 
+ */
+@mixin tnk-create-button-raised-class($color-theme) {
+  &.Button--raised {
+    @include tnk-button-is-not-disabled() {
+      border-bottom-color: tnk-color-theme-shade($color-theme, 15);
+      // border-bottom-width: 4px;
+      border-bottom-width: $tnk-button-raised-border-bottom-width;
+
+      @include tnk-button-is-hovered() {
+        border-bottom-color: tnk-color-theme-shade($color-theme, 10);
+      }
+
+      @include tnk-button-is-focused() {
+        margin-top: 0px;
+        outline: none;
+      }
+
+      @include tnk-button-is-active() {
+        border-bottom-width: 1px;
+        margin-top: $tnk-button-raised-border-bottom-width - 1;
+        outline: none;
+      }
+    }
+  }
+}
+
+/**
+ *
+ */
+@mixin tnk-create-button-size-classes() {
+  @each $size, $padding in $tnk-button-sizes {
+    &--#{$size} {
+      font-size: tnk-font-size($size);
+      padding: $padding;
+    }
+  }
+}
+
+/**
+ *
+ */
+@mixin tnk-create-button-shape-classes() {
+  &--rounded {
+    border-radius: tnk-border-radius(rounded);
+  }
+
+  // Extend button to 100% width of its parent
+  &--fullWidth {
+    width: 100%;
+  }
+}
+
+/**
+ * Create button group wrapper class.
+ *
+ * The ButtonGroup class can be used to encase multiple button components together to form
+ * a single, unified control-like component.
+ */
+@mixin tnk-create-button-group-classes() {
+  .ButtonGroup {
+    @include tnk-button-group-base-styles();
+  }
+}
+
+@mixin tnk-button-group-base-styles() {
+  display: flex;
+  flex-direction: row;
+
+  > .Button {
+    @include tnk-button-is-hovered() {
+      z-index: 1;
+    }
+
+    @include tnk-button-is-focused() {
+      z-index: 1;
+    }
+  }
+
+  > .Button:not(:last-child) {
+    margin-right: -1px;
+  }
+
+  > .Button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > .Button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  > .Button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+}
+
+/**
+ * These are helper mixins used in tnk-button to reduce abstractions and adhere 
+ * to reusability.
+ */
+@mixin tnk-button-is-not-disabled() {
+  &:not(:disabled),
+  &:not(.is-disabled) {
+    @content;
+  }
+}
+
+@mixin tnk-button-is-disabled() {
+  &:disabled,
+  &.is-disabled {
+    @content;
+  }
+}
+
+@mixin tnk-button-is-hovered() {
+  &:hover,
+  &.is-hovered {
+    @content;
+  }
+}
+
+@mixin tnk-button-is-focused() {
+  &:focus,
+  &.is-focused {
+    @content;
+  }
+}
+
+@mixin tnk-button-is-active() {
+  &:active,
+  &.is-active {
+    @content;
+  }
+}
+
+// TO-DO: Deprecate this helper mixin since it's not used anymore.
+// Shorthand version of the specific state functions.
+@mixin tnk-button-is-state($state: 'disabled') {
+  @include tnk-button-is-#{$state} {
+    @content;
+  }
+}

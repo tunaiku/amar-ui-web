@@ -1,0 +1,87 @@
+@import './variables';
+
+@mixin tnk-create-text-color-classes() {
+  $stylerules: ('Color');
+  @each $stylerule in $stylerules {
+    .#{$stylerule} {
+      @include tnk-create-color-themes($color-type: 'text');
+      @include tnk-create-color-helpers($color-type: 'text');
+    }
+  }
+}
+
+@mixin tnk-create-bg-color-classes() {
+  $stylerules: ('BgColor', 'BackgroundColor');
+
+  @each $stylerule in $stylerules {
+    .#{$stylerule} {
+      @include tnk-create-color-themes($color-type: 'background');
+      @include tnk-create-color-helpers($color-type: 'background');
+    }
+  }
+}
+
+// TO-DO: DEPRECATE!
+// ------------------
+// @mixin tnk-create-color-classes($type) {
+//   $color-theme-stylerules: () !default;
+//   $color-type-property: '' !default;
+
+//   @if $type == 'text' {
+//     $color-theme-stylerules: ('Color');
+//     $color-type-property: 'color';
+//   } @else if $type == 'background' {
+//     $color-theme-stylerules: ('BgColor');
+//     $color-type-property: 'background-color';
+//   }
+
+//   @each $color-theme-stylerule in $color-theme-stylerules {
+//     .#{$color-theme-stylerule} {
+//       @include tnk-append-color-theme-variants($type, $color-type-property);
+//       @include tnk-append-color-theme-helpers($type, $color-type-property);
+//     }
+//   }
+// }
+
+@mixin tnk-create-color-themes($color-type) {
+  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+
+  @each $color-theme, $color-theme-value in $tnk-color-themes {
+    &-#{$color-theme} {
+      @include tnk-create-color-themes-shades($color-type, $color-theme);
+
+      #{$color-type-property}: $color-theme-value !important;
+    }
+  }
+}
+
+@mixin tnk-create-color-themes-shades($color-type, $color-theme) {
+  @if not $color-theme {
+    @error 'You must pass $color-theme value to use this mixin!';
+  } @else if not $color-type {
+    @error 'You must pass $color-type value to use this mixin!';
+  }
+
+  $color-theme-value: tnk-color-theme($color-theme);
+  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+
+  @for $shade-index from 1 through 100 {
+    @if $shade-index % 10 == 0 {
+      &-#{$shade-index} {
+        #{$color-type-property}: tnk-color-shade($color-theme-value, $shade-index) !important;
+      }
+
+      &-m#{$shade-index} {
+        #{$color-type-property}: tnk-color-shade($color-theme-value, -$shade-index) !important;
+      }
+    }
+  }
+}
+
+@mixin tnk-create-color-helpers($color-type) {
+  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+
+  &-transparent {
+    #{$color-type-property}: transparent !important;
+  }
+}

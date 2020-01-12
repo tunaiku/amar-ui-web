@@ -1,0 +1,11 @@
+@function tnk-font-family($key, $map: $tnk-font-families) {
+  @return map-get($map, $key);
+}
+
+@function tnk-font-size($key) {
+  @return map-get($tnk-font-sizes, $key);
+}
+
+@function tnk-font-weight($key, $map: $tnk-font-weights) {
+  @return map-get($map, $key);
+}

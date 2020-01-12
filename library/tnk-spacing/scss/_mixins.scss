@@ -1,0 +1,94 @@
+@import './variables';
+
+/**
+ *
+ * Variants:
+ * - Standard version:
+ * # .(Margin|Padding) -> Applies base padding or margin around an element.
+ * # .(Margin|Padding):{value} -> Applies specific spacing size around an element.
+ * # .(Margin|Padding)(Left|Top|Right|Bottom|X|Y) -> Applies base padding or margin on specific direction.
+ * # .(Margin|Padding)(Left|Top|Right|Bottom|X|Y):{value} -> Applies specific padding/margin size on specific direction
+ *
+ * - Shorthand version:
+ * # (mg|pd) -> Applies base padding/margin around an element.
+ * # (mg|pd):{value} -> Applies specific padding/margin size around an element.
+ * # (mg|pd)-(left|top|right|bottom|x|y) -> Applies base padding/margin size on specific direction.
+ * # (mg|pd)-(left|top|right|bottom|x|y) -> Applies specific padding/margin size on specific direction.
+ */
+
+@mixin tnk-create-spacing-classes($is-abbreviated) {
+  @each $spacing-type, $spacing-type-abbreviation in $tnk-spacing-type-map {
+    $spacing-type-capitalized: capitalize($spacing-type);
+
+    $spacing-type-stylerule: '' !default;
+    @if $is-abbreviated {
+      // creates either "mg" or "pd" stylerule;
+      $spacing-type-stylerule: $spacing-type-abbreviation;
+    } @else {
+      $spacing-type-stylerule: $spacing-type-capitalized;
+    }
+
+    // Generates .Margin/.mg and .Padding/.pd classes.
+    .#{$spacing-type-stylerule} {
+      #{$spacing-type}: tnk-spacing(base) !important;
+
+      // prettier-ignore
+      @include tnk-create-spacing-values($is-abbreviated, $spacing-type);
+      @include tnk-create-spacing-directions($is-abbreviated, $spacing-type);
+    }
+  }
+}
+
+@mixin tnk-create-spacing-directions($is-abbreviated, $spacing-type) {
+  @each $spacing-direction in $tnk-spacing-direction-map {
+    $spacing-direction-lowercased: $spacing-direction;
+    $spacing-direction-capitalized: capitalize($spacing-direction);
+
+    $spacing-direction-stylerule: '' !default;
+    @if ($is-abbreviated) {
+      // e.g: "mg-left", "mg-top"
+      $spacing-direction-stylerule: '-#{$spacing-direction-lowercased}';
+    } @else {
+      // e.g: PaddingLeft, MarginTop
+      $spacing-direction-stylerule: $spacing-direction-capitalized;
+    }
+
+    // Generates .Margin(Left|Top|Right|Bottom) classes with base spacing value.
+    &#{$spacing-direction-stylerule} {
+      #{$spacing-type}-#{$spacing-direction}: tnk-spacing(base) !important;
+
+      // prettier-ignore
+      @include tnk-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction);
+    }
+  }
+}
+
+/**
+ * Generates size (from 2xsmall ~ 2xlarge) variant classes.
+ * 
+ * @params
+ * - $spacing-type -> ("padding"|"margin")
+ * - $spacing-direction -> ("all"|"left"|"top"|"right"|'bottom')
+ *
+ * @variants:
+ * - .Margin(Left|Top|Right|Bottom)-({n}xsmall|xsmall|small|base|large|xlarge|{n}xlarge)
+ *
+ * @examples:
+ * - .MarginLeft-large
+ * - .Padding-large
+ */
+@mixin tnk-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction: 'all') {
+  @each $spacing-size, $spacing-value in $tnk-spacings {
+    &-#{$spacing-size} {
+      @if $spacing-direction == 'all' {
+        #{$spacing-type}: tnk-spacing($spacing-size) !important;
+      } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
+        @each $direction in map-get($tnk-spacing-axes, $spacing-direction) {
+          #{$spacing-type}-#{$direction}: tnk-spacing($spacing-size) !important;
+        }
+      } @else {
+        #{$spacing-type}-#{$spacing-direction}: tnk-spacing($spacing-size) !important;
+      }
+    }
+  }
+}
