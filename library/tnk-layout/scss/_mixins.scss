@@ -1,0 +1,42 @@
+@import '@tunaiku-ui/responsive/scss/mixins';
+@import './variables';
+
+/// Generates Container class and its underlying variants and parts.
+///
+@mixin tnk-create-container-classes() {
+  .Container {
+    @include tnk-add-container-base-styles();
+    @include tnk-append-container-modifiers();
+    @include tnk-container-responsive();
+  }
+}
+
+@mixin tnk-add-container-base-styles() {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 $tnk-container-spacing;
+  width: 100%;
+
+  // Helps in smoothing out the transition of elements inside Container class in case
+  // users try to resize browser's resolution.
+  transition: all 250ms ease-in-out;
+}
+
+/// Generate variant classes for Container by appending some modifiers.
+///
+@mixin tnk-append-container-modifiers() {
+  &--fullWidth {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+/// Turn Container into responsive media class where it resizes on different breakpoints to
+/// achieve responsiveness.
+@mixin tnk-container-responsive() {
+  @each $breakpoint-name, $breakpoint-width in $tnk-container-widths {
+    @include tnk-responsive-media($breakpoint-name) {
+      max-width: $breakpoint-width;
+    }
+  }
+}

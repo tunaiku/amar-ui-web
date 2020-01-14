@@ -1,0 +1,16 @@
+@import '@tunaiku-ui/responsive/scss/functions';
+@import '@tunaiku-ui/spacing/scss/variables';
+
+$tnk-container-spacing: tnk-spacing('base') !default;
+
+$tnk-container-widths: () !default;
+$tnk-container-widths: map-merge(
+  (
+    'xs': 100%,
+    'sm': tnk-breakpoint-width('sm'),
+    'md': tnk-breakpoint-width('md'),
+    'lg': tnk-breakpoint-width('lg'),
+    'xl': tnk-breakpoint-width('xl'),
+  ),
+  $tnk-container-widths
+);
