@@ -1,0 +1,14 @@
+@import './breakpoints';
+@import './functions';
+
+$tnk-responsive-breakpoints: () !default;
+$tnk-responsive-breakpoints: map-merge(
+  (
+    'xs': 0,
+    'sm': $tnk-breakpoint-small,
+    'md': $tnk-breakpoint-medium,
+    'lg': $tnk-breakpoint-large,
+    'xl': $tnk-breakpoint-xlarge,
+  ),
+  $tnk-responsive-breakpoints
+);
