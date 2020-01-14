@@ -1,0 +1,15 @@
+@import '@tunaiku-ui/spacing/scss/variables';
+@import '@tunaiku-ui/shape/scss/variables';
+
+$tnk-card-padding: tnk-spacing('base');
+
+$tnk-card-bg-color: $white;
+$tnk-card-fg-color: tnk-color-contrast($tnk-card-bg-color);
+
+$tnk-card-border-style: solid;
+$tnk-card-border-width: 1px;
+$tnk-card-border-color: $light;
+$tnk-card-border-radius: tnk-border-radius(base);
+
+$tnk-card-elevation-level: 6 !default;
+$tnk-card-elevation-opacity: 0.1 !default;
