@@ -15,18 +15,12 @@ $danger-color: $medium-vermillion !default;
 $info-color: $cello !default;
 $gray-color: $sirocco !default;
 
-// Neutral color declaration
 $black: black;
 $white: white;
 $light: tint($gray-color, 80%);
 $lighter: tint($gray-color, 90%);
 $dark: shade($gray-color, 80%);
 $darker: shade($gray-color, 90%);
-
-/** 
- * 🌈 Default Formare's color themes.
- * Fully mapped and configurable.
- */
 
 $tnk-color-themes: () !default;
 $tnk-color-themes: map-merge(
