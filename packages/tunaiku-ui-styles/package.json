@@ -7,6 +7,8 @@
     "@tunaiku-ui/button": "^1.0.0",
     "@tunaiku-ui/color": "^1.0.0",
     "@tunaiku-ui/elevation": "^1.0.0",
+    "@tunaiku-ui/layout": "^1.0.0",
+    "@tunaiku-ui/responsive": "^1.0.0",
     "@tunaiku-ui/spacing": "^1.0.0",
     "@tunaiku-ui/typography": "^1.0.0"
   }
