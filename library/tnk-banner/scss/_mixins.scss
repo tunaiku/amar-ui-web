@@ -1,0 +1,34 @@
+@import '@tunaiku-ui/color/scss/variables';
+@import './variables';
+
+@mixin tnk-create-banner-classes() {
+  .Banner {
+    @include tnk-add-banner-base-styles();
+    @include tnk-append-banner-color-variants();
+  }
+}
+
+@mixin tnk-add-banner-base-styles() {
+  padding: tnk-spacing('base');
+}
+
+@mixin tnk-append-banner-color-variants() {
+  @each $color-theme, $color-value in $tnk-color-themes {
+    &--#{$color-theme} {
+      @include tnk-append-banner-color-shade-variants($color-theme);
+
+      background-color: $color-value;
+      color: tnk-color-contrast($color-value);
+    }
+  }
+}
+
+//*/
+/// Generates multiple shade variants from any given $color-theme.
+///
+/// @access private
+/// @param {String} $color-theme (e.g 'primary', 'secondary')
+//*/
+@mixin tnk-append-banner-color-shade-variants($color-theme) {
+  @include tnk-append-color-shade-variants($color-type: 'background', $color-theme: $color-theme);
+}
