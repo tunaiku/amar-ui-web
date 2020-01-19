@@ -1,0 +1,31 @@
+@import '@tunaiku-ui/elevation/scss/mixins';
+@import './variables';
+
+@mixin tnk-create-dialog-classes() {
+  .Dialog {
+    @include tnk-add-dialog-styles();
+    @include tnk-append-dialog-parts();
+  }
+}
+
+@mixin tnk-add-dialog-styles() {
+  border-radius: $tnk-dialog-border-radius;
+
+  @include tnk-create-elevation();
+}
+
+@mixin tnk-append-dialog-parts() {
+  &-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $fr-modal-backdrop-bg-color;
+    z-index: 1001;
+  }
+
+  &-block {
+    padding: $tnk-dialog-block-padding;
+  }
+}

@@ -1,0 +1,5 @@
+@import '@tunaiku-ui/shape/scss/variables';
+@import '@tunaiku-ui/spacing/scss/variables';
+
+$tnk-dialog-border-radius: tnk-border-radius('large') !default;
+$tnk-dialog-block-padding: tnk-spacing('base') !default;
