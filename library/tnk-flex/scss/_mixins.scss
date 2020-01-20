@@ -1,0 +1,85 @@
+@import './variables';
+
+@mixin tnk-create-flex-base-classes() {
+  .Flex {
+    @include tnk-flex-directions();
+    @include tnk-flex-presets();
+    @include tnk-flex-grows();
+
+    display: flex !important;
+  }
+
+  .InlineFlex {
+    display: inline-flex !important;
+  }
+}
+
+@mixin tnk-flex-presets() {
+  &-initial {
+    flex: 0 1 auto !important;
+  }
+
+  &-1 {
+    flex: 1 1 0% !important;
+  }
+
+  &-auto {
+    flex: 1 1 auto !important;
+  }
+
+  &-none {
+    flex: none !important;
+  }
+}
+
+@mixin tnk-flex-directions() {
+  @each $direction, $direction-value in $tnk-flex-directions {
+    &-#{$direction} {
+      flex-direction: $direction-value !important;
+    }
+  }
+}
+
+@mixin tnk-flex-grows() {
+  @for $i from 0 through 10 {
+    &Grow-#{$i} {
+      flex-grow: $i !important;
+    }
+
+    &Shrink-#{$i} {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+@mixin tnk-create-flex-alignment-classes() {
+  @each $alignment-axis in $tnk-alignment-axes {
+    $capitalized-alignment-axis: capitalize($alignment-axis);
+    $alignment-stylerule: '' !default;
+    $alignment-property: '' !default;
+
+    @each $alignment-type, $alignment-type-map in $tnk-alignment-types {
+      @if $alignment-type == 'items' {
+        // e.g .AlignItems or .JustifyItems
+        $alignment-stylerule: '#{$capitalized-alignment-axis}Items';
+        $alignment-property: '#{$alignment-axis}-items';
+      } @else if $alignment-type == 'content' {
+        // e.g .AlignContent or .JustifyContent
+        $alignment-stylerule: '#{$capitalized-alignment-axis}Content';
+        $alignment-property: '#{$alignment-axis}-content';
+      }
+
+      .#{$alignment-stylerule} {
+        @include tnk-flex-alignment-variants($alignment-type-map, $alignment-property);
+      }
+    }
+  }
+}
+
+@mixin tnk-flex-alignment-variants($alignment-type-map, $alignment-property) {
+  @each $alignment-type-shorthand, $alignment-type-value in $alignment-type-map {
+    &-#{$alignment-type-shorthand} {
+      #{$alignment-property}: $alignment-type-value !important;
+    }
+  }
+}

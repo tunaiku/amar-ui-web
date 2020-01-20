@@ -1,0 +1,29 @@
+@import '@formare/core/scss/utils';
+
+$tnk-flex-directions: (
+  'row': row,
+  'column': column,
+);
+
+$tnk-alignment-axes: ('align', 'justify');
+$tnk-alignment-types: (
+  'items': (
+    'start': flex-start,
+    'center': center,
+    'end': flex-end,
+    'stretch': stretch,
+    'baseline': baseline,
+    'left': left,
+    'right': right,
+  ),
+  'content': (
+    'start': flex-start,
+    'center': center,
+    'end': flex-end,
+    'baseline': baseline,
+    'between': space-between,
+    'around': space-around,
+    'evenly': space-evenly,
+    'stretch': stretch,
+  ),
+);
