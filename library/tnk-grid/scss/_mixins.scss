@@ -1,0 +1,79 @@
+@import '@tunaiku-ui/responsive/scss/variables';
+@import '@tunaiku-ui/responsive/scss/mixins';
+@import './variables';
+
+@mixin tnk-create-grid-classes() {
+  .Grids {
+    @include tnk-grid-row-base();
+    @include tnk-grid-row-modifiers();
+  }
+
+  .Grid {
+    @include tnk-grid-column-base();
+    @include tnk-grid-columns();
+  }
+}
+
+@mixin tnk-grid-row-base() {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 ($tnk-grid-gap-gutter / -1);
+
+  > .Grid,
+  > [class*='Grid-'] {
+    padding: $tnk-grid-gap-gutter;
+  }
+}
+
+@mixin tnk-grid-row-modifiers() {
+  &--gapless {
+    padding: 0 !important;
+
+    > .Grid,
+    > [class*='Column-'] {
+      padding: 0;
+    }
+  }
+}
+
+@mixin tnk-grid-column-base() {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin tnk-grid-columns() {
+  @for $index from 1 through $tnk-grid-columns {
+    $width: $index / $tnk-grid-columns;
+
+    &-#{$index} {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: percentage($width);
+      max-width: percentage($width);
+    }
+  }
+
+  @include tnk-append-responsive-media-classes() {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  @each $breakpoint, $width in $tnk-responsive-breakpoints {
+    @for $index from 1 through $tnk-grid-columns {
+      @include tnk-responsive-media($breakpoint) {
+        $width: $index / $tnk-grid-columns;
+
+        &-#{$breakpoint}-#{$index} {
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: percentage($width);
+          max-width: percentage($width);
+        }
+      }
+    }
+  }
+}
