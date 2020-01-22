@@ -7,7 +7,7 @@ $tnk-button-font-size: tnk-font-size('regular') !default;
 $tnk-button-font-weight: tnk-font-weight('semibold') !default;
 $tnk-button-font-family: tnk-font-family('primary') !default;
 $tnk-button-line-height: $tnk-line-height !default;
-$tnk-button-letter-spacing: 0 !default;
+$tnk-button-letter-spacing: 1.25px !default;
 
 $tnk-button-bg-color: transparent !default;
 $tnk-button-fg-color: $dark !default;
@@ -26,8 +26,7 @@ $tnk-button-border-radius: tnk-border-radius('base') !default;
 
 $tnk-button-box-shadow-values: 0 0 0.2em 0.1em !default;
 $tnk-button-box-shadow-values--is-focused: 0 0 0.2rem 0.1rem !default;
-// prettier-ignore
-$tnk-button-box-shadow-color--is-focused: tnk-color-theme-opacity("primary", 0.3) !default;
+$tnk-button-box-shadow-color--is-focused: tnk-color-theme-opacity('primary', 0.3) !default;
 $tnk-button-box-shadow--is-focused: $tnk-button-box-shadow-values--is-focused
   $tnk-button-box-shadow-color--is-focused;
 
@@ -35,21 +34,8 @@ $tnk-button-min-width: 6em !default;
 
 $tnk-button-transition: all 150ms ease-in-out !default;
 
-$tnk-button-spacing-y: tnk-spacing('xsmall') !default;
+$tnk-button-spacing-y: tnk-spacing('small') !default;
 $tnk-button-spacing-x: tnk-spacing('base') !default;
 $tnk-button-spacing: $tnk-button-spacing-y $tnk-button-spacing-x;
-
-$tnk-button-sizes: () !default;
-// prettier-ignore
-$tnk-button-sizes: map-merge(
-  (
-    "xsmall": ($tnk-button-spacing-y * 0.75) ($tnk-button-spacing-x * 0.75),
-    "small": ($tnk-button-spacing-y * 0.875) ($tnk-button-spacing-x * 0.875),
-    "base": $tnk-button-spacing,
-    "large": ($tnk-button-spacing-y * 1.25) ($tnk-button-spacing-x * 1.25),
-    "xlarge": ($tnk-button-spacing-y * 1.5) ($tnk-button-spacing-x * 1.5)
-  ),
-  $tnk-button-sizes
-);
 
 $tnk-button-raised-border-bottom-width: 5px !default;

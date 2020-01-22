@@ -25,6 +25,7 @@
   font-weight: $tnk-button-font-weight;
   font-family: $tnk-button-font-family;
   line-height: $tnk-button-line-height;
+  letter-spacing: $tnk-button-letter-spacing;
   text-align: center;
 
   padding: $tnk-button-spacing;
@@ -262,10 +263,9 @@
  *
  */
 @mixin tnk-create-button-size-classes() {
-  @each $size, $padding in $tnk-button-sizes {
+  @each $size in ('2xsmall', 'xsmall', 'small', 'base', 'large', 'xlarge', '2xlarge') {
     &--#{$size} {
       font-size: tnk-font-size($size);
-      padding: $padding;
     }
   }
 }
