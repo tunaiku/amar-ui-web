@@ -263,9 +263,10 @@
  *
  */
 @mixin tnk-create-button-size-classes() {
-  @each $size in ('2xsmall', 'xsmall', 'small', 'base', 'large', 'xlarge', '2xlarge') {
-    &--#{$size} {
-      font-size: tnk-font-size($size);
+  @each $size-name, $size-value in $tnk-button-spacings {
+    &--#{$size-name} {
+      font-size: tnk-font-size($size-name);
+      padding: $size-value;
     }
   }
 }

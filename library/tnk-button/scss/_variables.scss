@@ -33,9 +33,15 @@ $tnk-button-box-shadow--is-focused: $tnk-button-box-shadow-values--is-focused
 $tnk-button-min-width: 6em !default;
 
 $tnk-button-transition: all 150ms ease-in-out !default;
-
-$tnk-button-spacing-y: tnk-spacing('small') !default;
-$tnk-button-spacing-x: tnk-spacing('base') !default;
-$tnk-button-spacing: $tnk-button-spacing-y $tnk-button-spacing-x;
+$tnk-button-spacings: () !default;
+$tnk-button-spacings: map-merge(
+  (
+    'small': 6px 15.5px,
+    'base': 14px 15.5px,
+    'large': 18px 15.5px,
+  ),
+  $tnk-button-spacings
+);
+$tnk-button-spacing: map-get($tnk-button-spacings, 'base');
 
 $tnk-button-raised-border-bottom-width: 5px !default;
