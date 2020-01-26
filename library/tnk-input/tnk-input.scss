@@ -1,0 +1,4 @@
+@import './scss/mixins';
+
+@include tnk-create-input-classes();
+@include tnk-create-input-group-classes();
