@@ -9,7 +9,7 @@ $tnk-card-fg-color: tnk-color-contrast($tnk-card-bg-color);
 $tnk-card-border-style: solid;
 $tnk-card-border-width: 1px;
 $tnk-card-border-color: $light;
-$tnk-card-border-radius: tnk-border-radius(base);
+$tnk-card-border-radius: tnk-border-radius('xlarge');
 
 $tnk-card-elevation-level: 1 !default;
 $tnk-card-elevation-opacity: 0.1 !default;
