@@ -1,0 +1,50 @@
+@import '@tunaiku-ui/color/scss/variables';
+@import '@tunaiku-ui/spacing/scss/variables';
+
+@mixin tnk-create-bottom-bar-classes() {
+  .BottomBar {
+    &-menu {
+      display: flex;
+      flex-direction: row;
+
+      min-height: 4em;
+      background-color: tnk-color-theme('white');
+
+      // Reset default list style in case this is applied with ul tag.
+      list-style: none;
+    }
+
+    &-menuItem {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-grow: 1;
+
+      font-size: tnk-font-size('2xsmall');
+      color: tnk-color-theme-shade('neutral');
+
+      > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%;
+        padding: tnk-spacing('base') 0;
+
+        // Reset default link styles.
+        color: inherit;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &.is-active {
+        color: tnk-color-theme('primary');
+        transition: all 250ms ease-in-out;
+      }
+
+      &.is-active {
+        font-size: tnk-font-size('small');
+      }
+    }
+  }
+}
