@@ -1,0 +1,45 @@
+@import '@tunaiku-ui/spacing/scss/variables';
+@import '@tunaiku-ui/spacing/scss/variables';
+
+@mixin tnk-create-bottom-sheet-classes() {
+  .BottomSheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 900;
+
+    &-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 902;
+    }
+
+    &-dialog {
+      display: flex;
+      flex-direction: column;
+      min-height: 20em;
+
+      background-color: $white;
+      border-top-right-radius: tnk-border-radius('3xlarge');
+      border-top-left-radius: tnk-border-radius('3xlarge');
+    }
+
+    &-block {
+      padding: tnk-spacing('base');
+    }
+
+    &-backdrop {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: tnk-color-theme-opacity('dark', 0.3);
+      z-index: 901;
+    }
+  }
+}
