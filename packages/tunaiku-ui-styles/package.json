@@ -6,6 +6,7 @@
   "dependencies": {
     "@tunaiku-ui/banner": "^1.0.0",
     "@tunaiku-ui/bottom-bar": "^1.0.0",
+    "@tunaiku-ui/bottom-sheet": "^1.0.0",
     "@tunaiku-ui/button": "^1.0.0",
     "@tunaiku-ui/color": "^1.0.0",
     "@tunaiku-ui/elevation": "^1.0.0",
