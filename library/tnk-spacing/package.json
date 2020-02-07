@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@tunaiku-ui/grid": "^1.0.0",
     "@tunaiku-ui/styles": "^1.0.0"
   }
 }
