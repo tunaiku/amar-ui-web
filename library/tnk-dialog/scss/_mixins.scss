@@ -4,27 +4,62 @@
 @mixin tnk-create-dialog-classes() {
   .Dialog {
     @include tnk-add-dialog-styles();
-    @include tnk-append-dialog-parts();
+    @include tnk-append-dialog-box-part();
+    @include tnk-append-dialog-backdrop-part();
+    @include tnk-append-dialog-block-part();
+
+    z-index: 1000;
   }
 }
 
 @mixin tnk-add-dialog-styles() {
-  border-radius: $tnk-dialog-border-radius;
-
-  @include tnk-create-elevation();
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@mixin tnk-append-dialog-parts() {
+@mixin tnk-append-dialog-backdrop-part() {
   &-backdrop {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: $fr-modal-backdrop-bg-color;
+    background-color: $tnk-dialog-backdrop-bg-color;
     z-index: 1001;
   }
+}
 
+@mixin tnk-append-dialog-box-part() {
+  &-box {
+    @include tnk-create-elevation(
+      $level: $tnk-dialog-box-elevation-level,
+      $opacity: $tnk-dialog-box-elevation-opacity
+    );
+
+    display: flex;
+    flex-direction: column;
+    border-radius: tnk-border-radius('xlarge');
+
+    min-width: $tnk-dialog-box-min-width;
+    max-width: $tnk-dialog-box-max-width;
+
+    background-color: white;
+
+    overflow: auto;
+    z-index: 1002;
+
+    transition: all 150ms ease-in-out;
+    margin: 0 tnk-spacing('base');
+  }
+}
+
+@mixin tnk-append-dialog-block-part() {
   &-block {
     padding: $tnk-dialog-block-padding;
   }
