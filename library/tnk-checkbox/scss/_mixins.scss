@@ -1,0 +1,72 @@
+@import '@tunaiku-ui/color/scss/variables';
+@import '@tunaiku-ui/spacing/scss/variables';
+@import '@tunaiku-ui/shape/scss/variables';
+
+@mixin tnk-create-checkbox-classes() {
+  .Checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > *:not(:first-child) {
+      margin-left: tnk-spacing('small');
+    }
+
+    &-control {
+      position: relative;
+      appearance: none;
+      height: 20px;
+      width: 20px;
+      border: solid 1px tnk-color-theme('light');
+      border-radius: tnk-border-radius('base');
+      background-color: transparent;
+      transition: all 100ms ease-in-out;
+      outline: none;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        transition: all 100ms ease-out;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: solid 2px $white;
+        border-top: none;
+        border-left: none;
+        height: 12px;
+        width: 6px;
+        line-height: 0;
+        transform: translate(-50%, -60%) rotate(45deg) scale(0.5);
+        transform-origin: center center;
+        opacity: 0;
+        font-weight: bold;
+      }
+
+      &:checked,
+      &.is-checked {
+        background-color: tnk-color-theme('primary');
+        border-color: tnk-color-theme('primary');
+
+        &:after {
+          transform: translate(-50%, -60%) rotate(45deg) scale(1);
+          opacity: 1;
+        }
+      }
+
+      &:focus,
+      &.is-focused {
+        box-shadow: 0 0 0 5px tnk-color-theme-opacity('primary', 0.2);
+      }
+
+      &:active,
+      &.is-active {
+        box-shadow: 0 0 0 5px tnk-color-theme-opacity('primary', 0.2);
+      }
+    }
+
+    &-label {
+      color: tnk-color-theme('dark');
+      cursor: pointer;
+    }
+  }
+}
