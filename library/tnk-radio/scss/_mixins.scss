@@ -1,0 +1,58 @@
+@mixin tnk-create-radio-classes() {
+  .Radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > *:not(:first-child) {
+      margin-left: tnk-spacing('small');
+    }
+
+    &-control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      appearance: none;
+      height: 20px;
+      width: 20px;
+      border: solid 1px tnk-color-theme('light');
+      border-radius: tnk-border-radius('rounded');
+      background-color: transparent;
+      transition: all 100ms ease-in-out;
+      outline: none;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        transition: all 100ms ease-out;
+        transform: scale(0.5);
+        border-radius: 100%;
+        height: 12px;
+        width: 12px;
+        background-color: tnk-color-theme('primary');
+        opacity: 0;
+      }
+
+      &:checked,
+      &.is-checked {
+        border: solid 1px tnk-color-theme('primary');
+
+        &:after {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      &:focus,
+      &.is-focused {
+        box-shadow: 0 0 0 5px tnk-color-theme-opacity('primary', 0.2);
+      }
+
+      &:active,
+      &.is-active {
+        box-shadow: 0 0 0 5px tnk-color-theme-opacity('primary', 0.2);
+      }
+    }
+  }
+}
