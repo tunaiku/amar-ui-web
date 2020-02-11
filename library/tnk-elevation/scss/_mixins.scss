@@ -26,6 +26,7 @@
 
   $elevation-values-list: $elevation-offset-x $elevation-offset-y $elevation-blur $elevation-spread;
 
+  // Update each elevation values (offset-x, y, spread and blur) with $elevation-level value.
   $updated-elevation-values: () !default;
   @each $var in $elevation-values-list {
     $var: $var * $elevation-level;

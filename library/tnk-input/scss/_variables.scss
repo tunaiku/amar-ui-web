@@ -9,7 +9,7 @@ $tnk-input-fg-color: tnk-color-contrast($tnk-input-bg-color) !default;
 
 $tnk-input-border-style: solid !default;
 $tnk-input-border-width: 1px !default;
-$tnk-input-border-color: tnk-color-theme('gray') !default;
+$tnk-input-border-color: tnk-color-theme-shade('neutral', 60) !default;
 $tnk-input-border-radius: tnk-border-radius('base') !default;
 
 $tnk-input-spacing-y: tnk-spacing('xsmall') !default;
@@ -20,18 +20,17 @@ $tnk-input-line-height: $tnk-line-height !default;
 
 $tnk-input-transition: all 250ms ease-in-out;
 
-$tnk-input-hovered-border-color: tnk-color-theme-shade('primary', -20);
-
-$tnk-input-focused-border-color: tnk-color-theme-shade('primary', 0);
+$tnk-input-hovered-border-color: tnk-color-theme('primary');
+$tnk-input-focused-border-color: tnk-color-theme('primary');
 
 $tnk-input-focused-box-shadow-offset-y: 0 !default;
 $tnk-input-focused-box-shadow-offset-x: 0 !default;
 $tnk-input-focused-box-shadow-offsets: $tnk-input-focused-box-shadow-offset-y
   $tnk-input-focused-box-shadow-offset-x !default;
 
-$tnk-input-focused-box-shadow-blur: 0.2em !default;
-$tnk-input-focused-box-shadow-spread: 0.1em !default;
-$tnk-input-focused-box-shadow-color: tnk-color-theme-opacity(primary, 0.2);
+$tnk-input-focused-box-shadow-blur: 0 !default;
+$tnk-input-focused-box-shadow-spread: 3px !default;
+$tnk-input-focused-box-shadow-color: tnk-color-theme-opacity(primary, 0.3);
 $tnk-input-focused-box-shadow-values: $tnk-input-focused-box-shadow-offsets
   ($tnk-input-focused-box-shadow-blur) ($tnk-input-focused-box-shadow-spread) !default;
 

@@ -1,43 +1,54 @@
-/**
- *  🎨 Formare's default color palletes
- */
-
 @import './color-palletes';
 @import './functions';
 
-// Color themes
-$primary-color: $violet-blue !default;
-$secondary-color: $jaffa !default;
+/// Color themes
+///
+$primary-color: $limeade !default;
+$secondary-color: $blue-ribbon !default;
 $tertiary-color: $trinidad !default;
-$success-color: $mountain-meadow !default;
-$warning-color: $maximum-green-yellow !default;
-$danger-color: $medium-vermillion !default;
-$info-color: $cello !default;
-$gray-color: $sirocco !default;
+$success-color: $green !default;
+$danger-color: $red !default;
+$warning-color: $yellow !default;
+$info-color: $blue !default;
+$neutral-color: $gray !default;
 
-$black: black;
-$white: white;
-$light: tint($gray-color, 80%);
-$lighter: tint($gray-color, 90%);
-$dark: shade($gray-color, 80%);
-$darker: shade($gray-color, 90%);
+/// Shades of Neutrals
+///
+$neutral-10: tint($neutral-color, 80%);
+$neutral-20: tint($neutral-color, 60%);
+$neutral-30: tint($neutral-color, 40%);
+$neutral-40: tint($neutral-color, 20%);
+$neutral-50: $neutral-color;
+$neutral-60: shade($neutral-color, 20%);
+$neutral-70: shade($neutral-color, 40%);
+$neutral-80: shade($neutral-color, 60%);
+$neutral-90: shade($neutral-color, 80%);
 
 $tnk-color-themes: () !default;
 $tnk-color-themes: map-merge(
   (
     'primary': $primary-color,
     'secondary': $secondary-color,
+    'tertiary': $tertiary-color,
     'success': $success-color,
     'warning': $warning-color,
     'danger': $danger-color,
     'info': $info-color,
-    'gray': $gray-color,
-    'light': $light,
-    'lighter': $lighter,
-    'dark': $dark,
-    'darker': $darker,
-    'black': $black,
-    'white': $white,
+    'neutral': $neutral-color,
+    'light': $neutral-30,
+    'lighter': $neutral-10,
+    'dark': $neutral-80,
+    'darker': $neutral-90,
+    'black': #000000,
+    'white': #ffffff,
   ),
   $tnk-color-themes
 );
+
+// Neutrals
+$black: #000000;
+$white: #ffffff;
+$light: tnk-color-theme('light');
+$lighter: tnk-color-theme('lighter');
+$dark: tnk-color-theme('dark');
+$darker: tnk-color-theme('darker');

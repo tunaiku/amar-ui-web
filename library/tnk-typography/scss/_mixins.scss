@@ -36,13 +36,8 @@
   }
 }
 
-/**
- * Create font size classes.
- *
- * Example:
- * - .FontSize or .FontSize-base -> Applies base font size
- * - .FontSize-2xsmall or .FontSize-3xlarge -> Applies different size font classes
- */
+/// Generate font size classes
+///
 @mixin tnk-create-font-size-classes() {
   .FontSize {
     @each $font-size, $font-size-value in $tnk-font-sizes {
@@ -51,7 +46,7 @@
       }
     }
 
-    font-size: $tnk-font-size !important;
+    font-size: tnk-font-size('base') !important;
   }
 }
 

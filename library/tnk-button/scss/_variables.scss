@@ -24,8 +24,8 @@ $tnk-button-border-color--is-focused: tnk-color-theme('primary') !default;
 
 $tnk-button-border-radius: tnk-border-radius('base') !default;
 
-$tnk-button-box-shadow-values: 0 0 0.2em 0.1em !default;
-$tnk-button-box-shadow-values--is-focused: 0 0 0.2rem 0.1rem !default;
+$tnk-button-box-shadow-values: 0 0 0 3px !default;
+$tnk-button-box-shadow-values--is-focused: 0 0 0 3px !default;
 $tnk-button-box-shadow-color--is-focused: tnk-color-theme-opacity('primary', 0.3) !default;
 $tnk-button-box-shadow--is-focused: $tnk-button-box-shadow-values--is-focused
   $tnk-button-box-shadow-color--is-focused;

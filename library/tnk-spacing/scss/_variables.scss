@@ -5,7 +5,6 @@ $tnk-spacing: 1rem !default;
 $tnk-spacings: () !default;
 $tnk-spacings: map-merge(
   (
-    'auto': auto,
     '3xsmall': $tnk-spacing * 0.25,
     '2xsmall': $tnk-spacing * 0.5,
     'xsmall': $tnk-spacing * 0.75,

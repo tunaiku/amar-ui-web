@@ -2,6 +2,7 @@
 
 @mixin tnk-create-text-color-classes() {
   $stylerules: ('Color');
+
   @each $stylerule in $stylerules {
     .#{$stylerule} {
       @include tnk-create-color-themes($color-type: 'text');
@@ -21,41 +22,19 @@
   }
 }
 
-// TO-DO: DEPRECATE!
-// ------------------
-// @mixin tnk-create-color-classes($type) {
-//   $color-theme-stylerules: () !default;
-//   $color-type-property: '' !default;
-
-//   @if $type == 'text' {
-//     $color-theme-stylerules: ('Color');
-//     $color-type-property: 'color';
-//   } @else if $type == 'background' {
-//     $color-theme-stylerules: ('BgColor');
-//     $color-type-property: 'background-color';
-//   }
-
-//   @each $color-theme-stylerule in $color-theme-stylerules {
-//     .#{$color-theme-stylerule} {
-//       @include tnk-append-color-theme-variants($type, $color-type-property);
-//       @include tnk-append-color-theme-helpers($type, $color-type-property);
-//     }
-//   }
-// }
-
 @mixin tnk-create-color-themes($color-type) {
   $color-type-property: if($color-type == 'background', 'background-color', 'color');
 
   @each $color-theme, $color-theme-value in $tnk-color-themes {
     &-#{$color-theme} {
-      @include tnk-create-color-themes-shades($color-type, $color-theme);
+      @include tnk-append-color-shade-variants($color-type, $color-theme);
 
       #{$color-type-property}: $color-theme-value !important;
     }
   }
 }
 
-@mixin tnk-create-color-themes-shades($color-type, $color-theme) {
+@mixin tnk-append-color-shade-variants($color-type, $color-theme) {
   @if not $color-theme {
     @error 'You must pass $color-theme value to use this mixin!';
   } @else if not $color-type {
@@ -67,12 +46,14 @@
 
   @for $shade-index from 1 through 100 {
     @if $shade-index % 10 == 0 {
-      &-#{$shade-index} {
-        #{$color-type-property}: tnk-color-shade($color-theme-value, $shade-index) !important;
-      }
+      $color-value: tnk-color-shade($color-theme-value, $shade-index);
 
-      &-m#{$shade-index} {
-        #{$color-type-property}: tnk-color-shade($color-theme-value, -$shade-index) !important;
+      &-#{$shade-index} {
+        #{$color-type-property}: $color-value !important;
+
+        @if $color-type == 'background' {
+          color: tnk-color-contrast($color-value);
+        }
       }
     }
   }

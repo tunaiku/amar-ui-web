@@ -9,7 +9,7 @@
     @include tnk-append-field-label();
     @include tnk-append-field-helper();
 
-    > * {
+    > *:not(:last-child) {
       margin-bottom: tnk-spacing('3xsmall');
     }
   }
@@ -33,6 +33,6 @@
 @mixin tnk-append-field-helper() {
   &-helper {
     font-size: tnk-font-size('small');
-    color: tnk-color-theme-shade('gray', 50);
+    color: tnk-color-theme('darker');
   }
 }

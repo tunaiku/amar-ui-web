@@ -1,10 +1,10 @@
-### Dependencies ###
+## Dependencies ##
 .prettierrc
 
-### Project ###
+## Project ##
 dist/
 
-### Node ###
+## Node ##
 # Logs
 logs
 *.log
