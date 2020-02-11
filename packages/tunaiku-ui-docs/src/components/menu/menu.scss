@@ -1,0 +1,14 @@
+@import '@tunaiku-ui/color/scss/variables';
+@import '@tunaiku-ui/spacing/scss/spacing';
+
+.Menu {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &-item {
+    padding: tnk-spacing('base');
+  }
+}

@@ -1,0 +1,52 @@
+---
+path: '/docs/card'
+title: 'Card'
+description: 'A wrapper, usually to contain content or components with similar context.'
+---
+
+## Anatomy
+
+- `Card` - The outer wrapper that wraps all other components inside.
+- `Card-block` - A block element that holds sections of content of card.
+
+## Basic Usage
+
+Typically a card component consists of a title, body text and a button that specify a single context.
+
+```html preview=true size=small bgColor=lighter
+<div class="Card">
+  <div class="Card-block">
+    <h1 class="Heading-5">Card Title</h1>
+    <p>Card Subtitle</p>
+  </div>
+  <div class="Card-block">
+    <p>
+      This is a description text.
+    </p>
+  </div>
+  <div class="Card-block">
+    <button class="Button Button--primary Button--fullWidth">Submit</button>
+  </div>
+</div>
+```
+
+## Elevated
+
+`Card--elevated` modifier adds elevation effect to a card.
+
+```html preview=true size=small bgColor=lighter
+<div class="Card Card--elevated">
+  <div class="Card-block">
+    <h1 class="Heading-5">Card Title</h1>
+    <p class="Heading-6 Color-gray-50">Card Subtitle</p>
+  </div>
+  <div class="Card-block">
+    <p>
+      This is a description text.
+    </p>
+  </div>
+  <div class="Card-block Flex JustifyContent-end">
+    <button class="Button Button--primary Button--fullWidth">Submit</button>
+  </div>
+</div>
+```

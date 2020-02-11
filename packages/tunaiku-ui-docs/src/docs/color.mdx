@@ -1,0 +1,60 @@
+---
+path: '/docs/color'
+title: 'Color'
+description: 'Unified color language of Tunaiku Design System'
+---
+
+## Text Color
+
+Use `.Color-<theme>` class to change the **text color** of an element.
+
+```html preview=true
+<div class="Color-primary">Primary Color</div>
+<div class="Color-secondary">Secondary Color</div>
+<div class="Color-tertiary">Tertiary Color</div>
+<div class="Color-danger">Danger Color</div>
+<div class="Color-warning">Warning Color</div>
+<div class="Color-info">Info Color</div>
+<div class="Color-light BgColor-dark">Light Color</div>
+<div class="Color-dark">Dark Color</div>
+```
+
+## Background Color
+
+Use `.BgColor-<theme>` class to change the **background color** of an element.
+
+```html preview=true
+<div class="BgColor-primary Color-white">Primary Color</div>
+<div class="BgColor-secondary Color-white">Secondary Color</div>
+<div class="BgColor-tertiary Color-white">Tertiary Color</div>
+<div class="BgColor-danger Color-white">Danger Color</div>
+<div class="BgColor-warning Color-black">Warning Color</div>
+<div class="BgColor-info Color-white">Info Color</div>
+<div class="BgColor-light Color-black">Light Color</div>
+<div class="BgColor-dark Color-white">Dark Color</div>
+```
+
+## Neutral Spectrum
+
+```html preview=true
+<div class="BgColor-neutral-0 Padding">Neutral 0</div>
+<div class="BgColor-neutral-10 Padding">Neutral 10</div>
+<div class="BgColor-neutral-20 Padding">Neutral 20</div>
+<div class="BgColor-neutral-30 Padding">Neutral 30</div>
+<div class="BgColor-neutral-40 Padding">Neutral 40</div>
+<div class="BgColor-neutral-50 Padding">Neutral 50</div>
+<div class="BgColor-neutral-60 Padding">Neutral 60</div>
+<div class="BgColor-neutral-70 Padding">Neutral 70</div>
+<div class="BgColor-neutral-80 Padding">Neutral 80</div>
+<div class="BgColor-neutral-90 Padding">Neutral 90</div>
+<div class="BgColor-neutral-100 Padding">Neutral 100</div>
+```
+
+## Using mixins
+
+```scss
+.SomeComponent {
+  color: tnk-color-theme('primary'); // switches text color to primary theme.
+  background-color: tnk-color-theme('primary'); // switches background color to primary theme.
+}
+```
