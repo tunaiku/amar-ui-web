@@ -10,6 +10,7 @@ $tnk-border-radius-sizes: map-merge(
     'large': $tnk-border-radius * 1.5,
     'xlarge': $tnk-border-radius * 2,
     '2xlarge': $tnk-border-radius * 3,
+    '3xlarge': $tnk-border-radius * 4,
     'rounded': $tnk-border-radius-rounded,
     'circle': $tnk-border-radius-circle,
   ),
