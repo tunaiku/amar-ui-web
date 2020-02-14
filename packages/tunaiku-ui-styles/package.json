@@ -18,6 +18,7 @@
     "@tunaiku-ui/radio": "^1.0.0",
     "@tunaiku-ui/responsive": "^1.0.0",
     "@tunaiku-ui/spacing": "^1.0.0",
+    "@tunaiku-ui/tabs": "^1.0.0",
     "@tunaiku-ui/typography": "^1.0.0"
   }
 }
