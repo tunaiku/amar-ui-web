@@ -1,5 +1,7 @@
 @import '@tunaiku-ui/typography/scss/variables';
 @import '@tunaiku-ui/spacing/scss/variables';
+@import '@tunaiku-ui/color/scss/variables';
+@import '@tunaiku-ui/shape/scss/variables';
 
 .Markdown {
   > h1,
@@ -20,5 +22,11 @@
   > ul {
     list-style-type: initial;
     padding-left: tnk-spacing('2xlarge');
+  }
+
+  code {
+    background-color: tnk-color-theme-opacity('primary', 0.2);
+    padding: tnk-spacing('3xsmall');
+    border-radius: tnk-border-radius('base');
   }
 }
