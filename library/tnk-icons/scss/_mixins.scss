@@ -1,0 +1,17 @@
+@import './variables';
+
+@mixin tnk-create-icon-classes() {
+  .Icon {
+    @include tnk-create-icon-size-helpers();
+  }
+}
+
+@mixin tnk-create-icon-size-helpers() {
+  @each $size-name, $size-value in $tnk-icon-sizes {
+    &-#{$size-name} {
+      height: $size-value;
+      width: $size-value;
+      font-size: $size-name;
+    }
+  }
+}
