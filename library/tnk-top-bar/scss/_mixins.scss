@@ -1,0 +1,46 @@
+@import '@tunaiku-ui/spacing/scss/variables';
+
+@mixin tnk-create-top-bar-classes() {
+  .TopBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 56px;
+    padding: 0 8px;
+
+    &-logo {
+      > img {
+        height: 36px;
+        width: 124px;
+      }
+    }
+
+    &-actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-actions & {
+      &-action:not(:last-child) {
+        margin-right: tnk-spacing('small');
+      }
+
+      &-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 48px;
+        min-width: 48px;
+      }
+
+      &-actionLabel {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}

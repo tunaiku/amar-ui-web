@@ -1,0 +1,9 @@
+{
+  "name": "@tunaiku-ui/top-bar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@tunaiku-ui/spacing": "^1.0.0"
+  }
+}
