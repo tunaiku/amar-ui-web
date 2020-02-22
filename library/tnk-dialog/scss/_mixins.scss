@@ -1,6 +1,8 @@
 @import '@tunaiku-ui/elevation/scss/mixins';
 @import './variables';
 
+/// Generates all dialog classes
+///
 @mixin tnk-create-dialog-classes() {
   .Dialog {
     @include tnk-add-dialog-styles();
