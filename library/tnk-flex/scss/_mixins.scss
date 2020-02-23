@@ -10,6 +10,10 @@
   }
 
   .InlineFlex {
+    @include tnk-flex-directions();
+    @include tnk-flex-presets();
+    @include tnk-flex-grows();
+
     display: inline-flex !important;
   }
 }
