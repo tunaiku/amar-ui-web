@@ -1,5 +1,7 @@
 @import './variables';
 
+/// Generate all elevation classes.
+///
 @mixin tnk-create-elevation-classes() {
   @for $i from 1 through $tnk-elevation-max-level {
     $elevation-level: $i;
