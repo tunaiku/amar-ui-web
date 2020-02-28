@@ -1,6 +1,8 @@
 @import '@tunaiku-ui/color/scss/variables';
 @import '@tunaiku-ui/spacing/scss/variables';
 
+/// Generate bottom bar classes
+///
 @mixin tnk-create-bottom-bar-classes() {
   .BottomBar {
     &-menu {
