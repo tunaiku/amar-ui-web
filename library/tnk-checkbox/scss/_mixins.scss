@@ -2,6 +2,8 @@
 @import '@tunaiku-ui/spacing/scss/variables';
 @import '@tunaiku-ui/shape/scss/variables';
 
+/// Generates core, state and variant classes of checkbox component.
+///
 @mixin tnk-create-checkbox-classes() {
   .Checkbox {
     display: flex;
