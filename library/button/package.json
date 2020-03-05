@@ -1,13 +1,13 @@
 {
-  "name": "@tunaiku-ui/button",
+  "name": "@amar-ui-web/button",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@tunaiku-ui/color": "^1.0.1",
-    "@tunaiku-ui/elevation": "^1.0.1",
-    "@tunaiku-ui/shape": "^1.1.0",
-    "@tunaiku-ui/spacing": "^1.0.1",
-    "@tunaiku-ui/typography": "^1.0.1"
+    "@amar-ui-web/color": "^1.0.1",
+    "@amar-ui-web/elevation": "^1.0.1",
+    "@amar-ui-web/shape": "^1.1.0",
+    "@amar-ui-web/spacing": "^1.0.1",
+    "@amar-ui-web/typography": "^1.0.1"
   }
 }

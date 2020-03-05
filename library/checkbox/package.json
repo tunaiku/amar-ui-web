@@ -1,11 +1,11 @@
 {
-  "name": "@tunaiku-ui/checkbox",
+  "name": "@amar-ui-web/checkbox",
   "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@tunaiku-ui/color": "^1.0.1",
-    "@tunaiku-ui/shape": "^1.1.0",
-    "@tunaiku-ui/spacing": "^1.0.1"
+    "@amar-ui-web/color": "^1.0.1",
+    "@amar-ui-web/shape": "^1.1.0",
+    "@amar-ui-web/spacing": "^1.0.1"
   }
 }

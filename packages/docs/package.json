@@ -1,14 +1,14 @@
 {
-  "name": "@tunaiku-ui/docs",
+  "name": "@amar-ui-web/docs",
   "description": "Documentation of Tunaiku UI Library",
   "version": "1.1.0",
   "author": "dkk94 <davidkurniakristiadi@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/tag": "^0.20.3",
-    "@tunaiku-ui/layout": "^1.1.0",
-    "@tunaiku-ui/responsive": "^1.1.0",
-    "@tunaiku-ui/styles": "^1.1.0",
+    "@amar-ui-web/layout": "^1.1.0",
+    "@amar-ui-web/responsive": "^1.1.0",
+    "@amar-ui-web/styles": "^1.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
