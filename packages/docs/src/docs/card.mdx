@@ -4,32 +4,51 @@ title: 'Card'
 description: 'A wrapper, usually to contain content or components with similar context.'
 ---
 
-## Anatomy
-
-- `Card` - The outer wrapper that wraps all other components inside.
-- `Card-header` - Usually holds the title of the subject of a card.
-- `Card-block` - A block element that holds sections of content of card.
-
 ## Basic Usage
 
 Typically a card component consists of a title, body text and a button that specify a single context.
 
 ```html preview=true size=small bgColor=lighter
-<div class="Card">
-  <div class="Card-block">
-    <h1 class="Heading-5">Card Title</h1>
-    <p>Card Subtitle</p>
+<div className="Card">
+  <div className="Card-block">
+    <div className="MarginBottom-large">
+      <div className="FontSize-xlarge FontWeight-bold">Tagihan Saat Ini</div>
+      <div className="Color-gray-50">
+        Segera bayar tagihan untuk menghindari tunggakan biaya.
+      </div>
+    </div>
   </div>
-  <div class="Card-block">
-    <p>
-      This is a description text.
-    </p>
+  <div className="Card-block">
+    <div className="MarginBottom Flex JustifyContent-between Color-gray-50">
+      <div>Tagihan pokok bulan ini:</div>
+      <div className="FontWeight-bold">Rp 1.299.000</div>
+    </div>
+    <div className="Flex JustifyContent-between Color-gray-50">
+      <div>Jatuh tempo:</div>
+      <div className="FontWeight-bold">7 Februari 2020</div>
+    </div>
   </div>
-  <div class="Card-block">
-    <button class="Button Button--primary Button--fullWidth">Submit</button>
+  <div className="Card-block">
+    <div className="Flex JustifyContent-between">
+      <div className="FontSize-large FontWeight-bold Color-gray-50">
+        Total Tagihan:
+      </div>
+      <div className="FontSize-large FontWeight-bold">Rp 1.299.000</div>
+    </div>
+  </div>
+  <div className="Card-block Flex JustifyContent-between">
+    <button className="Button Button--primary Button--fullWidth">
+      Pay with TunaikuPay
+    </button>
   </div>
 </div>
 ```
+
+## Anatomy
+
+- `Card` - The outer wrapper that wraps all other components inside.
+- `Card-header` - Usually holds the title of the subject of a card.
+- `Card-block` - A block element that holds sections of content of card.
 
 ## Elevated
 
