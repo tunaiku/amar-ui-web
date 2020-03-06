@@ -5,6 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "@amar-web-ui/grid": "^1.1.0",
-    "@amar-web-ui/styles": "^1.1.0"
+    "@amar-web-ui/core": "^1.1.0"
   }
 }

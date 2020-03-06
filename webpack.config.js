@@ -13,9 +13,9 @@ module.exports = env => {
   const isProd = env.NODE_ENV === 'production';
 
   return {
-    name: 'tunaiku-ui',
+    name: 'amar-web-ui',
     entry: {
-      'tunaiku-ui': path.join(__dirname, '/packages/tunaiku-ui-styles/tunaiku-ui.scss'),
+      'amar-web-ui': path.join(__dirname, '/packages/core/amar-web-ui.scss'),
     },
     output: {
       path: path.join(__dirname, './dist'),

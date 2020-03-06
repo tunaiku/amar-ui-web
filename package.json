@@ -1,7 +1,7 @@
 {
-  "name": "tunaiku-ui",
+  "name": "amar-web-ui",
   "version": "1.0.0",
-  "description": "Tunaiku UI is an interface and CSS library that follows Tunaiku Design System.",
+  "description": "Amar Web UI is an interface and CSS library that follows Tunaiku Design System.",
   "main": "index.js",
   "author": "dkk94 <davidkurniakristiadi@gmail.com>",
   "license": "MIT",
