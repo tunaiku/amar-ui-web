@@ -1,11 +1,11 @@
 {
-  "name": "@amar-ui-web/checkbox",
+  "name": "@amar-web-ui/checkbox",
   "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@amar-ui-web/color": "^1.0.1",
-    "@amar-ui-web/shape": "^1.1.0",
-    "@amar-ui-web/spacing": "^1.0.1"
+    "@amar-web-ui/color": "^1.0.1",
+    "@amar-web-ui/shape": "^1.1.0",
+    "@amar-web-ui/spacing": "^1.0.1"
   }
 }
