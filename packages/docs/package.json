@@ -8,7 +8,7 @@
     "@mdx-js/tag": "^0.20.3",
     "@amar-web-ui/layout": "^1.1.0",
     "@amar-web-ui/responsive": "^1.1.0",
-    "@amar-web-ui/styles": "^1.1.0",
+    "@amar-web-ui/core": "^1.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
