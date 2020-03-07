@@ -16,7 +16,7 @@ const DocsLayout = ({ data }) => {
             <article className="DocsLayout-article">
               <div className="DocsLayout-heading MarginTop-3xlarge">
                 <h1 className="Heading-1">{frontmatter.title}</h1>
-                <p className="Heading-4 Color-neutral-80">{frontmatter.description}</p>
+                <p className="Heading-5 Color-neutral-80">{frontmatter.description}</p>
               </div>
               <Markdown className="DocsLayout-markdown">{mdx && body}</Markdown>
             </article>
