@@ -6,7 +6,10 @@ description: 'An interactive element that typically carries an action and return
 
 ## Basic Usage
 
-Button is primarily used to hold an action of which you want your users to get.
+Button is primarily used to hold an action of which you want your users to get. Buttons should be easily
+discoverable. On the most basic usage, append the `Button` class inside a `<button>` tag to quickly
+create a button component. There are several variants that you can choose from, depending on the context
+you want your button to appear.
 
 ```html preview=true
 <button class="Button">Button</button>
@@ -17,6 +20,10 @@ Button is primarily used to hold an action of which you want your users to get.
 ```
 
 ## Filled Button
+
+- Has standard emphasis.
+- Used for primary actions.
+- Good for grabbing attention of your users.
 
 ```html preview=true bgColor=lighter
 <button class="Button Button--primary">Primary</button>
@@ -29,6 +36,10 @@ Button is primarily used to hold an action of which you want your users to get.
 
 ## Outlined Button
 
+- Lower emphasis than a filled button.
+- For secondary actions.
+- Should be used in conjunction with a filled button.
+
 ```html preview=true bgColor=lighter
 <button class="Button Button--outlined Button--primary">Primary</button>
 <button class="Button Button--outlined Button--secondary">Secondary</button>
@@ -38,6 +49,9 @@ Button is primarily used to hold an action of which you want your users to get.
 ```
 
 ## Text Button
+
+- Lowest emphasis of them all.
+- Optional and is only used in rare cases.
 
 ```html preview=true
 <button class="Button Button--text Button--primary">Primary</button>
@@ -49,6 +63,10 @@ Button is primarily used to hold an action of which you want your users to get.
 ```
 
 ## Elevated Button
+
+- Custom effect with highest emphasis, higher than standard filled button.
+- Also optional, used in rare cases to make it stand out the most than other button.
+- Usually standalone, not paired with other buttons.
 
 ```html preview=true
 <button class="Button Button--elevated Button--primary">Primary</button>
