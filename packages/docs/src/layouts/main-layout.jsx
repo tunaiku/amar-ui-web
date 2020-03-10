@@ -12,7 +12,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import '../styles/main.scss';
 
 const MainLayout = ({ children }) => {
-  return <main className="Main">{children}</main>;
+  return (
+    <div className="Main">
+      <header className="Main-header"></header>
+      <main className="Main-content">{children}</main>
+    </div>
+  );
 };
 
 export default MainLayout;
