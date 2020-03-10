@@ -9,7 +9,7 @@ const path = require('path');
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const docsTemplate = path.resolve(`src/layouts/docs-layout.jsx`);
+  const docsTemplate = path.resolve(`src/layouts/docs-layout/docs-layout.jsx`);
   const allMdxQuery = `
     {
       allMdx {
