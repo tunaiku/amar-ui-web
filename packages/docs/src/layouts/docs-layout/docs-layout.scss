@@ -1,0 +1,23 @@
+@import '@amar-web-ui/color/scss/variables';
+@import '@amar-web-ui/flex/scss/variables';
+
+.DocsLayout {
+  display: flex;
+  flex-direction: row;
+
+  &-menu {
+    position: fixed;
+    left: 0;
+
+    height: 100%;
+
+    border-right: solid 1px tnk-color-theme-shade('light', 30);
+    width: 300px;
+    z-index: 5;
+  }
+
+  &-body {
+    flex-grow: 1;
+    padding-left: 300px;
+  }
+}
