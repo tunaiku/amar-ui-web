@@ -26,6 +26,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-mdx`,
     //   options: {
@@ -46,7 +54,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/layouts/docs-layout.jsx'),
+          default: require.resolve('./src/layouts/docs-layout/docs-layout.jsx'),
         },
       },
     },
