@@ -1,27 +1,30 @@
 {
   "name": "amar-web-ui",
   "version": "1.0.0",
+  "private": true,
   "description": "Amar Web UI is an interface and CSS library that follows Tunaiku Design System.",
-  "main": "index.js",
-  "author": "dkk94 <davidkurniakristiadi@gmail.com>",
   "license": "MIT",
+  "author": "dkk94 <davidkurniakristiadi@gmail.com>",
+  "main": "index.js",
   "workspaces": [
     "packages/*",
     "library/*"
   ],
-  "private": true,
   "scripts": {
-    "start:docs": "lerna exec --scope=@amar-web-ui/docs -- yarn start",
     "build": "yarn build:dev && yarn build:prod",
     "build:dev": "webpack --mode=development --env.NODE_ENV=development",
-    "build:prod": "webpack --mode=production --env.NODE_ENV=production"
+    "build:prod": "webpack --mode=production --env.NODE_ENV=production",
+    "start:docs": "lerna exec --scope=@amar-web-ui/docs -- yarn start"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
     "@mdx-js/tag": "^0.20.3",
@@ -29,7 +32,7 @@
     "classnames": "^2.2.6",
     "compression-webpack-plugin": "^3.1.0",
     "css-loader": "^3.4.1",
-    "cz-conventional-changelog": "^3.0.2",
+    "cz-conventional-changelog": "3.0.2",
     "gatsby-plugin-mdx": "^1.0.17",
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-remark-prismjs": "^3.3.30",
@@ -49,8 +52,5 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
-  },
-  "dependencies": {
-    "material-components-web": "^4.0.0"
   }
 }
