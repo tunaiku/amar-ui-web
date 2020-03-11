@@ -1,10 +1,10 @@
 {
-  "name": "@amar-web-ui/radio",
+  "name": "@amar-ui-web/radio",
   "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@amar-web-ui/color": "^1.0.1",
-    "@amar-web-ui/shape": "^1.1.0"
+    "@amar-ui-web/color": "^1.0.1",
+    "@amar-ui-web/shape": "^1.1.0"
   }
 }

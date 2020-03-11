@@ -11,7 +11,7 @@
   ],
   "private": true,
   "scripts": {
-    "start:docs": "lerna exec --scope=@amar-web-ui/docs -- yarn start",
+    "start:docs": "lerna exec --scope=@amar-ui-web/docs -- yarn start",
     "build": "yarn build:dev && yarn build:prod",
     "build:dev": "webpack --mode=development --env.NODE_ENV=development",
     "build:prod": "webpack --mode=production --env.NODE_ENV=production"
