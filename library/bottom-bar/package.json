@@ -1,10 +1,10 @@
 {
-  "name": "@amar-web-ui/bottom-bar",
+  "name": "@amar-ui-web/bottom-bar",
   "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@amar-web-ui/color": "^1.0.1",
-    "@amar-web-ui/spacing": "^1.0.1"
+    "@amar-ui-web/color": "^1.0.1",
+    "@amar-ui-web/spacing": "^1.0.1"
   }
 }
