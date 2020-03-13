@@ -1,0 +1,55 @@
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/elevation/scss/mixins';
+
+.MainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: tnk-color-theme('darker');
+  color: tnk-color-contrast(tnk-color-theme('darker'));
+  z-index: 1;
+
+  height: 5em;
+  font-weight: tnk-font-weight('medium');
+  padding-left: tnk-spacing('base');
+  padding-right: tnk-spacing('base');
+  border-bottom: solid 1px tnk-color-theme('light');
+
+  @include tnk-create-elevation();
+
+  &-brand {
+    display: flex;
+    align-items: center;
+    padding-left: tnk-spacing('base');
+    padding-right: tnk-spacing('base');
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &-nav & {
+    &-navList {
+      display: flex;
+      flex-direction: row;
+
+      > * {
+        padding: 0 tnk-spacing('base');
+      }
+    }
+
+    &-navItem {
+      > a {
+        font-weight: tnk-font-weight('medium');
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
