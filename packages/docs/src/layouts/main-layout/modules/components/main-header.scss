@@ -17,39 +17,30 @@
   font-weight: tnk-font-weight('medium');
   padding-left: tnk-spacing('base');
   padding-right: tnk-spacing('base');
-  border-bottom: solid 1px tnk-color-theme('light');
 
   @include tnk-create-elevation();
 
+  // Main Brand
   &-brand {
     display: flex;
-    align-items: center;
-    padding-left: tnk-spacing('base');
-    padding-right: tnk-spacing('base');
+    align-items: stretch;
+  }
+
+  &-brand & {
+    &-brandTitle {
+      display: flex;
+      align-items: center;
+      font-weight: tnk-font-weight('bold');
+      font-size: tnk-font-size('large');
+      color: inherit;
+      text-decoration: none;
+      padding-left: tnk-spacing('base');
+      padding-right: tnk-spacing('base');
+    }
   }
 
   &-nav {
     display: flex;
-    align-items: center;
     flex-grow: 1;
-  }
-
-  &-nav & {
-    &-navList {
-      display: flex;
-      flex-direction: row;
-
-      > * {
-        padding: 0 tnk-spacing('base');
-      }
-    }
-
-    &-navItem {
-      > a {
-        font-weight: tnk-font-weight('medium');
-        text-decoration: none;
-        color: inherit;
-      }
-    }
   }
 }

@@ -1,0 +1,46 @@
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/color/scss/variables';
+
+.Navbar {
+  display: flex;
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    > a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      color: tnk-color-theme-shade('neutral', 50);
+      padding-left: tnk-spacing('base');
+      padding-right: tnk-spacing('base');
+      font-weight: tnk-font-weight('medium');
+      text-decoration: none;
+      transition: all 150ms ease-in-out;
+
+      &.is-active {
+        position: relative;
+        font-weight: tnk-font-weight('semibold');
+        color: $white;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          border-bottom: solid 4px $white;
+        }
+      }
+    }
+
+    &:hover {
+      > a {
+        font-weight: tnk-font-weight('semibold');
+        color: tnk-color-theme-shade('neutral', 25);
+      }
+    }
+  }
+}
