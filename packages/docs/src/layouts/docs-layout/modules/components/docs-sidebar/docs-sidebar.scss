@@ -1,0 +1,17 @@
+@import '@amar-ui-web/spacing/scss/variables';
+
+.DocsSidebar {
+  display: flex;
+  flex-direction: column;
+  padding-left: tnk-spacing('base');
+
+  &-header {
+    height: 1.5em;
+  }
+
+  &-menuArea {
+    display: flex;
+    flex-direction: column;
+    padding-top: tnk-spacing('base');
+  }
+}
