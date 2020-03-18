@@ -1,8 +1,8 @@
 import React from 'react';
+import MainLayout from '../main-layout/main-layout';
 import { Markdown } from 'components/markdown';
 import { SEO } from 'components/seo';
-import MainLayout from '../main-layout';
-import { DocsMenu } from './modules/components';
+import { DocsSidebar } from './modules/components';
 import './docs-layout.scss';
 
 const DocsLayout = ({ data }) => {
@@ -12,11 +12,10 @@ const DocsLayout = ({ data }) => {
   return (
     <MainLayout>
       <SEO title={frontmatter.title} />
-      <div className="DocsLayout">
-        <div className="DocsLayout-menu">
-          <DocsMenu />
-        </div>
-        <div className="DocsLayout-body">
+      <div className="Docs">
+        <DocsSidebar />
+
+        <div className="Docs-body">
           <div className="Container Padding-xlarge">
             <article className="DocsLayout-article">
               <div className="DocsLayout-heading MarginTop-3xlarge">

@@ -1,11 +1,11 @@
-@import '@amar-web-ui/color/scss/variables';
-@import '@amar-web-ui/flex/scss/variables';
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/flex/scss/variables';
 
-.DocsLayout {
+.Docs {
   display: flex;
   flex-direction: row;
 
-  &-menu {
+  &-sidebar {
     position: fixed;
     left: 0;
 
