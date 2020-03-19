@@ -1,1 +1,1 @@
-export { default as DocsMenu } from './docs-menu';
+export * from './docs-sidebar';
