@@ -1,22 +1,36 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Navbar, NavbarItem } from 'components/navbar';
 import './main-header.scss';
 
 const MainHeader = () => {
   return (
     <div className="Main-header MainHeader">
       <div className="MainHeader-brand">
-        <div className="FontSize-xlarge">Amar UI Web</div>
+        <Link to="/" className="MainHeader-brandTitle">
+          Amar UI Web
+        </Link>
       </div>
       <div className="MainHeader-nav">
-        <ul className="MainHeader-navList">
-          <li className="MainHeader-navItem">
-            <Link to="/getting-started">Documentation</Link>
-          </li>
-          <li className="MainHeader-navItem">
-            <Link to="/getting-started">Documentation</Link>
-          </li>
-        </ul>
+        <div className="Flex JustifyContent-between FlexGrow-1">
+          <Navbar>
+            <NavbarItem>
+              <Link to="/getting-started" activeClassName="is-active">
+                Getting Started
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link to="/components" activeClassName="is-active" partiallyActive={true}>
+                Components
+              </Link>
+            </NavbarItem>
+          </Navbar>
+          <Navbar>
+            <NavbarItem>
+              <Link to="/github">🌙 Github</Link>
+            </NavbarItem>
+          </Navbar>
+        </div>
       </div>
     </div>
   );
