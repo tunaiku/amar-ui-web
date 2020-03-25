@@ -1,15 +1,13 @@
 ---
 path: '/components/button'
-title: 'Buttons'
-description: 'An interactive element that typically carries an action and returns a feedback.'
+title: 'Button'
+description: 'An interactive element that carries an action and returns a feedback when interacted.'
 ---
 
-## Basic Usage
-
-Button is primarily used to hold an action of which you want your users to get. Buttons should be easily
-discoverable. On the most basic usage, append the `Button` class inside a `<button>` tag to quickly
-create a button component. There are several variants that you can choose from, depending on the context
-you want your button to appear.
+Append the `.Button` class inside a `<button>` or `<a>` tag to quickly create a button component.
+From here, there are several options to choose from depending on how you want your button to appear.
+Typically, you would always want to prepend the `.Button--<theme>` class to fill the button with
+the preferred color theme.
 
 ```html preview=true
 <button class="Button">Button</button>
@@ -19,11 +17,16 @@ you want your button to appear.
 <button class="Button Button--primary Button--elevated">Button</button>
 ```
 
-## Filled Button
+## Variants
 
-- Has standard emphasis.
-- Used for primary actions.
-- Good for grabbing attention of your users.
+#### Filled Button
+
+Filled button holds the base emphasis and is used for primary actions. Filled button is also a
+requirement you choose to further transform it into other variants.
+
+To apply a filled button, append `.Button--<theme>` after `.Button` to fill a default button
+with the color theme of choice. It is normally used for primary buttons and is good for
+grabbing attention of your users.
 
 ```html preview=true bgColor=lighter
 <button class="Button Button--primary">Primary</button>
@@ -34,11 +37,10 @@ you want your button to appear.
 <button class="Button Button--light">Light</button>
 ```
 
-## Outlined Button
+#### Outlined Button
 
-- Lower emphasis than a filled button.
-- For secondary actions.
-- Should be used in conjunction with a filled button.
+Outlined button has a lower emphasis than a filled button and is usually used for secondary actions.
+It is normally used in conjunction with a filled button.
 
 ```html preview=true bgColor=lighter
 <button class="Button Button--outlined Button--primary">Primary</button>
@@ -48,10 +50,12 @@ you want your button to appear.
 <button class="Button Button--outlined Button--dark">Dark</button>
 ```
 
-## Text Button
+#### Text Button
 
-- Lowest emphasis of them all.
-- Optional and is only used in rare cases.
+Text or nude button has the lowest emphasis than any other variant of a button. It is highly optional
+and used in rare cases.
+
+To apply a text button, append `.Button--text` alongside a filled button.
 
 ```html preview=true
 <button class="Button Button--text Button--primary">Primary</button>
@@ -62,22 +66,37 @@ you want your button to appear.
 <button class="Button Button--text Button--light">Light</button>
 ```
 
-## Elevated Button
+#### Elevated Button
 
-- Custom effect with highest emphasis, higher than standard filled button.
-- Also optional, used in rare cases to make it stand out the most than other button.
-- Usually standalone, not paired with other buttons.
+Elevated button has a custom effect to make your button appear floated, similar to Material Design's
+button.
 
 ```html preview=true
-<button class="Button Button--elevated Button--primary">Primary</button>
+<button class="Button Button--primary Button--elevated">Primary</button>
+<button class="Button Button--secondary Button--elevated">Secondary</button>
+<button class="Button Button--danger Button--elevated">Danger</button>
+<button class="Button Button--warning Button--elevated">Warning</button>
+<button class="Button Button--success Button--elevated">Success</button>
+<button class="Button Button--dark Button--elevated">Dark</button>
+<button class="Button Button--light Button--elevated">Light</button>
 ```
 
-## Sizes
+## Other Modifiers
 
-Multiple sizes of a button.
+#### Button Sizes
+
+There are three sizes of a button you can choose from. To use it, append `Button--<size>` modifier
+class alongside a standard `.Button`.
 
 ```html preview=true
 <button class="Button Button--primary Button--small">Small</button>
 <button class="Button Button--primary">Base</button>
 <button class="Button Button--primary Button--large">Large</button>
+```
+
+#### Full Width
+
+```html preview=true bgColor=lighter
+<button className="Button Button--primary Button--fullWidth MarginBottom">Full Width Button</button>
+<button className="Button Button--secondary Button--fullWidth">Full Width Button</button>
 ```
