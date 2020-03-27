@@ -1,0 +1,73 @@
+---
+path: '/utilities/flex'
+title: 'Flex'
+description: 'A set of utilities that helps in creating flex layout.'
+---
+
+```html preview=true
+<div class="Flex BgColor-neutral-50">
+  <div class="Flex">
+    <div class="BgColor-neutral-60 Padding Margin">I'm a flex item</div>
+    <div class="BgColor-neutral-60 Padding Margin">I'm a flex item</div>
+  </div>
+</div>
+```
+
+## Flex Direciton
+
+#### Row
+
+```html preview=true
+<div class="Flex BgColor-neutral-50">
+  <div class="Flex Flex-row">
+    <div class="BgColor-neutral-60 Padding Margin">I'm a flex item</div>
+    <div class="BgColor-neutral-60 Padding Margin">I'm a flex item</div>
+  </div>
+</div>
+```
+
+#### Column
+
+```html preview=true
+<div class="Flex BgColor-neutral-50">
+  <div class="Flex Flex-column">
+    <div class="BgColor-neutral-60 Padding Margin">I'm a flex item</div>
+    <div class="BgColor-neutral-60 Padding Margin">I'm a flex item</div>
+  </div>
+</div>
+```
+
+## Justify Content
+
+```html preview=true
+<div class="BgColor-neutral-50">
+  <div class="Flex JustifyContent-start">
+    <div class="BgColor-neutral-60 Padding Margin">justify-content: flex-start</div>
+  </div>
+  <div class="Flex JustifyContent-center">
+    <div class="BgColor-neutral-60 Padding Margin">justify-content: center</div>
+  </div>
+  <div class="Flex JustifyContent-end">
+    <div class="BgColor-neutral-60 Padding Margin">justify-conetnt: flex-end</div>
+  </div>
+</div>
+```
+
+## Align Items
+
+```html preview=true
+<div class="Flex BgColor-neutral-50" style="height: 250px">
+  <div class="Flex AlignItems-stretch">
+    <div class="BgColor-neutral-60 Padding Margin">align-items: stretch</div>
+  </div>
+  <div class="Flex AlignItems-start">
+    <div class="BgColor-neutral-60 Padding Margin">align-items: flex-start</div>
+  </div>
+  <div class="Flex AlignItems-center">
+    <div class="BgColor-neutral-60 Padding Margin">align-items: center</div>
+  </div>
+  <div class="Flex AlignItems-end">
+    <div class="BgColor-neutral-60 Padding Margin">align-items: flex-end</div>
+  </div>
+</div>
+```
