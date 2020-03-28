@@ -12,8 +12,6 @@ $warning-color: $yellow !default;
 $info-color: $blue !default;
 $neutral-color: $gray !default;
 
-/// Shades of Neutrals
-///
 $neutral-10: tint($neutral-color, 80%);
 $neutral-20: tint($neutral-color, 60%);
 $neutral-30: tint($neutral-color, 40%);
@@ -24,8 +22,8 @@ $neutral-70: shade($neutral-color, 40%);
 $neutral-80: shade($neutral-color, 60%);
 $neutral-90: shade($neutral-color, 80%);
 
-$tnk-color-themes: () !default;
-$tnk-color-themes: map-merge(
+$amb-color-themes: () !default;
+$amb-color-themes: map-merge(
   (
     'primary': $primary-color,
     'secondary': $secondary-color,
@@ -42,7 +40,7 @@ $tnk-color-themes: map-merge(
     'black': #000000,
     'white': #ffffff,
   ),
-  $tnk-color-themes
+  $amb-color-themes
 );
 
 // Neutrals

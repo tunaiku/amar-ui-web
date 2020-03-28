@@ -3,15 +3,15 @@
 // Determine the max level of which the creation of elevation utility classes
 // will be generated. Defaults to 20. Change to whatever number you like. Lesser number will
 // generate lesser elevation classes which would decrease file size.
-$tnk-elevation-max-level: 20 !default;
+$amb-elevation-max-level: 20 !default;
 
-$tnk-elevation-level: 1 !default;
+$amb-elevation-level: 1 !default;
 
 // Default configuration to generate elevation effect and classes.
-$tnk-elevation-box-shadow-offset-x: 0 !default;
-$tnk-elevation-box-shadow-offset-y: 1px !default;
-$tnk-elevation-box-shadow-blur: 4px !default;
-$tnk-elevation-box-shadow-spread: 0 !default;
+$amb-elevation-box-shadow-offset-x: 0 !default;
+$amb-elevation-box-shadow-offset-y: 1px !default;
+$amb-elevation-box-shadow-blur: 4px !default;
+$amb-elevation-box-shadow-spread: 0 !default;
 
-$tnk-elevation-box-shadow-color-value: black !default;
-$tnk-elevation-box-shadow-color-opacity: 0.3 !default;
+$amb-elevation-box-shadow-color-value: black !default;
+$amb-elevation-box-shadow-color-opacity: 0.3 !default;

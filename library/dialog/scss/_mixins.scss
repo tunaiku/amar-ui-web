@@ -32,7 +32,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: $tnk-dialog-backdrop-bg-color;
+    background-color: $amb-dialog-backdrop-bg-color;
     z-index: 1001;
   }
 }
@@ -40,16 +40,16 @@
 @mixin tnk-append-dialog-box-part() {
   &-box {
     @include tnk-create-elevation(
-      $level: $tnk-dialog-box-elevation-level,
-      $opacity: $tnk-dialog-box-elevation-opacity
+      $level: $amb-dialog-box-elevation-level,
+      $opacity: $amb-dialog-box-elevation-opacity
     );
 
     display: flex;
     flex-direction: column;
     border-radius: tnk-border-radius('xlarge');
 
-    min-width: $tnk-dialog-box-min-width;
-    max-width: $tnk-dialog-box-max-width;
+    min-width: $amb-dialog-box-min-width;
+    max-width: $amb-dialog-box-max-width;
 
     background-color: white;
 
@@ -63,6 +63,6 @@
 
 @mixin tnk-append-dialog-block-part() {
   &-block {
-    padding: $tnk-dialog-block-padding;
+    padding: $amb-dialog-block-padding;
   }
 }

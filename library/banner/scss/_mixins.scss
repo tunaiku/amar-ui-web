@@ -13,7 +13,7 @@
 }
 
 @mixin tnk-append-banner-color-variants() {
-  @each $color-theme, $color-value in $tnk-color-themes {
+  @each $color-theme, $color-value in $amb-color-themes {
     &--#{$color-theme} {
       @include tnk-append-banner-color-shade-variants($color-theme);
 

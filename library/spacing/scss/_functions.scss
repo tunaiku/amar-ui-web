@@ -1,3 +1,3 @@
-@function tnk-spacing($value, $map: $tnk-spacings) {
+@function tnk-spacing($value, $map: $amb-spacings) {
   @return map-get($map, $value);
 }

@@ -1,15 +1,15 @@
 @import '@amar-ui-web/spacing/scss/variables';
 @import '@amar-ui-web/shape/scss/variables';
 
-$tnk-card-padding: tnk-spacing('base');
+$amb-card-padding: tnk-spacing('base');
 
-$tnk-card-bg-color: $white;
-$tnk-card-fg-color: tnk-color-contrast($tnk-card-bg-color);
+$amb-card-bg-color: $white;
+$amb-card-fg-color: tnk-color-contrast($amb-card-bg-color);
 
-$tnk-card-border-style: solid;
-$tnk-card-border-width: 1px;
-$tnk-card-border-color: $light;
-$tnk-card-border-radius: tnk-border-radius('xlarge');
+$amb-card-border-style: solid;
+$amb-card-border-width: 1px;
+$amb-card-border-color: $light;
+$amb-card-border-radius: tnk-border-radius('xlarge');
 
-$tnk-card-elevation-level: 1 !default;
-$tnk-card-elevation-opacity: 0.1 !default;
+$amb-card-elevation-level: 1 !default;
+$amb-card-elevation-opacity: 0.1 !default;

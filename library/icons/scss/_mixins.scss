@@ -7,7 +7,7 @@
 }
 
 @mixin tnk-create-icon-size-helpers() {
-  @each $size-name, $size-value in $tnk-icon-sizes {
+  @each $size-name, $size-value in $amb-icon-sizes {
     &-#{$size-name} {
       height: $size-value;
       width: $size-value;

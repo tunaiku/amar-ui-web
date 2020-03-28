@@ -25,11 +25,15 @@
 @mixin tnk-create-color-themes($color-type) {
   $color-type-property: if($color-type == 'background', 'background-color', 'color');
 
-  @each $color-theme, $color-theme-value in $tnk-color-themes {
+  @each $color-theme, $color-theme-value in $amb-color-themes {
     &-#{$color-theme} {
       @include tnk-append-color-shade-variants($color-type, $color-theme);
 
       #{$color-type-property}: $color-theme-value !important;
+
+      @if $color-type == 'background' {
+        color: tnk-color-contrast($color-theme-value);
+      }
     }
   }
 }

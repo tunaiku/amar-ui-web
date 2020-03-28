@@ -1,12 +1,12 @@
 @import '@amar-ui-web/core/helpers';
 
-$tnk-flex-directions: (
+$amb-flex-directions: (
   'row': row,
   'column': column,
 );
 
-$tnk-alignment-axes: ('align', 'justify');
-$tnk-alignment-types: (
+$amb-alignment-axes: ('align', 'justify');
+$amb-alignment-types: (
   'items': (
     'start': flex-start,
     'center': center,

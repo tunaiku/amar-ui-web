@@ -1,14 +1,14 @@
 @import './breakpoints';
 @import './functions';
 
-$tnk-responsive-breakpoints: () !default;
-$tnk-responsive-breakpoints: map-merge(
+$amb-responsive-breakpoints: () !default;
+$amb-responsive-breakpoints: map-merge(
   (
     'xs': 0,
-    'sm': $tnk-breakpoint-small,
-    'md': $tnk-breakpoint-medium,
-    'lg': $tnk-breakpoint-large,
-    'xl': $tnk-breakpoint-xlarge,
+    'sm': $amb-breakpoint-small,
+    'md': $amb-breakpoint-medium,
+    'lg': $amb-breakpoint-large,
+    'xl': $amb-breakpoint-xlarge,
   ),
-  $tnk-responsive-breakpoints
+  $amb-responsive-breakpoints
 );

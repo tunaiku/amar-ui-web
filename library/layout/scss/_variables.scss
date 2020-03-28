@@ -1,10 +1,10 @@
 @import '@amar-ui-web/responsive/scss/functions';
 @import '@amar-ui-web/spacing/scss/variables';
 
-$tnk-container-spacing: tnk-spacing('base') !default;
+$amb-container-spacing: tnk-spacing('base') !default;
 
-$tnk-container-widths: () !default;
-$tnk-container-widths: map-merge(
+$amb-container-widths: () !default;
+$amb-container-widths: map-merge(
   (
     'xs': 100%,
     'sm': tnk-breakpoint-width('sm'),
@@ -12,5 +12,5 @@ $tnk-container-widths: map-merge(
     'lg': tnk-breakpoint-width('lg'),
     'xl': tnk-breakpoint-width('xl'),
   ),
-  $tnk-container-widths
+  $amb-container-widths
 );

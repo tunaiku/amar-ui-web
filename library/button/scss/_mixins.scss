@@ -25,26 +25,26 @@
   justify-content: center;
   vertical-align: middle;
 
-  font-size: $tnk-button-font-size;
-  font-weight: $tnk-button-font-weight;
-  font-family: $tnk-button-font-family;
-  line-height: $tnk-button-line-height;
-  letter-spacing: $tnk-button-letter-spacing;
+  font-size: $amb-button-font-size;
+  font-weight: $amb-button-font-weight;
+  font-family: $amb-button-font-family;
+  line-height: $amb-button-line-height;
+  letter-spacing: $amb-button-letter-spacing;
   text-align: center;
 
-  padding: $tnk-button-spacing;
-  min-width: $tnk-button-min-width;
+  padding: $amb-button-spacing;
+  min-width: $amb-button-min-width;
 
-  color: $tnk-button-fg-color;
-  background-color: $tnk-button-bg-color;
+  color: $amb-button-fg-color;
+  background-color: $amb-button-bg-color;
 
-  border-style: $tnk-button-border-style;
-  border-width: $tnk-button-border-width;
-  border-color: $tnk-button-border-color;
-  // border-color: $tnk-button-border-color;
-  border-radius: $tnk-button-border-radius;
+  border-style: $amb-button-border-style;
+  border-width: $amb-button-border-width;
+  border-color: $amb-button-border-color;
+  // border-color: $amb-button-border-color;
+  border-radius: $amb-button-border-radius;
 
-  transition: $tnk-button-transition;
+  transition: $amb-button-transition;
   white-space: nowrap;
   outline: none;
   -webkit-appearance: none;
@@ -70,15 +70,15 @@
   @include tnk-button-is-not-disabled() {
     // Reset outline on every state classes to remove collision with border styling.
     @include tnk-button-is-hovered() {
-      border-color: $tnk-button-border-color--is-hovered;
-      color: $tnk-button-fg-color--is-hovered;
+      border-color: $amb-button-border-color--is-hovered;
+      color: $amb-button-fg-color--is-hovered;
       outline: none;
     }
 
     @include tnk-button-is-focused() {
-      box-shadow: $tnk-button-box-shadow--is-focused;
-      border-color: $tnk-button-border-color--is-focused;
-      color: $tnk-button-fg-color--is-focused;
+      box-shadow: $amb-button-box-shadow--is-focused;
+      border-color: $amb-button-border-color--is-focused;
+      color: $amb-button-fg-color--is-focused;
       outline: none;
     }
 
@@ -91,7 +91,7 @@
 /// Generate different button variants based on color themes.
 ///
 @mixin tnk-create-button-variant-classes() {
-  @each $color-theme, $color-theme-value in $tnk-color-themes {
+  @each $color-theme, $color-theme-value in $amb-color-themes {
     &--#{$color-theme} {
       @include tnk-add-button-filled-styles($color-theme);
       @include tnk-create-button-text-class($color-theme);
@@ -102,7 +102,7 @@
 }
 @mixin tnk-add-button-filled-styles($color-theme) {
   @include tnk-button-is-not-disabled() {
-    $box-shadow-values: $tnk-button-box-shadow-values;
+    $box-shadow-values: $amb-button-box-shadow-values;
 
     @include tnk-button-is-hovered() {
       $bg-color-hovered: tnk-color-theme-shade($color-theme, 40);
@@ -236,7 +236,7 @@
   &.Button--raised {
     @include tnk-button-is-not-disabled() {
       border-bottom-color: tnk-color-theme-shade($color-theme, 60);
-      border-bottom-width: $tnk-button-raised-border-bottom-width;
+      border-bottom-width: $amb-button-raised-border-bottom-width;
 
       @include tnk-button-is-hovered() {
         border-bottom-color: tnk-color-theme-shade($color-theme, 60);
@@ -249,7 +249,7 @@
 
       @include tnk-button-is-active() {
         border-bottom-width: 1px;
-        margin-top: $tnk-button-raised-border-bottom-width - 1;
+        margin-top: $amb-button-raised-border-bottom-width - 1;
         outline: none;
       }
     }
@@ -260,7 +260,7 @@
  *
  */
 @mixin tnk-create-button-size-classes() {
-  @each $size-name, $size-value in $tnk-button-spacings {
+  @each $size-name, $size-value in $amb-button-spacings {
     &--#{$size-name} {
       font-size: tnk-font-size($size-name);
       padding: $size-value;

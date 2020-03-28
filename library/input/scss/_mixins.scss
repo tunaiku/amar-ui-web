@@ -19,16 +19,16 @@
   display: flex;
   flex: 1 1 auto;
   width: 100%;
-  line-height: $tnk-input-line-height;
-  font-family: $tnk-input-font-family;
-  font-size: $tnk-input-font-size;
-  padding: $tnk-input-spacing;
-  transition: $tnk-input-transition;
-  background-color: $tnk-input-bg-color;
+  line-height: $amb-input-line-height;
+  font-family: $amb-input-font-family;
+  font-size: $amb-input-font-size;
+  padding: $amb-input-spacing;
+  transition: $amb-input-transition;
+  background-color: $amb-input-bg-color;
   border-style: solid;
   border-width: 1px;
-  border-color: $tnk-input-border-color;
-  border-radius: $tnk-input-border-radius;
+  border-color: $amb-input-border-color;
+  border-radius: $amb-input-border-radius;
   outline: none;
   white-space: normal;
 }
@@ -44,12 +44,12 @@
   $focused-box-shadow: '' !default;
 
   @if $color-theme == 'base' {
-    $focused-border-color: $tnk-input-focused-border-color;
-    $focused-box-shadow: $tnk-input-focused-box-shadow;
+    $focused-border-color: $amb-input-focused-border-color;
+    $focused-box-shadow: $amb-input-focused-box-shadow;
   } @else {
     $focused-border-color: tnk-theme-color($color-theme);
     $focused-box-shadow-color: tnk-theme-color($color-theme);
-    $focused-box-shadow-values: $tnk-input-focused-box-shadow-values;
+    $focused-box-shadow-values: $amb-input-focused-box-shadow-values;
     $focused-box-shadow: $focused-box-shadow-values $focused-box-shadow-color;
   }
 
@@ -66,7 +66,7 @@
   @include tnk-input-is-not-disabled() {
     &:hover,
     &.is-hovered {
-      border-color: $tnk-input-hovered-border-color;
+      border-color: $amb-input-hovered-border-color;
     }
   }
 }
@@ -74,7 +74,7 @@
 @mixin tnk-append-input-disabled-state() {
   &:disabled,
   &.is-disabled {
-    background-color: $tnk-input-disabled-background;
+    background-color: $amb-input-disabled-background;
     cursor: not-allowed;
   }
 }
@@ -83,7 +83,7 @@
  * Append color theme variant classes.
  */
 @mixin tnk-append-input-color-theme-variants() {
-  @each $color-theme, $color-theme-value in $tnk-color-themes {
+  @each $color-theme, $color-theme-value in $amb-color-themes {
     &--#{$color-theme} {
       @include tnk-append-input-state-variants($color-theme);
 
@@ -93,7 +93,7 @@
 }
 
 @mixin tnk-append-input-size-variants() {
-  @each $size-name, $size-value in $tnk-font-sizes {
+  @each $size-name, $size-value in $amb-font-sizes {
     &--#{$size-name} {
       font-size: tnk-font-size($size-name);
       padding: tnk-spacing($size-name);
@@ -103,7 +103,7 @@
 
 @mixin tnk-append-input-shape-variants() {
   &--rounded {
-    border-radius: $tnk-input-rounded-border-radius;
+    border-radius: $amb-input-rounded-border-radius;
   }
 }
 
@@ -165,7 +165,7 @@
 }
 
 @mixin tnk-append-input-group-color-theme-variants() {
-  @each $color-theme, $color-theme-value in $tnk-color-themes {
+  @each $color-theme, $color-theme-value in $amb-color-themes {
     &--#{$color-theme} {
       background-color: $color-theme-value !important;
       color: tnk-color-contrast($color-theme-value) !important;

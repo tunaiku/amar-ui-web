@@ -3,45 +3,45 @@
 @import '@amar-ui-web/color/scss/variables';
 @import '@amar-ui-web/shape/scss/variables';
 
-$tnk-button-font-size: tnk-font-size('regular') !default;
-$tnk-button-font-weight: tnk-font-weight('semibold') !default;
-$tnk-button-font-family: tnk-font-family('primary') !default;
-$tnk-button-line-height: $tnk-line-height !default;
-$tnk-button-letter-spacing: 1.25px !default;
+$amb-button-font-size: tnk-font-size('regular') !default;
+$amb-button-font-weight: tnk-font-weight('semibold') !default;
+$amb-button-font-family: tnk-font-family('primary') !default;
+$amb-button-line-height: $amb-line-height !default;
+$amb-button-letter-spacing: 1.25px !default;
 
-$tnk-button-bg-color: transparent !default;
-$tnk-button-fg-color: $dark !default;
+$amb-button-bg-color: transparent !default;
+$amb-button-fg-color: $dark !default;
 
-$tnk-button-fg-color--is-hovered: tnk-color-theme('primary') !default;
-$tnk-button-fg-color--is-focused: tnk-color-theme('primary') !default;
+$amb-button-fg-color--is-hovered: tnk-color-theme('primary') !default;
+$amb-button-fg-color--is-focused: tnk-color-theme('primary') !default;
 
-$tnk-button-border-color: tnk-color-theme('light') !default;
-$tnk-button-border-style: solid !default;
-$tnk-button-border-width: 1px !default;
+$amb-button-border-color: tnk-color-theme('light') !default;
+$amb-button-border-style: solid !default;
+$amb-button-border-width: 1px !default;
 
-$tnk-button-border-color--is-hovered: tnk-color-theme('primary') !default;
-$tnk-button-border-color--is-focused: tnk-color-theme('primary') !default;
+$amb-button-border-color--is-hovered: tnk-color-theme('primary') !default;
+$amb-button-border-color--is-focused: tnk-color-theme('primary') !default;
 
-$tnk-button-border-radius: tnk-border-radius('base') !default;
+$amb-button-border-radius: tnk-border-radius('base') !default;
 
-$tnk-button-box-shadow-values: 0 0 0 3px !default;
-$tnk-button-box-shadow-values--is-focused: 0 0 0 3px !default;
-$tnk-button-box-shadow-color--is-focused: tnk-color-theme-opacity('primary', 0.3) !default;
-$tnk-button-box-shadow--is-focused: $tnk-button-box-shadow-values--is-focused
-  $tnk-button-box-shadow-color--is-focused;
+$amb-button-box-shadow-values: 0 0 0 3px !default;
+$amb-button-box-shadow-values--is-focused: 0 0 0 3px !default;
+$amb-button-box-shadow-color--is-focused: tnk-color-theme-opacity('primary', 0.3) !default;
+$amb-button-box-shadow--is-focused: $amb-button-box-shadow-values--is-focused
+  $amb-button-box-shadow-color--is-focused;
 
-$tnk-button-min-width: 6em !default;
+$amb-button-min-width: 6em !default;
 
-$tnk-button-transition: all 150ms ease-in-out !default;
-$tnk-button-spacings: () !default;
-$tnk-button-spacings: map-merge(
+$amb-button-transition: all 150ms ease-in-out !default;
+$amb-button-spacings: () !default;
+$amb-button-spacings: map-merge(
   (
     'small': 6px 15.5px,
     'base': 14px 15.5px,
     'large': 18px 15.5px,
   ),
-  $tnk-button-spacings
+  $amb-button-spacings
 );
-$tnk-button-spacing: map-get($tnk-button-spacings, 'base');
+$amb-button-spacing: map-get($amb-button-spacings, 'base');
 
-$tnk-button-raised-border-bottom-width: 5px !default;
+$amb-button-raised-border-bottom-width: 5px !default;

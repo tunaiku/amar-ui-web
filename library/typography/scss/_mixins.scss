@@ -1,27 +1,27 @@
 @import './variables';
 
 @mixin tnk-create-typography-classes() {
-  @include tnk-create-font-size-classes();
-  @include tnk-create-font-weight-classes();
   @include tnk-create-heading-classes();
 }
 
 @mixin tnk-create-text-classes() {
+  @include tnk-create-font-size-classes();
+  @include tnk-create-font-weight-classes();
   @include tnk-create-text-transform-classes();
   @include tnk-create-line-height-classes();
   @include tnk-create-letter-spacing-classes();
 }
 
 @mixin tnk-create-text-transform-classes() {
-  @each $text-transform, $text-transform-value in $tnk-text-transforms {
-    .Text-#{$text-transform} {
+  @each $text-transform, $text-transform-value in $amb-text-transforms {
+    .Transform-#{$text-transform} {
       text-transform: $text-transform-value !important;
     }
   }
 }
 
 @mixin tnk-create-letter-spacing-classes() {
-  @each $letter-spacing, $letter-spacing-value in $tnk-letter-spacings {
+  @each $letter-spacing, $letter-spacing-value in $amb-letter-spacings {
     .Tracking-#{$letter-spacing} {
       letter-spacing: $letter-spacing-value !important;
     }
@@ -29,7 +29,7 @@
 }
 
 @mixin tnk-create-line-height-classes() {
-  @each $line-height, $line-height-value in $tnk-line-heights {
+  @each $line-height, $line-height-value in $amb-line-heights {
     .Leading-#{$line-height} {
       line-height: $line-height-value !important;
     }
@@ -38,21 +38,20 @@
 
 /// Generate font size classes
 ///
+
 @mixin tnk-create-font-size-classes() {
   .FontSize {
-    @each $font-size, $font-size-value in $tnk-font-sizes {
+    @each $font-size, $font-size-value in $amb-font-sizes {
       &-#{$font-size} {
         font-size: $font-size-value !important;
       }
     }
-
-    font-size: tnk-font-size('base') !important;
   }
 }
 
 @mixin tnk-create-heading-classes() {
-  @each $heading, $heading-size in $tnk-headings {
-    $heading-index: index($tnk-headings, ($heading $heading-size));
+  @each $heading, $heading-size in $amb-headings {
+    $heading-index: index($amb-headings, ($heading $heading-size));
 
     h#{$heading-index},
     .Heading-#{$heading-index} {
@@ -63,7 +62,7 @@
 
 @mixin tnk-create-font-weight-classes() {
   .FontWeight {
-    @each $font-weight, $font-weight-value in $tnk-font-weights {
+    @each $font-weight, $font-weight-value in $amb-font-weights {
       &-#{$font-weight} {
         font-weight: $font-weight-value !important;
       }

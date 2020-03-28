@@ -1,15 +1,19 @@
-@function tnk-font-family($key, $map: $tnk-font-families) {
+@function tnk-font-family($key, $map: $amb-font-families) {
   @return map-get($map, $key);
 }
 
-@function tnk-font-size($key, $map: $tnk-font-sizes) {
+@function tnk-font-size($key, $map: $amb-font-sizes) {
   @return map-get($map, $key);
 }
 
-@function tnk-font-weight($key, $map: $tnk-font-weights) {
+@function tnk-font-weight($key, $map: $amb-font-weights) {
   @return map-get($map, $key);
 }
 
-@function tnk-line-height($key, $map: $tnk-line-heights) {
+@function tnk-line-height($key, $map: $amb-line-heights) {
+  @return map-get($map, $key);
+}
+
+@function tnk-letter-spacing($key, $map: $amb-letter-spacings) {
   @return map-get($map, $key);
 }

@@ -1,42 +1,42 @@
 @import './functions';
 @import './typefaces';
 
-$tnk-font-family-sans-serif: $tnk-typeface-system-stack !default;
-$tnk-font-family-serif: $tnk-typeface-georgia-stack !default;
-$tnk-font-family-monospace: $tnk-typeface-sf-mono-stack !default;
+$amb-font-family-sans-serif: $amb-typeface-system-stack !default;
+$amb-font-family-serif: $amb-typeface-georgia-stack !default;
+$amb-font-family-monospace: $amb-typeface-sf-mono-stack !default;
 
-$tnk-font-families: () !default;
-$tnk-font-families: map-merge(
+$amb-font-families: () !default;
+$amb-font-families: map-merge(
   (
-    'sans-serif': $tnk-font-family-sans-serif,
-    'serif': $tnk-font-family-serif,
-    'monospace': $tnk-font-family-monospace,
+    'sans-serif': $amb-font-family-sans-serif,
+    'serif': $amb-font-family-serif,
+    'monospace': $amb-font-family-monospace,
   ),
-  $tnk-font-families
+  $amb-font-families
 );
 
-$tnk-font-size: 0.875rem !default;
-$tnk-font-sizes: () !default;
-$tnk-font-sizes: map-merge(
+$amb-font-size: 0.875rem !default;
+$amb-font-sizes: () !default;
+$amb-font-sizes: map-merge(
   (
-    '4xsmall': $tnk-font-size * 0.402,
-    '3xsmall': $tnk-font-size * 0.482,
-    '2xsmall': $tnk-font-size * 0.579,
-    'xsmall': $tnk-font-size * 0.694,
-    'small': $tnk-font-size * 0.833,
-    'base': $tnk-font-size,
-    'large': $tnk-font-size * 1.2,
-    'xlarge': $tnk-font-size * 1.44,
-    '2xlarge': $tnk-font-size * 1.728,
-    '3xlarge': $tnk-font-size * 2.074,
-    '4xlarge': $tnk-font-size * 2.488,
-    '5xlarge': $tnk-font-size * 2.986,
+    '4xsmall': $amb-font-size * 0.402,
+    '3xsmall': $amb-font-size * 0.482,
+    '2xsmall': $amb-font-size * 0.579,
+    'xsmall': $amb-font-size * 0.694,
+    'small': $amb-font-size * 0.833,
+    'base': $amb-font-size,
+    'large': $amb-font-size * 1.2,
+    'xlarge': $amb-font-size * 1.44,
+    '2xlarge': $amb-font-size * 1.728,
+    '3xlarge': $amb-font-size * 2.074,
+    '4xlarge': $amb-font-size * 2.488,
+    '5xlarge': $amb-font-size * 2.986,
   ),
-  $tnk-font-sizes
+  $amb-font-sizes
 );
 
-$tnk-headings: () !default;
-$tnk-headings: map-merge(
+$amb-headings: () !default;
+$amb-headings: map-merge(
   (
     'h1': tnk-font-size('5xlarge'),
     'h2': tnk-font-size('4xlarge'),
@@ -45,12 +45,12 @@ $tnk-headings: map-merge(
     'h5': tnk-font-size('xlarge'),
     'h6': tnk-font-size('large'),
   ),
-  $tnk-headings
+  $amb-headings
 );
 
-$tnk-font-weight: 400 !default;
-$tnk-font-weights: () !default;
-$tnk-font-weights: map-merge(
+$amb-font-weight: 400 !default;
+$amb-font-weights: () !default;
+$amb-font-weights: map-merge(
   (
     'thin': 100,
     'extra-light': 200,
@@ -72,44 +72,44 @@ $tnk-font-weights: map-merge(
     'ultra-black': 900,
     'extra-ultra': 900,
   ),
-  $tnk-font-weights
+  $amb-font-weights
 );
 
-$tnk-line-height: 1.5 !default;
-$tnk-line-heights: () !default;
-$tnk-line-heights: map-merge(
+$amb-line-height: 1.5 !default;
+$amb-line-heights: () !default;
+$amb-line-heights: map-merge(
   (
-    'xsmall': $tnk-line-height * 0.5,
-    'small': $tnk-line-height * 0.75,
-    'base': $tnk-line-height * 1,
-    'large': $tnk-line-height * 1.25,
-    'xlarge': $tnk-line-height * 1.5,
+    'xsmall': $amb-line-height * 0.5,
+    'small': $amb-line-height * 0.75,
+    'base': $amb-line-height * 1,
+    'large': $amb-line-height * 1.25,
+    'xlarge': $amb-line-height * 1.5,
   ),
-  $tnk-line-heights
+  $amb-line-heights
 );
 
-$tnk-letter-spacing: 0px !default;
-$tnk-letter-spacings: () !default;
-$tnk-letter-spacings: map-merge(
+$amb-letter-spacing: 0px !default;
+$amb-letter-spacings: () !default;
+$amb-letter-spacings: map-merge(
   (
-    '2xtight': $tnk-letter-spacing - 1.5,
-    'xtight': $tnk-letter-spacing - 1,
-    'tight': $tnk-letter-spacing - 0.5,
-    'base': $tnk-letter-spacing,
-    'loose': $tnk-letter-spacing + 1,
-    'xloose': $tnk-letter-spacing + 1.5,
-    '2xloose': $tnk-letter-spacing + 2,
+    '2xtight': $amb-letter-spacing - 1.5,
+    'xtight': $amb-letter-spacing - 1,
+    'tight': $amb-letter-spacing - 0.5,
+    'base': $amb-letter-spacing,
+    'loose': $amb-letter-spacing + 1,
+    'xloose': $amb-letter-spacing + 1.5,
+    '2xloose': $amb-letter-spacing + 2,
   ),
-  $tnk-letter-spacings
+  $amb-letter-spacings
 );
 
-$tnk-text-transforms: () !default;
-$tnk-text-transforms: map-merge(
+$amb-text-transforms: () !default;
+$amb-text-transforms: map-merge(
   (
     'none': none,
     'uppercase': uppercase,
     'lowercase': lowercase,
     'capitalize': capitalize,
   ),
-  $tnk-text-transforms
+  $amb-text-transforms
 );

@@ -1,12 +1,12 @@
 @import '@amar-ui-web/shape/scss/variables';
 @import '@amar-ui-web/spacing/scss/variables';
 
-$tnk-dialog-border-radius: tnk-border-radius('large') !default;
-$tnk-dialog-backdrop-bg-color: rgba(black, 0.3) !default;
-$tnk-dialog-block-padding: tnk-spacing('base') !default;
+$amb-dialog-border-radius: tnk-border-radius('large') !default;
+$amb-dialog-backdrop-bg-color: rgba(black, 0.3) !default;
+$amb-dialog-block-padding: tnk-spacing('base') !default;
 
-$tnk-dialog-box-elevation-opacity: 0.2 !default;
-$tnk-dialog-box-elevation-level: 2 !default;
+$amb-dialog-box-elevation-opacity: 0.2 !default;
+$amb-dialog-box-elevation-level: 2 !default;
 
-$tnk-dialog-box-min-width: 20em !default;
-$tnk-dialog-box-max-width: 20em !default;
+$amb-dialog-box-min-width: 20em !default;
+$amb-dialog-box-max-width: 20em !default;

@@ -17,11 +17,11 @@
 @mixin tnk-grid-row-base() {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 ($tnk-grid-gap-gutter / -1);
+  margin: 0 ($amb-grid-gap-gutter / -1);
 
   > .Grid,
   > [class*='Grid-'] {
-    padding: 0 $tnk-grid-gap-gutter;
+    padding: 0 $amb-grid-gap-gutter;
   }
 }
 
@@ -44,8 +44,8 @@
 }
 
 @mixin tnk-grid-columns() {
-  @for $index from 1 through $tnk-grid-columns {
-    $width: $index / $tnk-grid-columns;
+  @for $index from 1 through $amb-grid-columns {
+    $width: $index / $amb-grid-columns;
 
     &-#{$index} {
       flex-grow: 1;
@@ -62,10 +62,10 @@
     max-width: 100%;
   }
 
-  @each $breakpoint, $width in $tnk-responsive-breakpoints {
-    @for $index from 1 through $tnk-grid-columns {
+  @each $breakpoint, $width in $amb-responsive-breakpoints {
+    @for $index from 1 through $amb-grid-columns {
       @include tnk-responsive-media($breakpoint) {
-        $width: $index / $tnk-grid-columns;
+        $width: $index / $amb-grid-columns;
 
         &-#{$breakpoint}-#{$index} {
           flex-grow: 1;

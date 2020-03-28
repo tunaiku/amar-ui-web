@@ -17,7 +17,7 @@
  */
 
 @mixin tnk-create-spacing-classes($is-abbreviated) {
-  @each $spacing-type, $spacing-type-abbreviation in $tnk-spacing-type-map {
+  @each $spacing-type, $spacing-type-abbreviation in $amb-spacing-type-map {
     $spacing-type-capitalized: capitalize($spacing-type);
 
     $spacing-type-stylerule: '' !default;
@@ -40,7 +40,7 @@
 }
 
 @mixin tnk-create-spacing-directions($is-abbreviated, $spacing-type) {
-  @each $spacing-direction in $tnk-spacing-direction-map {
+  @each $spacing-direction in $amb-spacing-direction-map {
     $spacing-direction-lowercased: $spacing-direction;
     $spacing-direction-capitalized: capitalize($spacing-direction);
 
@@ -78,12 +78,12 @@
 /// - .Padding-large
 ///
 @mixin tnk-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction: 'all') {
-  @each $spacing-size, $spacing-value in $tnk-spacings {
+  @each $spacing-size, $spacing-value in $amb-spacings {
     &-#{$spacing-size} {
       @if $spacing-direction == 'all' {
         #{$spacing-type}: tnk-spacing($spacing-size) !important;
       } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
-        @each $direction in map-get($tnk-spacing-axes, $spacing-direction) {
+        @each $direction in map-get($amb-spacing-axes, $spacing-direction) {
           #{$spacing-type}-#{$direction}: tnk-spacing($spacing-size) !important;
         }
       } @else {
@@ -95,7 +95,7 @@
       @if $spacing-direction == 'all' {
         #{$spacing-type}: #{tnk-spacing($spacing-size) * -1} !important;
       } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
-        @each $direction in map-get($tnk-spacing-axes, $spacing-direction) {
+        @each $direction in map-get($amb-spacing-axes, $spacing-direction) {
           #{$spacing-type}-#{$direction}: #{tnk-spacing($spacing-size) * -1} !important;
         }
       } @else {

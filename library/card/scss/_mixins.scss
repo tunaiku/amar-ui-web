@@ -14,29 +14,29 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: $tnk-card-fg-color;
-  background-color: $tnk-card-bg-color;
-  border-radius: $tnk-card-border-radius;
-  border-style: $tnk-card-border-style;
-  border-color: $tnk-card-border-color;
-  border-width: $tnk-card-border-width;
+  color: $amb-card-fg-color;
+  background-color: $amb-card-bg-color;
+  border-radius: $amb-card-border-radius;
+  border-style: $amb-card-border-style;
+  border-color: $amb-card-border-color;
+  border-width: $amb-card-border-width;
 }
 
 @mixin tnk-append-card-parts() {
   &-block {
-    padding: $tnk-card-padding;
+    padding: $amb-card-padding;
   }
 
   &-title,
   &-body,
   &-footer {
-    padding: $tnk-card-padding;
+    padding: $amb-card-padding;
   }
 
   // &-media {
   //   position: relative;
-  //   height: $tnk-card-media-height;
-  //   min-height: $tnk-card-media-height;
+  //   height: $amb-card-media-height;
+  //   min-height: $amb-card-media-height;
 
   //   > img {
   //     position: absolute;
@@ -53,8 +53,8 @@
 @mixin tnk-append-card-elevated-variant() {
   &--elevated {
     @include tnk-create-elevation(
-      $level: $tnk-card-elevation-level,
-      $opacity: $tnk-card-elevation-opacity
+      $level: $amb-card-elevation-level,
+      $opacity: $amb-card-elevation-opacity
     );
   }
 }

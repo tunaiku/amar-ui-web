@@ -3,7 +3,7 @@
 /// Generate all elevation classes.
 ///
 @mixin tnk-create-elevation-classes() {
-  @for $i from 1 through $tnk-elevation-max-level {
+  @for $i from 1 through $amb-elevation-max-level {
     $elevation-level: $i;
 
     .Elevation-#{$i} {
@@ -13,18 +13,18 @@
 }
 
 @mixin tnk-create-elevation(
-  $level: $tnk-elevation-level,
-  $opacity: $tnk-elevation-box-shadow-color-opacity,
-  $color: $tnk-elevation-box-shadow-color-value
+  $level: $amb-elevation-level,
+  $opacity: $amb-elevation-box-shadow-color-opacity,
+  $color: $amb-elevation-box-shadow-color-value
 ) {
   $elevation-color: $color;
   $elevation-level: $level;
   $elevation-opacity: $opacity;
 
-  $elevation-offset-x: $tnk-elevation-box-shadow-offset-x;
-  $elevation-offset-y: $tnk-elevation-box-shadow-offset-y;
-  $elevation-spread: $tnk-elevation-box-shadow-spread;
-  $elevation-blur: $tnk-elevation-box-shadow-blur;
+  $elevation-offset-x: $amb-elevation-box-shadow-offset-x;
+  $elevation-offset-y: $amb-elevation-box-shadow-offset-y;
+  $elevation-spread: $amb-elevation-box-shadow-spread;
+  $elevation-blur: $amb-elevation-box-shadow-blur;
 
   $elevation-values-list: $elevation-offset-x $elevation-offset-y $elevation-blur $elevation-spread;
 

@@ -17,11 +17,11 @@
 /// @example tnk-color-theme("primary")
 ///
 @function tnk-color-theme($color-theme) {
-  @if not map-has-key($tnk-color-themes, $color-theme) {
-    @error "The theme '#{$color-theme}' is not found in '$tnk-color-themes' variable map!";
+  @if not map-has-key($amb-color-themes, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$amb-color-themes' variable map!";
   }
 
-  @return map-get($tnk-color-themes, $color-theme);
+  @return map-get($amb-color-themes, $color-theme);
 }
 
 /// Returns a different shade of the given color value.
@@ -49,7 +49,7 @@
 /// Gets the color value from the given color theme (e.g primary) and returns a different shade variant
 /// of the color value using the tinter shader function of the specified shade level.
 ///
-/// Color theme should be available in $tnk-color-themes variable map, otherwise it will return an error.
+/// Color theme should be available in $amb-color-themes variable map, otherwise it will return an error.
 ///
 /// e.g: tnk-color-theme-shade("primary", 50)
 ///
@@ -95,8 +95,8 @@
 }
 
 @function tnk-color-theme-contrast($color-theme) {
-  @if not map-has-key($tnk-color-themes, $color-theme) {
-    @error "The theme '#{$color-theme}' is not found in '$tnk-color-themes' variable map!";
+  @if not map-has-key($amb-color-themes, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$amb-color-themes' variable map!";
   }
 
   $color-value: tnk-color-theme($color-theme);

@@ -37,7 +37,7 @@
 }
 
 @mixin tnk-flex-directions() {
-  @each $direction, $direction-value in $tnk-flex-directions {
+  @each $direction, $direction-value in $amb-flex-directions {
     &-#{$direction} {
       flex-direction: $direction-value !important;
     }
@@ -57,12 +57,12 @@
 }
 
 @mixin tnk-create-flex-alignment-classes() {
-  @each $alignment-axis in $tnk-alignment-axes {
+  @each $alignment-axis in $amb-alignment-axes {
     $capitalized-alignment-axis: capitalize($alignment-axis);
     $alignment-stylerule: '' !default;
     $alignment-property: '' !default;
 
-    @each $alignment-type, $alignment-type-map in $tnk-alignment-types {
+    @each $alignment-type, $alignment-type-map in $amb-alignment-types {
       @if $alignment-type == 'items' {
         // e.g .AlignItems or .JustifyItems
         $alignment-stylerule: '#{$capitalized-alignment-axis}Items';

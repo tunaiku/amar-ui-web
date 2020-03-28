@@ -1,33 +1,33 @@
 @import '@amar-ui-web/core/helpers';
 @import './functions';
 
-$tnk-spacing: 1rem !default;
-$tnk-spacings: () !default;
-$tnk-spacings: map-merge(
+$amb-spacing: 1rem !default;
+$amb-spacings: () !default;
+$amb-spacings: map-merge(
   (
-    '3xsmall': $tnk-spacing * 0.25,
-    '2xsmall': $tnk-spacing * 0.5,
-    'xsmall': $tnk-spacing * 0.75,
-    'small': $tnk-spacing * 0.875,
-    'base': $tnk-spacing,
-    'large': $tnk-spacing * 1.25,
-    'xlarge': $tnk-spacing * 1.5,
-    '2xlarge': $tnk-spacing * 2,
-    '3xlarge': $tnk-spacing * 3,
+    '3xsmall': $amb-spacing * 0.25,
+    '2xsmall': $amb-spacing * 0.5,
+    'xsmall': $amb-spacing * 0.75,
+    'small': $amb-spacing * 0.875,
+    'base': $amb-spacing,
+    'large': $amb-spacing * 1.25,
+    'xlarge': $amb-spacing * 1.5,
+    '2xlarge': $amb-spacing * 2,
+    '3xlarge': $amb-spacing * 3,
   ),
-  $tnk-spacings
+  $amb-spacings
 );
 
 // prettier-ignore
-$tnk-spacing-type-map: (
+$amb-spacing-type-map: (
   "margin": "mg",
   "padding": "pd"
 );
 
-$tnk-spacing-direction-map: ('top', 'left', 'right', 'bottom');
+$amb-spacing-direction-map: ('top', 'left', 'right', 'bottom');
 
 // prettier-ignore
-$tnk-spacing-axes: (
+$amb-spacing-axes: (
   "x": ("left", "right"),
   "y": ("top", "bottom")
 );

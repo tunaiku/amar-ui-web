@@ -4,7 +4,7 @@
  * Applies breakpoint min/max width
  */
 @mixin tnk-responsive-media($breakpoint-name, $width-type: 'min') {
-  @if map-has-key($tnk-responsive-breakpoints, $breakpoint-name) {
+  @if map-has-key($amb-responsive-breakpoints, $breakpoint-name) {
     $breakpoint-width: tnk-breakpoint-width($breakpoint-name);
     @if $width-type == 'max' {
       $width: $width - 1px;
@@ -14,12 +14,12 @@
       @content;
     }
   } @else {
-    @error "Device breakpoint is not found in $tnk-responsive-breakpoints variable!";
+    @error "Device breakpoint is not found in $amb-responsive-breakpoints variable!";
   }
 }
 
 @mixin tnk-append-responsive-media-classes() {
-  @each $breakpoint, $width in $tnk-responsive-breakpoints {
+  @each $breakpoint, $width in $amb-responsive-breakpoints {
     @include tnk-responsive-media($breakpoint) {
       &-#{$breakpoint},
       &-#{$breakpoint} {

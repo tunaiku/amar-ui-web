@@ -27,7 +27,7 @@
 }
 
 @mixin tnk-create-border-color-theme-classes($border-side) {
-  @each $color-theme, $color-hex-value in $tnk-color-themes {
+  @each $color-theme, $color-hex-value in $amb-color-themes {
     $border-color-selector: $color-theme;
 
     $border-color-property: 'border-color' !default;
@@ -45,10 +45,10 @@
  * Generates border width value classes.
  *
  * Ranges from 1 to 10 by default. You can change the max number of value classes by changing
- * the $tnk-border-width-max-value variable.
+ * the $amb-border-width-max-value variable.
  */
 @mixin tnk-create-border-width-classes($border-side: '') {
-  @for $border-width-value from 1 through $tnk-border-width-max-value {
+  @for $border-width-value from 1 through $amb-border-width-max-value {
     $border-width-selector: $border-width-value;
 
     // Changes the border width default selector according to $border-side that is passed.

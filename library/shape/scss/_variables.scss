@@ -1,23 +1,23 @@
 @import './functions';
 
-$tnk-border-radius: 4px !default;
-$tnk-border-radius-rounded: 50px;
-$tnk-border-radius-circle: 100%;
-$tnk-border-radius-sizes: () !default;
-$tnk-border-radius-sizes: map-merge(
+$amb-border-radius: 4px !default;
+$amb-border-radius-rounded: 50px;
+$amb-border-radius-circle: 100%;
+$amb-border-radius-sizes: () !default;
+$amb-border-radius-sizes: map-merge(
   (
-    'base': $tnk-border-radius,
-    'large': $tnk-border-radius * 1.5,
-    'xlarge': $tnk-border-radius * 2,
-    '2xlarge': $tnk-border-radius * 3,
-    '3xlarge': $tnk-border-radius * 4,
-    'rounded': $tnk-border-radius-rounded,
-    'circle': $tnk-border-radius-circle,
+    'base': $amb-border-radius,
+    'large': $amb-border-radius * 1.5,
+    'xlarge': $amb-border-radius * 2,
+    '2xlarge': $amb-border-radius * 3,
+    '3xlarge': $amb-border-radius * 4,
+    'rounded': $amb-border-radius-rounded,
+    'circle': $amb-border-radius-circle,
   ),
-  $tnk-border-radius-sizes
+  $amb-border-radius-sizes
 );
 
-$tnk-border-position-map: ();
+$amb-border-position-map: ();
 
 // Change this variable value if you'd like to generate border-width values more than 10.
-$tnk-border-width-max-value: 10 !default;
+$amb-border-width-max-value: 10 !default;
