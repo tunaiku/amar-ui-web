@@ -14,16 +14,19 @@ const DocsLayout = ({ data }) => {
       <SEO title={frontmatter.title} />
       <div className="Docs">
         <DocsSidebar />
-
-        <div className="Docs-body">
-          <div className="Container Padding-xlarge">
-            <article className="DocsLayout-article">
-              <div className="DocsLayout-heading MarginTop-3xlarge">
-                <h1 className="Heading-1">{frontmatter.title}</h1>
-                <p className="Heading-5 Color-neutral-80">{frontmatter.description}</p>
+        <div className="Docs-content">
+          <div className="Container">
+            <div className="Docs-article">
+              <header className="Docs-headline">
+                <h1 className="Heading-1 MarginBottom-small FontSize-5xlarge">
+                  {frontmatter.title}
+                </h1>
+                <p className="Heading-4 Color-neutral-70">{frontmatter.description}</p>
+              </header>
+              <div className="Docs-markdown">
+                <Markdown>{mdx && body}</Markdown>
               </div>
-              <Markdown className="DocsLayout-markdown">{mdx && body}</Markdown>
-            </article>
+            </div>
           </div>
         </div>
       </div>
