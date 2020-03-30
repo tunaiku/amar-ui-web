@@ -1,24 +1,24 @@
 @import '@amar-ui-web/color/scss/variables';
 @import './variables';
 
-@mixin tnk-create-banner-classes() {
+@mixin amb-create-banner-classes() {
   .Banner {
-    @include tnk-add-banner-base-styles();
-    @include tnk-append-banner-color-variants();
+    @include amb-add-banner-base-styles();
+    @include amb-append-banner-color-variants();
   }
 }
 
-@mixin tnk-add-banner-base-styles() {
-  padding: tnk-spacing('base');
+@mixin amb-add-banner-base-styles() {
+  padding: amb-spacing('base');
 }
 
-@mixin tnk-append-banner-color-variants() {
+@mixin amb-append-banner-color-variants() {
   @each $color-theme, $color-value in $amb-color-themes {
     &--#{$color-theme} {
-      @include tnk-append-banner-color-shade-variants($color-theme);
+      @include amb-append-banner-color-shade-variants($color-theme);
 
       background-color: $color-value;
-      color: tnk-color-contrast($color-value);
+      color: amb-color-contrast($color-value);
     }
   }
 }
@@ -29,6 +29,6 @@
 /// @access private
 /// @param {String} $color-theme (e.g 'primary', 'secondary')
 //*/
-@mixin tnk-append-banner-color-shade-variants($color-theme) {
-  @include tnk-append-color-shade-variants($color-type: 'background', $color-theme: $color-theme);
+@mixin amb-append-banner-color-shade-variants($color-theme) {
+  @include amb-append-color-shade-variants($color-type: 'background', $color-theme: $color-theme);
 }
