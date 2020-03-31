@@ -3,14 +3,14 @@
 
 /// Generate bottom bar classes
 ///
-@mixin tnk-create-bottom-bar-classes() {
+@mixin amb-create-bottom-bar-classes() {
   .BottomBar {
     &-menu {
       display: flex;
       flex-direction: row;
 
       min-height: 4em;
-      background-color: tnk-color-theme('white');
+      background-color: $white;
 
       // Reset default list style in case this is applied with ul tag.
       list-style: none;
@@ -22,8 +22,8 @@
       align-items: center;
       flex-grow: 1;
 
-      font-size: tnk-font-size('xsmall');
-      color: tnk-color-theme-shade('dark');
+      font-size: amb-font-size('xsmall');
+      color: amb-color-theme('dark');
 
       > a {
         display: flex;
@@ -31,7 +31,7 @@
         align-items: center;
         flex-grow: 1;
         height: 100%;
-        padding: tnk-spacing('base') 0;
+        padding: amb-spacing('base') 0;
 
         // Reset default link styles.
         color: inherit;
@@ -40,12 +40,12 @@
 
       &:hover,
       &.is-active {
-        color: tnk-color-theme('primary');
+        color: amb-color-theme('primary');
         transition: all 250ms ease-in-out;
       }
 
       &.is-active {
-        font-size: tnk-font-size('small');
+        font-size: amb-font-size('small');
       }
     }
   }
