@@ -1,3 +1,4 @@
+@import '@amar-ui-web/core/helpers';
 @import '@amar-ui-web/elevation/scss/mixins';
 @import '@amar-ui-web/spacing/scss/variables';
 @import '@amar-ui-web/color/scss/variables';
@@ -5,21 +6,21 @@
 
 /// Main entrypoint of all functions to generate button component and its underlying functions.
 ///
-@mixin tnk-create-button-classes() {
+@mixin amb-create-button-classes() {
   .Button {
-    @include tnk-add-button-base-styles();
-    @include tnk-add-button-base-state-classes();
+    @include amb-add-button-base-styles();
+    @include amb-add-button-base-state-classes();
 
-    @include tnk-create-button-variant-classes();
-    @include tnk-create-button-size-classes();
-    @include tnk-create-button-shape-classes();
-    @include tnk-create-button-elevated-class();
+    @include amb-create-button-variant-classes();
+    @include amb-create-button-size-classes();
+    @include amb-create-button-shape-classes();
+    @include amb-create-button-elevated-class();
   }
 }
 
 /// Basic styles shared with all types and variants of button.
 ///
-@mixin tnk-add-button-base-styles() {
+@mixin amb-add-button-base-styles() {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -50,13 +51,13 @@
   -webkit-appearance: none;
 
   /* Apply pointer cursor on non-disabled buttons */
-  @include tnk-button-is-not-disabled() {
+  @include amb-button-is-not-disabled() {
     cursor: pointer !important;
   }
 }
 
-@mixin tnk-add-button-base-state-classes() {
-  @include tnk-button-is-disabled() {
+@mixin amb-add-button-base-state-classes() {
+  @include amb-button-is-disabled() {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
@@ -67,22 +68,22 @@
     }
   }
 
-  @include tnk-button-is-not-disabled() {
+  @include amb-button-is-not-disabled() {
     // Reset outline on every state classes to remove collision with border styling.
-    @include tnk-button-is-hovered() {
+    @include amb-button-is-hovered() {
       border-color: $amb-button-border-color--is-hovered;
       color: $amb-button-fg-color--is-hovered;
       outline: none;
     }
 
-    @include tnk-button-is-focused() {
+    @include amb-button-is-focused() {
       box-shadow: $amb-button-box-shadow--is-focused;
       border-color: $amb-button-border-color--is-focused;
       color: $amb-button-fg-color--is-focused;
       outline: none;
     }
 
-    @include tnk-button-is-active() {
+    @include amb-button-is-active() {
       outline: none;
     }
   }
@@ -90,23 +91,23 @@
 
 /// Generate different button variants based on color themes.
 ///
-@mixin tnk-create-button-variant-classes() {
-  @each $color-theme, $color-theme-value in $amb-color-themes {
+@mixin amb-create-button-variant-classes() {
+  @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &--#{$color-theme} {
-      @include tnk-add-button-filled-styles($color-theme);
-      @include tnk-create-button-text-class($color-theme);
-      @include tnk-create-button-outlined-class($color-theme);
-      @include tnk-create-button-raised-class($color-theme);
+      @include amb-add-button-filled-styles($color-theme);
+      @include amb-create-button-text-class($color-theme);
+      @include amb-create-button-outlined-class($color-theme);
+      @include amb-create-button-raised-class($color-theme);
     }
   }
 }
-@mixin tnk-add-button-filled-styles($color-theme) {
-  @include tnk-button-is-not-disabled() {
+@mixin amb-add-button-filled-styles($color-theme) {
+  @include amb-button-is-not-disabled() {
     $box-shadow-values: $amb-button-box-shadow-values;
 
-    @include tnk-button-is-hovered() {
-      $bg-color-hovered: tnk-color-theme-shade($color-theme, 40);
-      $fg-color-hovered: tnk-color-contrast($bg-color-hovered);
+    @include amb-button-is-hovered() {
+      $bg-color-hovered: amb-color-theme($color-theme, 40);
+      $fg-color-hovered: amb-color-contrast($bg-color-hovered);
       $border-color-hovered: $bg-color-hovered;
 
       color: $fg-color-hovered;
@@ -114,11 +115,11 @@
       border-color: $border-color-hovered;
     }
 
-    @include tnk-button-is-focused() {
-      $bg-color-focused: tnk-color-theme-shade($color-theme, 40);
-      $fg-color-focused: tnk-color-contrast($bg-color-focused);
+    @include amb-button-is-focused() {
+      $bg-color-focused: amb-color-theme($color-theme, 40);
+      $fg-color-focused: amb-color-contrast($bg-color-focused);
       $border-color-focused: $bg-color-focused;
-      $box-shadow-color-focused: tnk-color-theme-opacity($color-theme, 0.3);
+      $box-shadow-color-focused: amb-color-theme-opacity($color-theme, 0.3);
       $box-shadow-focused: $box-shadow-values $box-shadow-color-focused;
 
       color: $fg-color-focused;
@@ -127,9 +128,9 @@
       box-shadow: $box-shadow-focused;
     }
 
-    @include tnk-button-is-active() {
-      $bg-color-active: tnk-color-theme-shade($color-theme, 30);
-      $fg-color-active: tnk-color-contrast($bg-color-active);
+    @include amb-button-is-active() {
+      $bg-color-active: amb-color-theme($color-theme, 30);
+      $fg-color-active: amb-color-contrast($bg-color-active);
       $border-color-active: $bg-color-active;
 
       color: $fg-color-active;
@@ -140,38 +141,38 @@
     }
   }
 
-  background-color: tnk-color-theme($color-theme);
-  color: tnk-color-theme-contrast($color-theme);
-  border-color: tnk-color-theme($color-theme);
+  background-color: amb-color-theme($color-theme);
+  color: amb-color-theme-contrast($color-theme);
+  border-color: amb-color-theme($color-theme);
 }
 
 /// Generate the outlined or non-filled version from a standard button.
 /// @param {String} $color-theme
 ///
-@mixin tnk-create-button-outlined-class($color-theme) {
+@mixin amb-create-button-outlined-class($color-theme) {
   &.Button--outlined {
-    @include tnk-button-is-not-disabled() {
-      color: tnk-color-theme($color-theme);
-      border-color: tnk-color-theme($color-theme);
-      background-color: tnk-color-theme-opacity($color-theme, 0);
+    @include amb-button-is-not-disabled() {
+      color: amb-color-theme($color-theme);
+      border-color: amb-color-theme($color-theme);
+      background-color: amb-color-theme-opacity($color-theme, 0);
 
-      @include tnk-button-is-hovered() {
-        color: tnk-color-theme($color-theme);
-        border-color: tnk-color-theme-opacity($color-theme, 1);
-        background-color: tnk-color-theme-opacity($color-theme, 0.1);
+      @include amb-button-is-hovered() {
+        color: amb-color-theme($color-theme);
+        border-color: amb-color-theme-opacity($color-theme, 1);
+        background-color: amb-color-theme-opacity($color-theme, 0.1);
       }
 
-      @include tnk-button-is-focused() {
-        color: tnk-color-theme($color-theme);
-        background-color: tnk-color-theme-opacity($color-theme, 0.2);
-        border-color: tnk-color-theme-opacity($color-theme, 1);
+      @include amb-button-is-focused() {
+        color: amb-color-theme($color-theme);
+        background-color: amb-color-theme-opacity($color-theme, 0.2);
+        border-color: amb-color-theme-opacity($color-theme, 1);
         outline: none;
       }
 
-      @include tnk-button-is-active() {
-        color: tnk-color-theme($color-theme);
-        background-color: tnk-color-theme-opacity($color-theme, 0.3);
-        border-color: tnk-color-theme-opacity($color-theme, 1);
+      @include amb-button-is-active() {
+        color: amb-color-theme($color-theme);
+        background-color: amb-color-theme-opacity($color-theme, 0.3);
+        border-color: amb-color-theme-opacity($color-theme, 1);
       }
     }
   }
@@ -181,24 +182,24 @@
 /// @access public
 /// @param {String} $color-theme
 ///
-@mixin tnk-create-button-text-class($color-theme) {
+@mixin amb-create-button-text-class($color-theme) {
   &.Button--text {
-    @include tnk-button-is-not-disabled() {
-      color: tnk-color-theme($color-theme);
-      border-color: tnk-color-theme-opacity($color-theme, 0);
+    @include amb-button-is-not-disabled() {
+      color: amb-color-theme($color-theme);
+      border-color: amb-color-theme-opacity($color-theme, 0);
       box-shadow: none;
       background-color: transparent;
 
-      @include tnk-button-is-hovered() {
-        background-color: tnk-color-theme-opacity($color-theme, 0.15);
+      @include amb-button-is-hovered() {
+        background-color: amb-color-theme-opacity($color-theme, 0.15);
       }
 
-      @include tnk-button-is-focused() {
-        background-color: tnk-color-theme-opacity($color-theme, 0.25);
+      @include amb-button-is-focused() {
+        background-color: amb-color-theme-opacity($color-theme, 0.25);
       }
 
-      @include tnk-button-is-active() {
-        background-color: tnk-color-theme-opacity($color-theme, 0.35);
+      @include amb-button-is-active() {
+        background-color: amb-color-theme-opacity($color-theme, 0.35);
       }
     }
   }
@@ -207,21 +208,21 @@
 /// Generates elevated variant from a standard button component.
 /// @access public
 ///
-@mixin tnk-create-button-elevated-class() {
+@mixin amb-create-button-elevated-class() {
   &--elevated {
-    @include tnk-create-elevation(2);
+    @include amb-create-elevation(2);
 
-    @include tnk-button-is-not-disabled() {
-      @include tnk-button-is-hovered() {
-        @include tnk-create-elevation(3);
+    @include amb-button-is-not-disabled() {
+      @include amb-button-is-hovered() {
+        @include amb-create-elevation(3);
       }
 
-      @include tnk-button-is-focused() {
-        @include tnk-create-elevation(3);
+      @include amb-button-is-focused() {
+        @include amb-create-elevation(3);
       }
 
-      @include tnk-button-is-active() {
-        @include tnk-create-elevation(2);
+      @include amb-button-is-active() {
+        @include amb-create-elevation(2);
       }
     }
   }
@@ -232,22 +233,22 @@
  *
  * NOTE: This is still an experimental API. 
  */
-@mixin tnk-create-button-raised-class($color-theme) {
+@mixin amb-create-button-raised-class($color-theme) {
   &.Button--raised {
-    @include tnk-button-is-not-disabled() {
-      border-bottom-color: tnk-color-theme-shade($color-theme, 60);
+    @include amb-button-is-not-disabled() {
+      border-bottom-color: amb-color-theme($color-theme, 60);
       border-bottom-width: $amb-button-raised-border-bottom-width;
 
-      @include tnk-button-is-hovered() {
-        border-bottom-color: tnk-color-theme-shade($color-theme, 60);
+      @include amb-button-is-hovered() {
+        border-bottom-color: amb-color-theme($color-theme, 60);
       }
 
-      @include tnk-button-is-focused() {
+      @include amb-button-is-focused() {
         margin-top: 0px;
         outline: none;
       }
 
-      @include tnk-button-is-active() {
+      @include amb-button-is-active() {
         border-bottom-width: 1px;
         margin-top: $amb-button-raised-border-bottom-width - 1;
         outline: none;
@@ -259,11 +260,10 @@
 /**
  *
  */
-@mixin tnk-create-button-size-classes() {
-  @each $size-name, $size-value in $amb-button-spacings {
+@mixin amb-create-button-size-classes() {
+  @each $size-name, $size-properties in $amb-button-size-map {
     &--#{$size-name} {
-      font-size: tnk-font-size($size-name);
-      padding: $size-value;
+      @include create-properties($size-properties);
     }
   }
 }
@@ -271,9 +271,9 @@
 /**
  *
  */
-@mixin tnk-create-button-shape-classes() {
+@mixin amb-create-button-shape-classes() {
   &--rounded {
-    border-radius: tnk-border-radius(rounded);
+    border-radius: amb-border-radius(rounded);
   }
 
   // Extend button to 100% width of its parent
@@ -285,22 +285,22 @@
 /// Generate the .ButtonGroup helper class.
 /// Used to encase multiple button components into form a single, unified control.
 ///
-@mixin tnk-create-button-group-classes() {
+@mixin amb-create-button-group-classes() {
   .ButtonGroup {
-    @include tnk-button-group-base-styles();
+    @include amb-button-group-base-styles();
   }
 }
 
-@mixin tnk-button-group-base-styles() {
+@mixin amb-button-group-base-styles() {
   display: flex;
   flex-direction: row;
 
   > .Button {
-    @include tnk-button-is-hovered() {
+    @include amb-button-is-hovered() {
       z-index: 1;
     }
 
-    @include tnk-button-is-focused() {
+    @include amb-button-is-focused() {
       z-index: 1;
     }
   }
@@ -325,38 +325,38 @@
 }
 
 /**
- * These are helper mixins used in tnk-button to reduce abstractions and adhere 
+ * These are helper mixins used in amb-button to reduce abstractions and adhere 
  * to reusability.
  */
-@mixin tnk-button-is-not-disabled() {
+@mixin amb-button-is-not-disabled() {
   &:not(:disabled),
   &:not(.is-disabled) {
     @content;
   }
 }
 
-@mixin tnk-button-is-disabled() {
+@mixin amb-button-is-disabled() {
   &:disabled,
   &.is-disabled {
     @content;
   }
 }
 
-@mixin tnk-button-is-hovered() {
+@mixin amb-button-is-hovered() {
   &:hover,
   &.is-hovered {
     @content;
   }
 }
 
-@mixin tnk-button-is-focused() {
+@mixin amb-button-is-focused() {
   &:focus,
   &.is-focused {
     @content;
   }
 }
 
-@mixin tnk-button-is-active() {
+@mixin amb-button-is-active() {
   &:active,
   &.is-active {
     @content;
@@ -365,8 +365,8 @@
 
 // TO-DO: Deprecate this helper mixin since it's not used anymore.
 // Shorthand version of the specific state functions.
-@mixin tnk-button-is-state($state: 'disabled') {
-  @include tnk-button-is-#{$state} {
+@mixin amb-button-is-state($state: 'disabled') {
+  @include amb-button-is-#{$state} {
     @content;
   }
 }
