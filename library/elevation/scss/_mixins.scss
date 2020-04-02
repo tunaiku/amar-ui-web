@@ -2,17 +2,17 @@
 
 /// Generate all elevation classes.
 ///
-@mixin tnk-create-elevation-classes() {
+@mixin amb-create-elevation-classes() {
   @for $i from 1 through $amb-elevation-max-level {
     $elevation-level: $i;
 
     .Elevation-#{$i} {
-      @include tnk-create-elevation($elevation-level);
+      @include amb-create-elevation($elevation-level);
     }
   }
 }
 
-@mixin tnk-create-elevation(
+@mixin amb-create-elevation(
   $level: $amb-elevation-level,
   $opacity: $amb-elevation-box-shadow-color-opacity,
   $color: $amb-elevation-box-shadow-color-value
