@@ -4,14 +4,14 @@
 
 /// Generates core, state and variant classes of checkbox component.
 ///
-@mixin tnk-create-checkbox-classes() {
+@mixin amb-create-checkbox-classes() {
   .Checkbox {
     display: flex;
     flex-direction: row;
     align-items: center;
 
     > *:not(:first-child) {
-      margin-left: tnk-spacing('small');
+      margin-left: amb-spacing('small');
     }
 
     &-control {
@@ -19,8 +19,8 @@
       appearance: none;
       height: 20px;
       width: 20px;
-      border: solid 2px tnk-color-theme-shade('neutral', 60);
-      border-radius: tnk-border-radius('base');
+      border: solid 2px amb-color-theme('neutral', 60);
+      border-radius: amb-border-radius('base');
       background-color: transparent;
       transition: all 100ms ease-in-out;
       outline: none;
@@ -46,8 +46,8 @@
 
       &:checked,
       &.is-checked {
-        background-color: tnk-color-theme('primary');
-        border-color: tnk-color-theme('primary');
+        background-color: amb-color-theme('primary');
+        border-color: amb-color-theme('primary');
 
         &:after {
           transform: translate(-50%, -60%) rotate(45deg) scale(1);
@@ -57,12 +57,12 @@
 
       &:focus,
       &.is-focused {
-        box-shadow: 0 0 0 5px tnk-color-theme-opacity('primary', 0.2);
+        box-shadow: 0 0 0 5px amb-color-theme-opacity('primary', 0.2);
       }
 
       &:active,
       &.is-active {
-        box-shadow: 0 0 0 5px tnk-color-theme-opacity('primary', 0.2);
+        box-shadow: 0 0 0 5px amb-color-theme-opacity('primary', 0.2);
       }
 
       &.is-indeterminate {
@@ -80,8 +80,8 @@
 
         &:checked,
         &.is-checked {
-          background-color: tnk-color-theme('neutral');
-          border-color: tnk-color-theme('neutral');
+          background-color: amb-color-theme('neutral');
+          border-color: amb-color-theme('neutral');
 
           &:after {
             opacity: 1;
@@ -90,18 +90,18 @@
 
         &:focus,
         &.is-focused {
-          box-shadow: 0 0 0 5px tnk-color-theme-opacity('neutral', 0.2);
+          box-shadow: 0 0 0 5px amb-color-theme-opacity('neutral', 0.2);
         }
 
         &:active,
         &.is-active {
-          box-shadow: 0 0 0 5px tnk-color-theme-opacity('neutral', 0.2);
+          box-shadow: 0 0 0 5px amb-color-theme-opacity('neutral', 0.2);
         }
       }
     }
 
     &-label {
-      color: tnk-color-theme('dark');
+      color: amb-color-theme('dark');
       cursor: pointer;
     }
   }
