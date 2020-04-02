@@ -3,38 +3,39 @@
 
 /// Initial entrypoint mixin to create base Field class.
 ///
-@mixin tnk-create-field-classes() {
+@mixin amb-create-field-classes() {
   .Field {
-    @include tnk-field-base-styles();
-    @include tnk-append-field-label();
-    @include tnk-append-field-helper();
+    @include amb-field-base-styles();
+    @include amb-append-field-label();
+    @include amb-append-field-helper();
 
     > *:not(:last-child) {
-      margin-bottom: tnk-spacing('3xsmall');
+      margin-bottom: amb-spacing('3xsmall');
     }
   }
 }
 
 /// Basic styles for field component
 ///
-@mixin tnk-field-base-styles() {
+@mixin amb-field-base-styles() {
   display: flex;
   flex-direction: column;
 }
 
-@mixin tnk-append-field-label() {
+@mixin amb-append-field-label() {
   &-label {
     // to reset initial 'display: block' style if tag is label.
     display: flex;
 
-    font-size: tnk-font-size('base');
-    font-weight: tnk-font-weight('semibold');
+    font-size: amb-font-size('small');
+    font-weight: amb-font-weight('semibold');
   }
 }
 
-@mixin tnk-append-field-helper() {
+@mixin amb-append-field-helper() {
   &-helper {
-    font-size: tnk-font-size('small');
-    color: tnk-color-theme('darker');
+    // TO-DO: Convert into typography style caption12.
+    font-size: amb-font-size('xsmall');
+    color: amb-color-theme('darker');
   }
 }
