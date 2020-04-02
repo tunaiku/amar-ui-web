@@ -1,69 +1,69 @@
 @import './variables';
 
-@mixin tnk-create-text-color-classes() {
+@mixin amb-create-text-color-classes() {
   $stylerules: ('Color');
 
   @each $stylerule in $stylerules {
     .#{$stylerule} {
-      @include tnk-create-color-themes($color-type: 'text');
-      @include tnk-create-color-helpers($color-type: 'text');
+      @include amb-create-color-themes($color-type: 'text');
+      @include amb-create-color-helpers($color-type: 'text');
     }
   }
 }
 
-@mixin tnk-create-bg-color-classes() {
+@mixin amb-create-bg-color-classes() {
   $stylerules: ('BgColor', 'BackgroundColor');
 
   @each $stylerule in $stylerules {
     .#{$stylerule} {
-      @include tnk-create-color-themes($color-type: 'background');
-      @include tnk-create-color-helpers($color-type: 'background');
+      @include amb-create-color-themes($color-type: 'background');
+      @include amb-create-color-helpers($color-type: 'background');
     }
   }
 }
 
-@mixin tnk-create-color-themes($color-type) {
+@mixin amb-create-color-themes($color-type) {
   $color-type-property: if($color-type == 'background', 'background-color', 'color');
 
-  @each $color-theme, $color-theme-value in $amb-color-themes {
+  @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &-#{$color-theme} {
-      @include tnk-append-color-shade-variants($color-type, $color-theme);
+      @include amb-append-color-shade-variants($color-type, $color-theme);
 
       #{$color-type-property}: $color-theme-value !important;
 
       @if $color-type == 'background' {
-        color: tnk-color-contrast($color-theme-value);
+        color: amb-color-contrast($color-theme-value);
       }
     }
   }
 }
 
-@mixin tnk-append-color-shade-variants($color-type, $color-theme) {
+@mixin amb-append-color-shade-variants($color-type, $color-theme) {
   @if not $color-theme {
     @error 'You must pass $color-theme value to use this mixin!';
   } @else if not $color-type {
     @error 'You must pass $color-type value to use this mixin!';
   }
 
-  $color-theme-value: tnk-color-theme($color-theme);
+  $color-theme-value: amb-color-theme($color-theme);
   $color-type-property: if($color-type == 'background', 'background-color', 'color');
 
   @for $shade-index from 1 through 100 {
     @if $shade-index % 10 == 0 {
-      $color-value: tnk-color-shade($color-theme-value, $shade-index);
+      $color-value: amb-color-shade($color-theme-value, $shade-index);
 
       &-#{$shade-index} {
         #{$color-type-property}: $color-value !important;
 
         @if $color-type == 'background' {
-          color: tnk-color-contrast($color-value);
+          color: amb-color-contrast($color-value);
         }
       }
     }
   }
 }
 
-@mixin tnk-create-color-helpers($color-type) {
+@mixin amb-create-color-helpers($color-type) {
   $color-type-property: if($color-type == 'background', 'background-color', 'color');
 
   &-transparent {

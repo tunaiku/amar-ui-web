@@ -4,35 +4,36 @@
 /// @param {String} $percentage
 ///
 @function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
+  @return mix($white, $color, $percentage);
 }
 
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+  @return mix($black, $color, $percentage);
 }
 
 /// Returns the color value of the given color theme.
 ///
 /// @param {String} $color-theme
-/// @example tnk-color-theme("primary")
+/// @example amb-color-theme("primary")
 ///
-@function tnk-color-theme($color-theme) {
-  @if not map-has-key($amb-color-themes, $color-theme) {
-    @error "The theme '#{$color-theme}' is not found in '$amb-color-themes' variable map!";
+@function amb-color-theme($color-theme, $shade-level: 50) {
+  @if not map-has-key($amb-color-theme-map, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$amb-color-theme-map' variable map!";
   }
 
-  @return map-get($amb-color-themes, $color-theme);
+  $color-hex: map-get($amb-color-theme-map, $color-theme);
+  @return amb-color-shade($color-hex, $shade-level);
 }
 
 /// Returns a different shade of the given color value.
 ///
 /// @param {Number} $color-value
-/// @example tnk-color-shade(#abc123, 50)
+/// @example amb-color-shade(#abc123, 50)
 ///
-@function tnk-color-shade($color-value, $shade-level: 50) {
+@function amb-color-shade($color-value, $shade-level: 50) {
   // returns the absolute value of $shade-level and round it to the nearest multiplication of 10.
   @if $shade-level > 100 or $shade-level < 0 {
-    @error "$shade-level value cannot exceed 100 or less than 0!";
+    @error "$shade-level value cannot exceeds 100 or less than 0!";
   }
 
   @if $shade-level > 50 {
@@ -44,22 +45,22 @@
   }
 }
 
-/// The shorthand version of tnk-color-theme and tnk-color-shade functions.
+/// The shorthand version of amb-color-theme and amb-color-shade functions.
 ///
 /// Gets the color value from the given color theme (e.g primary) and returns a different shade variant
 /// of the color value using the tinter shader function of the specified shade level.
 ///
-/// Color theme should be available in $amb-color-themes variable map, otherwise it will return an error.
+/// Color theme should be available in $amb-color-theme-map variable map, otherwise it will return an error.
 ///
-/// e.g: tnk-color-theme-shade("primary", 50)
+/// e.g: amb-color-theme("primary", 50)
 ///
 /// @param {String} $color-theme
 /// @param {Number} $shade-level
 ///
-@function tnk-color-theme-shade($color-theme, $shade-level: 50) {
-  $color-value: tnk-color-theme($color-theme);
+@function amb-color-theme-shade($color-theme, $shade-level: 50) {
+  $color-value: amb-color-theme($color-theme);
 
-  @return tnk-color-shade($color-value, $shade-level);
+  @return amb-color-shade($color-value, $shade-level);
 }
 
 /// A shorthand function to get a specific opacity level of the selected color theme.
@@ -67,10 +68,10 @@
 ///
 /// @param {String} $color-theme
 /// @param {Number} $opacity-level
-/// @example tnk-color-theme-opacity("primary", 0.9)
+/// @example amb-color-theme-opacity("primary", 0.9)
 ///
-@function tnk-color-theme-opacity($color-theme, $opacity-level: 1) {
-  $color-value: tnk-color-theme($color-theme);
+@function amb-color-theme-opacity($color-theme, $opacity-level: 1) {
+  $color-value: amb-color-theme($color-theme);
   @return rgba($color-value, $opacity-level);
 }
 
@@ -80,10 +81,10 @@
 /// @todo This function has the literal computations as Bootstrap's. Create our own custom
 /// function to determine color contrast of the given $color value.
 ///
-@function tnk-color-contrast($color) {
+@function amb-color-contrast($color) {
   $color-contrast-threshold: 200;
-  $color-contrast-dark-text: $darker;
-  $color-contrast-light-text: $lighter;
+  $color-contrast-dark-text: $black;
+  $color-contrast-light-text: $white;
 
   $red: red($color);
   $green: green($color);
@@ -91,14 +92,14 @@
 
   $yiq: (($red * 299) + ($green * 587) + ($blue * 114)) / 1000;
 
-  @return if($yiq >= $color-contrast-threshold, $darker, $lighter);
+  @return if($yiq >= $color-contrast-threshold, $black, $white);
 }
 
-@function tnk-color-theme-contrast($color-theme) {
-  @if not map-has-key($amb-color-themes, $color-theme) {
-    @error "The theme '#{$color-theme}' is not found in '$amb-color-themes' variable map!";
+@function amb-color-theme-contrast($color-theme) {
+  @if not map-has-key($amb-color-theme-map, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$amb-color-theme-map' variable map!";
   }
 
-  $color-value: tnk-color-theme($color-theme);
-  @return tnk-color-contrast($color-value);
+  $color-value: amb-color-theme($color-theme);
+  @return amb-color-contrast($color-value);
 }
