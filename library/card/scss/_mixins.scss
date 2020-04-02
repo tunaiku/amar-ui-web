@@ -1,15 +1,15 @@
 @import '@amar-ui-web/color/scss/variables';
 @import './variables';
 
-@mixin tnk-create-card-classes() {
+@mixin amb-create-card-classes() {
   .Card {
-    @include tnk-card-base-styles();
-    @include tnk-append-card-parts();
-    @include tnk-append-card-elevated-variant();
+    @include amb-card-base-styles();
+    @include amb-append-card-parts();
+    @include amb-append-card-elevated-variant();
   }
 }
 
-@mixin tnk-card-base-styles() {
+@mixin amb-card-base-styles() {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   border-width: $amb-card-border-width;
 }
 
-@mixin tnk-append-card-parts() {
+@mixin amb-append-card-parts() {
   &-block {
     padding: $amb-card-padding;
   }
@@ -32,27 +32,11 @@
   &-footer {
     padding: $amb-card-padding;
   }
-
-  // &-media {
-  //   position: relative;
-  //   height: $amb-card-media-height;
-  //   min-height: $amb-card-media-height;
-
-  //   > img {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     height: 100%;
-  //     width: 100%;
-  //     object-fit: cover;
-  //     object-position: center;
-  //   }
-  // }
 }
 
-@mixin tnk-append-card-elevated-variant() {
+@mixin amb-append-card-elevated-variant() {
   &--elevated {
-    @include tnk-create-elevation(
+    @include amb-create-elevation(
       $level: $amb-card-elevation-level,
       $opacity: $amb-card-elevation-opacity
     );
