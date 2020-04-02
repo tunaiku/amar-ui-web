@@ -13,7 +13,7 @@
 }
 
 @mixin amb-append-banner-color-variants() {
-  @each $color-theme, $color-value in $amb-color-themes {
+  @each $color-theme, $color-value in $amb-color-theme-map {
     &--#{$color-theme} {
       @include amb-append-banner-color-shade-variants($color-theme);
 
