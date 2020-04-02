@@ -1,9 +1,9 @@
 @import '@amar-ui-web/shape/scss/variables';
 @import '@amar-ui-web/spacing/scss/variables';
 
-$amb-dialog-border-radius: tnk-border-radius('large') !default;
+$amb-dialog-border-radius: amb-border-radius('large') !default;
 $amb-dialog-backdrop-bg-color: rgba(black, 0.3) !default;
-$amb-dialog-block-padding: tnk-spacing('base') !default;
+$amb-dialog-block-padding: amb-spacing('base') !default;
 
 $amb-dialog-box-elevation-opacity: 0.2 !default;
 $amb-dialog-box-elevation-level: 2 !default;
