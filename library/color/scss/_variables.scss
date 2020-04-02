@@ -1,44 +1,45 @@
 @import './color-palletes';
 @import './functions';
 
-/// Color themes
 ///
-$primary-color: $limeade !default;
-$secondary-color: $blue-ribbon !default;
-$tertiary-color: $trinidad !default;
-$success-color: $green !default;
-$danger-color: $red !default;
-$warning-color: $yellow !default;
-$info-color: $blue !default;
-$neutral-color: $gray !default;
+$amb-primary: $limeade !default;
+$amb-secondary: $blue-ribbon !default;
+$amb-tertiary: $trinidad !default;
+$amb-success: $green !default;
+$amb-danger: $red !default;
+$amb-warning: $yellow !default;
+$amb-info: $blue !default;
 
-$neutral-10: tint($neutral-color, 80%);
-$neutral-20: tint($neutral-color, 60%);
-$neutral-30: tint($neutral-color, 40%);
-$neutral-40: tint($neutral-color, 20%);
-$neutral-50: $neutral-color;
-$neutral-60: shade($neutral-color, 20%);
-$neutral-70: shade($neutral-color, 40%);
-$neutral-80: shade($neutral-color, 60%);
-$neutral-90: shade($neutral-color, 80%);
+/// Shade of neutral color.
+///
+$amb-neutral: $gray !default;
+$amb-neutral-10: tint($amb-neutral, 80%);
+$amb-neutral-20: tint($amb-neutral, 60%);
+$amb-neutral-30: tint($amb-neutral, 40%);
+$amb-neutral-40: tint($amb-neutral, 20%);
+$amb-neutral-50: $amb-neutral;
+$amb-neutral-60: shade($amb-neutral, 20%);
+$amb-neutral-70: shade($amb-neutral, 40%);
+$amb-neutral-80: shade($amb-neutral, 60%);
+$amb-neutral-90: shade($amb-neutral, 80%);
 
-$amb-color-themes: () !default;
-$amb-color-themes: map-merge(
+/// Map variables for color themes.
+///
+$amb-color-theme-map: () !default;
+$amb-color-theme-map: map-merge(
   (
-    'primary': $primary-color,
-    'secondary': $secondary-color,
-    'tertiary': $tertiary-color,
-    'success': $success-color,
-    'warning': $warning-color,
-    'danger': $danger-color,
-    'info': $info-color,
-    'neutral': $neutral-color,
-    'light': $neutral-30,
-    'lighter': $neutral-10,
-    'dark': $neutral-80,
-    'darker': $neutral-90,
-    'black': #000000,
-    'white': #ffffff,
+    'primary': $amb-primary,
+    'secondary': $amb-secondary,
+    'tertiary': $amb-tertiary,
+    'success': $amb-success,
+    'warning': $amb-warning,
+    'danger': $amb-danger,
+    'info': $amb-info,
+    'neutral': $amb-neutral,
+    'light': $amb-neutral-30,
+    'lighter': $amb-neutral-10,
+    'dark': $amb-neutral-80,
+    'darker': $amb-neutral-90,
   ),
-  $amb-color-themes
+  $amb-color-theme-map
 );
