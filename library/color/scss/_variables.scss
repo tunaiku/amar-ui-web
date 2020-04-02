@@ -42,11 +42,3 @@ $amb-color-themes: map-merge(
   ),
   $amb-color-themes
 );
-
-// Neutrals
-$black: #000000;
-$white: #ffffff;
-$light: tnk-color-theme('light');
-$lighter: tnk-color-theme('lighter');
-$dark: tnk-color-theme('dark');
-$darker: tnk-color-theme('darker');
