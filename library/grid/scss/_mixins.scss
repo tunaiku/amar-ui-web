@@ -2,19 +2,19 @@
 @import '@amar-ui-web/responsive/scss/mixins';
 @import './variables';
 
-@mixin tnk-create-grid-classes() {
+@mixin amb-create-grid-classes() {
   .Grids {
-    @include tnk-grid-row-base();
-    @include tnk-grid-row-modifiers();
+    @include amb-grid-row-base();
+    @include amb-grid-row-modifiers();
   }
 
   .Grid {
-    @include tnk-grid-column-base();
-    @include tnk-grid-columns();
+    @include amb-grid-column-base();
+    @include amb-grid-columns();
   }
 }
 
-@mixin tnk-grid-row-base() {
+@mixin amb-grid-row-base() {
   display: flex;
   flex-wrap: wrap;
   margin: 0 ($amb-grid-gap-gutter / -1);
@@ -25,7 +25,7 @@
   }
 }
 
-@mixin tnk-grid-row-modifiers() {
+@mixin amb-grid-row-modifiers() {
   &--gapless {
     padding: 0 !important;
 
@@ -36,14 +36,14 @@
   }
 }
 
-@mixin tnk-grid-column-base() {
+@mixin amb-grid-column-base() {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0;
   max-width: 100%;
 }
 
-@mixin tnk-grid-columns() {
+@mixin amb-grid-columns() {
   @for $index from 1 through $amb-grid-columns {
     $width: $index / $amb-grid-columns;
 
@@ -55,7 +55,7 @@
     }
   }
 
-  @include tnk-append-responsive-media-classes() {
+  @include amb-append-responsive-media-classes() {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -64,7 +64,7 @@
 
   @each $breakpoint, $width in $amb-responsive-breakpoints {
     @for $index from 1 through $amb-grid-columns {
-      @include tnk-responsive-media($breakpoint) {
+      @include amb-responsive-media($breakpoint) {
         $width: $index / $amb-grid-columns;
 
         &-#{$breakpoint}-#{$index} {
