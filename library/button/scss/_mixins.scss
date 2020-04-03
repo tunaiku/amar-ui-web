@@ -50,6 +50,8 @@
   outline: none;
   -webkit-appearance: none;
 
+  text-decoration: none;
+
   /* Apply pointer cursor on non-disabled buttons */
   @include amb-button-is-not-disabled() {
     cursor: pointer !important;
