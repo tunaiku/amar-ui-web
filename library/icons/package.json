@@ -2,5 +2,8 @@
   "name": "@amar-ui-web/icons",
   "version": "1.1.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@amar-ui-web/typography": "^1.0.1"
+  }
 }
