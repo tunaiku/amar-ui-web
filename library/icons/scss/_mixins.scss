@@ -1,17 +1,24 @@
+@import '@amar-ui-web/typography/scss/variables';
 @import './variables';
 
-@mixin tnk-create-icon-classes() {
+@mixin amb-create-icon-classes() {
   .Icon {
-    @include tnk-create-icon-size-helpers();
+    @include amb-append-icon-core-styles();
+    @include amb-create-icon-size-variants();
   }
 }
 
-@mixin tnk-create-icon-size-helpers() {
-  @each $size-name, $size-value in $amb-icon-sizes {
-    &-#{$size-name} {
+@mixin amb-append-icon-core-styles() {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin amb-create-icon-size-variants() {
+  @each $size-name, $size-value in $amb-icon-size-map {
+    &--#{$size-name} {
       height: $size-value;
       width: $size-value;
-      font-size: $size-name;
     }
   }
 }
