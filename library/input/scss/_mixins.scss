@@ -3,18 +3,18 @@
 @import '@amar-ui-web/spacing/scss/functions';
 @import './variables';
 
-@mixin tnk-create-input-classes() {
+@mixin amb-create-input-classes() {
   .Input,
   .Textarea {
-    @include tnk-input-base-styles();
-    @include tnk-append-input-state-variants();
-    @include tnk-append-input-color-theme-variants();
-    @include tnk-append-input-size-variants();
-    @include tnk-append-input-shape-variants();
+    @include amb-input-base-styles();
+    @include amb-append-input-state-variants();
+    @include amb-append-input-color-theme-variants();
+    @include amb-append-input-size-variants();
+    @include amb-append-input-shape-variants();
   }
 }
 
-@mixin tnk-input-base-styles() {
+@mixin amb-input-base-styles() {
   position: relative;
   display: flex;
   flex: 1 1 auto;
@@ -33,13 +33,13 @@
   white-space: normal;
 }
 
-@mixin tnk-append-input-state-variants($color-theme: 'base') {
-  @include tnk-append-input-focused-state($color-theme);
-  @include tnk-append-input-hovered-state($color-theme);
-  @include tnk-append-input-disabled-state();
+@mixin amb-append-input-state-variants($color-theme: 'base') {
+  @include amb-append-input-focused-state($color-theme);
+  @include amb-append-input-hovered-state($color-theme);
+  @include amb-append-input-disabled-state();
 }
 
-@mixin tnk-append-input-focused-state($color-theme) {
+@mixin amb-append-input-focused-state($color-theme) {
   $focused-border-color: '' !default;
   $focused-box-shadow: '' !default;
 
@@ -47,13 +47,13 @@
     $focused-border-color: $amb-input-focused-border-color;
     $focused-box-shadow: $amb-input-focused-box-shadow;
   } @else {
-    $focused-border-color: tnk-theme-color($color-theme);
-    $focused-box-shadow-color: tnk-theme-color($color-theme);
+    $focused-border-color: amb-theme-color($color-theme);
+    $focused-box-shadow-color: amb-theme-color($color-theme);
     $focused-box-shadow-values: $amb-input-focused-box-shadow-values;
     $focused-box-shadow: $focused-box-shadow-values $focused-box-shadow-color;
   }
 
-  @include tnk-input-is-not-disabled() {
+  @include amb-input-is-not-disabled() {
     &:focus,
     &.is-focused {
       border-color: $focused-border-color;
@@ -62,8 +62,8 @@
   }
 }
 
-@mixin tnk-append-input-hovered-state($color-theme) {
-  @include tnk-input-is-not-disabled() {
+@mixin amb-append-input-hovered-state($color-theme) {
+  @include amb-input-is-not-disabled() {
     &:hover,
     &.is-hovered {
       border-color: $amb-input-hovered-border-color;
@@ -71,7 +71,7 @@
   }
 }
 
-@mixin tnk-append-input-disabled-state() {
+@mixin amb-append-input-disabled-state() {
   &:disabled,
   &.is-disabled {
     background-color: $amb-input-disabled-background;
@@ -82,26 +82,26 @@
 /**
  * Append color theme variant classes.
  */
-@mixin tnk-append-input-color-theme-variants() {
-  @each $color-theme, $color-theme-value in $amb-color-themes {
+@mixin amb-append-input-color-theme-variants() {
+  @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &--#{$color-theme} {
-      @include tnk-append-input-state-variants($color-theme);
+      @include amb-append-input-state-variants($color-theme);
 
       border-color: $color-theme-value;
     }
   }
 }
 
-@mixin tnk-append-input-size-variants() {
-  @each $size-name, $size-value in $amb-font-sizes {
+@mixin amb-append-input-size-variants() {
+  @each $size-name, $size-value in $amb-font-size-map {
     &--#{$size-name} {
-      font-size: tnk-font-size($size-name);
-      padding: tnk-spacing($size-name);
+      font-size: amb-font-size($size-name);
+      padding: amb-spacing($size-name);
     }
   }
 }
 
-@mixin tnk-append-input-shape-variants() {
+@mixin amb-append-input-shape-variants() {
   &--rounded {
     border-radius: $amb-input-rounded-border-radius;
   }
@@ -111,7 +111,7 @@
  * Helper mixin to style input only when it's enabled
  * Approach taken from MDC.
  */
-@mixin tnk-input-is-not-disabled() {
+@mixin amb-input-is-not-disabled() {
   &:not(:disabled):not(.is-disabled) {
     @content;
   }
@@ -120,14 +120,14 @@
 /**
  * Generates InputGroup classes.
  */
-@mixin tnk-create-input-group-classes() {
+@mixin amb-create-input-group-classes() {
   .InputGroup {
-    @include tnk-input-group-base-styles();
-    @include tnk-append-input-group-parts();
+    @include amb-input-group-base-styles();
+    @include amb-append-input-group-parts();
   }
 }
 
-@mixin tnk-input-group-base-styles() {
+@mixin amb-input-group-base-styles() {
   display: flex;
   flex-direction: row;
 
@@ -136,39 +136,39 @@
   }
 
   > *:first-child {
-    border-top-left-radius: tnk-border-radius('base');
-    border-bottom-left-radius: tnk-border-radius('base');
+    border-top-left-radius: amb-border-radius('base');
+    border-bottom-left-radius: amb-border-radius('base');
   }
 
   > *:last-child {
-    border-top-right-radius: tnk-border-radius('base');
-    border-bottom-right-radius: tnk-border-radius('base');
+    border-top-right-radius: amb-border-radius('base');
+    border-bottom-right-radius: amb-border-radius('base');
   }
 }
 
-@mixin tnk-append-input-group-parts() {
-  @include tnk-append-input-group-addon();
+@mixin amb-append-input-group-parts() {
+  @include amb-append-input-group-addon();
 }
 
-@mixin tnk-append-input-group-addon() {
+@mixin amb-append-input-group-addon() {
   &-addon {
-    @include tnk-input-group-addon-base-styles();
-    @include tnk-append-input-group-color-theme-variants();
+    @include amb-input-group-addon-base-styles();
+    @include amb-append-input-group-color-theme-variants();
   }
 }
 
-@mixin tnk-input-group-addon-base-styles() {
+@mixin amb-input-group-addon-base-styles() {
   display: flex;
   align-items: center;
-  padding: 0 tnk-spacing('base');
-  background-color: tnk-color-theme('light');
+  padding: 0 amb-spacing('base');
+  background-color: amb-color-theme('light');
 }
 
-@mixin tnk-append-input-group-color-theme-variants() {
-  @each $color-theme, $color-theme-value in $amb-color-themes {
+@mixin amb-append-input-group-color-theme-variants() {
+  @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &--#{$color-theme} {
       background-color: $color-theme-value !important;
-      color: tnk-color-contrast($color-theme-value) !important;
+      color: amb-color-contrast($color-theme-value) !important;
     }
   }
 }
