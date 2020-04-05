@@ -1,0 +1,46 @@
+@import './variables';
+
+@mixin amb-create-image-classes() {
+  .Image {
+    @include amb-append-image-base-styles();
+  }
+
+  @include amb-append-object-fit-variants();
+  @include amb-append-object-position-variants();
+}
+
+@mixin amb-append-image-base-styles() {
+  position: relative;
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@mixin amb-append-object-fit-variants() {
+  .ObjectFit {
+    @each $object-fit in $amb-object-fit-map {
+      > img {
+        &-#{$object-fit} {
+          object-fit: $object-fit !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin amb-append-object-position-variants() {
+  .ObjectPosition {
+    @each $object-position in $amb-object-position-map {
+      > img {
+        &-#{$object-position} {
+          object-position: $object-position !important;
+        }
+      }
+    }
+  }
+}
