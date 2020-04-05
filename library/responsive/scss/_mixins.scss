@@ -3,9 +3,9 @@
 /**
  * Applies breakpoint min/max width
  */
-@mixin tnk-responsive-media($breakpoint-name, $width-type: 'min') {
+@mixin amb-responsive-media($breakpoint-name, $width-type: 'min') {
   @if map-has-key($amb-responsive-breakpoints, $breakpoint-name) {
-    $breakpoint-width: tnk-breakpoint-width($breakpoint-name);
+    $breakpoint-width: amb-breakpoint-width($breakpoint-name);
     @if $width-type == 'max' {
       $width: $width - 1px;
     }
@@ -18,9 +18,9 @@
   }
 }
 
-@mixin tnk-append-responsive-media-classes() {
+@mixin amb-append-responsive-media-classes() {
   @each $breakpoint, $width in $amb-responsive-breakpoints {
-    @include tnk-responsive-media($breakpoint) {
+    @include amb-responsive-media($breakpoint) {
       &-#{$breakpoint},
       &-#{$breakpoint} {
         @content;
