@@ -3,15 +3,15 @@
 
 /// Generates Container class and its underlying variants and parts.
 ///
-@mixin tnk-create-container-classes() {
+@mixin amb-create-container-classes() {
   .Container {
-    @include tnk-add-container-base-styles();
-    @include tnk-append-container-modifiers();
-    @include tnk-container-responsive();
+    @include amb-add-container-base-styles();
+    @include amb-append-container-modifiers();
+    @include amb-container-responsive();
   }
 }
 
-@mixin tnk-add-container-base-styles() {
+@mixin amb-add-container-base-styles() {
   position: relative;
   margin: 0 auto;
   padding: 0 $amb-container-spacing;
@@ -24,7 +24,7 @@
 
 /// Generate variant classes for Container by appending some modifiers.
 ///
-@mixin tnk-append-container-modifiers() {
+@mixin amb-append-container-modifiers() {
   &--fullWidth {
     max-width: none;
     width: 100%;
@@ -33,9 +33,9 @@
 
 /// Turn Container into responsive media class where it resizes on different breakpoints to
 /// achieve responsiveness.
-@mixin tnk-container-responsive() {
+@mixin amb-container-responsive() {
   @each $breakpoint-name, $breakpoint-width in $amb-container-widths {
-    @include tnk-responsive-media($breakpoint-name) {
+    @include amb-responsive-media($breakpoint-name) {
       max-width: $breakpoint-width;
     }
   }
