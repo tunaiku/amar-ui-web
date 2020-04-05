@@ -27,7 +27,8 @@
 
 @mixin amb-grid-row-modifiers() {
   &--gapless {
-    padding: 0 !important;
+    padding: 0;
+    margin: 0;
 
     > .Grid,
     > [class*='Column-'] {
