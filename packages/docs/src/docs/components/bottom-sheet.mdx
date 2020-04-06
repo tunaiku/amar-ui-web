@@ -1,0 +1,61 @@
+---
+path: '/components/bottom-sheet'
+title: 'Bottom Sheet'
+description: 'Surface that is attached at the bottom'
+---
+
+import BottomSheetExample from 'examples/bottom-sheet-example';
+
+A **bottom sheet** is simply an interuptive component that demands user's attention and
+input to dismiss, similar to a dialog. It is typically used when we want to divert user's attention
+on an important information that we want the user to know. Like dialogs and modals, it's required
+to present a bottom sheet with a call-to-action element like a button or link for next action.
+
+## Implementation
+
+To implement a bottom sheet, first create a bottom sheet wrapper by appending `BottomSheet` class.
+Then add `BottomSheet-dialog` and `BottomSheet-backdrop` as direct children.
+
+- `BottomSheet` transforms an element into a bottom sheet wrapper. Controls how it position itself in relative
+  to the viewport since it is fixed at the bottom.
+- `BottomSheet-dialog` is where you can put any content inside.
+- `BottomSheet-backdrop` creates a semi-transparent overlay that cover every view behind the backdrop and
+  normally acts as the click target to dismiss the bottom sheet.
+
+Here are some of the classes you can use inside of `BottomSheet-dialog`.
+
+- `BottomSheet-header` is typically used to present the title and description of the bottom sheet.
+- `BottomSheet-body` is where you should put all vital information that you want to present.
+- `BottomSheet-footer` is where you could normally put the call-to-action such as buttons or links.
+- `BottomSheet-media` is an **optional** part element where you can put illustrative media for visual aids.
+
+Since the example below is just for illustrative purposes, both `BottomSheet` and `BottomSheet-backdrop`
+classes are omitted.
+
+```html preview=true bgColor=lighter center=true
+<div class="BottomSheet-dialog">
+  <div class="BottomSheet-block PaddingTop-xlarge PaddingBottom-xlarge">
+    <div class="Flex JustifyContent-center">
+      <img
+        src="https://assets-global.website-files.com/5bfd1275cc56e15ce750b18e/5d0521f085f49b4ae4a43c79_28.png"
+        style="width: 30%"
+      />
+    </div>
+  </div>
+  <div class="BottomSheet-block">
+    <h5 class="Typography-heading20 MarginBottom-2xsmall">Selamat, Pinjaman Anda telah lunas!</h5>
+    <p class="Color-neutral-80 MarginBottom">
+      Terima kasih telah menggunakan pinjaman Tunaiku. Surat keterangan lunas akan dikirim ke alamat
+      Anda.
+    </p>
+    <button class="Button Button--fullWidth Button--success">Ajukan Pinjaman Lagi</button>
+  </div>
+</div>
+```
+
+## Live Example
+
+Here's a rough visualization of how a bottom sheet would look in a real-app view (see it in **Mobile View**
+for the best experience).
+
+<BottomSheetExample />
