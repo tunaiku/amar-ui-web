@@ -24,6 +24,7 @@
   position: relative;
   display: inline-flex;
   justify-content: center;
+  align-items: center;
   vertical-align: middle;
 
   font-size: $amb-button-font-size;
@@ -274,8 +275,8 @@
  *
  */
 @mixin amb-create-button-shape-classes() {
-  &--rounded {
-    border-radius: amb-border-radius(rounded);
+  &--round {
+    border-radius: amb-border-radius('round');
   }
 
   // Extend button to 100% width of its parent
