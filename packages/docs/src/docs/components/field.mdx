@@ -1,0 +1,52 @@
+---
+path: '/components/field'
+title: 'Field'
+description: 'Arrange form controls to form a unity.'
+---
+
+Field is composed into several parts; `Field`, `Field-label`, `Field-control`, and the optional `Field-helper`.
+
+- `Field-label` is the class to put in a label associating the field.
+- `Field-control` is where you can put the preferred form control; `Input`, `Select`, to name the few.
+- `Field-helper` is an optional class to put in helper text that normally put beneath a control.
+
+Here's a basic example on how `Field` class can be implemented inside of a form.
+
+```html preview=true center=true
+<form>
+  <div class="Field MarginBottom">
+    <label class="Field-label">Full Name</label>
+    <div class="Field-control">
+      <input type="text" placeholder="e.g John Appleseed" class="Input" />
+    </div>
+  </div>
+  <div class="Field MarginBottom">
+    <label class="Field-label">Password</label>
+    <div class="Field-control">
+      <input type="password" placeholder="" class="Input" />
+    </div>
+    <div class="Field-helper">
+      Password should consists of one capital letter and a symbol letter.
+    </div>
+  </div>
+  <div class="Field MarginBottom">
+    <label class="Field-label Color-danger">Email address</label>
+    <div class="Field-control">
+      <input type="text" placeholder="e.g johnappleseed@email.com" class="Input Input--danger" />
+    </div>
+    <div class="Field-helper Color-danger">
+      Email address has a wrong format!
+    </div>
+  </div>
+  <div class="Field">
+    <div class="Field-control">
+      <div class="Checkbox">
+        <input id="TestCheckbox" type="checkbox" class="Checkbox-control" />
+        <label for="TestCheckbox" class="Checkbox-label">
+          By checking this you agree with our terms and conditions.
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+```
