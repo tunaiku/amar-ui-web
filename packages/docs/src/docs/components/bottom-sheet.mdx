@@ -2,35 +2,31 @@
 path: '/components/bottom-sheet'
 title: 'Bottom Sheet'
 description: "A bottom sheet is a type of modal that is attached to the bottom of the viewport.
-Similar to a dialog, it has an interruptive nature and covers the front of the primary content until
-dismissed or confirmed when called. Use bottom sheet to diver's user's attention on an important
-information in a more detailed fashion that a standard dialog lacks."
+Much like dialogs, it covers the front of the primary content until it is
+dismissed or confirmed, hence interruptive. Use bottom sheet to divert user's attention on an important
+information."
 ---
 
 import BottomSheetExample from 'examples/bottom-sheet-example';
 
-## Implementation
+## Usage
 
 To implement a bottom sheet, first create a bottom sheet wrapper by appending `BottomSheet` class.
 Then add `BottomSheet-dialog` and `BottomSheet-backdrop` as direct children.
 
-- `BottomSheet` transforms an element into a bottom sheet wrapper. Controls how it position itself in relative
-  to the viewport since it is fixed at the bottom.
+- `BottomSheet` transforms an element into a bottom sheet wrapper.
 - `BottomSheet-dialog` is where you can put any content inside.
 - `BottomSheet-backdrop` creates a semi-transparent overlay that cover every view behind the backdrop and
   normally acts as the click target to dismiss the bottom sheet.
 
 Here are some of the classes you can use inside of `BottomSheet-dialog`.
 
+- `BottomSheet-media` is an **optional** block for additional illustrative media for visual aids.
 - `BottomSheet-header` is typically used to present the title and description of the bottom sheet.
 - `BottomSheet-body` is where you should put all vital information that you want to present.
 - `BottomSheet-footer` is where you could normally put the call-to-action such as buttons or links.
-- `BottomSheet-media` is an **optional** part element where you can put illustrative media for visual aids.
 
-Since the example below is just for illustrative purposes, both `BottomSheet` and `BottomSheet-backdrop`
-classes are omitted.
-
-```html preview=true bgColor=lighter center=true
+```html preview=true bgColor=neutral.10 center=true
 <div class="BottomSheet-dialog">
   <div class="BottomSheet-block PaddingTop-xlarge PaddingBottom-xlarge">
     <div class="Flex JustifyContent-center">
