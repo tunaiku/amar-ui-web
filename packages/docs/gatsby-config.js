@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Amar UI Components`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: 'Amar UI Web',
+    description:
+      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: `David Kurnia Kristiadi @dkk94`,
   },
   plugins: [
@@ -12,6 +13,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@src': `${__dirname}/src`,
+          '@components': `${__dirname}/src/components`,
+          '@layouts': `${__dirname}/src/layouts`,
+          '@modules': `${__dirname}/src/modules`,
+          '@pages': `${__dirname}/src/pages`,
+          '@styles': `${__dirname}/src/styles`,
+          '@utilities': `${__dirname}/src/utilities`,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

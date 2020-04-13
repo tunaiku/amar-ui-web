@@ -1,14 +1,51 @@
+@import '@amar-ui-web/spacing/scss/variables';
 @import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/spacing';
+@import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/typography/scss/mixins';
 
 .Menu {
-  &-list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-  }
-
   &-item {
-    padding: tnk-spacing('base');
+    border-radius: amb-border-radius('base');
+    overflow: hidden;
+
+    > a {
+      display: flex;
+      text-decoration: none;
+      transition: all 150ms ease-in-out;
+      padding: amb-spacing('small') amb-spacing('base');
+      color: amb-color-theme('neutral', 70);
+
+      &.is-active {
+        color: amb-color-theme('primary');
+        font-weight: amb-font-weight('semibold');
+        background-color: amb-color-theme('primary', 5);
+      }
+
+      &:hover {
+        color: amb-color-theme('primary');
+      }
+    }
+
+    &--category {
+      padding-bottom: amb-spacing('base');
+
+      > a {
+        font-weight: amb-font-weight('semibold');
+        color: $black;
+      }
+
+      > .Menu {
+        > .Menu-item {
+          > a {
+            padding-left: amb-spacing('medium');
+
+            &.is-active {
+              font-weight: amb-font-weight('semibold');
+            }
+          }
+        }
+      }
+    }
   }
 }

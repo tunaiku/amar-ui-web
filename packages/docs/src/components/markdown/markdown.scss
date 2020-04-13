@@ -4,31 +4,42 @@
 @import '@amar-ui-web/shape/scss/variables';
 
 .Markdown {
+  > *:first-child {
+    margin-top: 0;
+  }
+
   > h1,
   > h2,
-  > h3,
+  > h3 {
+    margin-top: amb-spacing('xlarge');
+    margin-bottom: amb-spacing('base');
+    font-weight: amb-font-weight('semibold');
+  }
+
   > h4,
   > h5,
   > h6 {
-    margin-top: tnk-spacing('3xlarge');
-    margin-bottom: tnk-spacing('large');
-    font-weight: tnk-font-weight('medium');
+    margin-top: amb-spacing('large');
+    margin-bottom: amb-spacing('base');
+    font-weight: amb-font-weight('semibold');
   }
 
   > p {
-    margin: tnk-spacing('base') 0;
+    margin: amb-spacing('base') 0;
   }
 
-  > ul {
+  > ul,
+  > ol {
     list-style-type: initial;
-    padding-left: tnk-spacing('2xlarge');
+    padding-left: amb-spacing('medium');
+    margin: amb-spacing('base') 0 amb-spacing('medium');
   }
 
   code {
-    background-color: tnk-color-theme-opacity('primary', 0.1);
-    color: tnk-color-theme('primary');
+    color: currentColor;
     padding: 2.5px 5px;
-    border-radius: tnk-border-radius('base');
-    font-weight: tnk-font-weight('semibold');
+    border-radius: amb-border-radius('base');
+    background-color: amb-color-theme-opacity('neutral', 0.2);
+    font-weight: amb-font-weight('semibold');
   }
 }

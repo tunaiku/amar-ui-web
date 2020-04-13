@@ -9,16 +9,17 @@
   left: 0;
   width: 100%;
   display: flex;
-  background-color: tnk-color-theme('darker');
-  color: tnk-color-contrast(tnk-color-theme('darker'));
-  z-index: 1;
+  z-index: 10;
 
   height: 5em;
-  font-weight: tnk-font-weight('medium');
-  padding-left: tnk-spacing('base');
-  padding-right: tnk-spacing('base');
+  font-weight: amb-font-weight('medium');
+  padding-left: amb-spacing('base');
+  padding-right: amb-spacing('base');
 
-  @include tnk-create-elevation();
+  background-color: amb-color-theme('darker');
+  color: amb-color-contrast(amb-color-theme('darker'));
+
+  @include amb-create-elevation();
 
   // Main Brand
   &-brand {
@@ -30,12 +31,11 @@
     &-brandTitle {
       display: flex;
       align-items: center;
-      font-weight: tnk-font-weight('bold');
-      font-size: tnk-font-size('large');
+      padding-left: amb-spacing('base');
+      padding-right: amb-spacing('base');
       color: inherit;
       text-decoration: none;
-      padding-left: tnk-spacing('base');
-      padding-right: tnk-spacing('base');
+      font-size: amb-font-size('large');
     }
   }
 

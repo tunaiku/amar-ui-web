@@ -1,18 +1,22 @@
 import React from 'react';
 import classNames from 'classnames';
+import './menu.scss';
 
 const defaultProps = {
   tag: 'li',
 };
 
-const MenuItem = ({ tag: Tag, className, children, ...attributes }) => {
-  const cssClasses = classNames(`Menu-item`, className);
+const MenuItem = props => {
+  const { tag: Tag, className, children, isCategory, ...attributes } = props;
+  const cssClasses = classNames({
+    'Menu-item': true,
+    'Menu-item--category': isCategory,
+    className,
+  });
 
-  return (
-    <Tag {...attributes} className={cssClasses}>
-      {children}
-    </Tag>
-  );
+  attributes.className = cssClasses;
+
+  return <Tag {...attributes}>{children}</Tag>;
 };
 
 MenuItem.defaultProps = defaultProps;

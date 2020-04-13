@@ -6,13 +6,16 @@
  */
 
 import React from 'react';
-import { MainHeader } from './modules/components';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import { MainHeader } from './modules/components';
+import useFontAwesomeLibrary from 'modules/fa-library.hook';
 import 'styles/main.scss';
 import './main-layout.scss';
 
 const MainLayout = ({ children }) => {
+  // Initializes icon library to use inside of the webapp.
+  useFontAwesomeLibrary();
+
   return (
     <div className="Main">
       <MainHeader />

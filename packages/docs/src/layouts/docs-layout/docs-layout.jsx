@@ -2,7 +2,8 @@ import React from 'react';
 import MainLayout from '../main-layout/main-layout';
 import { Markdown } from 'components/markdown';
 import { SEO } from 'components/seo';
-import { DocsSidebar } from './modules/components';
+import { DOCS_MENU } from './modules/constants/docs-menu.constant';
+import { DocsMenu } from './modules/components/docs-menu';
 import './docs-layout.scss';
 
 const DocsLayout = ({ data }) => {
@@ -13,20 +14,22 @@ const DocsLayout = ({ data }) => {
     <MainLayout>
       <SEO title={frontmatter.title} />
       <div className="Docs">
-        <DocsSidebar />
+        <div className="Docs-sidebar">
+          <DocsMenu className="Docs-menu" menuItems={DOCS_MENU} />
+        </div>
         <div className="Docs-content">
           <div className="Container">
-            <div className="Docs-article">
-              <header className="Docs-headline">
+            <article className="Docs-article">
+              <header className="Docs-articleHeadline">
                 <h1 className="Heading-1 MarginBottom-small FontSize-5xlarge">
                   {frontmatter.title}
                 </h1>
                 <p className="Heading-4 Color-neutral-70">{frontmatter.description}</p>
               </header>
-              <div className="Docs-markdown">
+              <div className="Docs-articleMarkdown">
                 <Markdown>{mdx && body}</Markdown>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>

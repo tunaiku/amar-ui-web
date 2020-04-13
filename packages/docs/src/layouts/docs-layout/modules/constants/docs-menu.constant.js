@@ -4,6 +4,42 @@ export const DOCS_MENU = [
     path: '/getting-started',
   },
   {
+    title: 'Foundations',
+    path: '/foundations',
+    submenu: [
+      {
+        title: 'Color system',
+        path: '/foundations/color-system',
+      },
+      {
+        title: 'Typography',
+        path: '/foundations/typography',
+      },
+      {
+        title: 'Responsive',
+        path: '/utilities/responsive',
+      },
+    ],
+  },
+  {
+    title: 'Layout',
+    path: '/layout',
+    submenu: [
+      {
+        title: 'Container',
+        path: '/layout/container',
+      },
+      {
+        title: 'Grid System',
+        path: '/layout/grid-system',
+      },
+      {
+        title: 'Spacing',
+        path: '/layout/spacing',
+      },
+    ],
+  },
+  {
     title: 'Components',
     path: '/components',
     submenu: [
@@ -22,10 +58,6 @@ export const DOCS_MENU = [
       {
         title: 'Bottom Bar',
         path: '/components/bottom-bar',
-      },
-      {
-        title: 'Color',
-        path: '/components/color',
       },
       {
         title: 'Field',
@@ -52,8 +84,26 @@ export const DOCS_MENU = [
         path: '/components/checkbox',
       },
       {
-        title: 'Typography',
-        path: '/components/typography',
+        title: 'Image',
+        path: '/components/image',
+      },
+    ],
+  },
+  {
+    title: 'Utilities',
+    path: '/utilities',
+    submenu: [
+      {
+        title: 'Color',
+        path: '/utilities/color',
+      },
+      {
+        title: 'Font & Text',
+        path: '/utilities/font-and-text',
+      },
+      {
+        title: 'Flex',
+        path: '/utilities/flex',
       },
     ],
   },

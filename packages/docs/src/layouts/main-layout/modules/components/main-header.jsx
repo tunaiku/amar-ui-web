@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Navbar, NavbarItem } from 'components/navbar';
+import { Navbar, NavbarItem } from '@components/navbar';
+import { FontAwesomeIcon as FaIcon } from '@fortawesome/react-fontawesome';
 import './main-header.scss';
 
 const MainHeader = () => {
@@ -8,7 +9,7 @@ const MainHeader = () => {
     <div className="Main-header MainHeader">
       <div className="MainHeader-brand">
         <Link to="/" className="MainHeader-brandTitle">
-          Amar UI Web
+          <span>Amar UI Web</span>
         </Link>
       </div>
       <div className="MainHeader-nav">
@@ -27,7 +28,13 @@ const MainHeader = () => {
           </Navbar>
           <Navbar>
             <NavbarItem>
-              <Link to="/github">🌙 Github</Link>
+              <a
+                href="https://github.com/dkk94/amar-ui-web"
+                rel="noreferrer noopener"
+                target="_blank">
+                <FaIcon icon={['fab', 'github']} size="lg" className="MarginRight-small" />
+                <FaIcon icon={'external-link-alt'} size="sm" />
+              </a>
             </NavbarItem>
           </Navbar>
         </div>
