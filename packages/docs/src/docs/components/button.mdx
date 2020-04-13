@@ -1,0 +1,121 @@
+---
+path: '/components/button'
+title: 'Button'
+description: 'Button is an interactive element that carries an action that returns a feedback when
+clicked.'
+---
+
+## Usage
+
+Simply add the `.Button` class in a `<button>` or `<a>` tag to apply the standard styling of
+a button. From here, there are many options which you can choose to further modify your button.
+
+```html preview=true
+<button class="Button">Default button</button>
+```
+
+## Themes
+
+Themed button simply fills a button with the color theme of choice. Themed button holds the
+**base emphasis** and is mostly used for primary actions.
+
+To apply a themed button, simply append the `Button--<theme>` after `Button` class.
+
+```html preview=true
+<button class="Button Button--primary">Primary</button>
+<button class="Button Button--secondary">Secondary</button>
+<button class="Button Button--success">Warning</button>
+<button class="Button Button--warning">Warning</button>
+<button class="Button Button--danger">Danger</button>
+<button class="Button Button--dark">Dark</button>
+<button class="Button Button--light">Light</button>
+```
+
+## Modifiers
+
+You can further modify a button with a set of handful modifiers that have been provided. To know
+more about each modifier, see them on their respective sections. Please note that each modifier
+can only work only after you've added `Button--<theme>` first.
+
+- `Button--text` is a modifier that transforms a themed button into a **text button**.
+- `Button--outlined` is a modifier to transform a button into an **outlined button**.
+- `Button--elevated` is an experimental modifier that adds depth and elevation to a button.
+
+```html preview=true
+<button class="Button Button--primary">Button</button>
+<button class="Button Button--primary Button--outlined">Button</button>
+<button class="Button Button--primary Button--text">Button</button>
+<button class="Button Button--primary Button--elevated">Button</button>
+```
+
+#### Outlined button
+
+Outlined button has a lower emphasis than a themed button and is usually used for secondary actions.
+It is normally used in conjunction with a themed button.
+
+To apply an outlined button, append `.Button--outlined` alongside `Button` and `Button--<theme>`.
+
+```html preview=true bgColor=neutral
+<button class="Button Button--outlined Button--primary">Primary</button>
+<button class="Button Button--outlined Button--secondary">Secondary</button>
+<button class="Button Button--outlined Button--warning">Warning</button>
+<button class="Button Button--outlined Button--danger">Danger</button>
+<button class="Button Button--outlined Button--dark">Dark</button>
+<button class="Button Button--outlined Button--light">Light</button>
+```
+
+#### Text button
+
+**Text button** has no border and fill, leaving only a clickable text. It has the **lowest emphasis**
+than any other variants, hence it is highly optional and should be used only in rare circumstances.
+
+To apply a text button, append `.Button--text` alongside `Button` and `Button--<theme>`.
+
+```html preview=true
+<button class="Button Button--text Button--primary">Primary</button>
+<button class="Button Button--text Button--secondary">Secondary</button>
+<button class="Button Button--text Button--warning">Warning</button>
+<button class="Button Button--text Button--danger">Danger</button>
+<button class="Button Button--text Button--dark">Dark</button>
+<button class="Button Button--text Button--light">Light</button>
+```
+
+#### Elevated button
+
+Elevated button has a custom effect to make your button appear floated, similar to Material Design's
+button.
+
+```html preview=true
+<button class="Button Button--primary Button--elevated">Primary</button>
+<button class="Button Button--secondary Button--elevated">Secondary</button>
+<button class="Button Button--danger Button--elevated">Danger</button>
+<button class="Button Button--warning Button--elevated">Warning</button>
+<button class="Button Button--success Button--elevated">Success</button>
+<button class="Button Button--dark Button--elevated">Dark</button>
+<button class="Button Button--light Button--elevated">Light</button>
+```
+
+## Other modifiers
+
+#### Button Sizes
+
+There are three sizes of a button you can choose from. To use it, append `Button--<size>` modifier
+class alongside a standard `.Button`.
+
+```html preview=true
+<button class="Button Button--primary Button--small">Small</button>
+<button class="Button Button--primary">Base</button>
+<button class="Button Button--primary Button--large">Large</button>
+```
+
+#### Full Width
+
+```html preview=true
+<button className="Button Button--primary Button--fullWidth MarginBottom">Primary Button</button>
+<button className="Button Button--secondary Button--outlined Button--fullWidth MarginBottom">
+  Outlined Button
+</button>
+<button className="Button Button--secondary Button--fullWidth" disabled>
+  Outlined Button
+</button>
+```
