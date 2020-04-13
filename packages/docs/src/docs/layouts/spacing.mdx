@@ -1,0 +1,43 @@
+---
+path: '/layout/spacing'
+title: 'Spacing'
+description: 'Control the distance between components and layouts by using spacing.'
+---
+
+## Spacing scale
+
+```
+| Scale     | Value     | Computed |
+| --------- | --------- | -------- |
+| `base`    | `1rem`    | `16px`   |
+| `medium`  | `1.5rem`  | `24px`   |
+| `large`   | `2.25rem` | `24px`   |
+| `xlarge`  | `3rem`    | `24px`   |
+| `2xlarge` | `4.5rem`  | `24px`   |
+```
+
+## Spacing variables
+
+These are the variables that make up our spacing classes and functions that can be further seen
+in the spacing utility page.
+
+In Amar UI Web, we use the base value of `1rem` or `16px` as the default spacing value.
+
+```scss
+$amb-spacing-map: () !default;
+$amb-spacing-map: map-merge(
+  (
+    '2xsmall': 0.25rem,
+    'xsmall': 0.5rem,
+    'small': 0.75rem,
+    'base': 1rem,
+    'medium': 1.5rem,
+    'large': 2.25rem,
+    'xlarge': 3rem,
+    '2xlarge': 4.5rem,
+  ),
+  $amb-spacing-map
+);
+
+$amb-base-spacing: amb-spacing('base') !default;
+```
