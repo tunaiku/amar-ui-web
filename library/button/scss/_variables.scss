@@ -3,11 +3,11 @@
 @import '@amar-ui-web/color/scss/variables';
 @import '@amar-ui-web/shape/scss/variables';
 
-$amb-button-font-size: amb-font-size('small') !default;
-$amb-button-font-weight: amb-font-weight('semibold') !default;
+$amb-button-font-size: amb-font-size('base') !default;
+$amb-button-font-weight: amb-font-weight('medium') !default;
 $amb-button-font-family: amb-font-family('primary') !default;
 $amb-button-line-height: $amb-line-height !default;
-$amb-button-letter-spacing: 1.25px !default;
+$amb-button-letter-spacing: 1.2px !default;
 
 $amb-button-bg-color: transparent !default;
 $amb-button-fg-color: amb-color-theme('dark') !default;
