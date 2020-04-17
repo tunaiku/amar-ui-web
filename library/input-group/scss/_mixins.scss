@@ -1,0 +1,6 @@
+@mixin amb-input-group-classes() {
+  .InputGroup {
+    @include amb-input-group-base-styles();
+    @include amb-input-group-base-styles();
+  }
+}
