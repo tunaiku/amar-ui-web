@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Amar UI Web',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      '⚡️CSS framework of components, layouts and utilities based on Amar Design System',
     author: `David Kurnia Kristiadi @dkk94`,
   },
   plugins: [
