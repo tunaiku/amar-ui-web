@@ -1,3 +1,4 @@
+@import '@amar-ui-web/core/helpers';
 @import './functions';
 @import './typefaces';
 
@@ -15,35 +16,34 @@ $amb-font-families: map-merge(
   $amb-font-families
 );
 
-$amb-font-size: 0.875rem !default;
-$amb-font-sizes: () !default;
-$amb-font-sizes: map-merge(
+$amb-font-size-map: () !default;
+$amb-font-size-map: map-merge(
   (
-    '4xsmall': $amb-font-size * 0.402,
-    '3xsmall': $amb-font-size * 0.482,
-    '2xsmall': $amb-font-size * 0.579,
-    'xsmall': $amb-font-size * 0.694,
-    'small': $amb-font-size * 0.833,
-    'base': $amb-font-size,
-    'large': $amb-font-size * 1.2,
-    'xlarge': $amb-font-size * 1.44,
-    '2xlarge': $amb-font-size * 1.728,
-    '3xlarge': $amb-font-size * 2.074,
-    '4xlarge': $amb-font-size * 2.488,
-    '5xlarge': $amb-font-size * 2.986,
+    'xsmall': rem(12px),
+    'small': rem(14px),
+    'base': rem(16px),
+    'medium': rem(18px),
+    'large': rem(20px),
+    'xlarge': rem(24px),
+    '2xlarge': rem(28px),
+    '3xlarge': rem(32px),
+    '4xlarge': rem(40px),
+    '5xlarge': rem(48px),
   ),
-  $amb-font-sizes
+  $amb-font-size-map
 );
+
+$amb-base-font-size: amb-font-size('base');
 
 $amb-headings: () !default;
 $amb-headings: map-merge(
   (
-    'h1': tnk-font-size('5xlarge'),
-    'h2': tnk-font-size('4xlarge'),
-    'h3': tnk-font-size('3xlarge'),
-    'h4': tnk-font-size('2xlarge'),
-    'h5': tnk-font-size('xlarge'),
-    'h6': tnk-font-size('large'),
+    'h1': amb-font-size('4xlarge'),
+    'h2': amb-font-size('3xlarge'),
+    'h3': amb-font-size('2xlarge'),
+    'h4': amb-font-size('xlarge'),
+    'h5': amb-font-size('large'),
+    'h6': amb-font-size('medium'),
   ),
   $amb-headings
 );
@@ -73,6 +73,41 @@ $amb-font-weights: map-merge(
     'extra-ultra': 900,
   ),
   $amb-font-weights
+);
+
+$amb-typography-style-map: () !default;
+$amb-typography-style-map: map-merge(
+  (
+    'heading20': (
+      font-size: amb-font-size('large'),
+      font-weight: amb-font-weight('bold'),
+    ),
+    'heading24': (
+      font-size: amb-font-size('xlarge'),
+      font-weight: amb-font-weight('bold'),
+    ),
+    'bold14': (
+      font-size: amb-font-size('small'),
+      font-weight: amb-font-weight('bold'),
+    ),
+    'bold16': (
+      font-size: amb-font-size('base'),
+      font-weight: amb-font-weight('bold'),
+    ),
+    'regular14': (
+      font-size: amb-font-size('small'),
+      font-weight: amb-font-weight('regular'),
+    ),
+    'regular16': (
+      font-size: amb-font-size('base'),
+      font-weight: amb-font-weight('regular'),
+    ),
+    'caption12': (
+      font-size: amb-font-size('xsmall'),
+      font-weight: amb-font-weight('regular'),
+    ),
+  ),
+  $amb-typography-style-map
 );
 
 $amb-line-height: 1.5 !default;
@@ -113,3 +148,5 @@ $amb-text-transforms: map-merge(
   ),
   $amb-text-transforms
 );
+
+$amb-text-alignment-map: ('left', 'center', 'right', 'justify') !default;

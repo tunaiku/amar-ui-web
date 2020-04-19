@@ -1,4 +1,4 @@
 @import './scss/mixins';
 
-@include tnk-create-spacing-classes($is-abbreviated: false);
-@include tnk-create-spacing-classes($is-abbreviated: true);
+@include amb-create-spacing-classes($is-abbreviated: false);
+@include amb-create-spacing-classes($is-abbreviated: true);

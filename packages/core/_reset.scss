@@ -30,11 +30,11 @@ html {
 
 body {
   margin: 0;
-  font-family: tnk-font-family('sans-serif');
-  font-weight: tnk-font-weight('base');
-  font-size: $amb-font-size;
+  font-family: amb-font-family('sans-serif');
+  font-weight: amb-font-weight('base');
+  font-size: amb-font-size('base');
   line-height: $amb-line-height;
-  color: $darker;
+  color: $black;
 }
 
 /**
@@ -118,7 +118,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: tnk-font-family('monospace'); /* 1 */
+  font-family: amb-font-family('monospace'); /* 1 */
   font-size: 1em; /* 2 */
 }
 

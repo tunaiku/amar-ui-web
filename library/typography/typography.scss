@@ -1,4 +1,4 @@
 @import './scss/mixins';
 
-@include tnk-create-typography-classes();
-@include tnk-create-text-classes();
+@include amb-create-core-typography-classes();
+@include amb-create-text-utility-classes();

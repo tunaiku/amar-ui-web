@@ -102,24 +102,17 @@
 }
 
 @mixin amb-append-input-shape-variants() {
-  &--rounded {
+  &--round {
     border-radius: $amb-input-rounded-border-radius;
   }
 }
 
-/**
- * Helper mixin to style input only when it's enabled
- * Approach taken from MDC.
- */
 @mixin amb-input-is-not-disabled() {
   &:not(:disabled):not(.is-disabled) {
     @content;
   }
 }
 
-/**
- * Generates InputGroup classes.
- */
 @mixin amb-create-input-group-classes() {
   .InputGroup {
     @include amb-input-group-base-styles();

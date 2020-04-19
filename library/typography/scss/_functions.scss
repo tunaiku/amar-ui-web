@@ -1,19 +1,21 @@
-@function tnk-font-family($key, $map: $amb-font-families) {
+@import '@amar-ui-web/core/helpers';
+
+@function amb-font-family($key, $map: $amb-font-families) {
   @return map-get($map, $key);
 }
 
-@function tnk-font-size($key, $map: $amb-font-sizes) {
+@function amb-font-size($key, $map: $amb-font-size-map) {
   @return map-get($map, $key);
 }
 
-@function tnk-font-weight($key, $map: $amb-font-weights) {
+@function amb-font-weight($key, $map: $amb-font-weights) {
   @return map-get($map, $key);
 }
 
-@function tnk-line-height($key, $map: $amb-line-heights) {
+@function amb-line-height($key, $map: $amb-line-heights) {
   @return map-get($map, $key);
 }
 
-@function tnk-letter-spacing($key, $map: $amb-letter-spacings) {
+@function amb-letter-spacing($key, $map: $amb-letter-spacings) {
   @return map-get($map, $key);
 }

@@ -1,23 +1,19 @@
 @import './functions';
 
-$amb-border-radius: 4px !default;
-$amb-border-radius-rounded: 50px;
-$amb-border-radius-circle: 100%;
-$amb-border-radius-sizes: () !default;
-$amb-border-radius-sizes: map-merge(
+$amb-base-border-radius: 4px !default;
+$amb-border-radius-map: () !default;
+$amb-border-radius-map: map-merge(
   (
-    'base': $amb-border-radius,
-    'large': $amb-border-radius * 1.5,
-    'xlarge': $amb-border-radius * 2,
-    '2xlarge': $amb-border-radius * 3,
-    '3xlarge': $amb-border-radius * 4,
-    'rounded': $amb-border-radius-rounded,
-    'circle': $amb-border-radius-circle,
+    'base': $amb-base-border-radius,
+    'large': $amb-base-border-radius * 1.5,
+    'xlarge': $amb-base-border-radius * 2,
+    '2xlarge': $amb-base-border-radius * 3,
+    '3xlarge': $amb-base-border-radius * 4,
+    'round': 50px,
+    'circle': 100%,
   ),
-  $amb-border-radius-sizes
+  $amb-border-radius-map
 );
-
-$amb-border-position-map: ();
 
 // Change this variable value if you'd like to generate border-width values more than 10.
 $amb-border-width-max-value: 10 !default;

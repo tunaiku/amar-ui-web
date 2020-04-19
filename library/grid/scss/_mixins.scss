@@ -17,11 +17,11 @@
 @mixin amb-grid-row-base() {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 ($amb-grid-gap-gutter / -1);
+  margin: 0 calc(#{$amb-grid-gap-gutter / -2});
 
   > .Grid,
   > [class*='Grid-'] {
-    padding: 0 $amb-grid-gap-gutter;
+    padding: 0 calc(#{$amb-grid-gap-gutter} / 2);
   }
 }
 

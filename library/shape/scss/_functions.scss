@@ -1,7 +1,7 @@
-@function tnk-border-radius($border-radius-size) {
-  @if not map-has-key($amb-border-radius-sizes, $border-radius-size) {
-    @error "Variable '#{$border-radius}' is not found in '$amb-border-radius-sizes' variable map!";
+@function amb-border-radius($border-radius-size) {
+  @if not map-has-key($amb-border-radius-map, $border-radius-size) {
+    @error "Variable '#{$border-radius-size}' is not found in '$amb-border-radius-map' variable map!";
   }
 
-  @return map-get($amb-border-radius-sizes, $border-radius-size);
+  @return map-get($amb-border-radius-map, $border-radius-size);
 }

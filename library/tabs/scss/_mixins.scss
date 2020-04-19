@@ -4,7 +4,7 @@
 
 // Temporary variables
 
-@mixin tnk-create-tabs-classes() {
+@mixin amb-create-tabs-classes() {
   .Tabs {
     &-list {
       display: flex;
@@ -18,26 +18,26 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: tnk-color-theme-shade('neutral', 80);
-      font-weight: tnk-font-weight('medium');
+      color: amb-color-theme('neutral', 80);
+      font-weight: amb-font-weight('medium');
       transition: all 100ms ease-in;
-      padding: tnk-spacing('base');
+      padding: amb-spacing('base');
       cursor: pointer;
       outline: none;
 
       &.is-active {
-        color: tnk-color-theme('secondary');
-        border-bottom: solid 2px tnk-color-theme('secondary');
+        color: amb-color-theme('secondary');
+        border-bottom: solid 2px amb-color-theme('secondary');
       }
 
       &:hover,
       &:focus {
-        background-color: tnk-color-theme-opacity('secondary', 0.1);
+        background-color: amb-color-theme-opacity('secondary', 0.1);
         outline: none;
       }
 
       &:active {
-        background-color: tnk-color-theme-opacity('secondary', 0.2);
+        background-color: amb-color-theme-opacity('secondary', 0.2);
         outline: none;
       }
     }

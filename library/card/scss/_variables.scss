@@ -8,8 +8,8 @@ $amb-card-fg-color: amb-color-contrast($amb-card-bg-color);
 
 $amb-card-border-style: solid;
 $amb-card-border-width: 1px;
-$amb-card-border-color: $white;
+$amb-card-border-color: amb-color-theme('neutral', 30);
 $amb-card-border-radius: amb-border-radius('xlarge');
 
-$amb-card-elevation-level: 1 !default;
-$amb-card-elevation-opacity: 0.2 !default;
+$amb-card-elevation-level: 3 !default;
+$amb-card-elevation-opacity: 0.1 !default;

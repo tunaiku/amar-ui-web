@@ -1,18 +1,21 @@
+@import '@amar-ui-web/core/helpers';
 @import './variables';
 
-@mixin tnk-create-typography-classes() {
-  @include tnk-create-heading-classes();
+@mixin amb-create-core-typography-classes() {
+  @include amb-create-heading-classes();
+  @include amb-create-typography-style-classes();
 }
 
-@mixin tnk-create-text-classes() {
-  @include tnk-create-font-size-classes();
-  @include tnk-create-font-weight-classes();
-  @include tnk-create-text-transform-classes();
-  @include tnk-create-line-height-classes();
-  @include tnk-create-letter-spacing-classes();
+@mixin amb-create-text-utility-classes() {
+  @include amb-create-font-size-classes();
+  @include amb-create-font-weight-classes();
+  @include amb-create-text-transform-classes();
+  @include amb-create-line-height-classes();
+  @include amb-create-letter-spacing-classes();
+  @include amb-create-text-alignment-classes();
 }
 
-@mixin tnk-create-text-transform-classes() {
+@mixin amb-create-text-transform-classes() {
   @each $text-transform, $text-transform-value in $amb-text-transforms {
     .Transform-#{$text-transform} {
       text-transform: $text-transform-value !important;
@@ -20,7 +23,7 @@
   }
 }
 
-@mixin tnk-create-letter-spacing-classes() {
+@mixin amb-create-letter-spacing-classes() {
   @each $letter-spacing, $letter-spacing-value in $amb-letter-spacings {
     .Tracking-#{$letter-spacing} {
       letter-spacing: $letter-spacing-value !important;
@@ -28,7 +31,7 @@
   }
 }
 
-@mixin tnk-create-line-height-classes() {
+@mixin amb-create-line-height-classes() {
   @each $line-height, $line-height-value in $amb-line-heights {
     .Leading-#{$line-height} {
       line-height: $line-height-value !important;
@@ -39,9 +42,9 @@
 /// Generate font size classes
 ///
 
-@mixin tnk-create-font-size-classes() {
+@mixin amb-create-font-size-classes() {
   .FontSize {
-    @each $font-size, $font-size-value in $amb-font-sizes {
+    @each $font-size, $font-size-value in $amb-font-size-map {
       &-#{$font-size} {
         font-size: $font-size-value !important;
       }
@@ -49,18 +52,21 @@
   }
 }
 
-@mixin tnk-create-heading-classes() {
+@mixin amb-create-heading-classes() {
   @each $heading, $heading-size in $amb-headings {
     $heading-index: index($amb-headings, ($heading $heading-size));
 
-    h#{$heading-index},
+    h#{$heading-index} {
+      font-size: $heading-size;
+    }
+
     .Heading-#{$heading-index} {
       font-size: $heading-size !important;
     }
   }
 }
 
-@mixin tnk-create-font-weight-classes() {
+@mixin amb-create-font-weight-classes() {
   .FontWeight {
     @each $font-weight, $font-weight-value in $amb-font-weights {
       &-#{$font-weight} {
@@ -68,4 +74,32 @@
       }
     }
   }
+}
+
+@mixin amb-create-typography-style-classes() {
+  .Typography {
+    @each $typography-style, $properties in $amb-typography-style-map {
+      &-#{$typography-style} {
+        @include create-properties($properties);
+      }
+    }
+  }
+}
+
+@mixin amb-create-text-alignment-classes() {
+  .TextAlign {
+    @each $text-alignment in $amb-text-alignment-map {
+      &-#{$text-alignment} {
+        $text-alignment-value: unquote($text-alignment);
+        text-align: $text-alignment-value !important;
+      }
+    }
+  }
+}
+
+/// Helper mixin
+@mixin amb-typography-style($style) {
+  $a: map-get($amb-typography-style-map, $style);
+
+  @include create-properties($a);
 }

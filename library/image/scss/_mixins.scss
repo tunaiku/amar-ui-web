@@ -11,12 +11,11 @@
 
 @mixin amb-append-image-base-styles() {
   position: relative;
+  overflow: hidden;
 
   > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+    display: flex;
+    height: auto;
     width: 100%;
   }
 }
@@ -24,10 +23,8 @@
 @mixin amb-append-object-fit-variants() {
   .ObjectFit {
     @each $object-fit in $amb-object-fit-map {
-      > img {
-        &-#{$object-fit} {
-          object-fit: $object-fit !important;
-        }
+      &-#{$object-fit} {
+        object-fit: $object-fit !important;
       }
     }
   }
@@ -36,10 +33,8 @@
 @mixin amb-append-object-position-variants() {
   .ObjectPosition {
     @each $object-position in $amb-object-position-map {
-      > img {
-        &-#{$object-position} {
-          object-position: $object-position !important;
-        }
+      &-#{$object-position} {
+        object-position: $object-position !important;
       }
     }
   }

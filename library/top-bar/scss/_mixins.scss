@@ -1,6 +1,6 @@
 @import '@amar-ui-web/spacing/scss/variables';
 
-@mixin tnk-create-top-bar-classes() {
+@mixin amb-create-top-bar-classes() {
   .TopBar {
     display: flex;
     flex-direction: row;
@@ -25,7 +25,7 @@
 
     &-actions & {
       &-action:not(:last-child) {
-        margin-right: tnk-spacing('small');
+        margin-right: amb-spacing('small');
       }
 
       &-action {

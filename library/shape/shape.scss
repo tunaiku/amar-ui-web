@@ -1,4 +1,5 @@
 @import './scss/mixins';
 
-@include tnk-create-border-classes();
-@include tnk-create-border-side-classes();
+@include amb-create-border-classes();
+@include amb-create-border-side-classes();
+@include amb-create-border-radius-classes();
