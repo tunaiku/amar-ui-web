@@ -13,6 +13,7 @@
     "@amar-ui-web/elevation": "^1.0.1",
     "@amar-ui-web/field": "^1.1.0",
     "@amar-ui-web/flex": "^1.1.0",
+    "@amar-ui-web/image": "^1.0.0",
     "@amar-ui-web/input": "^1.1.0",
     "@amar-ui-web/layout": "^1.1.0",
     "@amar-ui-web/radio": "^1.1.0",
