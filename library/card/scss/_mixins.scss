@@ -5,7 +5,7 @@
   .Card {
     @include amb-card-base-styles();
     @include amb-append-card-parts();
-    @include amb-append-card-elevated-variant();
+    @include amb-append-card-variants();
   }
 }
 
@@ -23,22 +23,23 @@
 }
 
 @mixin amb-append-card-parts() {
-  &-block {
-    padding: $amb-card-padding;
-  }
-
-  &-title,
+  &-block,
+  &-header,
   &-body,
   &-footer {
     padding: $amb-card-padding;
   }
 }
 
-@mixin amb-append-card-elevated-variant() {
+@mixin amb-append-card-variants() {
   &--elevated {
     @include amb-create-elevation(
       $level: $amb-card-elevation-level,
       $opacity: $amb-card-elevation-opacity
     );
+  }
+
+  &--borderless {
+    border: none;
   }
 }
