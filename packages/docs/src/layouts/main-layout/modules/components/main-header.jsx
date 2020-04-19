@@ -16,7 +16,7 @@ const MainHeader = () => {
         <div className="Flex JustifyContent-between FlexGrow-1">
           <Navbar>
             <NavbarItem>
-              <Link to="/getting-started" activeClassName="is-active">
+              <Link to="/introduction/getting-started" activeClassName="is-active">
                 Getting Started
               </Link>
             </NavbarItem>

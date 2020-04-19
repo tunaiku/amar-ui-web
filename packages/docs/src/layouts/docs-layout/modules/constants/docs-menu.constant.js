@@ -1,7 +1,17 @@
 export const DOCS_MENU = [
   {
-    title: 'Getting Started',
-    path: '/getting-started',
+    title: 'Introduction',
+    path: '/introduction',
+    submenu: [
+      {
+        title: 'Getting Started',
+        path: '/introduction/getting-started',
+      },
+      {
+        title: 'Naming Convention',
+        path: '/introduction/naming-convention',
+      },
+    ],
   },
   {
     title: 'Foundations',
@@ -17,7 +27,7 @@ export const DOCS_MENU = [
       },
       {
         title: 'Responsive',
-        path: '/utilities/responsive',
+        path: '/foundations/responsive',
       },
     ],
   },

@@ -3,14 +3,15 @@ import { Link } from 'gatsby';
 import { SEO } from 'components/seo';
 import { MainLayout } from 'layouts/main-layout';
 import { FontAwesomeIcon as FaIcon } from '@fortawesome/react-fontawesome';
-import HomeLinks from './components/home-links';
 import HeroIllustration from 'images/amar-ui-hero.svg';
 import { Figure } from 'components/figure';
+import FeatureCards from './components/feature-cards';
+
 import './home.scss';
 
 const Home = () => (
   <MainLayout>
-    <SEO title="Amar UI Framework for CSS" />
+    <SEO title="Amar UI Web" />
     <div className="HomePage">
       <section className="HomePage-hero">
         <div className="HomePage-heroContent">
@@ -25,7 +26,9 @@ const Home = () => (
                       interfaces and experiences with Amar Design System as its foundation.
                     </p>
                   </div>
-                  <Link to="/getting-started" className="Button Button--secondary MarginRight">
+                  <Link
+                    to="/introduction/getting-started"
+                    className="Button Button--secondary MarginRight">
                     Getting Started
                   </Link>
                 </div>
@@ -43,7 +46,7 @@ const Home = () => (
           <div className="MarginTop-2xlarge MarginBottom-xlarge Flex Flex-column AlignItems-center">
             <h1>Based on Amar Design System</h1>
           </div>
-          <HomeLinks />
+          <FeatureCards />
         </div>
       </section>
     </div>

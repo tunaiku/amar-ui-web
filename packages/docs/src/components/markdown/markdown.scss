@@ -42,4 +42,8 @@
     background-color: amb-color-theme-opacity('neutral', 0.2);
     font-weight: amb-font-weight('semibold');
   }
+
+  > .CodeBlock {
+    margin: amb-spacing('xsmall') 0;
+  }
 }
