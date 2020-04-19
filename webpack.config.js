@@ -13,9 +13,9 @@ module.exports = env => {
   const isProd = env.NODE_ENV === 'production';
 
   return {
-    name: 'amar-web-ui',
+    name: 'amar-ui-web',
     entry: {
-      'amar-web-ui': path.join(__dirname, '/packages/core/amar-web-ui.scss'),
+      'amar-ui-web': path.join(__dirname, '/packages/core/index.scss'),
     },
     output: {
       path: path.join(__dirname, './dist'),
