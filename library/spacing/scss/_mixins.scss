@@ -1,4 +1,5 @@
 @import './variables';
+@import './constants';
 
 /**
  *
@@ -16,7 +17,7 @@
  * # (mg|pd)-(left|top|right|bottom|x|y) -> Applies specific padding/margin size on specific direction.
  */
 
-@mixin tnk-create-spacing-classes($is-abbreviated) {
+@mixin amb-create-spacing-classes($is-abbreviated) {
   @each $spacing-type, $spacing-type-abbreviation in $amb-spacing-type-map {
     $spacing-type-capitalized: capitalize($spacing-type);
 
@@ -30,35 +31,33 @@
 
     // Generates .Margin/.mg and .Padding/.pd classes.
     .#{$spacing-type-stylerule} {
-      #{$spacing-type}: tnk-spacing('base') !important;
+      #{$spacing-type}: amb-spacing('base') !important;
 
       // prettier-ignore
-      @include tnk-create-spacing-values($is-abbreviated, $spacing-type);
-      @include tnk-create-spacing-directions($is-abbreviated, $spacing-type);
+      @include amb-create-spacing-values($is-abbreviated, $spacing-type);
+      @include amb-create-spacing-directions($is-abbreviated, $spacing-type);
     }
   }
 }
 
-@mixin tnk-create-spacing-directions($is-abbreviated, $spacing-type) {
+@mixin amb-create-spacing-directions($is-abbreviated, $spacing-type) {
   @each $spacing-direction in $amb-spacing-direction-map {
     $spacing-direction-lowercased: $spacing-direction;
     $spacing-direction-capitalized: capitalize($spacing-direction);
 
     $spacing-direction-stylerule: '' !default;
     @if ($is-abbreviated) {
-      // e.g: "mg-left", "mg-top"
       $spacing-direction-stylerule: '-#{$spacing-direction-lowercased}';
     } @else {
-      // e.g: PaddingLeft, MarginTop
       $spacing-direction-stylerule: $spacing-direction-capitalized;
     }
 
     // Generates .Margin(Left|Top|Right|Bottom) classes with base spacing value.
     &#{$spacing-direction-stylerule} {
-      #{$spacing-type}-#{$spacing-direction}: tnk-spacing('base') !important;
+      #{$spacing-type}-#{$spacing-direction}: amb-spacing('base') !important;
 
       // prettier-ignore
-      @include tnk-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction);
+      @include amb-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction);
     }
   }
 }
@@ -77,29 +76,17 @@
 /// - .MarginLeft-large
 /// - .Padding-large
 ///
-@mixin tnk-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction: 'all') {
-  @each $spacing-size, $spacing-value in $amb-spacings {
+@mixin amb-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction: 'all') {
+  @each $spacing-size, $spacing-value in $amb-spacing-map {
     &-#{$spacing-size} {
       @if $spacing-direction == 'all' {
-        #{$spacing-type}: tnk-spacing($spacing-size) !important;
+        #{$spacing-type}: amb-spacing($spacing-size) !important;
       } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
         @each $direction in map-get($amb-spacing-axes, $spacing-direction) {
-          #{$spacing-type}-#{$direction}: tnk-spacing($spacing-size) !important;
+          #{$spacing-type}-#{$direction}: amb-spacing($spacing-size) !important;
         }
       } @else {
-        #{$spacing-type}-#{$spacing-direction}: tnk-spacing($spacing-size) !important;
-      }
-    }
-
-    &-m-#{$spacing-size} {
-      @if $spacing-direction == 'all' {
-        #{$spacing-type}: #{tnk-spacing($spacing-size) * -1} !important;
-      } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
-        @each $direction in map-get($amb-spacing-axes, $spacing-direction) {
-          #{$spacing-type}-#{$direction}: #{tnk-spacing($spacing-size) * -1} !important;
-        }
-      } @else {
-        #{$spacing-type}-#{$spacing-direction}: #{tnk-spacing($spacing-size) * -1} !important;
+        #{$spacing-type}-#{$spacing-direction}: amb-spacing($spacing-size) !important;
       }
     }
   }
