@@ -1,7 +1,8 @@
 ---
-path: '/utilities/responsive'
+path: '/foundations/responsive'
 title: 'Responsive'
-description: 'A set of utilities to help achieve responsive design.'
+description: 'Build adaptive user interfaces using responsive concept which can be applied
+using media breakpoints.'
 ---
 
 ## Breakpoints
@@ -52,46 +53,10 @@ description: 'A set of utilities to help achieve responsive design.'
 
 ## Breakpoint variables
 
-By default, breakpoint variables are put into a variable map called `$amb-responsive-breakpoints`
-and each breakpoint consumes a breakpoint variable directly called from `_breakpoints.scss`.
-
 ```scss
 /* @amar-ui-web/responsive/scss/_breakpoints.scss */
 $amb-breakpoint-small: 576px;
 $amb-breakpoint-medium: 768px;
 $amb-breakpoint-large: 992px;
 $amb-breakpoint-xlarge: 1200px;
-
-/* @amar-ui-web/responsive/scss/_variables.scss' */
-@import './breakpoints';
-
-// ...
-
-$amb-responsive-breakpoints: () !default;
-$amb-responsive-breakpoints: map-merge(
-  (
-    'xs': 0,
-    'sm': $amb-breakpoint-small,
-    'md': $amb-breakpoint-medium,
-    'lg': $amb-breakpoint-large,
-    'xl': $amb-breakpoint-xlarge,
-  ),
-  $amb-responsive-breakpoints
-);
-```
-
-You can also change current breakpoint widthds or add new ones.
-
-```scss
-// Override current value
-$amb-responsive-breakpoints: (
-  'sm': <your new value>,
-  'md': <your new value>,
-);
-
-// Or add a new value on top of the current values
-$amb-responsive-breakpoints: (
-  '2xl': <new breakpoint>,
-  '3xl': <new breakpoint>,
-);
 ```

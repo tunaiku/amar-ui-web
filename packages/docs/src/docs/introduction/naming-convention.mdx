@@ -1,0 +1,91 @@
+---
+path: '/introduction/naming-convention'
+title: 'Naming Convention'
+description: "Amar UI's naming conventions are highly influenced from SUIT CSS and is adapted from them.
+It relies on structured class names and meaningful hyphens (i.e., not using hyphens 
+merely to separate words)."
+---
+
+## Principles
+
+Strictly adhere to the agreed-upon style guide listed below. The general principle is to develop **DRY
+(Don't Repeat Yourself)** SCSS, built around reusable components and patterns.
+
+- All code should look like a single person has typed it.
+- Don't try to prematurely optimize your code; keep it readable and understandable.
+- When building a component, always start by looking at existing patterns.
+- Break down complex components until they are made up of simple components.
+- Save your complex components as patterns so they can be easily reused.
+- Build your component as a mixin which outputs optional css.
+
+## Components
+
+Component classes are pieces that forms the entirety of an application. They are
+building blocks that are normally **reusable**, which means that their usage aren't locked in just a
+single context or page. You can think of components as custom elements that enclose specific semantics,
+styling, and behaviour.
+
+To write a component class, the complete syntax is `ComponentName(-partName|--modifierName)`
+which is broken up into 3 pieces.
+
+#### `ComponentName`
+
+The component name must be written in **pascal case**.
+
+```html
+<div class="Button">...</div>
+<div class="InputGroup">...</div>
+```
+
+#### `ComponentName-partName`
+
+Parts live in the descendant nodes of a component and are integral pieces that form the entirety of
+a component. Component parts must be written in **camel case** following a single hyphen.
+
+```html
+<div class="Card">
+  <div class="Card-header">
+    <div class="Card-title">
+      ...
+    </div>
+  </div>
+  <div class="Card-body">
+    <p>...</p>
+  </div>
+</div>
+```
+
+#### `ComponentName--modifierName`
+
+A component can have multiple modifiers; that is responsible in modifying the presentation of the
+base component. Component modifiers must be written in **camel case** following double hyphens.
+
+```scss
+.Button { ... }
+.Button--primary { ... }
+```
+
+```html
+<!-- Modifier to apply primary fill to a standard button -->
+<button class="Button Button--primary"></button>
+```
+
+## Utilities
+
+Utility classes can be used in any elements and contexts as you see fit; they can be
+used in conjunction with component classes and can also be used together one another.
+
+To write a utility class, follow the syntax of `UtilityName-value`. Utility classes should be
+written in **pascal case**, similar to component classes, followed by its value in **camel case**.
+Non-value utility classes are implementable which apply the default value of the utility class.
+
+```html
+<!-- Without value = base value -->
+<div class="TextTransform">Use on its own</div>
+
+<!-- Has a single value -->
+<div class="FontWeight-bold">Has a single value</div>
+
+<!-- Used in combination -->
+<div class="Flex JustifyContent-end AlignItems-end">...</div>
+```
