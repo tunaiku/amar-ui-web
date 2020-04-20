@@ -29,7 +29,7 @@ const MainHeader = () => {
           <Navbar>
             <NavbarItem>
               <a
-                href="https://github.com/dkk94/amar-ui-web"
+                href="https://github.com/tunaiku/amar-ui-web"
                 rel="noreferrer noopener"
                 target="_blank">
                 <FaIcon icon={['fab', 'github']} size="lg" className="MarginRight-small" />
