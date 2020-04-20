@@ -1,6 +1,9 @@
 {
   "name": "@amar-ui-web/shape",
   "version": "1.0.0",
+  "license": "MIT",
   "main": "index.js",
-  "license": "MIT"
+  "publishConfig": {
+    "access": "public"
+  }
 }

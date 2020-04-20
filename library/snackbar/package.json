@@ -1,13 +1,16 @@
 {
   "name": "@amar-ui-web/snackbar",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "main": "index.js",
   "dependencies": {
     "@amar-ui-web/color": "^1.0.0",
     "@amar-ui-web/elevation": "^1.0.0",
     "@amar-ui-web/shape": "^1.0.0",
     "@amar-ui-web/spacing": "^1.0.0",
     "@amar-ui-web/typography": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
