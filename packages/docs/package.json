@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "author": "dkk94 <davidkurniakristiadi@gmail.com>",
   "dependencies": {
-    "@amar-ui-web/core": "^1.1.0",
-    "@amar-ui-web/layout": "^1.1.0",
-    "@amar-ui-web/responsive": "^1.1.0",
+    "@amar-ui-web/core": "^1.0.0",
+    "@amar-ui-web/layout": "^1.0.0",
+    "@amar-ui-web/responsive": "^1.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",

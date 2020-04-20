@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@amar-ui-web/grid": "^1.1.0",
-    "@amar-ui-web/core": "^1.1.0"
+    "@amar-ui-web/grid": "^1.0.0",
+    "@amar-ui-web/core": "^1.0.0"
   }
 }

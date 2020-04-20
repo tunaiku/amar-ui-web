@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@amar-ui-web/color": "^1.0.1",
-    "@amar-ui-web/shape": "^1.1.0",
-    "@amar-ui-web/spacing": "^1.0.1"
+    "@amar-ui-web/color": "^1.0.0",
+    "@amar-ui-web/shape": "^1.0.0",
+    "@amar-ui-web/spacing": "^1.0.0"
   }
 }
