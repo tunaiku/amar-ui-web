@@ -2,6 +2,7 @@
   "name": "@amar-ui-web/docs",
   "version": "1.0.0",
   "description": "Documentation of Tunaiku UI Library",
+  "private": true,
   "keywords": [
     "gatsby"
   ],
