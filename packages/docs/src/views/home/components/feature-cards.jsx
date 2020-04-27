@@ -9,7 +9,7 @@ const FeatureCards = () => {
   const links = [
     {
       title: 'Getting Started',
-      path: '/getting-started',
+      path: '/introduction/getting-started',
       description: 'Find guide on the installation process step-by-step.',
       imgPath: GettingStartedImg,
     },
@@ -20,15 +20,16 @@ const FeatureCards = () => {
       imgPath: ComponentsImg,
     },
     {
-      title: 'Foundations',
-      path: '/foundations',
-      description: 'Foundations that lay out the building blocks of the framework.',
+      title: 'Layout',
+      path: '/layouts',
+      description:
+        'Classes and components that help with structuring your web project such as grids and containers.',
       imgPath: FoundationsImg,
     },
     {
       title: 'Foundations',
       path: '/foundations',
-      description: 'Foundations that lay out the building blocks of the framework.',
+      description: 'Foundations which lay out the building blocks of the framework.',
       imgPath: FoundationsImg,
     },
     {
