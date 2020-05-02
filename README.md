@@ -1,26 +1,23 @@
-# Amar UI Web
+<h4 style="text-align: center; font-size: 36px;">Amar UI Web</h4>
 
 Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web primarily aims to enhance the UI/X developemnt workflow of web projects and applications within Amar Bank.
 
-## Installation
+# Installation
 
-### Via Package Managers
+Amar UI Web is best installed via **package managers** like `yarn` or `npm`.
 
-Amar UI Web is recommended to be installed via package managers such as npm or yarn.
-
-```
-npm install @amar-ui-web/core
-// or
-yarn add @amar-ui-web/core
+```bash
+$ npm install @amar-ui-web/core
+$ yarn add @amar-ui-web/core
 ```
 
-## Usage
+# Usage
 
-Upon installation, `@amar-ui-web/core` and all its child packages will live inside your project's `node_modules` directory, you can't consume it directly just yet. You will need to resolve `node_modules` directory first,since `@amar-ui-web/core` uses absolute import to depend on/import its packages using `@import`.
+Upon installation, `@amar-ui-web/core` and other `@amar-ui-web/*` package dependencies will be accessible from inside your project's `node_modules` directory, but you cannot access them directly just yet. You'll need to resolve `/node_modules` directory path first since `@amar-ui-web/core` uses absolute import to depend on its sub-packages using Sass' `@import`.
 
-To do this, include the `node_modules` directory into your [include paths](https://github.com/sass/node-sass#includepaths) property in your preferred bundler (we recommend `webpack`).
+To do this, include the `/node_modules` directory into [include paths](https://github.com/sass/node-sass#includepaths) property in your preferred bundler (we recommend webpack).
 
-Once this done, you can safely import the package like so:
+Once you're done, you should then be able import the package like this:
 
 ```scss
 @import '@amar-ui-web/core/index.scss';
@@ -40,4 +37,4 @@ If you would like to import individual packages/modules or its specific abstract
 @import '@amar-ui-web/color/scss/functions';
 ```
 
-Please refer to each package/module documentation to find out more.
+To know more about each package/module features and APIs, please refer to each package documentation.
