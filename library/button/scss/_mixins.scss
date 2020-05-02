@@ -55,7 +55,7 @@
 
   /* Apply pointer cursor on non-disabled buttons */
   @include amb-button-is-not-disabled() {
-    cursor: pointer !important;
+    cursor: pointer;
   }
 }
 
@@ -64,11 +64,6 @@
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
-
-    // Retains 'pointer-events: auto' stylerule to elements aside from link tag.
-    &:not(a) {
-      pointer-events: auto;
-    }
   }
 
   @include amb-button-is-not-disabled() {
@@ -88,6 +83,11 @@
 
     @include amb-button-is-active() {
       outline: none;
+    }
+
+    // Retains 'pointer-events: auto' stylerule to elements aside from link tag.
+    &:not(a) {
+      pointer-events: auto;
     }
   }
 }
@@ -332,8 +332,7 @@
  * to reusability.
  */
 @mixin amb-button-is-not-disabled() {
-  &:not(:disabled),
-  &:not(.is-disabled) {
+  &:not(:disabled):not(.is-disabled) {
     @content;
   }
 }
