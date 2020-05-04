@@ -35,6 +35,7 @@ In `angular.json` file, make sure the `node_modules/` is listed as the `includeP
   }
 }
 ```
+***Note***: *Don't forget to restart the `ng serve` after changing the `angular.json` file. Otherwise, the new changes will not be applied.*
 
 ## Usage
 Once you're done with the include paths, you should then be able import the package like this:
