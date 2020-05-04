@@ -18,7 +18,7 @@ To do this, include the `/node_modules` directory into [include paths](https://g
 
 ### Include Paths in Angular 6+
 In `angular.json` file, make sure the `node_modules/` is listed as the `includePaths` under the `build.options` configuration to enable the Sass compiler run properly.
-```json
+```
 {
   "build": {
     ...,
