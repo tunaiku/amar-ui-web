@@ -4,26 +4,30 @@ title: 'Getting Started'
 description: 'Quick start guide on how to get started with Amar UI Web.'
 ---
 
+<h1 align="center">Amar UI Web</h4>
+
+Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X developemnt workflow of web projects and applications within Amar Bank.
+
 ## Installation
 
-Amar UI Web can be installed by using **package managers** such as `yarn` and `npm`.
+Amar UI Web is best installed via **package managers** like `yarn` or `npm`.
 
-```shell
-# Using npm
-npm install @amar-ui-web/core
-
-# Or using yarn
-yarn add @amar-ui-web/core
+```bash
+$ npm install @amar-ui-web/core
+$ yarn add @amar-ui-web/core
 ```
 
 ## Resolve Sass Include Paths
-Upon installation, `@amar-ui-web/core` and other `@amar-ui-web/*` package dependencies will be accessible from inside your project's `node_modules` directory, but you **cannot access them directly just yet**. You'll need to resolve `/node_modules` directory path first since `@amar-ui-web/core` uses *absolute import* to depend on its sub-packages using Sass' `@import`.
 
-To do this, include the `/node_modules` directory into [include paths](https://github.com/sass/node-sass#includepaths) property in your preferred bundler (we recommend webpack). Otherwise, follow the below guidelines for more *framework-specific guides* to setup this part properly.
+Upon installation, `@amar-ui-web/core` and other `@amar-ui-web/*` package dependencies will be accessible from inside your project's `node_modules` directory, but you **cannot access them directly just yet**. You'll need to resolve `/node_modules` directory path first since `@amar-ui-web/core` uses _absolute import_ to depend on its sub-packages using Sass' `@import`.
+
+To do this, include the `/node_modules` directory into [include paths](https://github.com/sass/node-sass#includepaths) property in your preferred bundler (we recommend webpack). Otherwise, follow the below guidelines for more _framework-specific guides_ to setup this part properly.
 
 ### Include Paths in Angular 6+
+
 In `angular.json` file, make sure the `node_modules/` is listed as the `includePaths` under the `build.options` configuration to enable the Sass compiler run properly.
-```json
+
+```
 {
   "build": {
     ...,
@@ -31,7 +35,7 @@ In `angular.json` file, make sure the `node_modules/` is listed as the `includeP
       ...,
       "styles": [
         "src/styles.scss"
-      ], 
+      ],
       // add this line, just below "styles"
       "stylePreprocessorOptions": {
         "includePaths": ["node_modules/"]
@@ -40,15 +44,51 @@ In `angular.json` file, make sure the `node_modules/` is listed as the `includeP
   }
 }
 ```
-***Note***: *Don't forget to restart the `ng serve` after changing the `angular.json` file. Otherwise, the new changes will not be applied.*
+
+**_Note_**: _Don't forget to restart the `ng serve` after changing the `angular.json` file. Otherwise, the new changes will not be applied._
+
+### Include Paths in Webpack 4+
+
+Inside your project's `webpack.config.js`, you'll need to configure `sass-loader` options by adding the `sassOptions: { includePaths: ['/node_modules'] }` to resolve the `node_modules` directory.
+
+```js
+module.exports = [{
+  ...,
+  rules: [
+    ...,
+    {
+      loader: 'sass-loader',
+      options: {
+        ...,
+        sassOptions: {
+          includePaths: ['./node_modules']
+        }
+      }
+    }
+  ]
+}]
+```
 
 ## Usage
-Once you're done with the include paths, you can then proceed to import the `index.scss` of
-`@amar-ui-web/core` into your project's style entrypoint.
+
+Once you're done with the `includePaths` configuration, you should then be able import the package like this:
 
 ```scss
-// For example, styles.scss is our entrypoint.
 @import '@amar-ui-web/core/index.scss';
 ```
 
-You're done! Amar UI Web is now configured to be used in your application.
+If you would like to import individual packages/modules or its specific abstracts (variables, mixins, functions, etc.), you can do that as well.
+
+```scss
+@import '@amar-ui-web/color/index.scss';
+@import '@amar-ui-web/typography/index.scss';
+```
+
+```scss
+/* import specific abstracts like variables, functions, mixins. */
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/color/scss/mixins';
+@import '@amar-ui-web/color/scss/functions';
+```
+
+To know more about each package/module features and APIs, please refer to each package documentation.
