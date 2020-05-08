@@ -4,9 +4,7 @@ title: 'Getting Started'
 description: 'Quick start guide on how to get started with Amar UI Web.'
 ---
 
-<h1 align="center">Amar UI Web</h4>
-
-Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X developemnt workflow of web projects and applications within Amar Bank.
+Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X development workflow of web projects and applications within Amar Bank.
 
 ## Installation
 
@@ -27,7 +25,7 @@ To do this, include the `/node_modules` directory into [include paths](https://g
 
 In `angular.json` file, make sure the `node_modules/` is listed as the `includePaths` under the `build.options` configuration to enable the Sass compiler run properly.
 
-```
+```json
 {
   "build": {
     ...,
@@ -36,7 +34,7 @@ In `angular.json` file, make sure the `node_modules/` is listed as the `includeP
       "styles": [
         "src/styles.scss"
       ],
-      // add this line, just below "styles"
+      // add this line, just below styles
       "stylePreprocessorOptions": {
         "includePaths": ["node_modules/"]
       },
