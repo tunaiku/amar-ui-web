@@ -56,6 +56,7 @@
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "rehype-slug": "^3.0.0"
   }
 }
