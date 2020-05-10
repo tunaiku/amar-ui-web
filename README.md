@@ -11,61 +11,11 @@ $ npm install @amar-ui-web/core
 $ yarn add @amar-ui-web/core
 ```
 
-## Resolve Sass Include Paths
-
-Upon installation, `@amar-ui-web/core` and other `@amar-ui-web/*` package dependencies will be accessible from inside your project's `node_modules` directory, but you **cannot access them directly just yet**. You'll need to resolve `/node_modules` directory path first since `@amar-ui-web/core` uses _absolute import_ to depend on its sub-packages using Sass' `@import`.
-
-To do this, include the `/node_modules` directory into [include paths](https://github.com/sass/node-sass#includepaths) property in your preferred bundler (we recommend webpack). Otherwise, follow the below guidelines for more _framework-specific guides_ to setup this part properly.
-
-### Include Paths in Angular 6+
-
-In `angular.json` file, make sure the `node_modules/` is listed as the `includePaths` under the `build.options` configuration to enable the Sass compiler run properly.
-
-```
-{
-  "build": {
-    ...,
-    "options": {
-      ...,
-      "styles": [
-        "src/styles.scss"
-      ],
-      // add this line, just below "styles"
-      "stylePreprocessorOptions": {
-        "includePaths": ["node_modules/"]
-      },
-    }
-  }
-}
-```
-
-**_Note_**: _Don't forget to restart the `ng serve` after changing the `angular.json` file. Otherwise, the new changes will not be applied._
-
-### Include Paths in Webpack 4+
-
-Inside your project's `webpack.config.js`, you need to include `sassOptions: { includePaths: ['/node_modules'] }` in your `sass-loader` configuration to resolve the `node_modules` directory so `@amar-ui-web` packages can be imported directly using **absolute import**.
-
-```js
-module.exports = [{
-  ...,
-  rules: [
-    ...,
-    {
-      loader: 'sass-loader',
-      options: {
-        ...,
-        sassOptions: {
-          includePaths: ['./node_modules']
-        }
-      }
-    }
-  ]
-}]
-```
-
 ## Usage
 
-Once you're done with the `includePaths` configuration, you should then be able import the package like this:
+Upon installation, `@amar-ui-web/core` and all its underlying packages will be accessible from inside your project's `node_modules` folder, but you might notice that **you're unable to access them directly**. This is because you need to resolve your project's `node_modules` path first; each package uses _absolute import_ to depend on each other using Sass' `@import`. If you haven't done this, please follow the instructions in the [Resolving `node_modules` Path section](#resolving-node_modules-path).
+
+Once you're done, you should be able import the package like this:
 
 ```scss
 @import '@amar-ui-web/core/index.scss';
@@ -86,3 +36,51 @@ If you would like to import individual packages/modules or its specific abstract
 ```
 
 To know more about each package/module features and APIs, please refer to each package documentation.
+
+## Resolving `node_modules` Path
+
+### Webpack 4+
+
+In your project's `webpack.config.js`, you need to include `node_modules` path inside of the [`sassOptions.includePaths`](https://github.com/sass/node-sass#includepaths) property in your `sass-loader` options.
+
+```js
+module.exports = [{
+  ...,
+  rules: [
+    ...,
+    {
+      loader: 'sass-loader',
+      options: {
+        ...,
+        sassOptions: {
+          includePaths: ['./node_modules']
+        }
+      }
+    }
+  ]
+}]
+```
+
+### Angular 6+
+
+In `angular.json` file, make sure the `node_modules` is listed as the `includePaths` under the `build.options` configuration to enable the Sass compiler run properly.
+
+```
+{
+  "build": {
+    ...,
+    "options": {
+      ...,
+      "styles": [
+        "src/styles.scss"
+      ],
+      // add this line, just below "styles"
+      "stylePreprocessorOptions": {
+        "includePaths": ["node_modules/"]
+      },
+    }
+  }
+}
+```
+
+**_Note_**: _Don't forget to restart the `ng serve` after changing the `angular.json` file. Otherwise, the new changes will not be applied._
