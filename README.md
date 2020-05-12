@@ -2,9 +2,16 @@
 
 Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X developemnt workflow of web projects and applications within Amar Bank.
 
+## Important Links
+
+- [Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started)
+- [Naming Convention](https://amar-ui.tunaiku.com/introduction/naming-convention)
+- [Foundations](https://amar-ui.tunaiku.com/foundations)
+- [Components](https://amar-ui.tunaiku.com/components)
+
 ## Installation
 
-Amar UI Web is best installed via **package managers** like `yarn` or `npm`.
+Amar UI Web is available via **package managers**.
 
 ```bash
 $ npm install @amar-ui-web/core
@@ -13,9 +20,7 @@ $ yarn add @amar-ui-web/core
 
 ## Usage
 
-Upon installation, `@amar-ui-web/core` and all its underlying packages will be accessible from inside your project's `node_modules` folder, but you might notice that **you're unable to access them directly**. This is because you need to resolve your project's `node_modules` path first; each package uses _absolute import_ to depend on each other using Sass' `@import`. If you haven't done this, please follow the instructions in the [Resolving `node_modules` Path section](#resolving-node_modules-path).
-
-Once you're done, you should be able import the package like this:
+Make sure to have resolve your `node_module` path first in order to be able to use the library. You can find instructions about this at our [Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started) page.
 
 ```scss
 @import '@amar-ui-web/core/index.scss';
@@ -34,53 +39,3 @@ If you would like to import individual packages/modules or its specific abstract
 @import '@amar-ui-web/color/scss/mixins';
 @import '@amar-ui-web/color/scss/functions';
 ```
-
-To know more about each package/module features and APIs, please refer to each package documentation.
-
-## Resolving `node_modules` Path
-
-### Webpack 4+
-
-In your project's `webpack.config.js`, you need to include `node_modules` path inside of the [`sassOptions.includePaths`](https://github.com/sass/node-sass#includepaths) property in your `sass-loader` options.
-
-```js
-module.exports = [{
-  ...,
-  rules: [
-    ...,
-    {
-      loader: 'sass-loader',
-      options: {
-        ...,
-        sassOptions: {
-          includePaths: ['./node_modules']
-        }
-      }
-    }
-  ]
-}]
-```
-
-### Angular 6+
-
-In `angular.json` file, make sure the `node_modules` is listed as the `includePaths` under the `build.options` configuration to enable the Sass compiler run properly.
-
-```
-{
-  "build": {
-    ...,
-    "options": {
-      ...,
-      "styles": [
-        "src/styles.scss"
-      ],
-      // add this line, just below "styles"
-      "stylePreprocessorOptions": {
-        "includePaths": ["node_modules/"]
-      },
-    }
-  }
-}
-```
-
-**_Note_**: _Don't forget to restart the `ng serve` after changing the `angular.json` file. Otherwise, the new changes will not be applied._
