@@ -9,13 +9,13 @@
   }
 
   > h1,
-  > h2,
-  > h3 {
-    margin-top: amb-spacing('xlarge');
+  > h2 {
+    margin-top: amb-spacing('2xlarge');
     margin-bottom: amb-spacing('base');
     font-weight: amb-font-weight('semibold');
   }
 
+  > h3,
   > h4,
   > h5,
   > h6 {
