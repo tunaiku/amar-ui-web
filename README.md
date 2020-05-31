@@ -1,6 +1,6 @@
 <h1 align="center">Amar UI Web</h1>
 
-Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X developemnt workflow of web projects and applications within Amar Bank.
+Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X development workflow of web projects and applications within Amar Bank.
 
 ## Important Links
 
