@@ -1,6 +1,9 @@
 <h1 align="center">Amar UI Web</h1>
 
-Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X development workflow of web projects and applications within Amar Bank.
+Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that
+follows **Amar Design System** as its primary foundation. Amar UI Web aims to
+enhance the UI/X development workflow of web projects and applications within
+Amar Bank.
 
 ## Important Links
 
@@ -20,13 +23,17 @@ $ yarn add @amar-ui-web/core
 
 ## Usage
 
-Make sure to have resolve your `node_module` path first in order to be able to use the library. You can find instructions about this at our [Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started) page.
+Make sure to resolve your `node_module` path first in order to be able to use
+the library. You can find instructions about this at our
+[Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started)
+page.
 
 ```scss
 @import '@amar-ui-web/core/index.scss';
 ```
 
-If you would like to import individual packages/modules or its specific abstracts (variables, mixins, functions, etc.), you can do that as well.
+If you would like to import individual packages/modules or its specific
+abstracts (variables, mixins, functions, etc.), you can do that as well.
 
 ```scss
 @import '@amar-ui-web/color/index.scss';
