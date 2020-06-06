@@ -15,10 +15,10 @@ module.exports = env => {
   return {
     name: 'amar-ui-web',
     entry: {
-      'amar-ui-web': path.join(__dirname, '/packages/core/index.scss'),
+      index: path.join(__dirname, '/packages/core/index.scss'),
     },
     output: {
-      path: path.join(__dirname, './dist'),
+      path: path.join(__dirname, './packages/core/dist'),
       filename: `${isProd ? '[name].min.css.js' : '[name].css.js'}`,
     },
     devtool: isDev ? 'cheap-module-eval-source-map' : false,
@@ -49,7 +49,9 @@ module.exports = env => {
                 sourceMap: true,
                 sassOptions: {
                   minimize: false,
-                  includePaths: [path.resolve(path.join(__dirname, '/node_modules'))],
+                  includePaths: [
+                    path.resolve(path.join(__dirname, '/node_modules')),
+                  ],
                   implementation: require('node-sass'),
                   outputStyle: isProd ? 'compressed' : 'expanded',
                 },
