@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0...v1.1.1) (2020-06-06)
+
+
+### Bug Fixes
+
+* **docs:** fix duplicate foundations feature card in home ([6f4b79d](https://github.com/gatsbyjs/gatsby-starter-default/commit/6f4b79db546733e215c03af3478cc741efe55564))
+
+
+
+
+
 # 1.1.0 (2020-04-23)
 
 
