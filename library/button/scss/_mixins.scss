@@ -260,9 +260,6 @@
   }
 }
 
-/**
- *
- */
 @mixin amb-create-button-size-classes() {
   @each $size-name, $size-properties in $amb-button-size-map {
     &--#{$size-name} {
