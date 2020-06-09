@@ -1,8 +1,6 @@
 @import '@amar-ui-web/elevation/scss/mixins';
 @import './variables';
 
-/// Generates all dialog classes
-///
 @mixin amb-create-dialog-classes() {
   .Dialog {
     @include amb-add-dialog-styles();
