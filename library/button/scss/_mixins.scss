@@ -4,8 +4,6 @@
 @import '@amar-ui-web/color/scss/variables';
 @import './variables';
 
-/// Main entrypoint of all functions to generate button component and its underlying functions.
-///
 @mixin amb-create-button-classes() {
   .Button {
     @include amb-add-button-base-styles();
@@ -18,8 +16,6 @@
   }
 }
 
-/// Basic styles shared with all types and variants of button.
-///
 @mixin amb-add-button-base-styles() {
   position: relative;
   display: inline-flex;
