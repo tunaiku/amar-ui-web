@@ -356,11 +356,3 @@
     @content;
   }
 }
-
-// TO-DO: Deprecate this helper mixin since it's not used anymore.
-// Shorthand version of the specific state functions.
-@mixin amb-button-is-state($state: 'disabled') {
-  @include amb-button-is-#{$state} {
-    @content;
-  }
-}
