@@ -319,10 +319,6 @@
   }
 }
 
-/**
- * These are helper mixins used in amb-button to reduce abstractions and adhere 
- * to reusability.
- */
 @mixin amb-button-is-not-disabled() {
   &:not(:disabled):not(.is-disabled) {
     @content;
