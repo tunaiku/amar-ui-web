@@ -1,26 +1,17 @@
-// TO-DO: Move to @amar-ui-web/font
-//
-$amb-text-transforms: () !default;
-$amb-text-transforms: map-merge(
-  (
-    'none': none,
-    'uppercase': uppercase,
-    'lowercase': lowercase,
-    'capitalize': capitalize,
-  ),
-  $amb-text-transforms
-);
-
-// prettier-ignore
 $amb-spacing-type-map: (
-  "margin": "mg",
-  "padding": "pd"
+  'margin': 'mg',
+  'padding': 'pd',
 );
 
 $amb-spacing-direction-map: ('top', 'left', 'right', 'bottom');
 
-// prettier-ignore
 $amb-spacing-axes: (
-  "x": ("left", "right"),
-  "y": ("top", "bottom")
+  'x': (
+    'left',
+    'right',
+  ),
+  'y': (
+    'top',
+    'bottom',
+  ),
 );
