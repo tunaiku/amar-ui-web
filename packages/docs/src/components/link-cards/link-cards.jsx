@@ -15,6 +15,7 @@ const LinkCards = ({ links }) => {
                 {hasImage && (
                   <div className="Card-media">
                     <Figure
+                      alt={'tes'}
                       src={link.imgPath}
                       className="BgColor-secondary-90 Padding-large"
                       style={{ height: '250px' }}
@@ -23,8 +24,12 @@ const LinkCards = ({ links }) => {
                 )}
 
                 <div className="Card-block FlexGrow-1 PaddingBottom-xlarge">
-                  <h4 className="Typography-heading20 MarginBottom-2xsmall">{link.title}</h4>
-                  <p className="Typography-regular14 Color-neutral-80">{link.description}</p>
+                  <h4 className="Typography-heading20 MarginBottom-2xsmall">
+                    {link.title}
+                  </h4>
+                  <p className="Typography-regular14 Color-neutral-80">
+                    {link.description}
+                  </p>
                 </div>
               </div>
             </LinkCard>

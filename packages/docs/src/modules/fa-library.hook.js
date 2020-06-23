@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt, faRocket } from '@fortawesome/free-solid-svg-icons';

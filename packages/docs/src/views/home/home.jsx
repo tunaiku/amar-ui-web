@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { SEO } from 'components/seo';
 import { MainLayout } from 'layouts/main-layout';
-import { FontAwesomeIcon as FaIcon } from '@fortawesome/react-fontawesome';
 import HeroIllustration from 'images/amar-ui-hero.svg';
 import { Figure } from 'components/figure';
 import FeatureCards from './components/feature-cards';
@@ -20,10 +19,13 @@ const Home = () => (
               <div className="Grid Grid-6">
                 <div className="Flex-column AlignItems-center MarginRight">
                   <div className="MarginBottom-large">
-                    <h1 className="FontSize-5xlarge MarginBottom">Amar UI CSS</h1>
+                    <h1 className="FontSize-5xlarge MarginBottom">
+                      Amar UI CSS
+                    </h1>
                     <p className="FontSize-2xlarge Color-neutral-20">
-                      An <strong>open-source</strong> CSS Framework for crafting beautiful user
-                      interfaces and experiences with Amar Design System as its foundation.
+                      An <strong>open-source</strong> CSS Framework for crafting
+                      beautiful user interfaces and experiences with Amar Design
+                      System as its foundation.
                     </p>
                   </div>
                   <Link

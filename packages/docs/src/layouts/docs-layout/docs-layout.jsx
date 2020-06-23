@@ -8,7 +8,7 @@ import './docs-layout.scss';
 
 const DocsLayout = ({ data, ...rest }) => {
   const { mdx } = data;
-  const { body, frontmatter } = mdx;
+  const { frontmatter } = mdx;
 
   return (
     <MainLayout>
@@ -36,8 +36,12 @@ const DocsArticle = ({ markdown, children }) => {
     return (
       <article className="Docs-article">
         <header className="Docs-articleHeadline">
-          <h1 className="Heading-1 MarginBottom-small FontSize-5xlarge">{frontmatter.title}</h1>
-          <p className="Heading-4 Color-neutral-70">{frontmatter.description}</p>
+          <h1 className="Heading-1 MarginBottom-small FontSize-5xlarge">
+            {frontmatter.title}
+          </h1>
+          <p className="Heading-4 Color-neutral-70">
+            {frontmatter.description}
+          </p>
         </header>
         <div className="Docs-articleMarkdown">
           <Markdown>{markdown && body}</Markdown>

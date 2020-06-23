@@ -5,7 +5,7 @@ import { Menu, MenuItem } from 'components/menu';
 import { sortArrayObjectAlphabetically } from 'utilities/object.util';
 
 const DocsMenu = props => {
-  const { className, menuItems } = props;
+  const { menuItems } = props;
   const location = useLocation();
 
   const activateCurrentMenuItem = (path, location) => {
@@ -25,7 +25,9 @@ const DocsMenu = props => {
 
         return (
           <MenuItem isCategory={hasSubmenu}>
-            <Link to={path} activeClassName={activateCurrentMenuItem(path, location)}>
+            <Link
+              to={path}
+              activeClassName={activateCurrentMenuItem(path, location)}>
               {title}
             </Link>
             {submenu && <DocsMenu menuItems={submenu} />}
