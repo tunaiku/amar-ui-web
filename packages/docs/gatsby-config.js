@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Amar UI Web',
-    description:
-      '⚡️ CSS library of components, layouts and utilities based on Amar Design System',
+    description: '⚡️ CSS library of components, layouts and utilities based on Amar Design System',
     author: `David Kurnia Kristiadi @dkk94`,
   },
   plugins: [
@@ -50,22 +49,6 @@ module.exports = {
       },
     },
 
-    // {
-    //   resolve: `gatsby-plugin-mdx`,
-    //   options: {
-    //     defaultLayouts: require.resolve('./src/layouts/docs-layout.jsx'),
-    //     extensions: ['.mdx', '.md'],
-    //     gatsbyRemarkPlugins: [
-    //       {
-    //         resolve: `gatsby-remark-prismjs`,
-    //         options: {
-    //           classPrefix: 'language-',
-    //           aliases: {},
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
