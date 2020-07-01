@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: ['../../node_modules'],
+        includePaths: ['../node_modules'],
       },
     },
     `gatsby-plugin-react-helmet`,

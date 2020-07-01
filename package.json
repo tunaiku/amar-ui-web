@@ -8,7 +8,7 @@
   "author": "dkk94 <davidkurniakristiadi@gmail.com>",
   "main": "index.js",
   "workspaces": [
-    "packages/*",
+    "docs",
     "library/*"
   ],
   "scripts": {
