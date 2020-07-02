@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import './code.scss';
+import './code-block.scss';
 
 const CodeBlock = props => {
   const { codeString, language, className } = props;
@@ -10,13 +10,13 @@ const CodeBlock = props => {
     <Highlight {...defaultProps} code={codeString.trim()} language={language}>
       {props => {
         // prettier-ignore
-        const { 
-          className: _className, 
-          style,
-          tokens, 
-          getLineProps,
-          getTokenProps 
-        } = props;
+        const {
+					className: _className,
+					style,
+					tokens,
+					getLineProps,
+					getTokenProps
+				} = props;
 
         const cssClasses = classNames(className, `CodeBlock`, _className);
 

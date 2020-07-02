@@ -3,7 +3,8 @@ import './markdown.scss';
 import { preToCodeBlock } from 'mdx-utils';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { CodeBlock, CodePreview } from '../code';
+import { CodeBlock } from '../code-block';
+import { CodePreview } from '../code-preview';
 
 const Markdown = ({ children }) => {
   const transformTableMarkdown = () => props => {

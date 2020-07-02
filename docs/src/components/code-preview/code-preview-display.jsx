@@ -1,16 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import CodeBlock from './code-block';
-import JsxParser from 'react-jsx-parser';
-import './code.scss';
+import './code-preview.scss';
 
-const CodePreview = props => {
-  const { codeString, bgColor, center } = props;
-
-  const parseCode = string => {
-    return <JsxParser renderInWrapper={false} jsx={string} />;
-  };
-
+const CodePreviewDisplay = ({ bgColor, center, children }) => {
   const getBgColorMap = bgColorObject => {
     const splittedBgColorObject = bgColorObject.split('.');
 
@@ -31,7 +23,6 @@ const CodePreview = props => {
   };
 
   const cssClasses = {
-    codePreview: classNames(`CodePreview`),
     codePreviewDisplay: classNames({
       [`CodePreview-display`]: true,
       [getBgColorClass(bgColor)]: !!bgColor,
@@ -43,13 +34,10 @@ const CodePreview = props => {
   };
 
   return (
-    <div className={cssClasses.codePreview}>
-      <div className={cssClasses.codePreviewDisplay}>
-        <div className={cssClasses.codePreviewDisplayContainer}>{parseCode(codeString)}</div>
-      </div>
-      <CodeBlock {...props} className="CodePreview-codeBlock" />
+    <div className={cssClasses['codePreviewDisplay']}>
+      <div className={cssClasses['codePreviewDisplayContainer']}>{children}</div>
     </div>
   );
 };
 
-export default CodePreview;
+export default CodePreviewDisplay;
