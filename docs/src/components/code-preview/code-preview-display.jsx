@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './code-preview.scss';
 
-const CodePreviewDisplay = ({ bgColor, center, children }) => {
+const CodePreviewDisplay = ({ bgColor, fullWidth, children }) => {
   const getBgColorMap = bgColorObject => {
     const splittedBgColorObject = bgColorObject.split('.');
 
@@ -13,7 +13,7 @@ const CodePreviewDisplay = ({ bgColor, center, children }) => {
   };
 
   const getBgColorClass = bgColor => {
-    if (bgColor) {
+    if (!!bgColor) {
       const bgColorMap = getBgColorMap(bgColor);
       const bgColorThemeClass = bgColorMap.theme;
       const bgColorShadeClass = bgColorMap.shade ? `-${bgColorMap.shade}` : '';
@@ -29,7 +29,7 @@ const CodePreviewDisplay = ({ bgColor, center, children }) => {
     }),
     codePreviewDisplayContainer: classNames({
       [`CodePreview-displayContainer`]: true,
-      [`CodePreview-displayContainer--center`]: center,
+      [`CodePreview-displayContainer--fullWidth`]: fullWidth,
     }),
   };
 
