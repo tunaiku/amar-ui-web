@@ -32,10 +32,11 @@
 
   &-display & {
     &-displayContainer {
-      width: 100%;
+      max-width: 480px;
 
-      &--center {
-        max-width: 480px;
+      &--fullWidth {
+        max-width: 100%;
+        width: 100%;
       }
     }
   }
