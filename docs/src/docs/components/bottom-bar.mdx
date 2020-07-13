@@ -8,14 +8,10 @@ accompanied with a text label. Bottom bar is likely to be used in mobile-view.'
 
 ## Usage
 
-To implement a bottom bar, add `.BottomBar` class to transform it into a bottom bar wrapper. Inside
-the bottom bar wrapper, `.BottomBar-menu` and `.BottomBar-menuItem` can be used.
+To implement a bottom bar, add `.BottomBar` class to transform it into a bottom bar wrapper. Apply
+`.BottomBar-menu` and `.BottomBar-menuItem` as needed.
 
-- `BottomBar-menu` creates another layer of wrapper to control the menu items inside. Applies `flex` under the hood
-  to align menu items horizontally.
-- `BottomBar-menuItem` transforms an element into a menu item that organizes the placements of its insides; the menu icon and label.
-
-```html preview=true bgColor=lighter center=true
+```html preview=true bgColor=lighter fullWidth=true
 <div class="BottomBar">
   <ul class="BottomBar-menu">
     <li class="BottomBar-menuItem">
@@ -39,7 +35,7 @@ the bottom bar wrapper, `.BottomBar-menu` and `.BottomBar-menuItem` can be used.
 In order to activate the active state of a bottom bar item, simply append `.is-active` state inside
 of `BottomBar-menuItem`.
 
-```html preview=true bgColor=lighter center=true
+```html preview=true bgColor=lighter
 <div class="BottomBar">
   <ul class="BottomBar-menu">
     <li class="BottomBar-menuItem">
