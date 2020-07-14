@@ -23,21 +23,13 @@ const CodePreviewDisplay = ({ bgColor, fullWidth, children }) => {
   };
 
   const cssClasses = {
-    codePreviewDisplay: classNames({
-      [`CodePreview-display`]: true,
+    codePreviewDisplay: classNames('CodePreview-display', {
       [getBgColorClass(bgColor)]: !!bgColor,
-    }),
-    codePreviewDisplayContainer: classNames({
-      [`CodePreview-displayContainer`]: true,
-      [`CodePreview-displayContainer--fullWidth`]: fullWidth,
+      'CodePreview-display--fullWidth': fullWidth,
     }),
   };
 
-  return (
-    <div className={cssClasses['codePreviewDisplay']}>
-      <div className={cssClasses['codePreviewDisplayContainer']}>{children}</div>
-    </div>
-  );
+  return <div className={cssClasses['codePreviewDisplay']}>{children}</div>;
 };
 
 export default CodePreviewDisplay;
