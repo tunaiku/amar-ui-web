@@ -1,35 +1,30 @@
 ---
 path: '/components/button'
 title: 'Button'
-description: 'Button is an interactive element that carries an action that returns a feedback when
-clicked.'
+description: 'Button is an interactive element that returns feedback when clicked.'
 ---
 
 ## Usage
 
-Simply add the `.Button` class in a `<button>` or `<a>` tag to apply the standard button styling.
-From here, there are many options which you can choose to further modify your button.
+Add the `.Button` class in a `<button>` or `<a>` tag to apply the standard button styling.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button">Default button</button>
 ```
 
-A little note for accessibility; adding `.Button` class to `<a>` is completely possible, but always
-put `role="button"` attribute. This will make sure `<a>` element is recognized as a clickable
-element by screen readers.
+A little note for accessibility; adding `.Button` class to `<a>` is completely possible, but
+remember to always put `role="button"` attribute. This will make sure screen readers can recognize
+`<a>` element as a clickable element.
 
 ## Themes
 
-You can apply a theme to a button to make it the primary call-to-action element of a component.
-Applying a theme is required to apply variants to a button. If you choose to not apply other
-variants, a themed button will hold the base emphasis that typically used for primary actions.
+Append `Button--<theme>` class to turn your class into a themed button. Themed button has filled
+background color with the selected color theme of choice.
 
-To apply a themed button, simply append the `.Button--<theme>` class alongside the `.Button` class.
-
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button Button--primary">Primary</button>
 <button class="Button Button--secondary">Secondary</button>
-<button class="Button Button--success">Warning</button>
+<button class="Button Button--success">Success</button>
 <button class="Button Button--warning">Warning</button>
 <button class="Button Button--danger">Danger</button>
 <button class="Button Button--dark">Dark</button>
@@ -38,10 +33,10 @@ To apply a themed button, simply append the `.Button--<theme>` class alongside t
 
 ## Variants
 
-You can further modify a button with a set of handful **variants**. Variants are differentiated by
-their level of **emphasis**. Please note that variants can only work in a **themed button**.
+You can modify a button with a handful of **variants**. Note that variants can only work in a
+**themed button**.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button Button--primary">Button</button>
 <button class="Button Button--primary Button--outlined">Button</button>
 <button class="Button Button--primary Button--text">Button</button>
@@ -54,7 +49,7 @@ Outlined button has a lower emphasis than a themed button and is usually used fo
 
 To apply an outlined button, append `.Button--outlined` alongside `Button` and `Button--<theme>`.
 
-```html preview=true bgColor=neutral.10
+```html preview=true bgColor=neutral.10 fullWidth=true
 <button class="Button Button--outlined Button--primary">Primary</button>
 <button class="Button Button--outlined Button--secondary">Secondary</button>
 <button class="Button Button--outlined Button--warning">Warning</button>
@@ -70,7 +65,7 @@ To apply an outlined button, append `.Button--outlined` alongside `Button` and `
 
 To apply a text button, append `.Button--text` alongside `Button` and `Button--<theme>`.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button Button--text Button--primary">Primary</button>
 <button class="Button Button--text Button--secondary">Secondary</button>
 <button class="Button Button--text Button--warning">Warning</button>
@@ -84,7 +79,7 @@ To apply a text button, append `.Button--text` alongside `Button` and `Button--<
 Elevated button has a custom effect to make your button appear floated, similar to Material Design's
 button.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button Button--primary Button--elevated">Primary</button>
 <button class="Button Button--secondary Button--elevated">Secondary</button>
 <button class="Button Button--danger Button--elevated">Danger</button>
@@ -104,7 +99,7 @@ different button entities.
 Append `Button--<size>` modifier class to change the size of a button. Out of the box, there are
 three different sizes you can choose from.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button Button--primary Button--small">Small</button>
 <button class="Button Button--primary">Base</button>
 <button class="Button Button--primary Button--large">Large</button>
@@ -114,7 +109,7 @@ three different sizes you can choose from.
 
 Append `Button--rounded` modifier to turn buttons into a pill-like shape.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button class="Button Button--primary Button--rounded">A rounded button</button>
 <button class="Button Button--secondary Button--outlined Button--rounded">A rounded button</button>
 ```
@@ -124,7 +119,7 @@ Append `Button--rounded` modifier to turn buttons into a pill-like shape.
 Append the `Button--fullWidth` modifier to increase a button's width to expand over its parent's
 width.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button className="Button Button--primary Button--fullWidth MarginBottom">
   Primary Button
 </button>
@@ -137,7 +132,7 @@ width.
 
 Turns a button into disabled state which makes it **noninteractive**.
 
-```html preview=true
+```html preview=true fullWidth=true
 <button className="Button Button--primary" disabled>Disabled button</button>
 <a className="Button Button--primary is-disabled">Disabled button</a>
 ```
