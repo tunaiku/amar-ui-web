@@ -21,15 +21,38 @@
     &-dialog {
       display: flex;
       flex-direction: column;
-      min-height: 20em;
 
       background-color: $white;
       border-top-right-radius: amb-border-radius('3xlarge');
       border-top-left-radius: amb-border-radius('3xlarge');
+
+      > *:first-child {
+        padding-top: amb-spacing('base');
+      }
+
+      > *:last-child {
+        padding-bottom: amb-spacing('base');
+      }
     }
 
-    &-block {
-      padding: amb-spacing('base');
+    &-media {
+      display: flex;
+      justify-content: center;
+      padding-left: amb-spacing('base');
+      padding-right: amb-spacing('base');
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    &-body {
+      padding-left: amb-spacing('base');
+      padding-right: amb-spacing('base');
+    }
+
+    &-title {
+      @include amb-typography-style('heading20');
     }
 
     &-backdrop {
