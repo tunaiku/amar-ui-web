@@ -1,5 +1,6 @@
 import React from 'react';
-import cssClasses from './figure.module.scss';
+import classNames from 'classnames';
+import './figure.scss';
 
 const defaultProps = {
   tag: 'figure',
@@ -7,6 +8,10 @@ const defaultProps = {
 
 const Figure = props => {
   const { tag: Tag, attributes, ...rest } = props;
+
+  const cssClasses = {
+    Figure: classNames('Figure'),
+  };
 
   return (
     <div className={cssClasses['Figure']}>
