@@ -1,0 +1,83 @@
+@import '@amar-ui-web/color/scss/variables';
+@import './variables';
+
+@mixin amb-create-select() {
+  .Select {
+    position: relative;
+
+    > select {
+      @include amb-select-base-styles();
+      @include amb-create-select-states();
+    }
+
+    @include amb-create-select-themes();
+    @include amb-create-select-arrow-indicator();
+  }
+}
+
+@mixin amb-create-select-states($color-theme: null) {
+  @include amb-create-select-focus-state($color-theme);
+}
+
+@mixin amb-create-select-focus-state($color-theme) {
+  $select-border-color: '' !default;
+  $select-box-shadow: '' !default;
+
+  @if $color-theme {
+    $select-border-color: amb-color-theme($color-theme);
+    $select-box-shadow: 0 0 0 3px amb-color-theme-opacity($color-theme, 0.3);
+  } @else {
+    $select-border-color: amb-color-theme('primary');
+    $select-box-shadow: 0 0 0 3px amb-color-theme-opacity('primary', 0.3);
+  }
+
+  &:focus {
+    border-color: $select-border-color;
+    box-shadow: $select-box-shadow;
+  }
+}
+
+@mixin amb-select-base-styles() {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  line-height: $amb-select-line-height;
+  font-family: $amb-select-font-family;
+  font-size: $amb-select-font-size;
+  padding: $amb-select-spacing;
+  transition: $amb-select-transition;
+  background-color: $amb-select-bg-color;
+  border: $amb-select-border;
+  border-radius: $amb-select-border-radius;
+  outline: none;
+  appearance: none;
+  white-space: normal;
+}
+
+@mixin amb-create-select-themes() {
+  @each $color-theme, $color-theme-value in $amb-color-theme-map {
+    &--#{$color-theme} {
+      > select {
+        border-color: $color-theme-value;
+      }
+    }
+  }
+}
+
+@mixin amb-create-select-arrow-indicator() {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: amb-spacing('small');
+    transform: translateY(-50%);
+
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid black;
+    z-index: 1;
+  }
+}

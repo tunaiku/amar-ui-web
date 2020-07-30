@@ -1,0 +1,9 @@
+{
+  "name": "@amar-ui-web/select",
+  "version": "1.1.1",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  }
+}

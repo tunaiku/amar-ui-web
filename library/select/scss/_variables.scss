@@ -1,0 +1,19 @@
+@import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+
+$amb-select-font-size: amb-font-size('base') !default;
+$amb-select-font-family: amb-font-family('sans-serif') !default;
+
+$amb-select-bg-color: $white !default;
+$amb-select-fg-color: amb-color-contrast($amb-input-bg-color) !default;
+
+$amb-select-border: solid 1px amb-color-theme('neutral', 60) !default;
+$amb-select-border-radius: amb-border-radius('base') !default;
+
+$amb-select-spacing-y: amb-spacing('small') !default;
+$amb-select-spacing-x: amb-spacing('base') !default;
+$amb-select-spacing: $amb-input-spacing-y $amb-input-spacing-x;
+
+$amb-select-line-height: $amb-base-line-height !default;
+
+$amb-select-transition: all 250ms ease-in-out;
