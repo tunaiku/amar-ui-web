@@ -1,4 +1,3 @@
 @import './scss/mixins';
 
-@include amb-create-core-typography-classes();
-@include amb-create-text-utility-classes();
+@include amb-create-typography();
