@@ -1,19 +1,10 @@
 @import '@amar-ui-web/core/helpers';
 @import './variables';
 
-@mixin amb-create-typography-module() {
+@mixin amb-initialize-typography-module() {
   @include amb-create-heading-classes();
   @include amb-create-typography-style-classes();
   @include amb-create-typography-utility-classes();
-}
-
-@mixin amb-create-typography-utility-classes() {
-  @include amb-create-font-size-classes();
-  @include amb-create-font-weight-classes();
-  @include amb-create-text-transform-classes();
-  @include amb-create-line-height-classes();
-  @include amb-create-letter-spacing-classes();
-  @include amb-create-text-alignment-classes();
 }
 
 @mixin amb-create-heading-classes() {
@@ -25,6 +16,15 @@
       font-size: $heading-size;
     }
   }
+}
+
+@mixin amb-create-typography-utility-classes() {
+  @include amb-create-font-size-classes();
+  @include amb-create-font-weight-classes();
+  @include amb-create-text-transform-classes();
+  @include amb-create-line-height-classes();
+  @include amb-create-letter-spacing-classes();
+  @include amb-create-text-alignment-classes();
 }
 
 @mixin amb-create-typography-style-classes() {
