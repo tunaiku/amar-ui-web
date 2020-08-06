@@ -1,4 +1,3 @@
 @import './scss/mixins';
 
-@include amb-create-button-classes();
-@include amb-create-button-group-classes();
+@include amb-initialize-button-module();

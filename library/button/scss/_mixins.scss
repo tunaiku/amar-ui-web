@@ -4,33 +4,36 @@
 @import '@amar-ui-web/color/scss/variables';
 @import './variables';
 
+@mixin amb-initialize-button-module() {
+  @include amb-create-button-classes();
+  @include amb-create-button-group-classes();
+}
+
 @mixin amb-create-button-classes() {
   .Button {
-    @include amb-add-button-base-styles();
-    @include amb-add-button-base-state-classes();
+    @include amb-get-button-base-styles();
+    @include amb-get-button-base-state-classes();
 
     @include amb-create-button-variant-classes();
-    @include amb-create-button-size-classes();
-    @include amb-create-button-shape-classes();
-    @include amb-create-button-elevated-class();
+    @include amb-create-button-modifier-classes();
   }
 }
 
-@mixin amb-add-button-base-styles() {
+@mixin amb-get-button-base-styles() {
+  @include amb-get-button-size-props($amb-button-size-base);
+
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
 
-  font-size: $amb-button-font-size;
   font-weight: $amb-button-font-weight;
   font-family: $amb-button-font-family;
   line-height: $amb-button-line-height;
   letter-spacing: $amb-button-letter-spacing;
   text-align: center;
 
-  padding: $amb-button-spacing;
   min-width: $amb-button-min-width;
 
   color: $amb-button-fg-color;
@@ -44,17 +47,17 @@
   transition: $amb-button-transition;
   white-space: nowrap;
   outline: none;
-  -webkit-appearance: none;
+  appearance: none;
 
   text-decoration: none;
 
-  /* Apply pointer cursor on non-disabled buttons */
+  // Apply pointer cursor on non-disabled buttons
   @include amb-button-is-not-disabled() {
     cursor: pointer;
   }
 }
 
-@mixin amb-add-button-base-state-classes() {
+@mixin amb-get-button-base-state-classes() {
   @include amb-button-is-disabled() {
     opacity: 0.5;
     cursor: not-allowed;
@@ -92,14 +95,14 @@
 @mixin amb-create-button-variant-classes() {
   @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &--#{$color-theme} {
-      @include amb-add-button-filled-styles($color-theme);
+      @include amb-get-button-filled-styles($color-theme);
       @include amb-create-button-text-class($color-theme);
       @include amb-create-button-outlined-class($color-theme);
       @include amb-create-button-raised-class($color-theme);
     }
   }
 }
-@mixin amb-add-button-filled-styles($color-theme) {
+@mixin amb-get-button-filled-styles($color-theme) {
   @include amb-button-is-not-disabled() {
     $box-shadow-values: $amb-button-box-shadow-values;
 
@@ -134,8 +137,6 @@
       color: $fg-color-active;
       background-color: $bg-color-active;
       border-color: $border-color-active;
-
-      // box-shadow: none;
     }
   }
 
@@ -263,17 +264,22 @@
   }
 }
 
-/**
- *
- */
-@mixin amb-create-button-shape-classes() {
-  &--round {
-    border-radius: amb-border-radius('round');
-  }
+@mixin amb-create-button-modifier-classes() {
+  @include amb-create-button-size-classes();
+  @include amb-create-button-full-width-class();
+  @include amb-create-button-rounded-class();
+  @include amb-create-button-elevated-class();
+}
 
-  // Extend button to 100% width of its parent
+@mixin amb-create-button-full-width-class() {
   &--fullWidth {
     width: 100%;
+  }
+}
+
+@mixin amb-create-button-rounded-class() {
+  &--rounded {
+    border-radius: amb-border-radius('round');
   }
 }
 
@@ -351,4 +357,8 @@
   &.is-active {
     @content;
   }
+}
+
+@mixin amb-get-button-size-props($props) {
+  @include create-properties($props);
 }
