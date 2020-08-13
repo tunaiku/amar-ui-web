@@ -6,7 +6,7 @@
 $amb-button-font-size: amb-font-size('base') !default;
 $amb-button-font-weight: amb-font-weight('medium') !default;
 $amb-button-font-family: amb-font-family('primary') !default;
-$amb-button-line-height: $amb-line-height !default;
+$amb-button-line-height: 1.2 !default;
 $amb-button-letter-spacing: 1.2px !default;
 
 $amb-button-bg-color: transparent !default;
@@ -33,16 +33,6 @@ $amb-button-box-shadow--is-focused: $amb-button-box-shadow-values--is-focused
 $amb-button-min-width: 6em !default;
 
 $amb-button-transition: all 150ms ease-in-out !default;
-$amb-button-spacings: () !default;
-$amb-button-spacings: map-merge(
-  (
-    'small': 6px 15.5px,
-    'base': 14px 15.5px,
-    'large': 18px 15.5px,
-  ),
-  $amb-button-spacings
-);
-$amb-button-spacing: map-get($amb-button-spacings, 'base');
 
 $amb-button-size-map: () !default;
 $amb-button-size-map: map-merge(
@@ -52,15 +42,19 @@ $amb-button-size-map: map-merge(
       font-size: amb-font-size('xsmall'),
     ),
     'base': (
-      padding: 14px 15.5px,
+      padding: 14px 16px,
       font-size: amb-font-size('base'),
     ),
     'large': (
-      padding: 18px 15.5px,
+      padding: 18px 16px,
       font-size: amb-font-size('base'),
     ),
   ),
   $amb-button-size-map
 );
+
+$amb-button-size-base: map-get($amb-button-size-map, 'base');
+$amb-button-size-medium: map-get($amb-button-size-map, 'medium');
+$amb-button-size-large: map-get($amb-button-size-map, 'large');
 
 $amb-button-raised-border-bottom-width: 5px !default;

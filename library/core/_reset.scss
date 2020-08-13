@@ -33,7 +33,7 @@ body {
   font-family: amb-font-family('sans-serif');
   font-weight: amb-font-weight('base');
   font-size: amb-font-size('base');
-  line-height: $amb-line-height;
+  line-height: amb-line-height('base');
   color: $black;
 }
 

@@ -1,24 +1,28 @@
 @import '@amar-ui-web/core/helpers';
 @import './functions';
-@import './typefaces';
 
-$amb-font-family-sans-serif: $amb-typeface-system-stack !default;
-$amb-font-family-serif: $amb-typeface-georgia-stack !default;
-$amb-font-family-monospace: $amb-typeface-sf-mono-stack !default;
+/// Font families
+$amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif !default;
+$amb-font-family-serif: Georgia, 'Times New Roman', serif !default;
+$amb-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono',
+  'Liberation Mono', 'Courier New', monospace !default;
 
-$amb-font-families: () !default;
-$amb-font-families: map-merge(
+$amb-font-family-map: () !default;
+$amb-font-family-map: map-merge(
   (
     'sans-serif': $amb-font-family-sans-serif,
     'serif': $amb-font-family-serif,
     'monospace': $amb-font-family-monospace,
   ),
-  $amb-font-families
+  $amb-font-family-map
 );
 
+/// Font sizes
 $amb-font-size-map: () !default;
 $amb-font-size-map: map-merge(
   (
+    '2xsmall': rem(8px),
     'xsmall': rem(12px),
     'small': rem(14px),
     'base': rem(16px),
@@ -32,11 +36,11 @@ $amb-font-size-map: map-merge(
   ),
   $amb-font-size-map
 );
-
 $amb-base-font-size: amb-font-size('base');
 
-$amb-headings: () !default;
-$amb-headings: map-merge(
+/// Headings
+$amb-heading-map: () !default;
+$amb-heading-map: map-merge(
   (
     'h1': amb-font-size('4xlarge'),
     'h2': amb-font-size('3xlarge'),
@@ -45,12 +49,11 @@ $amb-headings: map-merge(
     'h5': amb-font-size('large'),
     'h6': amb-font-size('medium'),
   ),
-  $amb-headings
+  $amb-heading-map
 );
 
-$amb-font-weight: 400 !default;
-$amb-font-weights: () !default;
-$amb-font-weights: map-merge(
+$amb-font-weight-map: () !default;
+$amb-font-weight-map: map-merge(
   (
     'thin': 100,
     'extra-light': 200,
@@ -72,8 +75,9 @@ $amb-font-weights: map-merge(
     'ultra-black': 900,
     'extra-ultra': 900,
   ),
-  $amb-font-weights
+  $amb-font-weight-map
 );
+$amb-base-font-weight: amb-font-weight('base');
 
 $amb-typography-style-map: () !default;
 $amb-typography-style-map: map-merge(
@@ -110,43 +114,49 @@ $amb-typography-style-map: map-merge(
   $amb-typography-style-map
 );
 
-$amb-line-height: 1.5 !default;
-$amb-line-heights: () !default;
-$amb-line-heights: map-merge(
+/// Line heights
+$amb-line-height-map: () !default;
+$amb-line-height-map: map-merge(
   (
-    'xsmall': $amb-line-height * 0.5,
-    'small': $amb-line-height * 0.75,
-    'base': $amb-line-height * 1,
-    'large': $amb-line-height * 1.25,
-    'xlarge': $amb-line-height * 1.5,
+    'xsmall': 1,
+    'small': 1.25,
+    'base': 1.5,
+    'large': 1.75,
+    'xlarge': 2,
   ),
-  $amb-line-heights
+  $amb-line-height-map
 );
+$amb-base-line-height: amb-line-height('base');
 
+/// Letter spacings/Tracking
 $amb-letter-spacing: 0px !default;
-$amb-letter-spacings: () !default;
-$amb-letter-spacings: map-merge(
+$amb-letter-spacing-map: () !default;
+$amb-letter-spacing-map: map-merge(
   (
-    '2xtight': $amb-letter-spacing - 1.5,
-    'xtight': $amb-letter-spacing - 1,
-    'tight': $amb-letter-spacing - 0.5,
-    'base': $amb-letter-spacing,
-    'loose': $amb-letter-spacing + 1,
-    'xloose': $amb-letter-spacing + 1.5,
-    '2xloose': $amb-letter-spacing + 2,
+    '2xtight': rem(-2px),
+    'xtight': rem(-1px),
+    'tight': rem(-0.5px),
+    'base': 0,
+    'loose': rem(0.5px),
+    'xloose': rem(1px),
+    '2xloose': rem(2px),
   ),
-  $amb-letter-spacings
+  $amb-letter-spacing-map
 );
 
-$amb-text-transforms: () !default;
-$amb-text-transforms: map-merge(
+$amb-text-transform-map: () !default;
+$amb-text-transform-map: map-merge(
   (
     'none': none,
     'uppercase': uppercase,
     'lowercase': lowercase,
     'capitalize': capitalize,
   ),
-  $amb-text-transforms
+  $amb-text-transform-map
 );
 
-$amb-text-alignment-map: ('left', 'center', 'right', 'justify') !default;
+$amb-text-alignment-map: () !default;
+$amb-text-alignment-map: map-merge(
+  ('left', 'center', 'right', 'justify'),
+  $amb-text-alignment-map
+) !default;

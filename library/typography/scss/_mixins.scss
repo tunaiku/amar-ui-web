@@ -1,12 +1,24 @@
 @import '@amar-ui-web/core/helpers';
 @import './variables';
 
-@mixin amb-create-core-typography-classes() {
+@mixin amb-initialize-typography-module() {
   @include amb-create-heading-classes();
   @include amb-create-typography-style-classes();
+  @include amb-create-typography-utility-classes();
 }
 
-@mixin amb-create-text-utility-classes() {
+@mixin amb-create-heading-classes() {
+  @each $heading, $heading-size in $amb-heading-map {
+    $heading-index: index($amb-heading-map, ($heading $heading-size));
+
+    h#{$heading-index},
+    .Heading-#{$heading-index} {
+      font-size: $heading-size;
+    }
+  }
+}
+
+@mixin amb-create-typography-utility-classes() {
   @include amb-create-font-size-classes();
   @include amb-create-font-weight-classes();
   @include amb-create-text-transform-classes();
@@ -15,91 +27,69 @@
   @include amb-create-text-alignment-classes();
 }
 
+@mixin amb-create-typography-style-classes() {
+  @each $typography-style, $properties in $amb-typography-style-map {
+    .Typography-#{$typography-style} {
+      @include create-properties($properties);
+    }
+  }
+}
+
+@mixin amb-create-font-size-classes() {
+  @each $font-size, $font-size-value in $amb-font-size-map {
+    .FontSize-#{$font-size},
+    .Font-#{$font-size} {
+      font-size: $font-size-value !important;
+    }
+  }
+}
+
 @mixin amb-create-text-transform-classes() {
-  @each $text-transform, $text-transform-value in $amb-text-transforms {
-    .Transform-#{$text-transform} {
+  @each $text-transform, $text-transform-value in $amb-text-transform-map {
+    .Transform-#{$text-transform},
+    .TextTransform-#{$text-transform} {
       text-transform: $text-transform-value !important;
     }
   }
 }
 
 @mixin amb-create-letter-spacing-classes() {
-  @each $letter-spacing, $letter-spacing-value in $amb-letter-spacings {
-    .Tracking-#{$letter-spacing} {
+  @each $letter-spacing, $letter-spacing-value in $amb-letter-spacing-map {
+    .Tracking-#{$letter-spacing},
+    .LetterSpacing-#{$letter-spacing} {
       letter-spacing: $letter-spacing-value !important;
     }
   }
 }
 
 @mixin amb-create-line-height-classes() {
-  @each $line-height, $line-height-value in $amb-line-heights {
-    .Leading-#{$line-height} {
+  @each $line-height, $line-height-value in $amb-line-height-map {
+    .Leading-#{$line-height},
+    .LineHeight-#{$line-height} {
       line-height: $line-height-value !important;
     }
   }
 }
 
-/// Generate font size classes
-///
-
-@mixin amb-create-font-size-classes() {
-  .FontSize {
-    @each $font-size, $font-size-value in $amb-font-size-map {
-      &-#{$font-size} {
-        font-size: $font-size-value !important;
-      }
-    }
-  }
-}
-
-@mixin amb-create-heading-classes() {
-  @each $heading, $heading-size in $amb-headings {
-    $heading-index: index($amb-headings, ($heading $heading-size));
-
-    h#{$heading-index} {
-      font-size: $heading-size;
-    }
-
-    .Heading-#{$heading-index} {
-      font-size: $heading-size !important;
-    }
-  }
-}
-
 @mixin amb-create-font-weight-classes() {
-  .FontWeight {
-    @each $font-weight, $font-weight-value in $amb-font-weights {
-      &-#{$font-weight} {
-        font-weight: $font-weight-value !important;
-      }
-    }
-  }
-}
-
-@mixin amb-create-typography-style-classes() {
-  .Typography {
-    @each $typography-style, $properties in $amb-typography-style-map {
-      &-#{$typography-style} {
-        @include create-properties($properties);
-      }
+  @each $font-weight-key, $font-weight-value in $amb-font-weight-map {
+    .FontWeight-#{$font-weight-key} {
+      font-weight: $font-weight-value !important;
     }
   }
 }
 
 @mixin amb-create-text-alignment-classes() {
-  .TextAlign {
-    @each $text-alignment in $amb-text-alignment-map {
-      &-#{$text-alignment} {
-        $text-alignment-value: unquote($text-alignment);
-        text-align: $text-alignment-value !important;
-      }
+  @each $text-alignment in $amb-text-alignment-map {
+    .TextAlign-#{$text-alignment},
+    .Align-#{$text-alignment} {
+      text-align: $text-alignment;
     }
   }
 }
 
-/// Helper mixin
 @mixin amb-typography-style($style) {
-  $a: map-get($amb-typography-style-map, $style);
+  $properties: map-get($amb-typography-style-map, $style);
 
-  @include create-properties($a);
+  @include create-properties($properties);
 }

@@ -1,29 +1,26 @@
 ---
 path: '/components/card'
 title: 'Card'
-description: 'Surface containing series of information of a particular context.'
+description:
+  'A container component that displays information and actions about a particular subject.'
 ---
 
-## Usage
+## Basic Usage
 
-To implement a card component, simply add `.Card` class to an element to transform it into a
-**card wrapper**. Inside a card wrapper, you can add various part blocks that you can mix and match
-according to your needs.
+`.Card` component consists of several elements that you can mix and match according to your needs.
 
-- `.Card-header` is typically used to contain the title to represent the context of the card.
-- `.Card-body` serves as primary building block of a card. This is where you can store the information
-  you want to present to the user.
-- `.Card-footer` is normally used to contain call-to-action elements; such as buttons and links to trigger
-  action.
-- `.Card-media` is an optional block where you can add an image or banner for illustrative purposes.
+- `.Card`: Card component outer container.
+- `.Card-header`: Wrapper for the title and secondary title of the card.
+- `.Card-content`: Primary content of the card.
+- `.Card-footer`: Wrapper for the call-to-action elements of the card (e.g button, link)
 
-```html preview=true center=true bgColor=lighter
+```html preview=true bgColor=lighter
 <div class="Card">
   <div class="Card-header">
-    <h5>Card title here</h5>
-    <p class="Color-neutral-80">Secondary text here</p>
+    <h5 class="Typography-heading20">Card title here</h5>
+    <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
   </div>
-  <div class="Card-body">
+  <div class="Card-content">
     <p class="Typography-regular14 Color-neutral-80">
       Description text here. Contains various supporting text or content.
     </p>
@@ -34,44 +31,23 @@ according to your needs.
 </div>
 ```
 
-Under the hood, `Card-header`, `Card-body` and `Card-footer` extends the property of `.Card-block`,
-which simply adds spacing for breathability, in which case you could use `.Card-block`
-if you simply want to implement a card block without semantic definition, but is **not advised**.
+## Modifiers
 
-## Variants
+#### Elevated card
 
-#### Elevated
+Append `.Card--elevated` class to add the elevation effect to a card component to make it appear
+floated.
 
-`Card--elevated` modifier adds elevation effect to a card, making it appear floated.
-
-```html preview=true center=true bgColor=lighter
+```html preview=true bgColor=lighter
 <div class="Card Card--elevated">
   <div class="Card-header">
-    <h1 class="Typography-heading24">Card Title</h1>
-    <p class="Typography-regular14 Color-neutral-70">Card Subtitle</p>
+    <h5 class="Typography-heading20">Card title here</h5>
+    <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
   </div>
-  <div class="Card-body">
-    <p className="Typography-regular14 Color-neutral-80">
-      This is a description text.
+  <div class="Card-content">
+    <p class="Typography-regular14 Color-neutral-80">
+      Description text here. Contains various supporting text or content.
     </p>
-  </div>
-  <div class="Card-footer Flex JustifyContent-end">
-    <button class="Button Button--primary Button--fullWidth">Submit</button>
-  </div>
-</div>
-```
-
-#### Borderless
-
-To make your card appear borderless, simply append `Card--borderless` modifier class.
-
-```html preview=true bgColor=lighter center=true
-<div class="Card Card--borderless">
-  <div class="Card-header">
-    <h6 class="Typography-heading24">Example Card</h6>
-  </div>
-  <div class="Card-body">
-    <p class="Typography-regular14 Color-neutral-80">An example of a borderless card.</p>
   </div>
   <div class="Card-footer">
     <button class="Button Button--primary Button--fullWidth">Button</button>
@@ -79,40 +55,23 @@ To make your card appear borderless, simply append `Card--borderless` modifier c
 </div>
 ```
 
-## Examples
+#### Borderless card
 
-```html preview=true center=true bgColor=lighter
-<div className="Card">
-  <div className="Card-header">
-    <div className="MarginBottom-large">
-      <div className="FontSize-xlarge FontWeight-bold">Tagihan Saat Ini</div>
-      <div className="Color-neutral-70">
-        Segera bayar tagihan untuk menghindari tunggakan biaya.
-      </div>
-    </div>
+Remove the border of a card component by appending `.Card-borderless` class.
+
+```html preview=true bgColor=lighter
+<div class="Card Card--borderless">
+  <div class="Card-header">
+    <h5 class="Typography-heading20">Card title here</h5>
+    <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
   </div>
-  <div className="Card-body">
-    <div className="MarginBottom Flex JustifyContent-between Color-neutral-70">
-      <div>Tagihan pokok bulan ini:</div>
-      <div className="FontWeight-bold">Rp 1.299.000</div>
-    </div>
-    <div className="Flex JustifyContent-between Color-neutral-70">
-      <div>Jatuh tempo:</div>
-      <div className="FontWeight-bold">7 Februari 2020</div>
-    </div>
+  <div class="Card-content">
+    <p class="Typography-regular14 Color-neutral-80">
+      Description text here. Contains various supporting text or content.
+    </p>
   </div>
-  <div className="Card-footer">
-    <div className="Flex JustifyContent-between">
-      <div className="FontSize-medium FontWeight-bold Color-neutral-70">
-        Total Tagihan:
-      </div>
-      <div className="FontSize-medium FontWeight-bold">Rp 1.299.000</div>
-    </div>
-  </div>
-  <div className="Card-block Flex JustifyContent-between">
-    <button className="Button Button--primary Button--fullWidth">
-      Bayar Sekarang
-    </button>
+  <div class="Card-footer">
+    <button class="Button Button--primary Button--fullWidth">Button</button>
   </div>
 </div>
 ```
