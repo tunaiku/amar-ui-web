@@ -70,8 +70,16 @@ export const DOCS_MENU = [
         path: '/components/bottom-bar',
       },
       {
+        title: 'Input',
+        path: '/components/input',
+      },
+      {
         title: 'Field',
         path: '/components/field',
+      },
+      {
+        title: 'Select',
+        path: '/components/select',
       },
       {
         title: 'Dialog',
@@ -92,10 +100,6 @@ export const DOCS_MENU = [
       {
         title: 'Checkbox',
         path: '/components/checkbox',
-      },
-      {
-        title: 'Image',
-        path: '/components/image',
       },
     ],
   },
