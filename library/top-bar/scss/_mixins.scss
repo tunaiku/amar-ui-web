@@ -11,9 +11,11 @@
     padding: 0 8px;
 
     &-logo {
+      display: flex;
+      align-items: center;
+
       > img {
         height: 36px;
-        width: 124px;
       }
     }
 
