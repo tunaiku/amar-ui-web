@@ -1,18 +1,27 @@
 ---
 path: '/components/snackbar'
 title: 'Snackbar'
-description: "Provides a semi-interuptive message that typically doesn't require any action to dismiss."
+description: 'Displays short messages to inform users about processes and feedbacks from an action.'
 ---
 
-## Basic Usage
+## Usage
 
-```html preview=true center=true
-<div class="Snackbar-dialog">
-  <div class="Snackbar-text">
-    A single line message.
+<div class="BgColor-neutral-20 Padding-2xlarge">
+  <div class="Snackbar-dialog">
+    <div class="Snackbar-text">A single line message.</div>
+    <div class="Snackbar-actions">
+      <button class="Snackbar-action">Action</button>
+    </div>
   </div>
-  <div class="Snackbar-actions">
-    <button class="Snackbar-action">Action</button>
+</div>
+
+```html
+<div class="Snackbar">
+  <div class="Snackbar-dialog">
+    <div class="Snackbar-text">A single line message.</div>
+    <div class="Snackbar-actions">
+      <button class="Snackbar-action">Action</button>
+    </div>
   </div>
 </div>
 ```
@@ -21,9 +30,9 @@ description: "Provides a semi-interuptive message that typically doesn't require
 
 #### Longer Action Button
 
-Append `Snackbar-dialog--long` modifier class.
+To make room for a longer action button, append `Snackbar-dialog--long` after `Snackbar-dialog`.
 
-```html preview=true center=true
+```html preview=true
 <div class="Snackbar-dialog Snackbar-dialog--long">
   <div class="Snackbar-text">
     A single line message.
@@ -34,11 +43,11 @@ Append `Snackbar-dialog--long` modifier class.
 </div>
 ```
 
-#### With Elevation
+#### Elevated
 
 To give the snackbar an elevated effect, append `Snackbar-dialog--elevated` modifier class.
 
-```html preview=true center=true
+```html preview=true
 <div class="Snackbar-dialog Snackbar-dialog--elevated">
   <div class="Snackbar-text">
     A single line message.
