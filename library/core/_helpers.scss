@@ -10,6 +10,11 @@
   @return $number;
 }
 
+@function em($size) {
+  $size: strip-unit($size / 16);
+  @return #{$size}em;
+}
+
 @function rem($size) {
   $size: strip-unit($size / 16);
   @return #{$size}rem;
