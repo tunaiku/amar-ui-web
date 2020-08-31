@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import JsxParser from 'react-jsx-parser';
 import { CodePreviewContainer, CodePreviewDisplay, CodePreviewBlock } from '../code-preview';
 import './code-preview.scss';
