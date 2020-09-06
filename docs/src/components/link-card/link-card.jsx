@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
 import './link-card.scss';
-// import cssClasses from './link-card.module.scss';
 
 const LinkCard = ({ children, className, ...attributes }) => {
   const cssClasses = {
