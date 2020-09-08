@@ -33,40 +33,48 @@
   white-space: normal;
 }
 
-@mixin amb-append-input-state-variants($color-theme: 'base') {
+@mixin amb-append-input-state-variants($color-theme: '') {
   @include amb-append-input-focused-state($color-theme);
   @include amb-append-input-hovered-state($color-theme);
   @include amb-append-input-disabled-state();
 }
 
 @mixin amb-append-input-focused-state($color-theme) {
-  $focused-border-color: '' !default;
-  $focused-box-shadow: '' !default;
+  $border-color: '' !default;
+  $box-shadow: '' !default;
 
-  @if $color-theme == 'base' {
-    $focused-border-color: $amb-input-focused-border-color;
-    $focused-box-shadow: $amb-input-focused-box-shadow;
+  @if $color-theme == '' {
+    $border-color: $amb-input-focused-border-color;
+    $box-shadow: $amb-input-focused-box-shadow;
   } @else {
-    $focused-border-color: amb-theme-color($color-theme);
-    $focused-box-shadow-color: amb-theme-color($color-theme);
-    $focused-box-shadow-values: $amb-input-focused-box-shadow-values;
-    $focused-box-shadow: $focused-box-shadow-values $focused-box-shadow-color;
+    $border-color: amb-color-theme($color-theme);
+    $box-shadow-color: amb-color-theme-opacity($color-theme, 0.3);
+    $box-shadow-values: $amb-input-focused-box-shadow-values;
+    $box-shadow: $box-shadow-values $box-shadow-color;
   }
 
   @include amb-input-is-not-disabled() {
     &:focus,
     &.is-focused {
-      border-color: $focused-border-color;
-      box-shadow: $focused-box-shadow;
+      border-color: $border-color;
+      box-shadow: $box-shadow;
     }
   }
 }
 
 @mixin amb-append-input-hovered-state($color-theme) {
+  $border-color: '' !default;
+
+  @if $color-theme == '' {
+    $border-color: $amb-input-hovered-border-color;
+  } @else {
+    $border-color: amb-color-theme($color-theme);
+  }
+
   @include amb-input-is-not-disabled() {
     &:hover,
     &.is-hovered {
-      border-color: $amb-input-hovered-border-color;
+      border-color: $border-color;
     }
   }
 }
@@ -85,9 +93,11 @@
 @mixin amb-append-input-color-theme-variants() {
   @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &--#{$color-theme} {
-      @include amb-append-input-state-variants($color-theme);
+      @include amb-input-is-not-disabled() {
+        @include amb-append-input-state-variants($color-theme);
 
-      border-color: $color-theme-value;
+        border-color: $color-theme-value;
+      }
     }
   }
 }
