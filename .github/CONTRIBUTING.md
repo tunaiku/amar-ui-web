@@ -65,7 +65,8 @@ submit a PR:
 We follow the conventional commit guideline to structure our commit messages. We enforce you to
 follow the same in order for your changes to be accepted and merged to the `master` branch. Why is
 this important? Because your commit messages will be recorded in the version changelog list when
-releasing a new version.
+releasing a new version. We highly recommend you to configure `commitizen` to help you write commit
+messages that follow the conventional commit guideline.
 
 Each commit message must consist of a **type**, **scope** and **short summary**.
 
@@ -75,7 +76,7 @@ Each commit message must consist of a **type**, **scope** and **short summary**.
 <summary>
 ```
 
-The `<type>`, `<short summary>`, and `<summary>` are mandatory, while the `scope` is optional.
+The `<type>`, `<short summary>`, and `<summary>` are mandatory, while the `<scope>` is optional.
 
 ### Type
 
