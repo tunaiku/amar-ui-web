@@ -11,7 +11,7 @@ You can contribute to the project in several ways:
 ## Reporting a bug
 
 If you found a bug in the source code, help us contribute to the project by submitting an issue in
-our repository's issue tracker.
+our repository's [issue tracker](https://github.com/tunaiku/amar-ui-web/issues).
 
 A good bug report describes the complete detail of the issue to the point maintainers don't need to
 chase you for more information. Try to be as detailed as possible when reporting the bug so we can
