@@ -5,7 +5,6 @@ import { MainLayout } from 'layouts/main-layout';
 import HeroIllustration from 'images/amar-ui-hero.svg';
 import { Figure } from 'components/figure';
 import FeatureCards from './components/feature-cards';
-
 import './home.scss';
 
 const Home = () => (
@@ -25,9 +24,10 @@ const Home = () => (
                       interfaces and experiences with Amar Design System as its foundation.
                     </p>
                   </div>
+
                   <Link
                     to="/introduction/getting-started"
-                    className="Button Button--secondary MarginRight">
+                    className="Button Button--large Button--secondary MarginRight">
                     Getting Started
                   </Link>
                 </div>
