@@ -6,17 +6,22 @@ description: "A form control specific to fetch user's input in a form of text."
 
 ## Usage
 
-Append `.Input` class in an `input` tag to apply Amar UI styling of an input.
+Append `.Input` class on top of a standard `<input>` element to transform it into Amar UI's input
+component.
 
 ```html preview=true
 <input type="text" class="Input" placeholder="A standard input" />
 ```
 
+N.B: Not to be confused with `.Field` class, `.Input` class only controls the styling of an input
+element, **which** is commonly used inside `.Field` class inside a form.
+
 ## Variants
 
 #### Themes
 
-You can apply a color theme to the input component by appending the `.Input--<theme>` class.
+You can apply a color theme to the input component by appending the `.Input--<theme>` class on top
+of the standard `.Input` class.
 
 ```html preview=true
 <input type="text" class="Input Input--primary MarginBottom" placeholder="Primary theme" />
