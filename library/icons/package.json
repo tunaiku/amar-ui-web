@@ -1,10 +1,10 @@
 {
   "name": "@amar-ui-web/icons",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@amar-ui-web/typography": "^1.1.1"
+    "@amar-ui-web/typography": "^1.2.0"
   },
   "publishConfig": {
     "access": "public"

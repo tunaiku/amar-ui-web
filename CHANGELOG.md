@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/dkk94/amar-ui-web/compare/v1.1.1...v1.2.0) (2020-09-23)
+
+
+### Bug Fixes
+
+* **bottom-bar:** fix height issue ([c7691d0](https://github.com/dkk94/amar-ui-web/commit/c7691d0b9717c40273b3aa8011f74ca47c77cdc8))
+* **code-preview:** fix full width prop styling for code preview ([24cbc92](https://github.com/dkk94/amar-ui-web/commit/24cbc92e4e7bf9db13c97d1592ed017db8fc8267))
+* **input:** change variables used for input line height ([2c385f2](https://github.com/dkk94/amar-ui-web/commit/2c385f28527dbfb2e61b12fff66cdbae8fd7209f))
+* **top-bar:** fix logo is not vertically centered ([3407f8a](https://github.com/dkk94/amar-ui-web/commit/3407f8a19694b93279605cb86910cb6331cf5ee7))
+
+
+### Features
+
+* **core:** add em helper function ([ed2916c](https://github.com/dkk94/amar-ui-web/commit/ed2916cbb9197b0821d3633592791d7454e2462a))
+* **core:** add sizing import ([dff20ff](https://github.com/dkk94/amar-ui-web/commit/dff20ff81e598676447aafe445b725f63dcc6029))
+* **dialog:** add new parts ([cca0a91](https://github.com/dkk94/amar-ui-web/commit/cca0a91c2bed773130193a2046fc70581354b941))
+* **select:** initialize select lib ([d70782e](https://github.com/dkk94/amar-ui-web/commit/d70782ef616a45ef9eeeeed1e3fc29f0ba758205))
+* **sizing:** initialize sizing module ([987a1eb](https://github.com/dkk94/amar-ui-web/commit/987a1ebe98a5f8cb015ba289ef0196f6c5d7f739))
+
+
+
+
+
 ## [1.1.1](https://github.com/dkk94/amar-ui-web/compare/v1.1.0...v1.1.1) (2020-06-06)
 
 

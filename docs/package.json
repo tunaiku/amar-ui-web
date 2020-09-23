@@ -1,6 +1,6 @@
 {
   "name": "@amar-ui-web/docs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Documentation of Tunaiku UI Library",
   "private": true,
   "keywords": [
@@ -25,8 +25,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@amar-ui-web/core": "^1.1.1",
-    "@amar-ui-web/layout": "^1.1.1",
+    "@amar-ui-web/core": "^1.2.0",
+    "@amar-ui-web/layout": "^1.2.0",
     "@amar-ui-web/responsive": "^1.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
