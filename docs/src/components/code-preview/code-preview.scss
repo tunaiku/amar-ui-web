@@ -24,20 +24,17 @@
   }
 
   &-display {
-    padding-left: amb-spacing('base');
-    padding-right: amb-spacing('base');
-    padding-top: amb-spacing('xlarge');
-    padding-bottom: amb-spacing('xlarge');
+    padding: amb-spacing('base');
     border: solid 1px amb-color-theme('light');
     overflow: hidden;
 
-    @include amb-responsive-media('xl') {
-      padding-left: 200px;
-      padding-right: 200px;
+    @include amb-responsive-media('lg') {
+      padding: amb-spacing('xlarge');
     }
 
-    &--fullWidth {
-      padding: amb-spacing('large');
+    &--compact {
+      padding-left: 10em !important;
+      padding-right: 10em !important;
     }
   }
 

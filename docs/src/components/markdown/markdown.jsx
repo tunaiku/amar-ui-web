@@ -1,10 +1,10 @@
 import React from 'react';
 import './markdown.scss';
-import { preToCodeBlock } from 'mdx-utils';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { CodeBlock } from '../code-block';
 import { CodePreview } from '../code-preview';
+import { preToCodeBlock } from 'mdx-utils';
 
 const Markdown = ({ children }) => {
   const transformTableMarkdown = () => props => {
@@ -17,13 +17,15 @@ const Markdown = ({ children }) => {
 
   const transformPreMarkdown = () => props => {
     const newProps = preToCodeBlock(props);
+    const hasNewProps = !!newProps;
+    const isPreviewEnabled = !!newProps && !!newProps.preview;
 
-    if (newProps) {
-      if (newProps.preview) {
-        return <CodePreview {...newProps} />;
+    if (hasNewProps) {
+      if (!isPreviewEnabled) {
+        return <CodeBlock {...newProps} />;
       }
 
-      return <CodeBlock {...newProps} />;
+      return <CodePreview {...newProps} />;
     }
 
     return <pre {...props} />;

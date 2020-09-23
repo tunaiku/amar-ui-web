@@ -4,7 +4,7 @@ import { CodePreviewContainer, CodePreviewDisplay, CodePreviewBlock } from '../c
 import './code-preview.scss';
 
 const CodePreview = props => {
-  const { codeString, bgColor, fullWidth } = props;
+  const { codeString, bgColor, size } = props;
 
   const parseCode = string => {
     return <JsxParser renderInWrapper={false} jsx={string} />;
@@ -12,7 +12,7 @@ const CodePreview = props => {
 
   return (
     <CodePreviewContainer>
-      <CodePreviewDisplay fullWidth={fullWidth} bgColor={bgColor}>
+      <CodePreviewDisplay size={size} bgColor={bgColor}>
         {parseCode(codeString)}
       </CodePreviewDisplay>
       <CodePreviewBlock {...props} />

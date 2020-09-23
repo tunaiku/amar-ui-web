@@ -2,7 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import './code-preview.scss';
 
-const CodePreviewDisplay = ({ bgColor, fullWidth, children }) => {
+const CodePreviewDisplay = ({ bgColor, size, children }) => {
+  const isCompactSized = !!size && size === 'compact';
+
   const getBgColorMap = bgColorObject => {
     const splittedBgColorObject = bgColorObject.split('.');
 
@@ -25,7 +27,7 @@ const CodePreviewDisplay = ({ bgColor, fullWidth, children }) => {
   const cssClasses = {
     codePreviewDisplay: classNames('CodePreview-display', {
       [getBgColorClass(bgColor)]: !!bgColor,
-      'CodePreview-display--fullWidth': fullWidth,
+      'CodePreview-display--compact': isCompactSized,
     }),
   };
 
