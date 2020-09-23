@@ -13,8 +13,12 @@ const DialogExample = () => {
       {isDialogOpen && (
         <div className="Dialog">
           <div className="Dialog-box">
-            <h5 className="Dialog-title">Dialog Title</h5>
-            <p className="Dialog-content">Description of the dialog goes here.</p>
+            <div class="Dialog-header">
+              <h5 className="Dialog-title">Dialog Title</h5>
+            </div>
+            <div className="Dialog-content">
+              <p>Description of the dialog goes here.</p>
+            </div>
             <div className="Dialog-actions">
               <button className="Button Button--text Button--danger" onClick={toggleDialog}>
                 Close

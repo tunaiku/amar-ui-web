@@ -1,29 +1,29 @@
 @import '@amar-ui-web/elevation/scss/mixins';
+@import '@amar-ui-web/typography/scss/mixins';
+@import '@amar-ui-web/spacing/scss/variables';
 @import './variables';
 
 @mixin amb-create-dialog-classes() {
   .Dialog {
-    @include amb-add-dialog-styles();
-    @include amb-append-dialog-box-part();
-    @include amb-append-dialog-backdrop-part();
-    @include amb-append-dialog-block-part();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 
     z-index: 1000;
+
+    @include amb-append-dialog-box();
+    @include amb-append-dialog-backdrop();
+    @include amb-append-dialog-parts();
   }
 }
 
-@mixin amb-add-dialog-styles() {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin amb-append-dialog-backdrop-part() {
+@mixin amb-append-dialog-backdrop() {
   &-backdrop {
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@
   }
 }
 
-@mixin amb-append-dialog-box-part() {
+@mixin amb-append-dialog-box() {
   &-box {
     @include amb-create-elevation(
       $level: $amb-dialog-box-elevation-level,
@@ -45,22 +45,33 @@
     display: flex;
     flex-direction: column;
     border-radius: amb-border-radius('xlarge');
-
     min-width: $amb-dialog-box-min-width;
     max-width: $amb-dialog-box-max-width;
-
     background-color: white;
-
     overflow: auto;
     z-index: 1002;
-
     transition: all 150ms ease-in-out;
     margin: 0 amb-spacing('base');
   }
 }
 
-@mixin amb-append-dialog-block-part() {
-  &-block {
-    padding: $amb-dialog-block-padding;
+@mixin amb-append-dialog-parts() {
+  &-block,
+  &-header,
+  &-actions {
+    padding: amb-spacing('base');
+  }
+
+  &-title {
+    @include amb-typography-style('heading20');
+  }
+
+  &-content {
+    padding: 0 amb-spacing('base');
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
   }
 }
