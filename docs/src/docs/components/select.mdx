@@ -1,15 +1,21 @@
 ---
 path: '/components/select'
 title: 'Select'
-description: 'Allow users to select from a series of option available in a form of dropdown'
+description:
+  'A form control that allows users to select from a series of option available in a dropdown.'
 ---
 
-## Basic Usage
+## Usage
+
+To create a select component, simply create an outer element with the class `.Select` followed by
+the `<select>` element.
 
 ```html preview=true
 <div class="Select">
   <select>
-    <option value="Tes">Hey</option>
+    <option value="Jakarta">Jakarta</option>
+    <option value="Bandung">Bandung</option>
+    <option value="Surabaya">Surabaya</option>
   </select>
 </div>
 ```

@@ -68,20 +68,3 @@ To use a different shade of a color theme for text or background color in an ele
 <div class="BgColor-primary-80 Padding-small">Primary 80</div>
 <div class="BgColor-primary-90 Padding-small">Primary 90</div>
 ```
-
-## Customization
-
-You can override and add new color themes by assigning a new key value pair in the
-`$amb-color-theme-map` variable.
-
-```scss
-@import '@amar-ui-web/color/scss/variables';
-
-$your-custom-color: #a2b4c3;
-
-$amb-color-theme-map: (
-  'primary': #a2b4c3,
-  'secondary': #ad4d4a,
-  'tertiary': #de2f34,
-);
-```

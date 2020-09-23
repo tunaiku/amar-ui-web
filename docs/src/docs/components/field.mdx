@@ -8,13 +8,13 @@ Field is composed into several parts; `Field`, `Field-label`, `Field-control`, a
 `Field-helper`.
 
 - `Field-label` is the class to put in a label associating the field.
-- `Field-control` is where you can put the preferred form control; `Input`, `Select`, to name the
-  few.
-- `Field-helper` is an optional class to put in helper text that normally put beneath a control.
+- `Field-control` is where you can put the preferred form control like `Input` and `Select`.
+- `Field-helper` is an optional class to put in helper text that is normally put beneath a
+  `.Field-control`.
 
 Here's a basic example on how `Field` class can be implemented inside of a form.
 
-```html preview=true
+```html preview=true size=compact
 <form>
   <div class="Field MarginBottom">
     <label class="Field-label">Full Name</label>
@@ -53,37 +53,20 @@ Here's a basic example on how `Field` class can be implemented inside of a form.
 </form>
 ```
 
-## Themes
+## Regarding themes
 
-```html preview=true
-<div class="Field MarginBottom">
-  <div class="Field-label Color-primary">Primary Theme</div>
-  <div class="Field-control">
-    <input type="text" class="Input Input--primary" placeholder="Some placeholder" />
-  </div>
-</div>
-<div class="Field MarginBottom">
-  <div class="Field-label">Secondary Theme</div>
-  <div class="Field-control">
-    <input type="text" class="Input Input--info" placeholder="Some placeholder" />
-  </div>
-</div>
-<div class="Field MarginBottom">
-  <div class="Field-label">Danger Theme</div>
+At the moment, **you cannot** apply theme directly to the `.Field` class, but you can apply them
+directly to the elements as needed (e.g applying a theme directly to the `.Input`, or applying
+`Color-*` class to the label to change its color).
+
+In the example below, we applied `.Input--danger` to the input and `Color-danger` to the label to
+achieve an invalid field effect.
+
+```html preview=true size=compact
+<div class="Field">
+  <div class="Field-label Color-danger">Form label</div>
   <div class="Field-control">
     <input type="text" class="Input Input--danger" placeholder="Some placeholder" />
-  </div>
-</div>
-<div class="Field MarginBottom">
-  <div class="Field-label">Warning Theme</div>
-  <div class="Field-control">
-    <input type="text" class="Input Input--warning" placeholder="Some placeholder" />
-  </div>
-</div>
-<div class="Field MarginBottom">
-  <div class="Field-label">Info Theme</div>
-  <div class="Field-control">
-    <input type="text" class="Input Input--info" placeholder="Some placeholder" />
   </div>
 </div>
 ```

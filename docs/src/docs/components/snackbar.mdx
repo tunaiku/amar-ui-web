@@ -6,33 +6,23 @@ description: 'Displays short messages to inform users about processes and feedba
 
 ## Usage
 
-<div class="BgColor-neutral-20 Padding-2xlarge">
-  <div class="Snackbar-dialog">
-    <div class="Snackbar-text">A single line message.</div>
-    <div class="Snackbar-actions">
-      <button class="Snackbar-action">Action</button>
-    </div>
-  </div>
-</div>
+Below is a static snackbar example (you will need to add the wrapper with `.Snackbar` class first
+since it provides necessary styles to make it appear fixed on screen, see live example below).
 
-```html
-<div class="Snackbar">
-  <div class="Snackbar-dialog">
-    <div class="Snackbar-text">A single line message.</div>
-    <div class="Snackbar-actions">
-      <button class="Snackbar-action">Action</button>
-    </div>
+```html preview size=compact
+<div class="Snackbar-dialog">
+  <div class="Snackbar-text">A single line message.</div>
+  <div class="Snackbar-actions">
+    <button class="Snackbar-action">Action</button>
   </div>
 </div>
 ```
 
-## Variants
-
 #### Longer Action Button
 
-To make room for a longer action button, append `Snackbar-dialog--long` after `Snackbar-dialog`.
+To make room for a longer action button, append `.Snackbar-dialog--long` after `Snackbar-dialog`.
 
-```html preview=true
+```html preview=true size=compact
 <div class="Snackbar-dialog Snackbar-dialog--long">
   <div class="Snackbar-text">
     A single line message.
@@ -45,9 +35,9 @@ To make room for a longer action button, append `Snackbar-dialog--long` after `S
 
 #### Elevated
 
-To give the snackbar an elevated effect, append `Snackbar-dialog--elevated` modifier class.
+To give the snackbar an elevated effect, append `.Snackbar-dialog--elevated` modifier class.
 
-```html preview=true
+```html preview=true size=compact
 <div class="Snackbar-dialog Snackbar-dialog--elevated">
   <div class="Snackbar-text">
     A single line message.

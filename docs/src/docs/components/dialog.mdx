@@ -5,39 +5,41 @@ description: "Dialog is a type of modal that interrupts and demands immediate re
 from the user. It covers the whole front of the primary content until dismissed or confirmed."
 ---
 
-import DialogExample from 'examples/dialog-example';
+import { DialogExample } from 'examples/dialog-example';
+import { CodePreviewDisplay, CodePreviewBlock } from 'components/code-preview';
 
 ## Usage
 
-<div class="BgColor-neutral-20 Padding-2xlarge">
-  <div class="Dialog-box">
-    <div class="Dialog-block">
-      <div class="Heading-5 FontWeight-bold PaddingBottom">Dialog Title</div>
-      <p class="Color-gray-50">Description text here.</p>
+Below is a static dialog example (you will need to add the wrapper with `.Dialog` class first since
+it provides necessary styles to make it appear fixed on screen, see live example below).
+
+<div class="CodePreview">
+  <CodePreviewDisplay>
+    <div class="Dialog-box Margin-auto">
+      <div class="Dialog-title">Dialog Title</div>
+      <p class="Dialog-content">Description text here.</p>
+      <div class="Dialog-actions">
+        <button class="Button Button--text MarginRight-2xsmall Button--primary">Decline</button>
+        <button class="Button Button--primary">Submit</button>
+      </div>
     </div>
-    <div class="Dialog-block Flex JustifyContent-end">
+  </CodePreviewDisplay>
+  <CodePreviewBlock
+    language={'html'}
+    codeString={`
+<div class="Dialog">
+  <div class="Dialog-box Margin-auto">
+    <div class="Dialog-title">Dialog Title</div>
+    <p class="Dialog-content">Description text here.</p>
+    <div class="Dialog-actions">
       <button class="Button Button--text MarginRight-2xsmall Button--primary">Decline</button>
       <button class="Button Button--primary">Submit</button>
     </div>
   </div>
 </div>
-
-```html bgColor=neutral.10
-<div class="Dialog">
-  <div class="Dialog-box">
-    <div class="Dialog-block">
-      <div class="Heading-5 FontWeight-bold PaddingBottom">Dialog Title</div>
-      <p class="Color-gray-50">Description text here.</p>
-    </div>
-    <div class="Dialog-block Flex JustifyContent-end">
-      <button class="Button Button--text MarginRight-2xsmall Button--primary">
-        Decline
-      </button>
-      <button class="Button Button--primary">Submit</button>
-    </div>
-  </div>
+`}
+  />
 </div>
-```
 
 ## Live example
 
