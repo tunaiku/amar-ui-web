@@ -1,5 +1,11 @@
 @import './variables';
 @import './constants';
+@import './functions';
+
+@mixin amb-initialize-spacing-module() {
+  @include amb-create-spacing-classes($is-abbreviated: false);
+  @include amb-create-spacing-classes($is-abbreviated: true);
+}
 
 /**
  *
@@ -23,7 +29,6 @@
 
     $spacing-type-stylerule: '' !default;
     @if $is-abbreviated {
-      // creates either "mg" or "pd" stylerule;
       $spacing-type-stylerule: $spacing-type-abbreviation;
     } @else {
       $spacing-type-stylerule: $spacing-type-capitalized;
@@ -36,6 +41,7 @@
       // prettier-ignore
       @include amb-create-spacing-values($is-abbreviated, $spacing-type);
       @include amb-create-spacing-directions($is-abbreviated, $spacing-type);
+      @include amb-create-spacing-utilities($spacing-type);
     }
   }
 }
@@ -88,6 +94,18 @@
       } @else {
         #{$spacing-type}-#{$spacing-direction}: amb-spacing($spacing-size) !important;
       }
+    }
+  }
+}
+
+@mixin amb-create-spacing-utilities($spacing-type) {
+  &-0 {
+    #{$spacing-type}: 0 !important;
+  }
+
+  @if $spacing-type == 'margin' {
+    &-auto {
+      #{$spacing-type}: auto !important;
     }
   }
 }

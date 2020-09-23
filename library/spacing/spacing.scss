@@ -1,4 +1,3 @@
 @import './scss/mixins';
 
-@include amb-create-spacing-classes($is-abbreviated: false);
-@include amb-create-spacing-classes($is-abbreviated: true);
+@include amb-initialize-spacing-module();
