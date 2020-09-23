@@ -16,7 +16,7 @@ $amb-input-spacing-y: amb-spacing('small') !default;
 $amb-input-spacing-x: amb-spacing('base') !default;
 $amb-input-spacing: $amb-input-spacing-y $amb-input-spacing-x;
 
-$amb-input-line-height: $amb-line-height !default;
+$amb-input-line-height: $amb-base-line-height !default;
 
 $amb-input-transition: all 250ms ease-in-out;
 
