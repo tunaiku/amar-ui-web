@@ -45,3 +45,8 @@ mixins, functions, etc.), you can do that as well.
 @import '@amar-ui-web/color/scss/mixins';
 @import '@amar-ui-web/color/scss/functions';
 ```
+
+## Contribute
+
+Interested in contributing in the project? Refer to our
+[contribution guide](https://github.com/tunaiku/amar-ui-web/blob/master/.github/CONTRIBUTING.md)!
