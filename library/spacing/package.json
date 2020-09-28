@@ -1,10 +1,10 @@
 {
   "name": "@amar-ui-web/spacing",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@amar-ui-web/core": "^1.2.1",
+    "@amar-ui-web/core": "^1.2.2",
     "@amar-ui-web/grid": "^1.2.0"
   },
   "publishConfig": {
