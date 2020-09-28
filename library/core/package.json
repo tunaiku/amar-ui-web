@@ -1,6 +1,6 @@
 {
   "name": "@amar-ui-web/core",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
@@ -24,7 +24,7 @@
     "@amar-ui-web/select": "^1.2.0",
     "@amar-ui-web/shape": "^1.1.1",
     "@amar-ui-web/snackbar": "^1.2.0",
-    "@amar-ui-web/spacing": "^1.2.0",
+    "@amar-ui-web/spacing": "^1.2.1",
     "@amar-ui-web/tabs": "^1.2.0",
     "@amar-ui-web/top-bar": "^1.2.0",
     "@amar-ui-web/typography": "^1.2.0"

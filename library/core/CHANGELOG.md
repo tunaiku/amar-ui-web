@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/tunaiku/amar-ui-web/compare/v1.2.0...v1.2.1) (2020-09-28)
+
+
+### Bug Fixes
+
+* **core:** remove banner redundant import ([b4a1d3b](https://github.com/tunaiku/amar-ui-web/commit/b4a1d3bf5cd17ded46d9d6d07929e7e8320320cd))
+
+
+
+
+
 # [1.2.0](https://github.com/tunaiku/amar-ui-web/compare/v1.1.1...v1.2.0) (2020-09-23)
 
 
