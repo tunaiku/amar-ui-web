@@ -4,7 +4,6 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@amar-ui-web/banner": "^1.1.1",
     "@amar-ui-web/bottom-bar": "^1.2.0",
     "@amar-ui-web/bottom-sheet": "^1.2.0",
     "@amar-ui-web/button": "^1.2.0",
@@ -22,6 +21,7 @@
     "@amar-ui-web/layout": "^1.2.0",
     "@amar-ui-web/radio": "^1.2.0",
     "@amar-ui-web/responsive": "^1.1.1",
+    "@amar-ui-web/select": "^1.2.0",
     "@amar-ui-web/shape": "^1.1.1",
     "@amar-ui-web/snackbar": "^1.2.0",
     "@amar-ui-web/spacing": "^1.2.0",
