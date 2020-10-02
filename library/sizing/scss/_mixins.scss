@@ -1,0 +1,13 @@
+@mixin amb-initialize-sizing-module() {
+  .Width {
+    &-100 {
+      width: 100% !important;
+    }
+  }
+
+  .Height {
+    &-100 {
+      height: 100% !important;
+    }
+  }
+}
