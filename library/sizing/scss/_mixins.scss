@@ -3,11 +3,27 @@
     &-100 {
       width: 100% !important;
     }
+
+    &-auto {
+      width: auto !important;
+    }
+
+    &-screen {
+      width: 100vw !important;
+    }
   }
 
   .Height {
     &-100 {
       height: 100% !important;
+    }
+
+    &-auto {
+      height: auto !important;
+    }
+
+    &-screen {
+      width: 100vh !important;
     }
   }
 }
