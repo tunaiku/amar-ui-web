@@ -27,3 +27,15 @@ $amb-alignment-types: (
     'stretch': stretch,
   ),
 );
+
+$amb-align-self-map: () !default;
+$amb-align-self-map: map-merge(
+  (
+    'auto': auto,
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'stretch': stretch,
+  ),
+  $amb-align-self-map
+);
