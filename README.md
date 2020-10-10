@@ -10,7 +10,6 @@ of web projects and applications within Amar Bank.
 - [Naming Convention](https://amar-ui.tunaiku.com/introduction/naming-convention)
 - [Foundations](https://amar-ui.tunaiku.com/foundations)
 - [Components](https://amar-ui.tunaiku.com/components)
-- [Layouts](https://amar-ui.tunaiku.com/layouts)
 
 ## Installation
 
