@@ -16,6 +16,10 @@
 
     display: inline-flex !important;
   }
+
+  .AlignSelf {
+    @include amb-create-align-self-classes();
+  }
 }
 
 @mixin amb-flex-presets() {
@@ -84,6 +88,14 @@
   @each $alignment-type-shorthand, $alignment-type-value in $alignment-type-map {
     &-#{$alignment-type-shorthand} {
       #{$alignment-property}: $alignment-type-value !important;
+    }
+  }
+}
+
+@mixin amb-create-align-self-classes() {
+  @each $align-self-type, $align-self-value in $amb-align-self-map {
+    &-#{$align-self-type} {
+      align-self: $align-self-value !important;
     }
   }
 }
