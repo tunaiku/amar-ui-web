@@ -39,7 +39,6 @@ mixins, functions, etc.), you can do that as well.
 ```
 
 ```scss
-/* import specific abstracts like variables, functions, mixins. */
 @import '@amar-ui-web/color/scss/variables';
 @import '@amar-ui-web/color/scss/mixins';
 @import '@amar-ui-web/color/scss/functions';
