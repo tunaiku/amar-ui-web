@@ -1,5 +1,7 @@
 <h1 align="center">Amar UI Web</h1>
 
+[![GitHub license](https://img.shields.io/github/license/tunaiku/amar-ui-web)](https://github.com/tunaiku/amar-ui-web/blob/master/LICENSE)
+
 Amar UI for Web (or simply Amar UI Web) is a CSS library built in Sass/SCSS that follows **Amar
 Design System** as its primary foundation. Amar UI Web aims to enhance the UI/X development workflow
 of web projects and applications within Amar Bank.
