@@ -32,13 +32,14 @@ find instructions about this at our
 @import '@amar-ui-web/core/index.scss';
 ```
 
-If you would like to import individual packages/modules or its specific abstracts (variables,
-mixins, functions, etc.), you can do that as well.
+If you would like to import an individual package/module:
 
 ```scss
 @import '@amar-ui-web/color/index.scss';
 @import '@amar-ui-web/typography/index.scss';
 ```
+
+Or if you'd like to import only some of a package's specific abstracts (variables, mixins, functions, etc.):
 
 ```scss
 @import '@amar-ui-web/color/scss/variables';
