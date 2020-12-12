@@ -5,7 +5,7 @@ const SnackbarExample = () => {
     <div class="Snackbar-dialog">
       <div class="Snackbar-text">A single line message.</div>
       <div class="Snackbar-actions">
-        <button class="Snackbar-action">Action</button>
+        <button class="Snackbar-action">Submit</button>
       </div>
     </div>
   );
