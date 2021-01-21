@@ -1,5 +1,5 @@
-@import '@amar-ui-web/core/helpers';
-@import './variables';
+@import "@amar-ui-web/core/helpers";
+@import "./variables";
 
 @mixin amb-initialize-typography-module() {
   @include amb-create-heading-classes();
@@ -83,7 +83,7 @@
   @each $text-alignment in $amb-text-alignment-map {
     .TextAlign-#{$text-alignment},
     .Align-#{$text-alignment} {
-      text-align: $text-alignment;
+      text-align: $text-alignment !important;
     }
   }
 }

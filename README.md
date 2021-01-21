@@ -28,17 +28,20 @@ Make sure to resolve your `node_modules` path first in order to be able to use t
 find instructions about this at our
 [Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started) page.
 
+Resolving `node_modules` path would make it possible to import Amar UI Web like so:
+
 ```scss
 @import '@amar-ui-web/core/index.scss';
 ```
 
-If you would like to import individual packages/modules or its specific abstracts (variables,
-mixins, functions, etc.), you can do that as well.
+And if you would like to import an individual package/module:
 
 ```scss
 @import '@amar-ui-web/color/index.scss';
 @import '@amar-ui-web/typography/index.scss';
 ```
+
+Or if you'd like to import only some of a package's specific abstracts (variables, mixins, functions, etc.):
 
 ```scss
 @import '@amar-ui-web/color/scss/variables';

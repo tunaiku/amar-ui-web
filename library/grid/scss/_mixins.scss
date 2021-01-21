@@ -2,6 +2,10 @@
 @import '@amar-ui-web/responsive/scss/mixins';
 @import './variables';
 
+@mixin amb-initialize-grid-module() {
+  @include amb-create-grid-classes();
+}
+
 @mixin amb-create-grid-classes() {
   .Grids {
     @include amb-grid-row-base();
