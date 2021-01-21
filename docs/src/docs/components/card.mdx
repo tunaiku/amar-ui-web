@@ -9,18 +9,18 @@ description:
 
 `.Card` component consists of several elements that you can mix and match according to your needs.
 
-- `.Card`: Card component outer container.
-- `.Card-header`: Wrapper for the title and secondary title of the card.
-- `.Card-content`: Primary content of the card.
-- `.Card-footer`: Wrapper for the call-to-action elements of the card (e.g button, link)
+- `.Card`: Serves as the primary wrapper class for the other parts.
+- `.Card-title`: Contains the title and subtitle text of the card.
+- `.Card-body`: Contains the primary content of the card.
+- `.Card-footer`: Contains the call-to-action elements of the card (e.g button, link, etc.)
 
 ```html preview=true bgColor=lighter size=compact
 <div class="Card">
-  <div class="Card-header">
+  <div class="Card-title">
     <h5 class="Typography-heading20">Card title here</h5>
     <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
   </div>
-  <div class="Card-content">
+  <div class="Card-body">
     <p class="Typography-regular14 Color-neutral-80">
       Description text here. Contains various supporting text or content.
     </p>
@@ -31,20 +31,18 @@ description:
 </div>
 ```
 
-## Modifiers
-
-#### Elevated card
+## Elevated card
 
 Append `.Card--elevated` class to add the elevation effect to a card component to make it appear
 floated.
 
 ```html preview=true bgColor=lighter size=compact
 <div class="Card Card--elevated">
-  <div class="Card-header">
+  <div class="Card-title">
     <h5 class="Typography-heading20">Card title here</h5>
     <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
   </div>
-  <div class="Card-content">
+  <div class="Card-body">
     <p class="Typography-regular14 Color-neutral-80">
       Description text here. Contains various supporting text or content.
     </p>
@@ -55,13 +53,14 @@ floated.
 </div>
 ```
 
-#### Borderless card
+## Borderless card
 
-Remove the border of a card component by appending `.Card-borderless` class.
+Append `.Card-borderless` class to remove the border of the card component. This is particularly
+useful if you want to incorporate the card component as a part of a larger component.
 
 ```html preview=true bgColor=lighter size=compact
 <div class="Card Card--borderless">
-  <div class="Card-header">
+  <div class="Card-title">
     <h5 class="Typography-heading20">Card title here</h5>
     <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
   </div>

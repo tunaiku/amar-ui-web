@@ -24,7 +24,7 @@
 }
 
 @mixin amb-create-card-parts() {
-  &-header {
+  &-title {
     padding-bottom: amb-spacing('base');
   }
 
