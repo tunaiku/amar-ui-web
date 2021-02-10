@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/dkk94/amar-ui-web/compare/v1.2.2...v1.3.0) (2021-02-10)
+
+
+### Bug Fixes
+
+* **card:** fix Card-footer spacing spec ([2ed8f78](https://github.com/dkk94/amar-ui-web/commit/2ed8f78fe8c10f796527371e221ef58a0197267a))
+* **radio:** add flex auto property to Radio-control ([b50a8bb](https://github.com/dkk94/amar-ui-web/commit/b50a8bbbd86cb08f760d6089ff644c89c047051d))
+* **typography:** Add !important flag to .TextAlign-* ([622e39f](https://github.com/dkk94/amar-ui-web/commit/622e39fccbbbd85772cb9cd4115e1f2bbb8f240b))
+
+
+### Features
+
+* **flex:** add align-self classes feature ([d76a762](https://github.com/dkk94/amar-ui-web/commit/d76a762b6d278e020bd60da3db4a78fadcae598b))
+
+
+
+
+
 ## [1.2.2](https://github.com/dkk94/amar-ui-web/compare/v1.2.1...v1.2.2) (2020-09-28)
 
 
