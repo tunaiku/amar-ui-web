@@ -1,21 +1,17 @@
 @import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/shape/scss/variables';
 
-@mixin amb-create-bottom-sheet-classes() {
+@mixin amb-initialize-bottom-sheet-module() {
   .BottomSheet {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 900;
+    position: relative;
 
-    &-container {
-      position: absolute;
-      bottom: 0;
+    &--fixed {
+      position: fixed;
+      top: 0;
       left: 0;
+      height: 100%;
       width: 100%;
-      z-index: 902;
     }
 
     &-dialog {
@@ -62,7 +58,9 @@
       top: 0;
       left: 0;
       background-color: amb-color-theme-opacity('dark', 0.3);
-      z-index: 901;
+    }
+
+    &-closeButton {
     }
   }
 }
