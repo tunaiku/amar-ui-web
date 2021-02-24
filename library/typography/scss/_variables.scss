@@ -155,8 +155,4 @@ $amb-text-transform-map: map-merge(
   $amb-text-transform-map
 );
 
-$amb-text-alignment-map: () !default;
-$amb-text-alignment-map: map-merge(
-  ('left', 'center', 'right', 'justify'),
-  $amb-text-alignment-map
-) !default;
+$amb-text-alignment-map: ('left', 'center', 'right', 'justify') !default;
