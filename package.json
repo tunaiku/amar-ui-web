@@ -15,6 +15,7 @@
     "build": "webpack --mode=development --env.NODE_ENV=development --progress --colors --display=minimal",
     "build:all": "yarn build && yarn build:min",
     "build:min": "webpack --mode=production --env.NODE_ENV=production --progress --colors --display=minimal",
+    "build:docs": "lerna exec --scope=@amar-ui-web/docs -- yarn build",
     "start:docs": "lerna exec --scope=@amar-ui-web/docs -- yarn start"
   },
   "config": {
