@@ -1,0 +1,21 @@
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+
+.Breadcrumbs {
+  display: flex;
+  flex-direction: row;
+
+  &-item {
+    &:not(:last-child) {
+      &:after {
+        content: '>';
+        padding: 0 amb-spacing('small');
+      }
+    }
+
+    &.is-active {
+      font-weight: amb-font-weight('semibold');
+      text-decoration: none;
+    }
+  }
+}
