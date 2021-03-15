@@ -1,0 +1,38 @@
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/shape/scss/variables';
+
+.Pagination {
+  display: flex;
+  flex-direction: row;
+
+  &-controls {
+    display: flex;
+    flex-direction: row;
+    border-radius: amb-border-radius('base');
+    border: solid 1px amb-color-theme-shade('neutral', 50);
+  }
+
+  &-controlItem {
+    padding: amb-spacing('small') amb-spacing('base');
+
+    &:not(:last-child) {
+      border-right: solid 1px amb-color-theme-shade('neutral', 50);
+    }
+  }
+
+  &-info {
+    display: flex;
+    padding: 0 amb-spacing('base');
+  }
+
+  &-currentPage {
+    padding: amb-spacing('small') amb-spacing('base');
+    border: solid 1px amb-color-theme-shade('neutral', 50);
+    border-radius: amb-border-radius('base');
+  }
+
+  &-maxPages {
+    padding: amb-spacing('small');
+  }
+}
