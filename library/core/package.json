@@ -6,6 +6,7 @@
   "dependencies": {
     "@amar-ui-web/bottom-bar": "^1.3.1",
     "@amar-ui-web/bottom-sheet": "^1.3.1",
+    "@amar-ui-web/breadcrumbs": "^1.0.0",
     "@amar-ui-web/button": "^1.3.1",
     "@amar-ui-web/card": "^1.3.1",
     "@amar-ui-web/checkbox": "^1.3.1",
