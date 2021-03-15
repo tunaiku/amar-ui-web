@@ -105,6 +105,10 @@ export const DOCS_MENU = [
         title: 'Breadcrumbs',
         path: '/components/breadcrumbs',
       },
+      {
+        title: 'Table',
+        path: '/components/table',
+      },
     ],
   },
   {
