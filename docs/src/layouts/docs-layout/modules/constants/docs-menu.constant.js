@@ -109,6 +109,10 @@ export const DOCS_MENU = [
         title: 'Table',
         path: '/components/table',
       },
+      {
+        title: 'Pagination',
+        path: '/components/pagination',
+      },
     ],
   },
   {
