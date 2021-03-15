@@ -101,6 +101,10 @@ export const DOCS_MENU = [
         title: 'Checkbox',
         path: '/components/checkbox',
       },
+      {
+        title: 'Breadcrumbs',
+        path: '/components/breadcrumbs',
+      },
     ],
   },
   {
