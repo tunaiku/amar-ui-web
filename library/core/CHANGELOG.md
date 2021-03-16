@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tunaiku/amar-ui-web/compare/v1.3.1...v1.4.0) (2021-03-16)
+
+
+### Features
+
+* **breadcrumbs:** implement breadcrumbs css module ([1639f4b](https://github.com/tunaiku/amar-ui-web/commit/1639f4bbaf465eca1243f9d0c96956a906149ad8))
+* **core:** add @amar-ui-web/breadcrumbs dependency ([50d87c6](https://github.com/tunaiku/amar-ui-web/commit/50d87c61abe4765c792d381e93dd2527b864cd89))
+* **core:** add @amar-ui-web/table dependency ([6b274f9](https://github.com/tunaiku/amar-ui-web/commit/6b274f95cafda943ced7f3eb5492eb60aedf4187))
+* **pagination:** implement pagination css module ([600af15](https://github.com/tunaiku/amar-ui-web/commit/600af1588770e53d3510912ecea0d1530b6ab781))
+* **table:** implement table css module ([1661314](https://github.com/tunaiku/amar-ui-web/commit/16613141cc12a3bcb103e51d7905de22058b2780))
+
+
+
+
+
 ## [1.3.1](https://github.com/tunaiku/amar-ui-web/compare/v1.3.0...v1.3.1) (2021-02-24)
 
 **Note:** Version bump only for package @amar-ui-web/core
