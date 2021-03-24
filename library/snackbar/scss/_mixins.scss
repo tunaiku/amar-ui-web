@@ -6,21 +6,57 @@
 
 @mixin amb-create-snackbar-component() {
   .Snackbar {
-    @include amb-include-snackbar-styles();
+    position: fixed;
+    z-index: 1500;
+
+    @include amb-append-snackbar-positions();
     @include amb-append-snackbar-dialog();
     @include amb-append-snackbar-parts();
   }
 }
 
-@mixin amb-include-snackbar-styles() {
-  position: fixed;
+@mixin amb-append-snackbar-positions() {
+  &--topRight {
+    top: amb-spacing('base');
+    right: amb-spacing('base');
+  }
+
+  &--topCenter {
+    top: amb-spacing('base');
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  &--topLeft {
+    top: amb-spacing('base');
+    left: amb-spacing('base');
+  }
+
+  &--bottomRight {
+    bottom: amb-spacing('base');
+    right: amb-spacing('base');
+  }
+
+  &--bottomCenter {
+    bottom: amb-spacing('base');
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  &--bottomLeft {
+    bottom: amb-spacing('base');
+    left: amb-spacing('base');
+  }
 }
 
 @mixin amb-append-snackbar-dialog() {
   &-dialog {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(black, 0.7);
+    flex-wrap: wrap;
+    background-color: amb-color-shade(black, 35);
     color: amb-color-theme('lighter');
     border-radius: amb-border-radius('base');
     padding-right: amb-spacing('2xsmall');
@@ -31,16 +67,28 @@
 
 @mixin amb-append-snackbar-parts() {
   &-text {
+    display: flex;
+    align-items: center;
+    font-size: amb-font-size('xsmall');
     padding: amb-spacing('base');
     flex-grow: 1;
   }
 
+  &-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+  }
+
   &-action {
+    font-size: amb-font-size('xsmall');
     padding: amb-spacing('base');
     color: amb-color-theme('primary');
     font-weight: amb-font-weight('bold');
     letter-spacing: amb-letter-spacing('xloose');
     text-transform: uppercase;
+    text-align: right;
     cursor: pointer;
     outline: none;
 
@@ -60,10 +108,11 @@
   }
 
   &--long {
-    display: flex;
     flex-direction: column;
+  }
 
-    .Snackbar-actions {
+  &--long & {
+    &-actions {
       display: flex;
       justify-content: flex-end;
     }
