@@ -1,0 +1,20 @@
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+
+$amb-color-secondary: amb-color-theme('secondary');
+$amb-color-light: amb-color-theme('light');
+$amb-stepper-background-color: white;
+
+$amb-stepper-margin: amb-spacing('xsmall');
+$amb-stepper-inner-margin: amb-spacing('base');
+
+$amb-stepper-border-radius: 50%;
+$amb-stepper-z-index: 40;
+
+$amb-stepper-height: 60px;
+$amb-stepper-widht: 60px;
+
+$amb-stepper-inner-text-align: center;
+
+$amb-stepper-inner-font-weight: amb-font-weight('medium');
