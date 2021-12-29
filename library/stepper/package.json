@@ -1,5 +1,5 @@
 {
-  "name": "@amar-ui-web/circular-stepper",
+  "name": "@amar-ui-web/stepper",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
