@@ -28,7 +28,7 @@
       border-radius: $amb-stepper-border-radius;
       background: transparent;
       text-align: $amb-stepper-inner-text-align;
-      margin: $amb-stepper-progress-bar-margin;
+      margin: amb-spacing('base');
       position: absolute;
       z-index: 100;
       font-weight: amb-font-weight('medium');
