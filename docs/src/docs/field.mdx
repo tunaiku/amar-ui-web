@@ -1,0 +1,89 @@
+---
+path: '/components/field'
+title: 'Field'
+description: 'Arrange form controls to form a unity.'
+---
+
+## Usage
+
+Field is composed into several parts; `Field`, `Field-label`, `Field-control`, and the optional
+`Field-helper`.
+
+- `Field-label` is the class to put in a label associating the field.
+- `Field-control` is where you can put the preferred form control like `Input` and `Select`.
+- `Field-helper` is an optional class to put in helper text that is normally put beneath a
+  `.Field-control`.
+
+Here's a basic example on how `Field` class can be implemented inside of a form.
+
+```html preview=true size=compact
+<form>
+  <div class="Field MarginBottom">
+    <label class="Field-label">Full Name</label>
+    <div class="Field-control">
+      <input type="text" placeholder="e.g John Appleseed" class="Input" />
+    </div>
+  </div>
+  <div class="Field MarginBottom">
+    <label class="Field-label">Password</label>
+    <div class="Field-control">
+      <input type="password" placeholder="" class="Input" />
+    </div>
+    <div class="Field-helper">
+      Password should consists of one capital letter and a symbol letter.
+    </div>
+  </div>
+  <div class="Field MarginBottom">
+    <label class="Field-label Color-danger">Email address</label>
+    <div class="Field-control">
+      <input type="text" placeholder="e.g johnappleseed@email.com" class="Input Input--danger" />
+    </div>
+    <div class="Field-helper Color-danger">Email address has a wrong format!</div>
+  </div>
+  <div class="Field">
+    <div class="Field-control">
+      <div class="Checkbox">
+        <input id="TestCheckbox" type="checkbox" class="Checkbox-control" />
+        <label for="TestCheckbox" class="Checkbox-label">
+          By checking this you agree with our terms and conditions.
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+```
+
+## Theming
+
+At the moment, there aren't dedicated theme classes available for this component. Instead, you can
+drectly apply thematic color utility classes directly to the elements inside of the the `.Field`
+class.
+
+For example, to emphasis an existing error for a particular field, you can apply `.Input--danger`
+directly to the input element and `.Color--danger` to the label element as shown.
+
+```html preview=true size=compact
+<div class="Field">
+  <div class="Field-label Color-danger">Form label</div>
+  <div class="Field-control">
+    <input type="text" class="Input Input--danger" placeholder="Some placeholder" />
+  </div>
+</div>
+```
+
+## Multiline Field
+
+Use `textarea` element instead of `input` when dealing with multiline field.
+
+```html preview=true size=compact
+<div class="Field">
+  <label class="Field-label">Label</label>
+  <div class="Field-control">
+    <textarea class="Input"></textarea>
+  </div>
+  <div class="Field-helper">
+    <p>Helper text</p>
+    <span>0/140</span>
+  </div>
+</div>
+```

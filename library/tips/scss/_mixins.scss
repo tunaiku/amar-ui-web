@@ -1,0 +1,14 @@
+@import '@amar-ui-web/typography/scss/mixins';
+@import '@amar-ui-web/spacing/scss/mixins';
+@import '@amar-ui-web/shape/scss/mixins';
+@import './variables';
+
+@mixin amb-initialize-tips-module() {
+  .Tips {
+    background-color: $amb-tips-background-color;
+    border: $amb-tips-border;
+    font-size: amb-font-size('xsmall');
+    padding: amb-spacing('base');
+    border-radius: amb-border-radius('base');
+  }
+}

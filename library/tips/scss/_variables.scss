@@ -1,0 +1,7 @@
+@import '@amar-ui-web/shape/scss/mixins';
+@import '@amar-ui-web/color/scss/mixins';
+
+$amb-tips-border-color: #d3ca63;
+$amb-tips-border: solid 1px $amb-tips-border-color;
+$amb-tips-border-radius: amb-border-radius('base');
+$amb-tips-background-color: amb-color-pallete('light-yellow');

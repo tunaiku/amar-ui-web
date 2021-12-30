@@ -4,22 +4,25 @@
 @import '@amar-ui-web/responsive/scss/mixins';
 @import '@amar-ui-web/color/scss/variables';
 
+$code-preview-border-radius: amb-border-radius('xlarge');
+
 .CodePreview {
   > * {
     border-radius: 0;
 
     &:first-child {
-      border-top-left-radius: amb-border-radius('base');
-      border-top-right-radius: amb-border-radius('base');
+      border-top-left-radius: $code-preview-border-radius;
+      border-top-right-radius: $code-preview-border-radius;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
 
     &:last-child {
+      border-top: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-bottom-left-radius: amb-border-radius('base');
-      border-bottom-right-radius: amb-border-radius('base');
+      border-bottom-left-radius: $code-preview-border-radius;
+      border-bottom-right-radius: $code-preview-border-radius;
     }
   }
 
@@ -33,8 +36,13 @@
     }
 
     &--compact {
-      padding-left: 10em !important;
-      padding-right: 10em !important;
+      padding-left: amb-spacing('large');
+      padding-right: amb-spacing('large');
+
+      @include amb-responsive-media('lg') {
+        padding-left: 10em !important;
+        padding-right: 10em !important;
+      }
     }
   }
 

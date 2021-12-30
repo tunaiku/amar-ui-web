@@ -1,0 +1,70 @@
+@import '@amar-ui-web/color/scss/mixins';
+@import '@amar-ui-web/spacing/scss/mixins';
+@import '@amar-ui-web/typography/scss/mixins';
+@import '@amar-ui-web/responsive/scss/mixins';
+@import '@amar-ui-web/core/helpers';
+
+$app-header-height: em(70px);
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.AppBody {
+  margin-top: $app-header-height;
+}
+
+.AppHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $app-header-height;
+  min-height: $app-header-height;
+  margin: 0;
+  border-bottom: solid 1px amb-color-pallete('gray', 20);
+  box-shadow: 0 1px 4px 0 amb-color-pallete('gray', 10);
+  background-color: white;
+  z-index: 100;
+
+  @include amb-responsive-media('md') {
+    margin: 0 amb-spacing('base');
+  }
+
+  &-menuToggler {
+    display: flex;
+
+    @include amb-responsive-media('md') {
+      display: none;
+    }
+  }
+
+  &-logo {
+    font-weight: amb-font-weight('bold');
+    font-size: amb-font-size('large');
+    padding-right: amb-spacing('large');
+  }
+
+  &-nav {
+    display: flex;
+  }
+
+  &-navItem {
+    display: flex;
+    align-items: center;
+
+    > a {
+      color: amb-color-pallete('gray', 70);
+      font-size: amb-font-size('small');
+      font-weight: amb-font-weight('medium');
+      padding-right: amb-spacing('medium');
+      padding-top: amb-spacing('small');
+      padding-bottom: amb-spacing('small');
+
+      &.is-active {
+        font-weight: amb-font-weight('semibold');
+        color: amb-color-pallete('gray', 90);
+      }
+    }
+  }
+}

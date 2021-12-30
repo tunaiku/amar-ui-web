@@ -13,14 +13,21 @@
   .Button {
     @include amb-get-button-base-styles();
     @include amb-get-button-base-state-classes();
-
     @include amb-create-button-variant-classes();
     @include amb-create-button-modifier-classes();
   }
 }
 
+@mixin amb-reset-button-appearance() {
+  white-space: nowrap;
+  outline: none;
+  appearance: none;
+  text-decoration: none;
+}
+
 @mixin amb-get-button-base-styles() {
   @include amb-get-button-size-props($amb-button-size-base);
+  @include amb-reset-button-appearance();
 
   position: relative;
   display: inline-flex;
@@ -45,11 +52,6 @@
   border-radius: $amb-button-border-radius;
 
   transition: $amb-button-transition;
-  white-space: nowrap;
-  outline: none;
-  appearance: none;
-
-  text-decoration: none;
 
   // Apply pointer cursor on non-disabled buttons
   @include amb-button-is-not-disabled() {
@@ -94,7 +96,9 @@
 ///
 @mixin amb-create-button-variant-classes() {
   @each $color-theme, $color-theme-value in $amb-color-theme-map {
-    &--#{$color-theme} {
+    $camelized-color-theme: camelize($color-theme);
+
+    &--#{$camelized-color-theme} {
       @include amb-get-button-filled-styles($color-theme);
       @include amb-create-button-text-class($color-theme);
       @include amb-create-button-outlined-class($color-theme);

@@ -1,0 +1,46 @@
+---
+path: '/components/checkbox'
+title: 'Checkbox'
+description: 'Lets users select multiple choices of a particular subject.'
+---
+
+## Usage
+
+To apply checkbox styling, simply append `.Checkbox` class and add `<input[type=checkbox]>` and
+`<label>` elements with `.Checkbox-control` and `.Checkbox-label` respectively as the direct
+children.
+
+- `.Checkbox`: Wrapper class that wraps `Checkbox-control` and `Checkbox-label`
+- `.Checkbox-control`: Apply inside an `<input[type=checkbox]>` element.
+- `.Checkbox-label`: Apply inside the accompanying `label` element.
+
+```html preview=true
+<div class="Checkbox MarginBottom">
+  <input class="Checkbox-control" id="checkboxExample1" type="checkbox" />
+  <label class="Checkbox-label" for="checkboxExample1">Check me!</label>
+</div>
+<div class="Checkbox">
+  <input class="Checkbox-control" id="checkboxExample2" type="checkbox" />
+  <label class="Checkbox-label" for="checkboxExample2">Check me too!</label>
+</div>
+```
+
+#### Accessibility
+
+Make sure to add `id` in `input[type=checkbox]` and `for` attribute in the accompanying `label`.
+This adds a couple of benefits:
+
+- **Improved accessibility**. It's required by most web auditing tools including Google Lighthouse.
+- **Better user experience**. This enables users to click the label to check the checkbox.
+
+## Indeterminate State
+
+Append `.is-indeterminate` state class with `Checkbox-control` to transform it into indeterminate
+state.
+
+```html preview=true
+<div class="Checkbox">
+  <input class="Checkbox-control is-indeterminate" id="checkboxExample3" type="checkbox" />
+  <label class="Checkbox-label" for="checkboxExample3">Check to see</label>
+</div>
+```

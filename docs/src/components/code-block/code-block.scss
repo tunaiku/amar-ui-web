@@ -1,13 +1,18 @@
 @import '@amar-ui-web/spacing/scss/variables';
 @import '@amar-ui-web/typography/scss/variables';
 @import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/responsive/scss/mixins';
 
 .CodeBlock {
-  position: relative;
-  padding: amb-spacing('medium');
+  border-radius: amb-border-radius('xlarge');
   font-size: amb-font-size('small');
-  font-family: amb-font-family('monospace');
-  border-radius: amb-border-radius('base');
-  overflow: auto;
-  margin: 0;
+  overflow: hidden;
+
+  > pre {
+    padding: amb-spacing('base');
+    font-family: amb-font-family('monospace');
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow: auto;
+  }
 }

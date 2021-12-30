@@ -2,18 +2,12 @@ import React from 'react';
 import classNames from 'classnames';
 import './code-preview.scss';
 
-const CodePreviewContainer = props => {
-  const { tag: Tag, className, ...rest } = props;
-
+const CodePreviewContainer = ({ tag: Tag = 'div', className, ...rest }) => {
   const cssClasses = {
-    codePreview: classNames(className, 'CodePreview'),
+    CodePreview: classNames(className, 'CodePreview'),
   };
 
-  return <Tag className={cssClasses['codePreview']} {...rest} />;
-};
-
-CodePreviewContainer.defaultProps = {
-  tag: 'div',
+  return <Tag className={cssClasses['CodePreview']} {...rest} />;
 };
 
 export default CodePreviewContainer;

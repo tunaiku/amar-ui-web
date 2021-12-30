@@ -1,0 +1,92 @@
+---
+path: '/components/card'
+title: 'Card'
+description:
+  'A container component that contains information and actions about a particular subject.'
+---
+
+## Usage
+
+`.Card` component consists of several elements that you can mix and match according to your needs.
+
+- `.Card`: Serves as the primary wrapper class for the other parts.
+- `.Card-title`: Contains the title and subtitle text of the card.
+- `.Card-body`: Contains the primary content of the card.
+- `.Card-footer`: Contains the call-to-action elements of the card (e.g button, link, etc.)
+
+```html preview=true bgColor=lighter size=compact
+<div class="Card">
+  <div class="Card-title">
+    <h5 class="Typography-heading20">Card title here</h5>
+    <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
+  </div>
+  <div class="Card-body">
+    <p class="Typography-regular14 Color-neutral-80">
+      Description text here. Contains various supporting text or content.
+    </p>
+  </div>
+  <div class="Card-footer">
+    <button class="Button Button--primary Button--fullWidth">Button</button>
+  </div>
+</div>
+```
+
+## Elevated card
+
+Append `.Card--elevated` class to add the elevation effect to a card component to make it appear
+floated.
+
+```html preview=true bgColor=lighter size=compact
+<div class="Card Card--elevated">
+  <div class="Card-title">
+    <h5 class="Typography-heading20">Card title here</h5>
+    <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
+  </div>
+  <div class="Card-body">
+    <p class="Typography-regular14 Color-neutral-80">
+      Description text here. Contains various supporting text or content.
+    </p>
+  </div>
+  <div class="Card-footer">
+    <button class="Button Button--primary Button--fullWidth">Button</button>
+  </div>
+</div>
+```
+
+## Borderless card
+
+Append `.Card--borderless` class to remove the border of the card component. This is particularly
+useful if you want to incorporate the card component as a part of a larger component.
+
+```html preview=true bgColor=lighter size=compact
+<div class="Card Card--borderless">
+  <div class="Card-title">
+    <h5 class="Typography-heading20">Card title here</h5>
+    <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
+  </div>
+  <div class="Card-content">
+    <p class="Typography-regular14 Color-neutral-80">
+      Description text here. Contains various supporting text or content.
+    </p>
+  </div>
+  <div class="Card-footer">
+    <button class="Button Button--primary Button--fullWidth">Button</button>
+  </div>
+</div>
+```
+
+## Patterns
+
+#### Card with Decorative Icon
+
+```html preview=true size=compact
+<div class="Card">
+  <div class="Card-body Flex">
+    <div class="BorderRadius-circle Padding-large BgColor-neutral MarginRight"></div>
+    <div>
+      <h5 class="Typography-bold16">Card title here</h5>
+      <p class="Typography-regular14 Color-neutral-80">Secondary text here</p>
+    </div>
+  </div>
+</div>
+```

@@ -72,9 +72,13 @@
 }
 
 @mixin amb-create-font-weight-classes() {
-  @each $font-weight-key, $font-weight-value in $amb-font-weight-map {
-    .FontWeight-#{$font-weight-key} {
-      font-weight: $font-weight-value !important;
+  .FontWeight {
+    font-weight: amb-font-weight('regular');
+
+    @each $font-weight-key, $font-weight-value in $amb-font-weight-map {
+      &-#{$font-weight-key} {
+        font-weight: $font-weight-value !important;
+      }
     }
   }
 }

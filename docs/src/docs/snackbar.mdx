@@ -1,0 +1,45 @@
+---
+path: '/components/snackbar'
+title: 'Snackbar'
+description: 'Displays short messages to inform users about processes and feedbacks from an action.'
+---
+
+## Usage
+
+Below is a static snackbar example (you will need to add the wrapper with `.Snackbar` class first
+since it provides necessary styles to make it appear fixed on screen, see live example below).
+
+```html size=compact
+<div class="Snackbar-dialog">
+  <div class="Snackbar-text">A single line message.</div>
+  <div class="Snackbar-actions">
+    <button class="Snackbar-action">Action</button>
+  </div>
+</div>
+```
+
+## Longer Action Button
+
+To make room for a longer action button, append `.Snackbar-dialog--long` after `Snackbar-dialog`.
+
+```html preview=true size=compact
+<div class="Snackbar-dialog Snackbar-dialog--long">
+  <div class="Snackbar-text">A single line message.</div>
+  <div class="Snackbar-actions">
+    <button class="Snackbar-action">Longer Action Button</button>
+  </div>
+</div>
+```
+
+## Elevated
+
+To give the snackbar an elevated effect, append `.Snackbar-dialog--elevated` modifier class.
+
+```html preview=true size=compact
+<div class="Snackbar-dialog Snackbar-dialog--elevated">
+  <div class="Snackbar-text">A single line message.</div>
+  <div class="Snackbar-actions">
+    <button class="Snackbar-action">Action</button>
+  </div>
+</div>
+```

@@ -1,18 +1,17 @@
 /**
  * Implement Gatsby's Node APIs in this file.
  *
- * See: https://www.gatsbyjs.org/docs/node-apis/
+ * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
 const path = require('path');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
 
-  const docsTemplate = path.resolve(`src/layouts/docs-layout/docs-layout.jsx`);
-  const allMdxQuery = `
-    {
-      allMdx {
+  const result = await graphql(`
+    query {
+      allMdx(limit: 1000) {
         edges {
           node {
             excerpt(pruneLength: 250)
@@ -26,27 +25,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       }
     }
-  `;
+  `);
 
-  return graphql(allMdxQuery).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors);
-    }
+  if (result.errors) {
+    reporter.panicOnBuild('Error while running GraphQL query');
+    return;
+  }
 
-    result.data.allMdx.edges.forEach(({ node }) => {
-      createPage({
-        path: `${node.frontmatter.path}`,
-        component: docsTemplate,
-        context: { id: node.id },
-      });
+  const docpageLayout = path.resolve('src/layouts/docpage/docpage-layout.jsx');
+  const docpages = result.data.allMdx.edges;
+
+  docpages.forEach(({ node }, index) => {
+    const path = node.frontmatter.path;
+    createPage({
+      path,
+      component: docpageLayout,
+      context: {
+        id: node.id,
+      },
     });
-  });
-};
-
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
   });
 };

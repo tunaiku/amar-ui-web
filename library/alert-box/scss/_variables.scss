@@ -1,0 +1,24 @@
+@import '@amar-ui-web/color/scss/variables';
+
+$amb-alert-box-themes: () !default;
+$amb-alert-box-themes: map-merge(
+  (
+    'success': (
+      color: amb-color-pallete('green'),
+      background-color: amb-color-pallete('light-green'),
+    ),
+    'warning': (
+      color: amb-color-pallete('dark-yellow'),
+      background-color: amb-color-pallete('light-yellow'),
+    ),
+    'danger': (
+      color: amb-color-pallete('red'),
+      background-color: amb-color-pallete('light-red'),
+    ),
+    'info': (
+      color: amb-color-pallete('blue'),
+      background-color: amb-color-pallete('light-blue'),
+    ),
+  ),
+  $amb-alert-box-themes
+);

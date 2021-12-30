@@ -1,0 +1,47 @@
+---
+path: '/components/bottom-sheet'
+title: 'Bottom Sheet'
+description: 'A container component with a dismissable view from the bottom of the screen.'
+---
+
+## Usage
+
+Bottom sheet is similar to modals where it blocks some part of your screen to present vital
+information that users need to see. As its name implies, bottom sheet is displayed from the bottom
+of the screen and should be easily dismissable.
+
+To implement a bottom sheet, there are several classes you need to create:
+
+- `.BottomSheet` class to an element to transform it into a bottom sheet wrapper.
+- `.BottomSheet-dialog` to create a container to place the primary content you want to put.
+
+```html preview=true bgColor=neutral.10 size=compact
+<div class="BottomSheet">
+  <div class="BottomSheet-dialog">
+    <div class="BottomSheet-media MarginBottom-small">
+      <img
+        style="width: 232px; height: 180px"
+        src="https://res.cloudinary.com/dwhvwfzcm/image/upload/v1593543146/undraw_working_from_anywhere_ub67_wg7r8a.svg"
+      />
+    </div>
+    <div class="BottomSheet-body">
+      <h5 class="BottomSheet-title MarginBottom-xsmall">Selamat, Pinjaman Anda telah lunas!</h5>
+      <p class="Typography-regular16 Color-neutral-80 MarginBottom">
+        Terima kasih telah menggunakan pinjaman Tunaiku. Surat keterangan lunas akan dikirim ke
+        alamat Anda.
+      </p>
+      <button class="Button Button--fullWidth Button--success">Ajukan Pinjaman Lagi</button>
+    </div>
+  </div>
+</div>
+```
+
+## Fixed
+
+Append `.BottomSheet--fixed` class to make it stick to the bottom of the screen.
+
+```html
+<div class="BottomSheet BottomSheet--fixed">
+  <div class="BottomSheet-dialog">...</div>
+</div>
+```

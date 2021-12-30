@@ -1,0 +1,95 @@
+---
+path: '/components/icons'
+title: 'Icons'
+description: ''
+---
+
+## Usage
+
+Add `.Icon` into an element to turn it into an icon container. Inside an icon container, you can put
+an icon asset (preferably SVG) to adjust its size to match our icon specifications.
+
+```html preview=true
+<div class="Icon">
+  <svg
+    height="24px"
+    width="24px"
+    viewBox="0 0 24 24"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <title>ic_action_copy_neutral100_24</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g
+        id="01.-Tunaiku-/-02.-Visual-Assets-/-Icon-/-System-Icon-/-Action-/-Copy"
+        fill="currentColor"
+      >
+        <path
+          d="M19,5 C20.1045695,5 21,5.8954305 21,7 L21,21 C21,22.1045695 20.1045695,23 19,23 L9,23 C7.8954305,23 7,22.1045695 7,21 L7,7 C7,5.8954305 7.8954305,5 9,5 L19,5 Z M19,7 L9,7 L9,21 L19,21 L19,7 Z M15,1 C15.5522847,1 16,1.44771525 16,2 C16,2.55228475 15.5522847,3 15,3 L5,3 L5,17 C5,17.5522847 4.55228475,18 4,18 C3.44771525,18 3,17.5522847 3,17 L3,3 C3,1.8954305 3.8954305,1 5,1 L15,1 Z"
+          id="🎨-Color-Icon"
+        ></path>
+      </g>
+    </g>
+  </svg>
+</div>
+```
+
+## Sizes
+
+You can modify the size of an icon with one of the three sizes that come by default: `base`,
+`medium`, or `large`.
+
+```html preview=true
+<div class="Icon">
+  <svg
+    viewBox="0 0 24 24"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <g id="Icons-/-form-/-ic_kantor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+      <path
+        d="M4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 L16,2 C17.1045695,2 18,2.8954305 18,4 L18,7 L20,7 C21.1045695,7 22,7.8954305 22,9 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 Z M16,4 L4,4 L4,20 L11,20 L11,16 L13,16 L13,20 L16,20 L16,4 Z M20,9 L18,9 L18,20 L20,20 L20,9 Z M9,14 L9,16 L7,16 L7,14 L9,14 Z M9,10 L9,12 L7,12 L7,10 L9,10 Z M13,10 L13,12 L11,12 L11,10 L13,10 Z M9,6 L9,8 L7,8 L7,6 L9,6 Z M13,6 L13,8 L11,8 L11,6 L13,6 Z"
+        id="Shape"
+        fill="#25282B"
+      ></path>
+    </g>
+  </svg>
+</div>
+<div class="Icon Icon--medium">
+  <svg
+    viewBox="0 0 24 24"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <g id="Icons-/-form-/-ic_kantor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+      <path
+        d="M4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 L16,2 C17.1045695,2 18,2.8954305 18,4 L18,7 L20,7 C21.1045695,7 22,7.8954305 22,9 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 Z M16,4 L4,4 L4,20 L11,20 L11,16 L13,16 L13,20 L16,20 L16,4 Z M20,9 L18,9 L18,20 L20,20 L20,9 Z M9,14 L9,16 L7,16 L7,14 L9,14 Z M9,10 L9,12 L7,12 L7,10 L9,10 Z M13,10 L13,12 L11,12 L11,10 L13,10 Z M9,6 L9,8 L7,8 L7,6 L9,6 Z M13,6 L13,8 L11,8 L11,6 L13,6 Z"
+        id="Shape"
+        fill="#25282B"
+      ></path>
+    </g>
+  </svg>
+</div>
+<div class="Icon Icon--large">
+  <svg
+    viewBox="0 0 24 24"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <g id="Icons-/-form-/-ic_kantor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+      <path
+        d="M4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 L16,2 C17.1045695,2 18,2.8954305 18,4 L18,7 L20,7 C21.1045695,7 22,7.8954305 22,9 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 Z M16,4 L4,4 L4,20 L11,20 L11,16 L13,16 L13,20 L16,20 L16,4 Z M20,9 L18,9 L18,20 L20,20 L20,9 Z M9,14 L9,16 L7,16 L7,14 L9,14 Z M9,10 L9,12 L7,12 L7,10 L9,10 Z M13,10 L13,12 L11,12 L11,10 L13,10 Z M9,6 L9,8 L7,8 L7,6 L9,6 Z M13,6 L13,8 L11,8 L11,6 L13,6 Z"
+        id="Shape"
+        fill="#25282B"
+      ></path>
+    </g>
+  </svg>
+</div>
+```

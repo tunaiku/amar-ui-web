@@ -1,7 +1,6 @@
 @import '@amar-ui-web/core/helpers';
 @import './functions';
 
-/// Font families
 $amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
   'Helvetica Neue', Arial, sans-serif !default;
 $amb-font-family-serif: Georgia, 'Times New Roman', serif !default;
@@ -33,6 +32,7 @@ $amb-font-size-map: map-merge(
     '3xlarge': rem(32px),
     '4xlarge': rem(40px),
     '5xlarge': rem(48px),
+    '6xlarge': rem(56px),
   ),
   $amb-font-size-map
 );

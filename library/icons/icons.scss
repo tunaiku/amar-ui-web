@@ -1,3 +1,19 @@
-@import './scss/mixins';
+@import './scss/variables';
 
-@include amb-create-icon-classes();
+.Icon {
+  display: inline-flex;
+  width: map-get($amb-icon-size-map, 'base');
+  height: map-get($amb-icon-size-map, 'base');
+
+  @each $size, $value in $amb-icon-size-map {
+    &--#{$size} {
+      width: $value;
+      height: $value;
+    }
+  }
+
+  svg {
+    width: auto;
+    height: auto;
+  }
+}

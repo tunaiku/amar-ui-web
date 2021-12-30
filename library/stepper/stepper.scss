@@ -1,0 +1,68 @@
+@import '@amar-ui-web/spacing/scss/mixins';
+@import '@amar-ui-web/typography/scss/mixins';
+
+.LinearStepper {
+  &-step {
+    position: relative;
+    display: flex;
+    padding-bottom: amb-spacing('base');
+
+    &:not(:last-child) {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 11px;
+        top: 0;
+        height: 100%;
+        border-left: solid 2px #cdd0d6;
+      }
+    }
+
+    &.is-done,
+    &.is-active {
+      .LinearStepper-stepStatus {
+        border-color: #0079ff;
+      }
+    }
+
+    &.is-active {
+      .LinearStepper-stepStatus {
+        border-color: #0079ff;
+        color: #0079ff;
+      }
+    }
+
+    &.is-done {
+      &:before {
+        border-color: #0079ff;
+      }
+
+      .LinearStepper-stepStatus {
+        background-color: #0079ff;
+        color: amb-color-contrast(#0079ff);
+      }
+    }
+  }
+
+  &-stepStatus {
+    position: relative;
+    border-radius: 100%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: solid 2px #cdd0d6;
+    color: #cdd0d6;
+    margin-right: amb-spacing('base');
+    font-weight: amb-font-weight('bold');
+    font-size: amb-font-size('xsmall');
+    flex-shrink: 0;
+  }
+
+  &-stepDescription {
+    position: relative;
+    flex-grow: 1;
+  }
+}

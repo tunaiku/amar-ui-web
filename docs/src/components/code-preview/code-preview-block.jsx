@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { CodeBlock } from '../code-block';
+import { CodeBlock } from '@components/code-block';
 import './code-preview.scss';
 
 const CodePreviewBlock = props => {

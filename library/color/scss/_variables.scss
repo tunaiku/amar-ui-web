@@ -1,45 +1,41 @@
 @import './color-palletes';
 @import './functions';
 
-///
-$amb-primary: $limeade !default;
-$amb-secondary: $blue-ribbon !default;
-$amb-tertiary: $trinidad !default;
-$amb-success: $green !default;
-$amb-danger: $red !default;
-$amb-warning: $yellow !default;
-$amb-info: $blue !default;
+$amb-color-pallete-map: () !default;
+$amb-color-pallete-map: map-merge(
+  (
+    'limenade': #48a800,
+    'blue-ribbon': #005fff,
+    'trinidad': #e54206,
+    'blue': #1564ec,
+    'green': #007200,
+    'red': #dd1717,
+    'yellow': #ffd500,
+    'dark-yellow': #8e6a10,
+    'gray': #cdd0d6,
+    'light-blue': #e2f3ff,
+    'light-green': #eff9e6,
+    'light-red': #ffeaec,
+    'light-yellow': #fef9e5,
+  ),
+  $amb-color-pallete-map
+);
 
-/// Shade of neutral color.
-///
-$amb-neutral: $gray !default;
-$amb-neutral-10: tint($amb-neutral, 80%);
-$amb-neutral-20: tint($amb-neutral, 60%);
-$amb-neutral-30: tint($amb-neutral, 40%);
-$amb-neutral-40: tint($amb-neutral, 20%);
-$amb-neutral-50: $amb-neutral;
-$amb-neutral-60: shade($amb-neutral, 20%);
-$amb-neutral-70: shade($amb-neutral, 40%);
-$amb-neutral-80: shade($amb-neutral, 60%);
-$amb-neutral-90: shade($amb-neutral, 80%);
-
-/// Map variables for color themes.
-///
 $amb-color-theme-map: () !default;
 $amb-color-theme-map: map-merge(
   (
-    'primary': $amb-primary,
-    'secondary': $amb-secondary,
-    'tertiary': $amb-tertiary,
-    'success': $amb-success,
-    'warning': $amb-warning,
-    'danger': $amb-danger,
-    'info': $amb-info,
-    'neutral': $amb-neutral,
-    'light': $amb-neutral-30,
-    'lighter': $amb-neutral-10,
-    'dark': $amb-neutral-80,
-    'darker': $amb-neutral-90,
+    'primary': amb-color-pallete('limenade'),
+    'secondary': amb-color-pallete('blue-ribbon'),
+    'tertiary': amb-color-pallete('trinidad'),
+    'success': amb-color-pallete('green'),
+    'info': amb-color-pallete('blue'),
+    'danger': amb-color-pallete('red'),
+    'warning': amb-color-pallete('yellow'),
+    'neutral': amb-color-pallete('gray'),
+    'light': tint(amb-color-pallete('gray'), 60%),
+    'lighter': tint(amb-color-pallete('gray'), 90%),
+    'dark': shade(amb-color-pallete('gray'), 60%),
+    'darker': shade(amb-color-pallete('gray'), 80%),
   ),
   $amb-color-theme-map
 );

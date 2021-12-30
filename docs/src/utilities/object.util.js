@@ -1,6 +1,3 @@
-/**
- *
- * @param {*} object
- */
-export const sortArrayObjectAlphabetically = (object, reference) =>
-  object.sort((firstItem, secondItem) => firstItem[reference].localeCompare(secondItem[reference]));
+export const sortObjectByPropertyAlphabetically = (firstObject, secondObject, reference) => {
+  return firstObject[reference].localeCompare(secondObject[reference]);
+};

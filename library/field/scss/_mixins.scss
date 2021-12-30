@@ -1,8 +1,6 @@
 @import '@amar-ui-web/spacing/scss/variables';
 @import '@amar-ui-web/typography/scss/variables';
 
-/// Initial entrypoint mixin to create base Field class.
-///
 @mixin amb-create-field-classes() {
   .Field {
     @include amb-field-base-styles();
@@ -15,8 +13,6 @@
   }
 }
 
-/// Basic styles for field component
-///
 @mixin amb-field-base-styles() {
   display: flex;
   flex-direction: column;
@@ -34,7 +30,8 @@
 
 @mixin amb-append-field-helper() {
   &-helper {
-    // TO-DO: Convert into typography style caption12.
+    display: flex;
+    justify-content: space-between;
     font-size: amb-font-size('xsmall');
     color: amb-color-theme('darker');
   }

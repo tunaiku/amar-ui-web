@@ -18,10 +18,29 @@
 ///
 @function amb-color-theme($color-theme, $shade-level: 50) {
   @if not map-has-key($amb-color-theme-map, $color-theme) {
-    @error "The theme '#{$color-theme}' is not found in '$amb-color-theme-map' variable map!";
+    @error "The theme '#{$color-theme}' is not found in '$amb-color-theme-map'";
   }
 
   $color-hex: map-get($amb-color-theme-map, $color-theme);
+  @return amb-color-shade($color-hex, $shade-level);
+}
+
+/// Returns color hex value of the passed color pallete. Additionally, you could
+/// also pass a different shade of the color by passing `$shade-level` argument.
+///
+/// @param {String} $color-name
+/// @param {Number} $shade-level | Default: 50
+/// @example
+///   color: amb-color-pallete('red', 50)
+/// @example
+///   background-color: amb-color-pallete('green', 50)
+///
+@function amb-color-pallete($color-name, $shade-level: 50) {
+  @if not map-has-key($amb-color-pallete-map, $color-name) {
+    @error "'#{$color-name}' is not found in '$amb-color-pallete-map'";
+  }
+
+  $color-hex: map-get($amb-color-pallete-map, $color-name);
   @return amb-color-shade($color-hex, $shade-level);
 }
 

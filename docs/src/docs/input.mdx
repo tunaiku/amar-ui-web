@@ -1,0 +1,88 @@
+---
+path: '/components/input'
+title: 'Input'
+description: 'A form control that allows users to type a value in a form of text.'
+---
+
+## Usage
+
+Append `.Input` class on top of a standard `<input>` element to transform it into Amar UI's input
+component.
+
+```html preview=true size=compact
+<input type="text" class="Input" placeholder="A standard input" />
+```
+
+## Themes
+
+By default, an input component doesn't apply any themes out-of-the-box, but you can easily apply
+theme as needed by appending the `*--<theme>` modifier class.
+
+```html preview=true size=compact
+<input type="text" class="Input Input--primary MarginBottom" placeholder="Primary theme" />
+<input type="text" class="Input Input--secondary MarginBottom" placeholder="Secondary theme" />
+<input type="text" class="Input Input--danger MarginBottom" placeholder="Danger theme" />
+<input type="text" class="Input Input--warning MarginBottom" placeholder="Warning theme" />
+<input type="text" class="Input Input--info" placeholder="Info theme" />
+```
+
+## Multiline
+
+You can use `textarea` to create a multiline input.
+
+```html preview=true size=compact
+<textarea class="Input" placeholder="I'm a textarea input"></textarea>
+```
+
+You can apply themes as usual as well.
+
+```html preview size=compact
+<textarea class="Input Input--danger MarginBottom"></textarea>
+<textarea class="Input Input--success MarginBottom"></textarea>
+<textarea class="Input Input--warning MarginBottom"></textarea>
+<textarea class="Input Input--info"></textarea>
+```
+
+## Input with Icon
+
+```html preview=true size=compact
+<div class="InputGroup InputGroup--hasExtraRight">
+  <input class="Input" />
+  <span class="InputGroup-extra">
+    <div class="Icon">
+      <svg
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <title>Icons / payment / ic_mobile_banking</title>
+        <desc>Created with Sketch.</desc>
+        <g
+          id="Icons-/-payment-/-ic_mobile_banking"
+          stroke="none"
+          stroke-width="1"
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+          <path
+            d="M17,2 C18.1045695,2 19,2.94255842 19,4.10526316 L19,19.8947368 C19,21.0574416 18.1045695,22 17,22 L7,22 C5.8954305,22 5,21.0574416 5,19.8947368 L5,4.10526316 C5,2.94255842 5.8954305,2 7,2 L17,2 Z M13,19.25 L11,19.25 C10.5857864,19.25 10.25,19.5857864 10.25,20 C10.25,20.4142136 10.5857864,20.75 11,20.75 L13,20.75 C13.4142136,20.75 13.75,20.4142136 13.75,20 C13.75,19.5857864 13.4142136,19.25 13,19.25 Z M17,4 L7,4 L7,18 L17,18 L17,4 Z"
+            id="Combined-Shape"
+            fill="#25282B"
+          ></path>
+        </g>
+      </svg>
+    </div>
+  </span>
+</div>
+```
+
+## Input with Prefix
+
+```html preview=true size=compact
+<div class="InputGroup InputGroup--hasExtraLeft">
+  <span class="InputGroup-extra">Rp</span>
+  <input class="Input" />
+</div>
+```

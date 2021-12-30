@@ -1,24 +1,18 @@
+@import '@amar-ui-web/core/helpers';
 @import './variables';
 
 @mixin amb-create-text-color-classes() {
-  $stylerules: ('Color');
-
-  @each $stylerule in $stylerules {
-    .#{$stylerule} {
-      @include amb-create-color-themes($color-type: 'text');
-      @include amb-create-color-helpers($color-type: 'text');
-    }
+  .Color {
+    @include amb-create-color-themes($color-type: 'text');
+    @include amb-create-color-helpers($color-type: 'text');
   }
 }
 
 @mixin amb-create-bg-color-classes() {
-  $stylerules: ('BgColor', 'BackgroundColor');
-
-  @each $stylerule in $stylerules {
-    .#{$stylerule} {
-      @include amb-create-color-themes($color-type: 'background');
-      @include amb-create-color-helpers($color-type: 'background');
-    }
+  .BgColor,
+  .BackgroundColor {
+    @include amb-create-color-themes($color-type: 'background');
+    @include amb-create-color-helpers($color-type: 'background');
   }
 }
 
@@ -26,7 +20,8 @@
   $color-type-property: if($color-type == 'background', 'background-color', 'color');
 
   @each $color-theme, $color-theme-value in $amb-color-theme-map {
-    &-#{$color-theme} {
+    $camelized-color-theme: camelize($color-theme);
+    &-#{$camelized-color-theme} {
       @include amb-append-color-shade-variants($color-type, $color-theme);
 
       #{$color-type-property}: $color-theme-value !important;

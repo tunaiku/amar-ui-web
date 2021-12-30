@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Icons / form / ic_data_pekerjaan</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons-/-form-/-ic_data_pekerjaan" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        <path d="M14,2.5 C15.11,2.5 16,3.39 16,4.5 L16,6.5 L20,6.5 C21.11,6.5 22,7.39 22,8.5 L22,19.5 C22,20.61 21.11,21.5 20,21.5 L4,21.5 C2.89,21.5 2,20.61 2,19.5 L2.01,8.5 C2.01,7.39 2.89,6.5 4,6.5 L8,6.5 L8,4.5 C8,3.39 8.89,2.5 10,2.5 L14,2.5 Z M20,12.387 L12.9486833,14.7378648 C12.3328829,14.9431316 11.6671171,14.9431316 11.0513167,14.7378648 L4,12.387 L4,19.5 L20,19.5 L20,12.387 Z M20,8.5 L4,8.5 L4,10.279 L11.6837722,12.8404982 C11.8479857,12.895236 12.0228584,12.9061836 12.1913356,12.8733409 L12.3162278,12.8404982 L20,10.279 L20,8.5 Z M14,4.5 L10,4.5 L10,6.5 L14,6.5 L14,4.5 Z" id="Shape" fill="#25282B"></path>
+    </g>
+</svg>
