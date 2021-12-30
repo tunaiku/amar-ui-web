@@ -19,7 +19,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.45.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
