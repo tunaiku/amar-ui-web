@@ -1,15 +1,25 @@
 ---
 path: '/components/stepper'
 title: 'Stepper'
-description: 'Stepper display steps and progress sequencial.'
+description: 'Stepper display steps and progress sequentially.'
 ---
 
 ## Usage
 
-# Circular Stepper
+### Circular Stepper
 
 ```html preview=true
 <div class="CircularStepper">
-  <div class="CircularStepper-progressBar">3/5</div>
+  <div class="CircularStepper-ring">
+    <div class="CircularStepper-indicator">3/5</div>
+  </div>
+  <div class="CircularStepper-description">
+    <div class="CircularStepper-title">
+      Stepper
+    </div>
+    <div class="CircularStepper-subtitle">
+      Circular Stepper
+    </div>
+  </div>
 </div>
 ```

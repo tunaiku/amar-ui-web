@@ -2,36 +2,59 @@
 
 @mixin amb-circular-stepper-classes() {
   .CircularStepper {
-    border-radius: $amb-stepper-border-radius;
-    height: $amb-stepper-height;
-    width: $amb-stepper-width;
     display: flex;
-    flex-direction: row;
-    background-image: conic-gradient(
-      amb-color-theme('secondary') 216deg,
-      amb-color-theme('secondary', 10) 216deg,
-      amb-color-theme('secondary', 10) 360deg
-    );
+    margin: amb-spacing('base');
 
-    &::before {
-      content: '';
-      position: absolute;
-      margin: amb-spacing('xsmall');
+    &-ring {
+      position: relative;
       border-radius: $amb-stepper-border-radius;
-      height: calc(60px - 15px);
-      width: calc(60px - 15px);
-      background-color: white;
-      z-index: $amb-stepper-z-index;
+      height: $amb-stepper-height;
+      width: $amb-stepper-width;
+      display: flex;
+      flex-direction: row;
+      background-image: conic-gradient(
+        amb-color-theme('secondary') 216deg,
+        amb-color-theme('secondary', 10) 216deg,
+        amb-color-theme('secondary', 10) 360deg
+      );
+
+      &::before {
+        content: '';
+        margin: amb-spacing('xsmall');
+        border-radius: $amb-stepper-border-radius;
+        height: calc(60px - 15px);
+        width: calc(60px - 15px);
+        background-color: white;
+        z-index: $amb-stepper-z-index;
+      }
     }
 
-    &-progressBar {
+    &-indicator {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       border-radius: $amb-stepper-border-radius;
       background: transparent;
       text-align: $amb-stepper-inner-text-align;
-      margin: amb-spacing('base');
       position: absolute;
       z-index: 100;
       font-weight: amb-font-weight('medium');
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      margin-left: amb-spacing('small');
+      position: relative;
+    }
+
+    &-title {
+      font-size: amb-font-size('large');
+      font-weight: amb-font-weight('bold');
+    }
+
+    &-subtitle {
+      color: amb-color-theme('dark');
     }
   }
 }
