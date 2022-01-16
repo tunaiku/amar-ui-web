@@ -27,6 +27,7 @@
     "@amar-ui-web/shape": "^1.1.1",
     "@amar-ui-web/snackbar": "^1.4.1",
     "@amar-ui-web/spacing": "^1.4.1",
+    "@amar-ui-web/stepper": "^1.0.0",
     "@amar-ui-web/table": "^1.4.0",
     "@amar-ui-web/tabs": "^1.3.1",
     "@amar-ui-web/top-bar": "^1.3.1",

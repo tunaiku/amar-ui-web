@@ -1,0 +1,70 @@
+@import '@amar-ui-web/core/helpers';
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/responsive/scss/mixins';
+
+$app-header-height: 4em;
+
+.App {
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+  }
+
+  &-body {
+    margin-top: $app-header-height;
+    z-index: 1000;
+  }
+}
+
+.Navbar {
+  height: $app-header-height;
+  background-color: white;
+  border-bottom: solid 1px amb-color-theme('light');
+  box-shadow: 0 1px 4px 0 amb-color-theme-opacity('light', 0.3);
+
+  &-logo {
+    font-size: amb-font-size('large');
+    font-weight: amb-font-weight('bold');
+    padding: amb-spacing('base');
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &-link {
+    > a {
+      padding: amb-spacing('small');
+      font-size: amb-font-size('small');
+      font-weight: amb-font-weight('medium');
+      text-decoration: none;
+      color: inherit;
+
+      &.is-active {
+        background-color: amb-color-theme('primary', 5);
+        color: amb-color-theme('primary');
+        border-radius: amb-border-radius('base');
+        font-weight: amb-font-weight('bold');
+      }
+    }
+  }
+
+  &-menuIcon {
+    display: block;
+    cursor: pointer;
+
+    @include amb-responsive-media('md') {
+      display: none;
+    }
+  }
+}

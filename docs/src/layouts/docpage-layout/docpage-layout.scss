@@ -1,0 +1,100 @@
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/responsive/scss/mixins';
+@import '../app-layout/app-layout.scss';
+
+$app-docpage-sidebar-width: 200px;
+
+.Docpage {
+  display: flex;
+  position: relative;
+
+  &-sidebar {
+    position: fixed;
+    top: $app-header-height;
+    background-color: white;
+    width: $app-docpage-sidebar-width;
+    height: calc(100vh - #{$app-header-height});
+    min-height: calc(100vh - #{$app-header-height});
+    flex-shrink: 0;
+    padding: amb-spacing('base');
+    padding-left: 0;
+    transform: translateX(#{-1 * $app-docpage-sidebar-width});
+    transition: all 150ms ease-in-out;
+    border-right: solid 1px amb-color-theme('light', 30);
+    opacity: 0;
+
+    @include amb-responsive-media('md') {
+      position: sticky;
+      top: $app-header-height;
+      transform: translateX(0);
+      opacity: 100%;
+      border-right: 0;
+    }
+  }
+
+  &-body {
+    flex-grow: 1;
+    min-width: 0;
+    width: 100%;
+    transition: all 150ms ease-in-out;
+    padding: 0 amb-spacing('large');
+
+    @include amb-responsive-media('md') {
+      padding-top: amb-spacing('base');
+      padding-left: amb-spacing('large');
+      padding-right: amb-spacing('large');
+    }
+  }
+
+  &-title {
+    font-size: amb-font-size('5xlarge');
+    margin-top: amb-spacing('large');
+    margin-bottom: amb-spacing('base');
+  }
+
+  &-description {
+    font-size: amb-font-size('large');
+    font-weight: amb-font-weight('regular');
+    color: amb-color-theme('neutral', 70);
+    margin-bottom: amb-spacing('2xlarge');
+  }
+
+  &.is-menu-open & {
+    &-sidebar {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+
+    &-body {
+      transform: translateX($app-docpage-sidebar-width);
+
+      @include amb-responsive-media('md') {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.Sidenav {
+  &-item {
+    > a {
+      display: block;
+      color: amb-color-theme('neutral', 70);
+      background-color: amb-color-theme('primary', 0);
+      text-decoration: none;
+      padding: amb-spacing('xsmall') amb-spacing('base');
+      font-size: amb-font-size('small');
+      transition: all 250ms ease-in-out;
+
+      &.is-active {
+        font-weight: amb-font-weight('bold');
+        background-color: amb-color-theme('primary', 5);
+        color: amb-color-theme('primary');
+        border-radius: amb-border-radius('base');
+      }
+    }
+  }
+}

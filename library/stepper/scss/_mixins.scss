@@ -1,0 +1,144 @@
+@import '@amar-ui-web/spacing/scss/mixins';
+@import '@amar-ui-web/typography/scss/mixins';
+@import './variables';
+
+@mixin amb-circular-stepper-classes() {
+  .CircularStepper {
+    display: flex;
+    margin: amb-spacing('base');
+
+    &-ring {
+      position: relative;
+      border-radius: $amb-circular-stepper-border-radius;
+      height: $amb-circular-stepper-height;
+      width: $amb-circular-stepper-width;
+      display: flex;
+      flex-direction: row;
+      background-image: conic-gradient(
+        amb-color-theme('secondary') 216deg,
+        amb-color-theme('secondary', 10) 216deg,
+        amb-color-theme('secondary', 10) 360deg
+      );
+
+      &::before {
+        content: '';
+        margin: amb-spacing('xsmall');
+        border-radius: $amb-circular-stepper-border-radius;
+        height: calc(60px - 15px);
+        width: calc(60px - 15px);
+        background-color: white;
+      }
+    }
+
+    &-indicator {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: $amb-circular-stepper-border-radius;
+      background: transparent;
+      text-align: center;
+      position: absolute;
+      font-weight: amb-font-weight('medium');
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      margin-left: amb-spacing('small');
+      position: relative;
+    }
+
+    &-title {
+      font-size: amb-font-size('large');
+      font-weight: amb-font-weight('bold');
+    }
+
+    &-subtitle {
+      color: amb-color-theme('dark');
+    }
+  }
+}
+
+@mixin amb-linear-stepper-classes() {
+  .LinearStepper {
+    &-step {
+      position: relative;
+      display: flex;
+      padding-bottom: amb-spacing('base');
+
+      &:not(:last-child) {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 11px;
+          top: 0;
+          height: 100%;
+          border-left: solid 2px amb-color-theme('neutral');
+        }
+      }
+
+      &.is-done,
+      &.is-active {
+        .LinearStepper-stepStatus {
+          border-color: $amb-linear-stepper-step-active-color;
+        }
+      }
+
+      &.is-active {
+        .LinearStepper {
+          &-stepStatus {
+            border-color: $amb-linear-stepper-step-active-color;
+            color: $amb-linear-stepper-step-active-color;
+          }
+
+          &-stepSubtitle {
+            color: amb-color-theme('neutral', 80);
+          }
+        }
+      }
+
+      &.is-done {
+        &:before {
+          border-color: $amb-linear-stepper-step-active-color;
+        }
+
+        .LinearStepper {
+          &-stepStatus {
+            background-color: $amb-linear-stepper-step-active-color;
+            color: amb-color-contrast($amb-linear-stepper-step-active-color);
+          }
+
+          &-stepSubtitle {
+            color: amb-color-theme('neutral', 80);
+          }
+        }
+      }
+    }
+
+    &-stepStatus {
+      position: relative;
+      border-radius: 100%;
+      height: 24px;
+      width: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: solid 2px amb-color-theme('neutral');
+      color: amb-color-theme('neutral');
+      margin-right: amb-spacing('base');
+      font-weight: amb-font-weight('bold');
+      font-size: amb-font-size('xsmall');
+      flex-shrink: 0;
+    }
+
+    &-stepTitle {
+      @include amb-typography-style('bold16');
+    }
+
+    &-stepSubtitle {
+      @include amb-typography-style('regular14');
+      color: amb-color-theme('neutral', 60);
+    }
+  }
+}

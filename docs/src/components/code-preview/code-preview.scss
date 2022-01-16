@@ -33,8 +33,12 @@
     }
 
     &--compact {
-      padding-left: 10em !important;
-      padding-right: 10em !important;
+      padding: amb-spacing('base');
+
+      @include amb-responsive-media('lg') {
+        padding-left: 10em !important;
+        padding-right: 10em !important;
+      }
     }
   }
 

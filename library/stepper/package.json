@@ -1,0 +1,9 @@
+{
+  "name": "@amar-ui-web/stepper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

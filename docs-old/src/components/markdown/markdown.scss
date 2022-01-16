@@ -1,0 +1,49 @@
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/shape/scss/variables';
+
+.Markdown {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > h1,
+  > h2 {
+    margin-top: amb-spacing('2xlarge');
+    margin-bottom: amb-spacing('base');
+    font-weight: amb-font-weight('semibold');
+  }
+
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    margin-top: amb-spacing('large');
+    margin-bottom: amb-spacing('base');
+    font-weight: amb-font-weight('semibold');
+  }
+
+  > p {
+    margin: amb-spacing('base') 0;
+  }
+
+  > ul,
+  > ol {
+    list-style-type: initial;
+    padding-left: amb-spacing('medium');
+    margin: amb-spacing('base') 0 amb-spacing('medium');
+  }
+
+  code {
+    color: currentColor;
+    padding: 2.5px 5px;
+    border-radius: amb-border-radius('base');
+    background-color: amb-color-theme-opacity('neutral', 0.2);
+    font-weight: amb-font-weight('semibold');
+  }
+
+  > .CodeBlock {
+    margin: amb-spacing('xsmall') 0;
+  }
+}

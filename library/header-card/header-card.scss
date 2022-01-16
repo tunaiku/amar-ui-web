@@ -1,0 +1,35 @@
+@import '@amar-ui-web/typography/scss/variables';
+@import '@amar-ui-web/button/scss/mixins';
+
+.HeaderCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: amb-border-radius('xlarge');
+  padding: amb-spacing('base');
+  // border: solid 1px amb-color-theme('neutral'); // TODO: ganti jadi box-shadow sesuai zeroheight
+  box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+  &-subtitle {
+    @include amb-typography-style('caption12');
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: amb-spacing('xsmall');
+  }
+
+  &-title {
+    @include amb-typography-style('bold16');
+    display: flex;
+    align-items: center;
+  }
+
+  &-action {
+    @include amb-reset-button-appearance();
+    color: amb-color-theme('secondary');
+    text-transform: uppercase;
+    font-size: amb-font-size('xsmall');
+    letter-spacing: 0.4px;
+    font-weight: amb-font-weight('medium');
+  }
+}

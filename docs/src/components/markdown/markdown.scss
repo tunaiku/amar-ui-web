@@ -10,7 +10,7 @@
 
   > h1,
   > h2 {
-    margin-top: amb-spacing('2xlarge');
+    margin-top: amb-spacing('xlarge');
     margin-bottom: amb-spacing('base');
     font-weight: amb-font-weight('semibold');
   }
@@ -26,6 +26,7 @@
 
   > p {
     margin: amb-spacing('base') 0;
+    line-height: amb-line-height('large');
   }
 
   > ul,
@@ -36,11 +37,10 @@
   }
 
   code {
-    color: currentColor;
+    color: inherit;
     padding: 2.5px 5px;
     border-radius: amb-border-radius('base');
     background-color: amb-color-theme-opacity('neutral', 0.2);
-    font-weight: amb-font-weight('semibold');
   }
 
   > .CodeBlock {

@@ -1,3 +1,12 @@
-import { Home } from '../views/home';
+import React from 'react';
+import { AppLayout } from '@layouts/app-layout';
 
-export default Home;
+const IndexPage = () => {
+  return (
+    <AppLayout>
+      <p>tes</p>
+    </AppLayout>
+  );
+};
+
+export default IndexPage;

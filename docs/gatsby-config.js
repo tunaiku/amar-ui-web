@@ -1,17 +1,29 @@
 module.exports = {
   siteMetadata: {
     title: 'Amar UI Web',
-    description: '⚡️ CSS library of components, layouts and utilities based on Amar Design System',
+    description:
+      '⚡️ CSS library of components, layouts and utilities based on Amar Design System ⚡️',
     author: `David Kurnia Kristiadi @dkk94`,
   },
   plugins: [
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-mdx',
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        includePaths: ['../node_modules'],
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      },
+      __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'docpages',
+        path: `${__dirname}/src/docpages`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
@@ -19,61 +31,12 @@ module.exports = {
           '@src': `${__dirname}/src`,
           '@components': `${__dirname}/src/components`,
           '@layouts': `${__dirname}/src/layouts`,
-          '@modules': `${__dirname}/src/modules`,
+          '@contexts': `${__dirname}/src/contexts`,
           '@pages': `${__dirname}/src/pages`,
           '@styles': `${__dirname}/src/styles`,
           '@utilities': `${__dirname}/src/utilities`,
         },
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'docs',
-        path: `${__dirname}/src/docs`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /icons/,
-        },
-      },
-    },
-
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        rehypePlugins: [require('rehype-slug')],
-        defaultLayouts: {
-          default: require.resolve('./src/layouts/docs-layout/docs-layout.jsx'),
-        },
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };

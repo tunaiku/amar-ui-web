@@ -1,0 +1,10 @@
+@import '@amar-ui-web/color/scss/variables';
+@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/typography/scss/variables';
+
+$amb-circular-stepper-border-radius: 50%;
+$amb-circular-stepper-z-index: 40;
+$amb-circular-stepper-height: 60px;
+$amb-circular-stepper-width: 60px;
+
+$amb-linear-stepper-step-active-color: $blue;
