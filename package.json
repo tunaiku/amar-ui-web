@@ -36,7 +36,6 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.5",
     "prettier-webpack-plugin": "^1.2.0",
-    "react-jsx-parser": "^1.21.0",
     "sass-loader": "^8.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0"
   }
