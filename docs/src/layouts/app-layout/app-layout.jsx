@@ -7,7 +7,6 @@ import './app-layout.scss';
 
 const AppLayout = ({ children }) => {
   const { isMenuOpen, setIsMenuOpen } = useContext(AppContext);
-  console.log(isMenuOpen);
 
   return (
     <div className="App">

@@ -25,12 +25,12 @@
     "gatsby-plugin-react-helmet": "^5.4.0",
     "gatsby-plugin-sass": "^5.4.0",
     "gatsby-source-filesystem": "^4.4.0",
-    "node-sass": "^4.13.0",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-jsx-parser": "^1.21.0"
+    "react-jsx-parser": "^1.21.0",
+    "sass": "^1.48.0"
   },
   "devDependencies": {
     "mdx-utils": "^0.2.0"
