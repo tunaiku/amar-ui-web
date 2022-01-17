@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import AppContext from '@contexts/app.context';
-import '@styles/index.scss';
 
 import './app-layout.scss';
 
