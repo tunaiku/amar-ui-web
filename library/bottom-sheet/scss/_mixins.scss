@@ -17,6 +17,7 @@
     &-dialog {
       display: flex;
       flex-direction: column;
+      gap: amb-spacing('small');
 
       background-color: $white;
       border-top-right-radius: amb-border-radius('3xlarge');
@@ -42,6 +43,11 @@
       }
     }
 
+    &-header {
+      padding-left: amb-spacing('base');
+      padding-right: amb-spacing('base');
+    }
+
     &-body {
       padding-left: amb-spacing('base');
       padding-right: amb-spacing('base');
@@ -51,6 +57,21 @@
       @include amb-typography-style('heading20');
     }
 
+    &-closeButton {
+      width: amb-spacing('medium');
+      height: amb-spacing('medium');
+      margin-bottom: amb-spacing('small');
+      cursor: pointer;
+    }
+
+    &-divider {
+      width: 100%;
+      height: 1px;
+      margin: 0;
+      border-width: 0;
+      background-color: amb-color-theme-opacity('light', 0.9);
+    }
+
     &-backdrop {
       position: absolute;
       height: 100%;
@@ -58,9 +79,6 @@
       top: 0;
       left: 0;
       background-color: amb-color-theme-opacity('dark', 0.3);
-    }
-
-    &-closeButton {
     }
   }
 }
