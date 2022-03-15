@@ -1,0 +1,101 @@
+---
+path: '/components/input-set'
+title: 'Input Set'
+description: 'An form control variant with icon.'
+---
+
+## Usage
+
+You can append `.InputSet` class into form control container and then append one of 2 modifiers:
+
+1. `.InputSet--hasIconLeft`
+2. and/or `.InputSet--hasIconLeft`
+
+You also need to add a modifier on the icon container:
+
+1. `.InputSet-icon Icon--left` if `.InputSet--hasIconLeft` is used
+2. `.InputSet-icon Icon--right` if `.InputSet--hasIconRight` is used
+
+```html preview=true size=compact
+<div class="InputSet InputSet--hasIconLeft MarginBottom">
+  <input class="Input" placeholder="Username" />
+  <span class="InputSet-icon Icon--left">
+    <img src="https://img.icons8.com/material-outlined/24/000000/name.png" />
+  </span>
+</div>
+
+<div class="InputSet InputSet--hasIconRight MarginBottom">
+  <input type="password" class="Input" placeholder="Password" />
+  <span class="InputSet-icon Icon--right">
+    <img
+      src="https://img.icons8.com/material-outlined/24/000000/invisible.png"
+    />
+  </span>
+</div>
+
+<div class="InputSet InputSet--hasIconLeft InputSet--hasIconRight MarginBottom">
+  <input class="Input" placeholder="Password" />
+  <span class="InputSet-icon Icon--left">
+    <img
+      src="https://img.icons8.com/material-outlined/24/000000/password.png"
+    />
+  </span>
+  <span class="InputSet-icon Icon--right">
+    <img
+      src="https://img.icons8.com/material-outlined/96/000000/visible--v1.png"
+    />
+  </span>
+</div>
+```
+
+N.B: You can also use it together with `.Field` class.
+
+```html preview=true size=compact
+<form>
+  <div class="Field MarginBottom">
+    <label class="Field-label">Full Name</label>
+    <div class="Field-control InputSet InputSet--hasIconLeft">
+      <input type="text" placeholder="e.g John Appleseed" class="Input" />
+      <span class="InputSet-icon Icon--left">
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/name.png"
+        />
+      </span>
+    </div>
+  </div>
+
+  <div class="Field MarginBottom">
+    <label class="Field-label">Password</label>
+    <div class="Field-control InputSet InputSet--hasIconRight">
+      <input type="password" class="Input" />
+      <span class="InputSet-icon Icon--right">
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/invisible.png"
+        />
+      </span>
+    </div>
+    <div class="Field-helper">
+      Password should consists of one capital letter and a symbol letter.
+    </div>
+  </div>
+
+  <div class="Field MarginBottom">
+    <label class="Field-label Color-danger">Email address</label>
+    <div class="Field-control InputSet InputSet--hasIconLeft">
+      <input
+        type="text"
+        placeholder="e.g johnappleseed@email.com"
+        class="Input Input--danger"
+      />
+      <span class="InputSet-icon Icon--left">
+        <img
+          src=" https://img.icons8.com/material-outlined/24/000000/email-sign.png"
+        />
+      </span>
+    </div>
+    <div class="Field-helper Color-danger">
+      Email address has a wrong format!
+    </div>
+  </div>
+</form>
+```
