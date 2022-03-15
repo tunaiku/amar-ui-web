@@ -1,0 +1,73 @@
+@import '@amar-ui-web/icons/scss/mixins';
+@import '@amar-ui-web/icons/scss/variables';
+@import '@amar-ui-web/spacing/scss/functions';
+@import './variables';
+
+@mixin amb-create-input-set-classes {
+  .InputSet {
+    @include amb-input-set-base-styles();
+    @include amb-append-input-set-has-icon-variants();
+
+    &-icon {
+      @include amb-input-set-icon-base-styles();
+      @include amb-append-input-set-icon-position-variants();
+    }
+  }
+}
+
+@mixin amb-input-set-base-styles() {
+  position: relative;
+}
+
+@mixin amb-append-input-set-has-icon-variants() {
+  @include amb-append-input-set-has-icon-left();
+  @include amb-append-input-set-has-icon-right();
+}
+
+@mixin amb-append-input-set-has-icon-left() {
+  &--hasIconLeft {
+    .Input {
+      padding-left: $amb-input-set-has-icon-spacing;
+    }
+  }
+}
+
+@mixin amb-append-input-set-has-icon-right() {
+  &--hasIconRight {
+    .Input {
+      padding-right: $amb-input-set-has-icon-spacing;
+    }
+  }
+}
+
+@mixin amb-input-set-icon-base-styles() {
+  @extend .Icon;
+
+  position: absolute;
+  top: 0;
+  width: $amb-input-set-icon-width;
+  height: 100%;
+
+  img,
+  svg {
+    max-width: map-get($amb-icon-size-map, medium);
+    max-height: 100%;
+  }
+}
+
+@mixin amb-append-input-set-icon-position-variants() {
+  @include amb-append-input-set-icon-position-left();
+  @include amb-append-input-set-icon-position-right();
+}
+
+@mixin amb-append-input-set-icon-position-left() {
+  &.Icon--left {
+    left: 0;
+  }
+}
+
+@mixin amb-append-input-set-icon-position-right() {
+  &.Icon--right {
+    right: 0;
+  }
+}
