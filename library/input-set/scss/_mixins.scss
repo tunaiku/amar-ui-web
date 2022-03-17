@@ -41,7 +41,7 @@
 }
 
 @mixin amb-input-set-icon-base-styles() {
-  @extend .Icon;
+  @include amb-append-icon-core-styles();
 
   position: absolute;
   top: 0;
@@ -61,13 +61,13 @@
 }
 
 @mixin amb-append-input-set-icon-position-left() {
-  &.Icon--left {
+  &--left {
     left: 0;
   }
 }
 
 @mixin amb-append-input-set-icon-position-right() {
-  &.Icon--right {
+  &--right {
     right: 0;
   }
 }
