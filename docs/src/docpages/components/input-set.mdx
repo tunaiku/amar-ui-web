@@ -13,37 +13,82 @@ You can append `.InputSet` class into form control container and then append one
 
 You also need to add a modifier on the icon container:
 
-1. `.InputSet-icon Icon--left` if `.InputSet--hasIconLeft` is used
-2. `.InputSet-icon Icon--right` if `.InputSet--hasIconRight` is used
+1. `InputSet-icon InputSet-icon--left` if `.InputSet--hasIconLeft` is used
+2. `InputSet-icon InputSet-icon--right` if `.InputSet--hasIconRight` is used
 
 ```html preview=true size=compact
 <div class="InputSet InputSet--hasIconLeft MarginBottom">
   <input class="Input" placeholder="Username" />
-  <span class="InputSet-icon Icon--left">
-    <img src="https://img.icons8.com/material-outlined/24/000000/name.png" />
+  <span class="InputSet-icon InputSet-icon--left">
+    <svg width="24px" height="24px" viewBox="0 0 24 24">
+      <g
+        id="Icons-/-form-/-ic_data_diri"
+        stroke="none"
+        stroke-width="1"
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        <path
+          d="M12,5.9 C13.16,5.9 14.1,6.84 14.1,8 C14.1,9.16 13.16,10.1 12,10.1 C10.84,10.1 9.9,9.16 9.9,8 C9.9,6.84 10.84,5.9 12,5.9 L12,5.9 Z M12,14.9 C14.97,14.9 18.1,16.36 18.1,17 L18.1,18.1 L5.9,18.1 L5.9,17 C5.9,16.36 9.03,14.9 12,14.9 L12,14.9 Z M12,4 C9.79,4 8,5.79 8,8 C8,10.21 9.79,12 12,12 C14.21,12 16,10.21 16,8 C16,5.79 14.21,4 12,4 Z M12,13 C9.33,13 4,14.34 4,17 L4,20 L20,20 L20,17 C20,14.34 14.67,13 12,13 Z"
+          id="shape"
+          fill="#25282B"
+        ></path>
+      </g>
+    </svg>
   </span>
 </div>
 
 <div class="InputSet InputSet--hasIconRight MarginBottom">
   <input type="password" class="Input" placeholder="Password" />
-  <span class="InputSet-icon Icon--right">
-    <img
-      src="https://img.icons8.com/material-outlined/24/000000/invisible.png"
-    />
+  <span class="InputSet-icon InputSet-icon--right">
+    <svg width="1024px" height="1024px" viewBox="0 0 1024 1024">
+      <path
+        d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 0 0 0-51.5zm-63.57-320.64L836 122.88a8 8 0 0 0-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 0 0 0 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 0 0 0 11.31L155.17 889a8 8 0 0 0 11.31 0l712.15-712.12a8 8 0 0 0 0-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 0 0-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 0 1 146.2-106.69L401.31 546.2A112 112 0 0 1 396 512z"
+      />
+      <path
+        d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 0 0 227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 0 1-112 112z"
+      />
+    </svg>
   </span>
 </div>
 
 <div class="InputSet InputSet--hasIconLeft InputSet--hasIconRight MarginBottom">
   <input class="Input" placeholder="Password" />
-  <span class="InputSet-icon Icon--left">
-    <img
-      src="https://img.icons8.com/material-outlined/24/000000/password.png"
-    />
+  <span class="InputSet-icon InputSet-icon--left">
+    <svg
+      version="1.1"
+      id="Capa_1"
+      x="0px"
+      y="0px"
+      viewBox="0 0 203.096 203.096"
+      style="enable-background:new 0 0 203.096 203.096;"
+      xml:space="preserve"
+    >
+      <g>
+        <path
+          d="M153.976,73.236h-3.308V49.115C150.669,22.033,128.634,0,101.549,0C74.465,0,52.43,22.033,52.43,49.115v24.121H49.12
+		c-9.649,0-17.5,7.851-17.5,17.5v94.859c0,9.649,7.851,17.5,17.5,17.5h104.856c9.649,0,17.5-7.851,17.5-17.5V90.736
+		C171.476,81.087,163.626,73.236,153.976,73.236z M67.43,49.115C67.43,30.304,82.736,15,101.549,15
+		c18.813,0,34.119,15.304,34.119,34.115v24.121H67.43V49.115z M156.476,185.596c0,1.355-1.145,2.5-2.5,2.5H49.12
+		c-1.355,0-2.5-1.145-2.5-2.5V90.736c0-1.355,1.145-2.5,2.5-2.5H59.93h83.238h10.808c1.355,0,2.5,1.145,2.5,2.5V185.596z"
+        />
+        <path
+          d="M101.547,116.309c-4.142,0-7.5,3.357-7.5,7.5v28.715c0,4.143,3.358,7.5,7.5,7.5c4.142,0,7.5-3.357,7.5-7.5v-28.715
+		C109.047,119.666,105.689,116.309,101.547,116.309z"
+        />
+      </g>
+    </svg>
   </span>
-  <span class="InputSet-icon Icon--right">
-    <img
-      src="https://img.icons8.com/material-outlined/96/000000/visible--v1.png"
-    />
+  <span class="InputSet-icon InputSet-icon--right">
+    <svg width="35px" height="35px" viewBox="0 0 35 35">
+      <path
+        d="M17.5,23.625A6.125,6.125,0,1,1,23.624,17.5,6.132,6.132,0,0,1,17.5,23.625Zm0-9.749A3.625,3.625,0,1,0,21.124,17.5,3.629,3.629,0,0,0,17.5,13.876Z"
+      />
+      <path
+        d="M17.494,29.079A19.508,19.508,0,0,1,.831,19.616a4.119,4.119,0,0,1,0-4.232,19.269,19.269,0,0,1,16.66-9.463,19.54,19.54,0,0,1,16.672,9.462,4.118,4.118,0,0,1,0,4.234A19.517,19.517,0,0,1,17.494,29.079Zm0-20.658A16.792,16.792,0,0,0,2.978,16.669a1.643,1.643,0,0,0,0,1.666,16.994,16.994,0,0,0,14.516,8.244,16.784,16.784,0,0,0,14.528-8.244,1.644,1.644,0,0,0,0-1.668A16.8,16.8,0,0,0,17.494,8.421Z"
+      />
+    </svg>
   </span>
 </div>
 ```
@@ -56,10 +101,28 @@ N.B: You can also use it together with `.Field` class.
     <label class="Field-label">Full Name</label>
     <div class="Field-control InputSet InputSet--hasIconLeft">
       <input type="text" placeholder="e.g John Appleseed" class="Input" />
-      <span class="InputSet-icon Icon--left">
-        <img
-          src="https://img.icons8.com/material-outlined/24/000000/name.png"
-        />
+      <span class="InputSet-icon InputSet-icon--left">
+        <svg
+          x="0px"
+          y="0px"
+          viewBox="0 0 285.5 285.5"
+          style="enable-background:new 0 0 285.5 285.5;"
+          xml:space="preserve"
+        >
+          <g id="XMLID_791_">
+            <path
+              id="XMLID_792_"
+              d="M142.75,125.5c34.601,0,62.751-28.149,62.751-62.75S177.351,0,142.75,0S79.999,28.149,79.999,62.75
+		S108.149,125.5,142.75,125.5z M142.75,30c18.059,0,32.751,14.691,32.751,32.75S160.809,95.5,142.75,95.5
+		s-32.751-14.691-32.751-32.75S124.691,30,142.75,30z"
+            />
+            <path
+              id="XMLID_795_"
+              d="M142.75,155.5c-63.411,0-115,51.589-115,115c0,8.284,6.716,15,15,15h200c8.284,0,15-6.716,15-15
+		C257.75,207.089,206.161,155.5,142.75,155.5z M59.075,255.5c7.106-39.739,41.923-70,83.675-70s76.569,30.261,83.675,70H59.075z"
+            />
+          </g>
+        </svg>
       </span>
     </div>
   </div>
@@ -68,10 +131,15 @@ N.B: You can also use it together with `.Field` class.
     <label class="Field-label">Password</label>
     <div class="Field-control InputSet InputSet--hasIconRight">
       <input type="password" class="Input" />
-      <span class="InputSet-icon Icon--right">
-        <img
-          src="https://img.icons8.com/material-outlined/24/000000/invisible.png"
-        />
+      <span class="InputSet-icon InputSet-icon--right">
+        <svg width="1024px" height="1024px" viewBox="0 0 1024 1024">
+          <path
+            d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 0 0 0-51.5zm-63.57-320.64L836 122.88a8 8 0 0 0-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 0 0 0 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 0 0 0 11.31L155.17 889a8 8 0 0 0 11.31 0l712.15-712.12a8 8 0 0 0 0-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 0 0-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 0 1 146.2-106.69L401.31 546.2A112 112 0 0 1 396 512z"
+          />
+          <path
+            d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 0 0 227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 0 1-112 112z"
+          />
+        </svg>
       </span>
     </div>
     <div class="Field-helper">
@@ -87,10 +155,12 @@ N.B: You can also use it together with `.Field` class.
         placeholder="e.g johnappleseed@email.com"
         class="Input Input--danger"
       />
-      <span class="InputSet-icon Icon--left">
-        <img
-          src=" https://img.icons8.com/material-outlined/24/000000/email-sign.png"
-        />
+      <span class="InputSet-icon InputSet-icon--left">
+        <svg width="24px" height="24px" viewBox="0 0 24 24">
+          <path
+            d="M12,2 C17.4292399,2 21.8479317,6.32667079 21.9961582,11.7200952 L22,12 L22,13 C22,15.1729208 20.477434,17 18.5,17 C17.3269391,17 16.3139529,16.3570244 15.6839382,15.3803024 C14.770593,16.3757823 13.4581934,17 12,17 C9.23857625,17 7,14.7614237 7,12 C7,9.23857625 9.23857625,7 12,7 C14.6887547,7 16.8818181,9.12230671 16.9953805,11.7831104 L17,12 L17,13 C17,14.1407877 17.7160103,15 18.5,15 C19.2447902,15 19.928229,14.2245609 19.9947109,13.1689341 L20,13 L20,12 C20,7.581722 16.418278,4 12,4 C7.581722,4 4,7.581722 4,12 C4,16.418278 7.581722,20 12,20 C13.1630948,20 14.2892822,19.7522618 15.3225159,19.2798331 C15.8247876,19.0501777 16.4181317,19.271177 16.647787,19.7734487 C16.8774423,20.2757205 16.656443,20.8690646 16.1541713,21.0987199 C14.861218,21.689901 13.4515463,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 Z"
+          />
+        </svg>
       </span>
     </div>
     <div class="Field-helper Color-danger">
