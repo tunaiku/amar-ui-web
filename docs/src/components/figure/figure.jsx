@@ -15,7 +15,7 @@ const Figure = props => {
 
   return (
     <div className={cssClasses['Figure']}>
-      <img {...rest} />
+      <img {...rest} alt={cssClasses['Figure']}/>
     </div>
   );
 };

@@ -2,11 +2,27 @@
 @import './functions';
 
 /// Font families
-$amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, sans-serif !default;
+@font-face {
+  font-family: 'Roboto Regular';
+  src: local('Roboto'),
+    url('/library/typography/assets/Roboto-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: local('Roboto'),
+    url('/library/typography/assets/Roboto-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+$amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
 $amb-font-family-serif: Georgia, 'Times New Roman', serif !default;
-$amb-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono',
-  'Liberation Mono', 'Courier New', monospace !default;
+$amb-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Roboto Mono', 'Liberation Mono', 'Courier New', monospace !default;
+$amb-font-family-roboto-regular: 'Roboto Regular', sans-serif !default;
+$amb-font-family-roboto-bold: 'Roboto Bold', sans-serif !default;
 
 $amb-font-family-map: () !default;
 $amb-font-family-map: map-merge(
@@ -14,6 +30,8 @@ $amb-font-family-map: map-merge(
     'sans-serif': $amb-font-family-sans-serif,
     'serif': $amb-font-family-serif,
     'monospace': $amb-font-family-monospace,
+    'roboto-regular': $amb-font-family-roboto-regular,
+    'roboto-bold': $amb-font-family-roboto-bold,
   ),
   $amb-font-family-map
 );

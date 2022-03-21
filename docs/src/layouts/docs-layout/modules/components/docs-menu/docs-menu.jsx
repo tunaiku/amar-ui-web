@@ -15,7 +15,7 @@ const DocsMenu = props => {
 
   return (
     <Menu>
-      {menuItems.map(menuItem => {
+      {menuItems.map((menuItem, index) => {
         const { path, title, submenu } = menuItem;
         const hasSubmenu = submenu;
 
@@ -24,8 +24,9 @@ const DocsMenu = props => {
         }
 
         return (
-          <MenuItem isCategory={hasSubmenu}>
+          <MenuItem isCategory={hasSubmenu} key={`${hasSubmenu}${index}`}>
             <Link
+              key={`${title}${index}`}
               to={path}
               activeClassName={activateCurrentMenuItem(path, location)}>
               {title}
