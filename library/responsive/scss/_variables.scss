@@ -1,14 +1,14 @@
-@import './breakpoints';
-@import './functions';
+@import "./breakpoints";
+@import "./functions";
 
 $amb-responsive-breakpoints: () !default;
 $amb-responsive-breakpoints: map-merge(
   (
-    'xs': 0,
-    'sm': $amb-breakpoint-small,
-    'md': $amb-breakpoint-medium,
-    'lg': $amb-breakpoint-large,
-    'xl': $amb-breakpoint-xlarge,
+    "xs": 0,
+    "sm": $amb-breakpoint-small,
+    "md": $amb-breakpoint-medium,
+    "lg": $amb-breakpoint-large,
+    "xl": $amb-breakpoint-xlarge,
   ),
   $amb-responsive-breakpoints
 );

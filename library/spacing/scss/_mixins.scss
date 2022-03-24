@@ -1,6 +1,6 @@
-@import './variables';
-@import './constants';
-@import './functions';
+@import "./variables";
+@import "./constants";
+@import "./functions";
 
 @mixin amb-initialize-spacing-module() {
   @include amb-create-spacing-classes($is-abbreviated: false);
@@ -27,7 +27,7 @@
   @each $spacing-type, $spacing-type-abbreviation in $amb-spacing-type-map {
     $spacing-type-capitalized: capitalize($spacing-type);
 
-    $spacing-type-stylerule: '' !default;
+    $spacing-type-stylerule: "" !default;
     @if $is-abbreviated {
       $spacing-type-stylerule: $spacing-type-abbreviation;
     } @else {
@@ -36,7 +36,7 @@
 
     // Generates .Margin/.mg and .Padding/.pd classes.
     .#{$spacing-type-stylerule} {
-      #{$spacing-type}: amb-spacing('base') !important;
+      #{$spacing-type}: amb-spacing("base") !important;
 
       // prettier-ignore
       @include amb-create-spacing-values($is-abbreviated, $spacing-type);
@@ -51,16 +51,16 @@
     $spacing-direction-lowercased: $spacing-direction;
     $spacing-direction-capitalized: capitalize($spacing-direction);
 
-    $spacing-direction-stylerule: '' !default;
+    $spacing-direction-stylerule: "" !default;
     @if ($is-abbreviated) {
-      $spacing-direction-stylerule: '-#{$spacing-direction-lowercased}';
+      $spacing-direction-stylerule: "-#{$spacing-direction-lowercased}";
     } @else {
       $spacing-direction-stylerule: $spacing-direction-capitalized;
     }
 
     // Generates .Margin(Left|Top|Right|Bottom) classes with base spacing value.
     &#{$spacing-direction-stylerule} {
-      #{$spacing-type}-#{$spacing-direction}: amb-spacing('base') !important;
+      #{$spacing-type}-#{$spacing-direction}: amb-spacing("base") !important;
 
       // prettier-ignore
       @include amb-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction);
@@ -82,17 +82,23 @@
 /// - .MarginLeft-large
 /// - .Padding-large
 ///
-@mixin amb-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction: 'all') {
+@mixin amb-create-spacing-values(
+  $is-abbreviated,
+  $spacing-type,
+  $spacing-direction: "all"
+) {
   @each $spacing-size, $spacing-value in $amb-spacing-map {
     &-#{$spacing-size} {
-      @if $spacing-direction == 'all' {
+      @if $spacing-direction == "all" {
         #{$spacing-type}: amb-spacing($spacing-size) !important;
-      } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
+      } @else if $spacing-direction == "x" or $spacing-direction == "y" {
         @each $direction in map-get($amb-spacing-axes, $spacing-direction) {
           #{$spacing-type}-#{$direction}: amb-spacing($spacing-size) !important;
         }
       } @else {
-        #{$spacing-type}-#{$spacing-direction}: amb-spacing($spacing-size) !important;
+        #{$spacing-type}-#{$spacing-direction}: amb-spacing(
+          $spacing-size
+        ) !important;
       }
     }
   }
@@ -103,7 +109,7 @@
     #{$spacing-type}: 0 !important;
   }
 
-  @if $spacing-type == 'margin' {
+  @if $spacing-type == "margin" {
     &-auto {
       #{$spacing-type}: auto !important;
     }

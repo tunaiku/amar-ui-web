@@ -1,5 +1,5 @@
-@import '@amar-ui-web/color/scss/variables';
-@import './variables';
+@import "@amar-ui-web/color/scss/variables";
+@import "./variables";
 
 @mixin amb-create-select() {
   .Select {
@@ -20,15 +20,15 @@
 }
 
 @mixin amb-create-select-focus-state($color-theme) {
-  $select-border-color: '' !default;
-  $select-box-shadow: '' !default;
+  $select-border-color: "" !default;
+  $select-box-shadow: "" !default;
 
   @if $color-theme {
     $select-border-color: amb-color-theme($color-theme);
     $select-box-shadow: 0 0 0 3px amb-color-theme-opacity($color-theme, 0.3);
   } @else {
-    $select-border-color: amb-color-theme('primary');
-    $select-box-shadow: 0 0 0 3px amb-color-theme-opacity('primary', 0.3);
+    $select-border-color: amb-color-theme("primary");
+    $select-box-shadow: 0 0 0 3px amb-color-theme-opacity("primary", 0.3);
   }
 
   &:focus {
@@ -67,10 +67,10 @@
 
 @mixin amb-create-select-arrow-indicator() {
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
-    right: amb-spacing('small');
+    right: amb-spacing("small");
     transform: translateY(-50%);
 
     width: 0;

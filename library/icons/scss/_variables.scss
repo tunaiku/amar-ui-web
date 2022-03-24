@@ -1,9 +1,9 @@
 $amb-icon-size-map: () !default;
 $amb-icon-size-map: map-merge(
   (
-    'base': 1rem,
-    'medium': 1.5rem,
-    'large': 2.25rem,
+    "base": 1rem,
+    "medium": 1.5rem,
+    "large": 2.25rem,
   ),
   $amb-icon-size-map
 );

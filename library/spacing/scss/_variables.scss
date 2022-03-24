@@ -1,19 +1,19 @@
-@import '@amar-ui-web/core/helpers';
-@import './functions';
+@import "@amar-ui-web/core/helpers";
+@import "./functions";
 
 $amb-spacing-map: () !default;
 $amb-spacing-map: map-merge(
   (
-    '2xsmall': rem(4px),
-    'xsmall': rem(8px),
-    'small': rem(12px),
-    'base': rem(16px),
-    'medium': rem(24px),
-    'large': rem(36px),
-    'xlarge': rem(48px),
-    '2xlarge': rem(72px),
+    "2xsmall": rem(4px),
+    "xsmall": rem(8px),
+    "small": rem(12px),
+    "base": rem(16px),
+    "medium": rem(24px),
+    "large": rem(36px),
+    "xlarge": rem(48px),
+    "2xlarge": rem(72px),
   ),
   $amb-spacing-map
 );
 
-$amb-base-spacing: amb-spacing('base') !default;
+$amb-base-spacing: amb-spacing("base") !default;

@@ -1,16 +1,16 @@
-@import './functions';
+@import "./functions";
 
 $amb-base-border-radius: 4px !default;
 $amb-border-radius-map: () !default;
 $amb-border-radius-map: map-merge(
   (
-    'base': $amb-base-border-radius,
-    'large': $amb-base-border-radius * 1.5,
-    'xlarge': $amb-base-border-radius * 2,
-    '2xlarge': $amb-base-border-radius * 3,
-    '3xlarge': $amb-base-border-radius * 4,
-    'round': 50px,
-    'circle': 100%,
+    "base": $amb-base-border-radius,
+    "large": $amb-base-border-radius * 1.5,
+    "xlarge": $amb-base-border-radius * 2,
+    "2xlarge": $amb-base-border-radius * 3,
+    "3xlarge": $amb-base-border-radius * 4,
+    "round": 50px,
+    "circle": 100%,
   ),
   $amb-border-radius-map
 );

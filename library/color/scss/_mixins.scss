@@ -1,29 +1,33 @@
-@import './variables';
+@import "./variables";
 
 @mixin amb-create-text-color-classes() {
-  $stylerules: ('Color');
+  $stylerules: ("Color");
 
   @each $stylerule in $stylerules {
     .#{$stylerule} {
-      @include amb-create-color-themes($color-type: 'text');
-      @include amb-create-color-helpers($color-type: 'text');
+      @include amb-create-color-themes($color-type: "text");
+      @include amb-create-color-helpers($color-type: "text");
     }
   }
 }
 
 @mixin amb-create-bg-color-classes() {
-  $stylerules: ('BgColor', 'BackgroundColor');
+  $stylerules: ("BgColor", "BackgroundColor");
 
   @each $stylerule in $stylerules {
     .#{$stylerule} {
-      @include amb-create-color-themes($color-type: 'background');
-      @include amb-create-color-helpers($color-type: 'background');
+      @include amb-create-color-themes($color-type: "background");
+      @include amb-create-color-helpers($color-type: "background");
     }
   }
 }
 
 @mixin amb-create-color-themes($color-type) {
-  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+  $color-type-property: if(
+    $color-type == "background",
+    "background-color",
+    "color"
+  );
 
   @each $color-theme, $color-theme-value in $amb-color-theme-map {
     &-#{$color-theme} {
@@ -31,7 +35,7 @@
 
       #{$color-type-property}: $color-theme-value !important;
 
-      @if $color-type == 'background' {
+      @if $color-type == "background" {
         color: amb-color-contrast($color-theme-value);
       }
     }
@@ -46,7 +50,11 @@
   }
 
   $color-theme-value: amb-color-theme($color-theme);
-  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+  $color-type-property: if(
+    $color-type == "background",
+    "background-color",
+    "color"
+  );
 
   @for $shade-index from 1 through 100 {
     @if $shade-index % 10 == 0 {
@@ -55,7 +63,7 @@
       &-#{$shade-index} {
         #{$color-type-property}: $color-value !important;
 
-        @if $color-type == 'background' {
+        @if $color-type == "background" {
           color: amb-color-contrast($color-value);
         }
       }
@@ -64,7 +72,11 @@
 }
 
 @mixin amb-create-color-helpers($color-type) {
-  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+  $color-type-property: if(
+    $color-type == "background",
+    "background-color",
+    "color"
+  );
 
   &-transparent {
     #{$color-type-property}: transparent !important;

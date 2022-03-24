@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 @mixin amb-create-flex-base-classes() {
   .Flex {
@@ -63,29 +63,33 @@
 @mixin amb-create-flex-alignment-classes() {
   @each $alignment-axis in $amb-alignment-axes {
     $capitalized-alignment-axis: capitalize($alignment-axis);
-    $alignment-stylerule: '' !default;
-    $alignment-property: '' !default;
+    $alignment-stylerule: "" !default;
+    $alignment-property: "" !default;
 
     @each $alignment-type, $alignment-type-map in $amb-alignment-types {
-      @if $alignment-type == 'items' {
+      @if $alignment-type == "items" {
         // e.g .AlignItems or .JustifyItems
-        $alignment-stylerule: '#{$capitalized-alignment-axis}Items';
-        $alignment-property: '#{$alignment-axis}-items';
-      } @else if $alignment-type == 'content' {
+        $alignment-stylerule: "#{$capitalized-alignment-axis}Items";
+        $alignment-property: "#{$alignment-axis}-items";
+      } @else if $alignment-type == "content" {
         // e.g .AlignContent or .JustifyContent
-        $alignment-stylerule: '#{$capitalized-alignment-axis}Content';
-        $alignment-property: '#{$alignment-axis}-content';
+        $alignment-stylerule: "#{$capitalized-alignment-axis}Content";
+        $alignment-property: "#{$alignment-axis}-content";
       }
 
       .#{$alignment-stylerule} {
-        @include amb-flex-alignment-variants($alignment-type-map, $alignment-property);
+        @include amb-flex-alignment-variants(
+          $alignment-type-map,
+          $alignment-property
+        );
       }
     }
   }
 }
 
 @mixin amb-flex-alignment-variants($alignment-type-map, $alignment-property) {
-  @each $alignment-type-shorthand, $alignment-type-value in $alignment-type-map {
+  @each $alignment-type-shorthand, $alignment-type-value in $alignment-type-map
+  {
     &-#{$alignment-type-shorthand} {
       #{$alignment-property}: $alignment-type-value !important;
     }

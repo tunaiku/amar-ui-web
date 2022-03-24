@@ -1,6 +1,6 @@
-@import '@amar-ui-web/responsive/scss/variables';
-@import '@amar-ui-web/responsive/scss/mixins';
-@import './variables';
+@import "@amar-ui-web/responsive/scss/variables";
+@import "@amar-ui-web/responsive/scss/mixins";
+@import "./variables";
 
 @mixin amb-initialize-grid-module() {
   @include amb-create-grid-classes();
@@ -24,7 +24,7 @@
   margin: 0 calc(#{$amb-grid-gap-gutter / -2});
 
   > .Grid,
-  > [class*='Grid-'] {
+  > [class*="Grid-"] {
     padding: 0 calc(#{$amb-grid-gap-gutter} / 2);
   }
 }
@@ -35,7 +35,7 @@
     margin: 0;
 
     > .Grid,
-    > [class*='Column-'] {
+    > [class*="Column-"] {
       padding: 0;
     }
   }

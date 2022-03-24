@@ -1,6 +1,6 @@
-@import '@amar-ui-web/spacing/scss/mixins';
-@import '@amar-ui-web/color/scss/mixins';
-@import '@amar-ui-web/typography/scss/mixins';
+@import "@amar-ui-web/spacing/scss/mixins";
+@import "@amar-ui-web/color/scss/mixins";
+@import "@amar-ui-web/typography/scss/mixins";
 
 @mixin amb-create-tabs-classes() {
   .Tabs {
@@ -16,26 +16,26 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: amb-color-theme('neutral', 80);
-      font-weight: amb-font-weight('medium');
+      color: amb-color-theme("neutral", 80);
+      font-weight: amb-font-weight("medium");
       transition: all 100ms ease-in;
-      padding: amb-spacing('base');
+      padding: amb-spacing("base");
       cursor: pointer;
       outline: none;
 
       &.is-active {
-        color: amb-color-theme('secondary');
-        border-bottom: solid 2px amb-color-theme('secondary');
+        color: amb-color-theme("secondary");
+        border-bottom: solid 2px amb-color-theme("secondary");
       }
 
       &:hover,
       &:focus {
-        background-color: amb-color-theme-opacity('secondary', 0.1);
+        background-color: amb-color-theme-opacity("secondary", 0.1);
         outline: none;
       }
 
       &:active {
-        background-color: amb-color-theme-opacity('secondary', 0.2);
+        background-color: amb-color-theme-opacity("secondary", 0.2);
         outline: none;
       }
     }

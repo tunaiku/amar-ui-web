@@ -1,8 +1,8 @@
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
-@import '@amar-ui-web/typography/scss/variables';
-@import '@amar-ui-web/elevation/scss/variables';
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/shape/scss/variables";
+@import "@amar-ui-web/typography/scss/variables";
+@import "@amar-ui-web/elevation/scss/variables";
 
 @mixin amb-create-snackbar-component() {
   .Snackbar {
@@ -17,37 +17,37 @@
 
 @mixin amb-append-snackbar-positions() {
   &--topRight {
-    top: amb-spacing('base');
-    right: amb-spacing('base');
+    top: amb-spacing("base");
+    right: amb-spacing("base");
   }
 
   &--topCenter {
-    top: amb-spacing('base');
+    top: amb-spacing("base");
     left: 50%;
     right: auto;
     transform: translateX(-50%);
   }
 
   &--topLeft {
-    top: amb-spacing('base');
-    left: amb-spacing('base');
+    top: amb-spacing("base");
+    left: amb-spacing("base");
   }
 
   &--bottomRight {
-    bottom: amb-spacing('base');
-    right: amb-spacing('base');
+    bottom: amb-spacing("base");
+    right: amb-spacing("base");
   }
 
   &--bottomCenter {
-    bottom: amb-spacing('base');
+    bottom: amb-spacing("base");
     left: 50%;
     right: auto;
     transform: translateX(-50%);
   }
 
   &--bottomLeft {
-    bottom: amb-spacing('base');
-    left: amb-spacing('base');
+    bottom: amb-spacing("base");
+    left: amb-spacing("base");
   }
 }
 
@@ -57,9 +57,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: amb-color-shade(black, 35);
-    color: amb-color-theme('lighter');
-    border-radius: amb-border-radius('base');
-    padding-right: amb-spacing('2xsmall');
+    color: amb-color-theme("lighter");
+    border-radius: amb-border-radius("base");
+    padding-right: amb-spacing("2xsmall");
 
     @include amb-append-snackbar-dialog-variants();
   }
@@ -69,8 +69,8 @@
   &-text {
     display: flex;
     align-items: center;
-    font-size: amb-font-size('xsmall');
-    padding: amb-spacing('base');
+    font-size: amb-font-size("xsmall");
+    padding: amb-spacing("base");
     flex-grow: 1;
   }
 
@@ -82,11 +82,11 @@
   }
 
   &-action {
-    font-size: amb-font-size('xsmall');
-    padding: amb-spacing('base');
-    color: amb-color-theme('primary');
-    font-weight: amb-font-weight('bold');
-    letter-spacing: amb-letter-spacing('xloose');
+    font-size: amb-font-size("xsmall");
+    padding: amb-spacing("base");
+    color: amb-color-theme("primary");
+    font-weight: amb-font-weight("bold");
+    letter-spacing: amb-letter-spacing("xloose");
     text-transform: uppercase;
     text-align: right;
     cursor: pointer;

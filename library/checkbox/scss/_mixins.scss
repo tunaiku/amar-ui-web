@@ -1,6 +1,6 @@
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/shape/scss/variables";
 
 /// Generates core, state and variant classes of checkbox component.
 ///
@@ -11,7 +11,7 @@
     align-items: center;
 
     > *:not(:first-child) {
-      margin-left: amb-spacing('small');
+      margin-left: amb-spacing("small");
     }
 
     &-control {
@@ -19,15 +19,15 @@
       appearance: none;
       height: 20px;
       width: 20px;
-      border: solid 2px amb-color-theme('neutral', 60);
-      border-radius: amb-border-radius('base');
+      border: solid 2px amb-color-theme("neutral", 60);
+      border-radius: amb-border-radius("base");
       background-color: transparent;
       transition: all 100ms ease-in-out;
       outline: none;
       cursor: pointer;
 
       &:after {
-        content: '';
+        content: "";
         transition: all 100ms ease-out;
         position: absolute;
         top: 50%;
@@ -46,8 +46,8 @@
 
       &:checked,
       &.is-checked {
-        background-color: amb-color-theme('primary');
-        border-color: amb-color-theme('primary');
+        background-color: amb-color-theme("primary");
+        border-color: amb-color-theme("primary");
 
         &:after {
           transform: translate(-50%, -60%) rotate(45deg) scale(1);
@@ -57,17 +57,17 @@
 
       &:focus,
       &.is-focused {
-        box-shadow: 0 0 0 5px amb-color-theme-opacity('primary', 0.2);
+        box-shadow: 0 0 0 5px amb-color-theme-opacity("primary", 0.2);
       }
 
       &:active,
       &.is-active {
-        box-shadow: 0 0 0 5px amb-color-theme-opacity('primary', 0.2);
+        box-shadow: 0 0 0 5px amb-color-theme-opacity("primary", 0.2);
       }
 
       &.is-indeterminate {
         &:after {
-          content: '';
+          content: "";
           transition: all 100ms ease-out;
           position: absolute;
           top: 50%;
@@ -80,8 +80,8 @@
 
         &:checked,
         &.is-checked {
-          background-color: amb-color-theme('neutral');
-          border-color: amb-color-theme('neutral');
+          background-color: amb-color-theme("neutral");
+          border-color: amb-color-theme("neutral");
 
           &:after {
             opacity: 1;
@@ -90,18 +90,18 @@
 
         &:focus,
         &.is-focused {
-          box-shadow: 0 0 0 5px amb-color-theme-opacity('neutral', 0.2);
+          box-shadow: 0 0 0 5px amb-color-theme-opacity("neutral", 0.2);
         }
 
         &:active,
         &.is-active {
-          box-shadow: 0 0 0 5px amb-color-theme-opacity('neutral', 0.2);
+          box-shadow: 0 0 0 5px amb-color-theme-opacity("neutral", 0.2);
         }
       }
     }
 
     &-label {
-      color: amb-color-theme('dark');
+      color: amb-color-theme("dark");
       cursor: pointer;
     }
   }

@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 /// Generate all elevation classes.
 ///
@@ -26,7 +26,8 @@
   $elevation-spread: $amb-elevation-box-shadow-spread;
   $elevation-blur: $amb-elevation-box-shadow-blur;
 
-  $elevation-values-list: $elevation-offset-x $elevation-offset-y $elevation-blur $elevation-spread;
+  $elevation-values-list: $elevation-offset-x $elevation-offset-y
+    $elevation-blur $elevation-spread;
 
   // Update each elevation values (offset-x, y, spread and blur) with $elevation-level value.
   $updated-elevation-values: () !default;
@@ -36,7 +37,10 @@
   }
 
   $elevation-box-shadow-color: rgba(black, $elevation-opacity);
-  $elevation-box-shadow: append($updated-elevation-values, $elevation-box-shadow-color) !default;
+  $elevation-box-shadow: append(
+    $updated-elevation-values,
+    $elevation-box-shadow-color
+  ) !default;
 
   // Generate the correct box-shadow value based on the calculation above
   box-shadow: $elevation-box-shadow;

@@ -1,33 +1,33 @@
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/spacing/scss/variables";
 
 .Table {
   width: 100%;
   border-collapse: collapse;
-  border: solid 1px amb-color-theme-shade('neutral', 20);
+  border: solid 1px amb-color-theme-shade("neutral", 20);
 
   &--compact & {
     &-head {
       th {
-        padding: amb-spacing('small');
+        padding: amb-spacing("small");
       }
     }
 
     &-body {
       td {
-        padding: amb-spacing('small');
+        padding: amb-spacing("small");
       }
     }
   }
 
   &-head {
     tr {
-      background-color: amb-color-theme-shade('neutral', 20);
+      background-color: amb-color-theme-shade("neutral", 20);
       border: 0;
     }
 
     th {
-      padding: amb-spacing('base');
+      padding: amb-spacing("base");
       text-align: left;
     }
   }
@@ -35,12 +35,12 @@
   &-body {
     tr {
       &:not(:last-child) {
-        border-bottom: solid 1px amb-color-theme-shade('neutral', 20);
+        border-bottom: solid 1px amb-color-theme-shade("neutral", 20);
       }
     }
 
     td {
-      padding: amb-spacing('base');
+      padding: amb-spacing("base");
     }
   }
 }

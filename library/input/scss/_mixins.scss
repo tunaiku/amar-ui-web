@@ -1,7 +1,7 @@
-@import '@amar-ui-web/shape/scss/variables';
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/functions';
-@import './variables';
+@import "@amar-ui-web/shape/scss/variables";
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/spacing/scss/functions";
+@import "./variables";
 
 @mixin amb-create-input-classes() {
   .Input,
@@ -33,17 +33,17 @@
   white-space: normal;
 }
 
-@mixin amb-append-input-state-variants($color-theme: '') {
+@mixin amb-append-input-state-variants($color-theme: "") {
   @include amb-append-input-focused-state($color-theme);
   @include amb-append-input-hovered-state($color-theme);
   @include amb-append-input-disabled-state();
 }
 
 @mixin amb-append-input-focused-state($color-theme) {
-  $border-color: '' !default;
-  $box-shadow: '' !default;
+  $border-color: "" !default;
+  $box-shadow: "" !default;
 
-  @if $color-theme == '' {
+  @if $color-theme == "" {
     $border-color: $amb-input-focused-border-color;
     $box-shadow: $amb-input-focused-box-shadow;
   } @else {
@@ -63,9 +63,9 @@
 }
 
 @mixin amb-append-input-hovered-state($color-theme) {
-  $border-color: '' !default;
+  $border-color: "" !default;
 
-  @if $color-theme == '' {
+  @if $color-theme == "" {
     $border-color: $amb-input-hovered-border-color;
   } @else {
     $border-color: amb-color-theme($color-theme);
@@ -139,13 +139,13 @@
   }
 
   > *:first-child {
-    border-top-left-radius: amb-border-radius('base');
-    border-bottom-left-radius: amb-border-radius('base');
+    border-top-left-radius: amb-border-radius("base");
+    border-bottom-left-radius: amb-border-radius("base");
   }
 
   > *:last-child {
-    border-top-right-radius: amb-border-radius('base');
-    border-bottom-right-radius: amb-border-radius('base');
+    border-top-right-radius: amb-border-radius("base");
+    border-bottom-right-radius: amb-border-radius("base");
   }
 }
 
@@ -163,8 +163,8 @@
 @mixin amb-input-group-addon-base-styles() {
   display: flex;
   align-items: center;
-  padding: 0 amb-spacing('base');
-  background-color: amb-color-theme('light');
+  padding: 0 amb-spacing("base");
+  background-color: amb-color-theme("light");
 }
 
 @mixin amb-append-input-group-color-theme-variants() {

@@ -1,12 +1,12 @@
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/shape/scss/variables";
 
-$amb-card-padding: amb-spacing('base');
+$amb-card-padding: amb-spacing("base");
 
 $amb-card-bg-color: $white;
 $amb-card-fg-color: amb-color-contrast($amb-card-bg-color);
 
 $amb-card-border-style: solid;
 $amb-card-border-width: 1px;
-$amb-card-border-color: amb-color-theme('neutral', 30);
-$amb-card-border-radius: amb-border-radius('xlarge');
+$amb-card-border-color: amb-color-theme("neutral", 30);
+$amb-card-border-radius: amb-border-radius("xlarge");

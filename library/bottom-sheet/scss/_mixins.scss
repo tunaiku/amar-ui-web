@@ -1,6 +1,6 @@
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/shape/scss/variables";
 
 @mixin amb-initialize-bottom-sheet-module() {
   .BottomSheet {
@@ -19,23 +19,23 @@
       flex-direction: column;
 
       background-color: $white;
-      border-top-right-radius: amb-border-radius('3xlarge');
-      border-top-left-radius: amb-border-radius('3xlarge');
+      border-top-right-radius: amb-border-radius("3xlarge");
+      border-top-left-radius: amb-border-radius("3xlarge");
 
       > *:first-child {
-        padding-top: amb-spacing('base');
+        padding-top: amb-spacing("base");
       }
 
       > *:last-child {
-        padding-bottom: amb-spacing('base');
+        padding-bottom: amb-spacing("base");
       }
     }
 
     &-media {
       display: flex;
       justify-content: center;
-      padding-left: amb-spacing('base');
-      padding-right: amb-spacing('base');
+      padding-left: amb-spacing("base");
+      padding-right: amb-spacing("base");
 
       > img {
         width: 100%;
@@ -43,12 +43,12 @@
     }
 
     &-body {
-      padding-left: amb-spacing('base');
-      padding-right: amb-spacing('base');
+      padding-left: amb-spacing("base");
+      padding-right: amb-spacing("base");
     }
 
     &-title {
-      @include amb-typography-style('heading20');
+      @include amb-typography-style("heading20");
     }
 
     &-backdrop {
@@ -57,7 +57,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      background-color: amb-color-theme-opacity('dark', 0.3);
+      background-color: amb-color-theme-opacity("dark", 0.3);
     }
 
     &-closeButton {

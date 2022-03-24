@@ -1,11 +1,11 @@
-@import '@amar-ui-web/color/scss/variables';
-@import './variables';
+@import "@amar-ui-web/color/scss/variables";
+@import "./variables";
 
-@mixin amb-create-border-classes($border-side: '') {
-  $border-base-selector: 'Border' !default;
+@mixin amb-create-border-classes($border-side: "") {
+  $border-base-selector: "Border" !default;
   @if $border-side {
     $capitalized-border-side: capitalize($border-side);
-    $border-base-selector: 'Border#{$capitalized-border-side}';
+    $border-base-selector: "Border#{$capitalized-border-side}";
   }
 
   .#{$border-base-selector} {
@@ -27,16 +27,16 @@
 
 @mixin amb-border-base-styles() {
   border-style: solid;
-  border-color: amb-color-theme('neutral', 50);
+  border-color: amb-color-theme("neutral", 50);
 }
 
 @mixin amb-create-border-color-theme-classes($border-side) {
   @each $color-theme, $color-hex-value in $amb-color-theme-map {
     $border-color-selector: $color-theme;
 
-    $border-color-property: 'border-color' !default;
-    @if $border-side != '' {
-      $border-color-property: 'border-#{$border-side}-color';
+    $border-color-property: "border-color" !default;
+    @if $border-side != "" {
+      $border-color-property: "border-#{$border-side}-color";
     }
 
     &-#{$border-color-selector} {
@@ -51,15 +51,15 @@
  * Ranges from 1 to 10 by default. You can change the max number of value classes by changing
  * the $amb-border-width-max-value variable.
  */
-@mixin amb-create-border-width-classes($border-side: '') {
+@mixin amb-create-border-width-classes($border-side: "") {
   @for $border-width-value from 1 through $amb-border-width-max-value {
     $border-width-selector: $border-width-value;
 
     // Changes the border width default selector according to $border-side that is passed.
     // If $border-side is not passed, generates a standard border-width instead.
-    $border-width-property: 'border-width' !default;
-    @if $border-side != '' {
-      $border-width-property: 'border-#{$border-side}-width';
+    $border-width-property: "border-width" !default;
+    @if $border-side != "" {
+      $border-width-property: "border-#{$border-side}-width";
     }
 
     &-#{$border-width-selector} {
@@ -69,7 +69,7 @@
 }
 
 @mixin amb-create-border-side-classes() {
-  $border-sides: ('top', 'right', 'bottom', 'right');
+  $border-sides: ("top", "right", "bottom", "right");
 
   @each $border-side in $border-sides {
     @include amb-create-border-classes($border-side);

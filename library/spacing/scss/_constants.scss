@@ -1,17 +1,17 @@
 $amb-spacing-type-map: (
-  'margin': 'mg',
-  'padding': 'pd',
+  "margin": "mg",
+  "padding": "pd",
 );
 
-$amb-spacing-direction-map: ('top', 'left', 'right', 'bottom');
+$amb-spacing-direction-map: ("top", "left", "right", "bottom");
 
 $amb-spacing-axes: (
-  'x': (
-    'left',
-    'right',
+  "x": (
+    "left",
+    "right",
   ),
-  'y': (
-    'top',
-    'bottom',
+  "y": (
+    "top",
+    "bottom",
   ),
 );

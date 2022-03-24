@@ -1,4 +1,4 @@
-@import '@amar-ui-web/core/helpers';
+@import "@amar-ui-web/core/helpers";
 
 @function amb-font-family($key, $map: $amb-font-family-map) {
   @return map-get($map, $key);

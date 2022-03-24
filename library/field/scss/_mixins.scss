@@ -1,5 +1,5 @@
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/typography/scss/variables';
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/typography/scss/variables";
 
 /// Initial entrypoint mixin to create base Field class.
 ///
@@ -10,7 +10,7 @@
     @include amb-append-field-helper();
 
     > *:not(:last-child) {
-      margin-bottom: amb-spacing('3xsmall');
+      margin-bottom: amb-spacing("3xsmall");
     }
   }
 }
@@ -27,15 +27,15 @@
     // to reset initial 'display: block' style if tag is label.
     display: flex;
 
-    font-size: amb-font-size('small');
-    font-weight: amb-font-weight('semibold');
+    font-size: amb-font-size("small");
+    font-weight: amb-font-weight("semibold");
   }
 }
 
 @mixin amb-append-field-helper() {
   &-helper {
     // TO-DO: Convert into typography style caption12.
-    font-size: amb-font-size('xsmall');
-    color: amb-color-theme('darker');
+    font-size: amb-font-size("xsmall");
+    color: amb-color-theme("darker");
   }
 }

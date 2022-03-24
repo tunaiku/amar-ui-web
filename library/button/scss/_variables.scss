@@ -1,32 +1,35 @@
-@import '@amar-ui-web/typography/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
+@import "@amar-ui-web/typography/scss/variables";
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/shape/scss/variables";
 
-$amb-button-font-size: amb-font-size('base') !default;
-$amb-button-font-weight: amb-font-weight('medium') !default;
-$amb-button-font-family: amb-font-family('primary') !default;
+$amb-button-font-size: amb-font-size("base") !default;
+$amb-button-font-weight: amb-font-weight("medium") !default;
+$amb-button-font-family: amb-font-family("primary") !default;
 $amb-button-line-height: 1.2 !default;
 $amb-button-letter-spacing: 1.2px !default;
 
 $amb-button-bg-color: transparent !default;
-$amb-button-fg-color: amb-color-theme('dark') !default;
+$amb-button-fg-color: amb-color-theme("dark") !default;
 
-$amb-button-fg-color--is-hovered: amb-color-theme('primary') !default;
-$amb-button-fg-color--is-focused: amb-color-theme('primary') !default;
+$amb-button-fg-color--is-hovered: amb-color-theme("primary") !default;
+$amb-button-fg-color--is-focused: amb-color-theme("primary") !default;
 
-$amb-button-border-color: amb-color-theme('light') !default;
+$amb-button-border-color: amb-color-theme("light") !default;
 $amb-button-border-style: solid !default;
 $amb-button-border-width: 1px !default;
 
-$amb-button-border-color--is-hovered: amb-color-theme('primary') !default;
-$amb-button-border-color--is-focused: amb-color-theme('primary') !default;
+$amb-button-border-color--is-hovered: amb-color-theme("primary") !default;
+$amb-button-border-color--is-focused: amb-color-theme("primary") !default;
 
-$amb-button-border-radius: amb-border-radius('base') !default;
+$amb-button-border-radius: amb-border-radius("base") !default;
 
 $amb-button-box-shadow-values: 0 0 0 3px !default;
 $amb-button-box-shadow-values--is-focused: 0 0 0 3px !default;
-$amb-button-box-shadow-color--is-focused: amb-color-theme-opacity('primary', 0.3) !default;
+$amb-button-box-shadow-color--is-focused: amb-color-theme-opacity(
+  "primary",
+  0.3
+) !default;
 $amb-button-box-shadow--is-focused: $amb-button-box-shadow-values--is-focused
   $amb-button-box-shadow-color--is-focused;
 
@@ -37,24 +40,24 @@ $amb-button-transition: all 150ms ease-in-out !default;
 $amb-button-size-map: () !default;
 $amb-button-size-map: map-merge(
   (
-    'small': (
+    "small": (
       padding: 6px 15.5px,
-      font-size: amb-font-size('xsmall'),
+      font-size: amb-font-size("xsmall"),
     ),
-    'base': (
+    "base": (
       padding: 14px 16px,
-      font-size: amb-font-size('base'),
+      font-size: amb-font-size("base"),
     ),
-    'large': (
+    "large": (
       padding: 18px 16px,
-      font-size: amb-font-size('base'),
+      font-size: amb-font-size("base"),
     ),
   ),
   $amb-button-size-map
 );
 
-$amb-button-size-base: map-get($amb-button-size-map, 'base');
-$amb-button-size-medium: map-get($amb-button-size-map, 'medium');
-$amb-button-size-large: map-get($amb-button-size-map, 'large');
+$amb-button-size-base: map-get($amb-button-size-map, "base");
+$amb-button-size-medium: map-get($amb-button-size-map, "medium");
+$amb-button-size-large: map-get($amb-button-size-map, "large");
 
 $amb-button-raised-border-bottom-width: 5px !default;

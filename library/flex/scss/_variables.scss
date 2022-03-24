@@ -1,41 +1,41 @@
-@import '@amar-ui-web/core/helpers';
+@import "@amar-ui-web/core/helpers";
 
 $amb-flex-directions: (
-  'row': row,
-  'column': column,
+  "row": row,
+  "column": column,
 );
 
-$amb-alignment-axes: ('align', 'justify');
+$amb-alignment-axes: ("align", "justify");
 $amb-alignment-types: (
-  'items': (
-    'start': flex-start,
-    'center': center,
-    'end': flex-end,
-    'stretch': stretch,
-    'baseline': baseline,
-    'left': left,
-    'right': right,
+  "items": (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end,
+    "stretch": stretch,
+    "baseline": baseline,
+    "left": left,
+    "right": right,
   ),
-  'content': (
-    'start': flex-start,
-    'center': center,
-    'end': flex-end,
-    'baseline': baseline,
-    'between': space-between,
-    'around': space-around,
-    'evenly': space-evenly,
-    'stretch': stretch,
+  "content": (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end,
+    "baseline": baseline,
+    "between": space-between,
+    "around": space-around,
+    "evenly": space-evenly,
+    "stretch": stretch,
   ),
 );
 
 $amb-align-self-map: () !default;
 $amb-align-self-map: map-merge(
   (
-    'auto': auto,
-    'start': flex-start,
-    'end': flex-end,
-    'center': center,
-    'stretch': stretch,
+    "auto": auto,
+    "start": flex-start,
+    "end": flex-end,
+    "center": center,
+    "stretch": stretch,
   ),
   $amb-align-self-map
 );

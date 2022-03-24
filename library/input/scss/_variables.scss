@@ -1,27 +1,27 @@
-@import '@amar-ui-web/shape/scss/variables';
-@import '@amar-ui-web/typography/scss/variables';
+@import "@amar-ui-web/shape/scss/variables";
+@import "@amar-ui-web/typography/scss/variables";
 
-$amb-input-font-size: amb-font-size('base') !default;
-$amb-input-font-family: amb-font-family('sans-serif') !default;
+$amb-input-font-size: amb-font-size("base") !default;
+$amb-input-font-family: amb-font-family("sans-serif") !default;
 
 $amb-input-bg-color: $white !default;
 $amb-input-fg-color: amb-color-contrast($amb-input-bg-color) !default;
 
 $amb-input-border-style: solid !default;
 $amb-input-border-width: 1px !default;
-$amb-input-border-color: amb-color-theme('neutral', 60) !default;
-$amb-input-border-radius: amb-border-radius('base') !default;
+$amb-input-border-color: amb-color-theme("neutral", 60) !default;
+$amb-input-border-radius: amb-border-radius("base") !default;
 
-$amb-input-spacing-y: amb-spacing('small') !default;
-$amb-input-spacing-x: amb-spacing('base') !default;
+$amb-input-spacing-y: amb-spacing("small") !default;
+$amb-input-spacing-x: amb-spacing("base") !default;
 $amb-input-spacing: $amb-input-spacing-y $amb-input-spacing-x;
 
 $amb-input-line-height: $amb-base-line-height !default;
 
 $amb-input-transition: all 250ms ease-in-out;
 
-$amb-input-hovered-border-color: amb-color-theme('primary');
-$amb-input-focused-border-color: amb-color-theme('primary');
+$amb-input-hovered-border-color: amb-color-theme("primary");
+$amb-input-focused-border-color: amb-color-theme("primary");
 
 $amb-input-focused-box-shadow-offset-y: 0 !default;
 $amb-input-focused-box-shadow-offset-x: 0 !default;
@@ -37,6 +37,6 @@ $amb-input-focused-box-shadow-values: $amb-input-focused-box-shadow-offsets
 $amb-input-focused-box-shadow: $amb-input-focused-box-shadow-values
   ($amb-input-focused-box-shadow-color) !default;
 
-$amb-input-disabled-background: amb-color-theme('lighter');
+$amb-input-disabled-background: amb-color-theme("lighter");
 
-$amb-input-rounded-border-radius: amb-border-radius('base');
+$amb-input-rounded-border-radius: amb-border-radius("base");

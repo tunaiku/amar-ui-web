@@ -1,5 +1,5 @@
-@import './color-palletes';
-@import './functions';
+@import "./color-palletes";
+@import "./functions";
 
 ///
 $amb-primary: $limeade !default;
@@ -28,18 +28,18 @@ $amb-neutral-90: shade($amb-neutral, 80%);
 $amb-color-theme-map: () !default;
 $amb-color-theme-map: map-merge(
   (
-    'primary': $amb-primary,
-    'secondary': $amb-secondary,
-    'tertiary': $amb-tertiary,
-    'success': $amb-success,
-    'warning': $amb-warning,
-    'danger': $amb-danger,
-    'info': $amb-info,
-    'neutral': $amb-neutral,
-    'light': $amb-neutral-30,
-    'lighter': $amb-neutral-10,
-    'dark': $amb-neutral-80,
-    'darker': $amb-neutral-90,
+    "primary": $amb-primary,
+    "secondary": $amb-secondary,
+    "tertiary": $amb-tertiary,
+    "success": $amb-success,
+    "warning": $amb-warning,
+    "danger": $amb-danger,
+    "info": $amb-info,
+    "neutral": $amb-neutral,
+    "light": $amb-neutral-30,
+    "lighter": $amb-neutral-10,
+    "dark": $amb-neutral-80,
+    "darker": $amb-neutral-90,
   ),
   $amb-color-theme-map
 );

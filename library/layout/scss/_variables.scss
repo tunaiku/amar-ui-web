@@ -1,16 +1,16 @@
-@import '@amar-ui-web/responsive/scss/functions';
-@import '@amar-ui-web/spacing/scss/variables';
+@import "@amar-ui-web/responsive/scss/functions";
+@import "@amar-ui-web/spacing/scss/variables";
 
-$amb-container-spacing: amb-spacing('base') !default;
+$amb-container-spacing: amb-spacing("base") !default;
 
 $amb-container-widths: () !default;
 $amb-container-widths: map-merge(
   (
-    'xs': 100%,
-    'sm': amb-breakpoint-width('sm'),
-    'md': amb-breakpoint-width('md'),
-    'lg': amb-breakpoint-width('lg'),
-    'xl': amb-breakpoint-width('xl'),
+    "xs": 100%,
+    "sm": amb-breakpoint-width("sm"),
+    "md": amb-breakpoint-width("md"),
+    "lg": amb-breakpoint-width("lg"),
+    "xl": amb-breakpoint-width("xl"),
   ),
   $amb-container-widths
 );

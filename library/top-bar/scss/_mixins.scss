@@ -1,4 +1,4 @@
-@import '@amar-ui-web/spacing/scss/variables';
+@import "@amar-ui-web/spacing/scss/variables";
 
 @mixin amb-create-top-bar-classes() {
   .TopBar {
@@ -27,7 +27,7 @@
 
     &-actions & {
       &-action:not(:last-child) {
-        margin-right: amb-spacing('small');
+        margin-right: amb-spacing("small");
       }
 
       &-action {

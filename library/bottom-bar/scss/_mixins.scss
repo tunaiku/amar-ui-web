@@ -1,7 +1,7 @@
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/typography/scss/mixins';
-@import '@amar-ui-web/core/helpers';
+@import "@amar-ui-web/color/scss/variables";
+@import "@amar-ui-web/spacing/scss/variables";
+@import "@amar-ui-web/typography/scss/mixins";
+@import "@amar-ui-web/core/helpers";
 
 /// Generate bottom bar classes
 ///
@@ -24,18 +24,18 @@
       align-items: center;
       flex-grow: 1;
 
-      font-size: amb-font-size('xsmall');
-      color: amb-color-theme('dark');
+      font-size: amb-font-size("xsmall");
+      color: amb-color-theme("dark");
 
       > a {
-        @include amb-typography-style('caption12');
+        @include amb-typography-style("caption12");
         display: flex;
         justify-content: center;
         align-items: center;
         flex-grow: 1;
         height: rem(56px);
         width: rem(90px);
-        padding: amb-spacing('base') 0;
+        padding: amb-spacing("base") 0;
 
         color: inherit;
         text-decoration: none;
@@ -43,12 +43,12 @@
 
       &:hover,
       &.is-active {
-        color: amb-color-theme('primary');
+        color: amb-color-theme("primary");
         transition: all 250ms ease-in-out;
       }
 
       &.is-active {
-        font-size: amb-font-size('small');
+        font-size: amb-font-size("small");
       }
     }
   }

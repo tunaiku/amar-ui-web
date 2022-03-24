@@ -1,5 +1,5 @@
-@import '@amar-ui-web/color/scss/variables';
-@import './variables';
+@import "@amar-ui-web/color/scss/variables";
+@import "./variables";
 
 @mixin amb-create-card-classes() {
   .Card {
@@ -25,11 +25,11 @@
 
 @mixin amb-create-card-parts() {
   &-title {
-    padding-bottom: amb-spacing('base');
+    padding-bottom: amb-spacing("base");
   }
 
   &-footer {
-    padding-top: amb-spacing('medium');
+    padding-top: amb-spacing("medium");
   }
 }
 
