@@ -1,32 +1,47 @@
-@import '@amar-ui-web/core/helpers';
-@import './functions';
+@import "@amar-ui-web/core/helpers";
+@import "./functions";
 
 /// Font families
+$font-url: "~@amar-ui-web/core/fonts";
+
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('/fonts/Roboto-Regular.eot');
-  src: url('/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Roboto-Regular.woff2') format('woff2'),
-    url('/fonts/Roboto-Regular.woff') format('woff'),
-    url('/fonts/Roboto-Regular.ttf') format('truetype'),
-    url('/fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-family: "Roboto";
+  src: local("Roboto"), url($font-url + "/Roboto-Regular.eot");
+  src: url($font-url + "/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url($font-url + "/Roboto-Regular.woff2") format("woff2"),
+    url($font-url + "/Roboto-Regular.woff") format("woff"),
+    url($font-url + "/Roboto-Regular.ttf") format("truetype"),
+    url($font-url + "/Roboto-Regular.svg#Roboto-Regular") format("svg");
   font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url($font-url + "/Roboto-Bold.eot");
+  src: url($font-url + "/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url($font-url + "/Roboto-Bold.woff2") format("woff2"),
+    url($font-url + "/Roboto-Bold.woff") format("woff"),
+    url($font-url + "/Roboto-Bold.ttf") format("truetype"),
+    url($font-url + "/Roboto-Bold.svg#Roboto-Bold") format("svg");
+  font-display: swap;
+  font-weight: 700;
 }
 
 $amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
-$amb-font-family-serif: Georgia, 'Times New Roman', serif !default;
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$amb-font-family-serif: Georgia, "Times New Roman", serif !default;
 $amb-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-  'Roboto Mono', 'Liberation Mono', 'Courier New', monospace !default;
-$amb-font-family-roboto-regular: 'Roboto', sans-serif !default;
+  "Roboto Mono", "Liberation Mono", "Courier New", monospace !default;
+$amb-font-family-roboto: "Roboto", sans-serif !default;
 
 $amb-font-family-map: () !default;
 $amb-font-family-map: map-merge(
   (
-    'sans-serif': $amb-font-family-sans-serif,
-    'serif': $amb-font-family-serif,
-    'monospace': $amb-font-family-monospace,
-    'roboto-regular': $amb-font-family-roboto-regular,
+    "sans-serif": $amb-font-family-sans-serif,
+    "serif": $amb-font-family-serif,
+    "monospace": $amb-font-family-monospace,
+    "roboto": $amb-font-family-roboto,
   ),
   $amb-font-family-map
 );
@@ -35,32 +50,32 @@ $amb-font-family-map: map-merge(
 $amb-font-size-map: () !default;
 $amb-font-size-map: map-merge(
   (
-    '2xsmall': rem(8px),
-    'xsmall': rem(12px),
-    'small': rem(14px),
-    'base': rem(16px),
-    'medium': rem(18px),
-    'large': rem(20px),
-    'xlarge': rem(24px),
-    '2xlarge': rem(28px),
-    '3xlarge': rem(32px),
-    '4xlarge': rem(40px),
-    '5xlarge': rem(48px),
+    "2xsmall": rem(8px),
+    "xsmall": rem(12px),
+    "small": rem(14px),
+    "base": rem(16px),
+    "medium": rem(18px),
+    "large": rem(20px),
+    "xlarge": rem(24px),
+    "2xlarge": rem(28px),
+    "3xlarge": rem(32px),
+    "4xlarge": rem(40px),
+    "5xlarge": rem(48px),
   ),
   $amb-font-size-map
 );
-$amb-base-font-size: amb-font-size('base');
+$amb-base-font-size: amb-font-size("base");
 
 /// Headings
 $amb-heading-map: () !default;
 $amb-heading-map: map-merge(
   (
-    'h1': amb-font-size('4xlarge'),
-    'h2': amb-font-size('3xlarge'),
-    'h3': amb-font-size('2xlarge'),
-    'h4': amb-font-size('xlarge'),
-    'h5': amb-font-size('large'),
-    'h6': amb-font-size('medium'),
+    "h1": amb-font-size("4xlarge"),
+    "h2": amb-font-size("3xlarge"),
+    "h3": amb-font-size("2xlarge"),
+    "h4": amb-font-size("xlarge"),
+    "h5": amb-font-size("large"),
+    "h6": amb-font-size("medium"),
   ),
   $amb-heading-map
 );
@@ -68,60 +83,60 @@ $amb-heading-map: map-merge(
 $amb-font-weight-map: () !default;
 $amb-font-weight-map: map-merge(
   (
-    'thin': 100,
-    'extra-light': 200,
-    'ultra-light': 200,
-    'light': 300,
-    'normal': 400,
-    'book': 400,
-    'regular': 400,
-    'medium': 500,
-    'semi-bold': 600,
-    'semibold': 600,
-    'demi-bold': 600,
-    'bold': 700,
-    'extra-bold': 800,
-    'ultra-bold': 900,
-    'heavy': 900,
-    'black': 900,
-    'ultra': 900,
-    'ultra-black': 900,
-    'extra-ultra': 900,
+    "thin": 100,
+    "extra-light": 200,
+    "ultra-light": 200,
+    "light": 300,
+    "normal": 400,
+    "book": 400,
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "semibold": 600,
+    "demi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "ultra-bold": 900,
+    "heavy": 900,
+    "black": 900,
+    "ultra": 900,
+    "ultra-black": 900,
+    "extra-ultra": 900,
   ),
   $amb-font-weight-map
 );
-$amb-base-font-weight: amb-font-weight('base');
+$amb-base-font-weight: amb-font-weight("base");
 
 $amb-typography-style-map: () !default;
 $amb-typography-style-map: map-merge(
   (
-    'heading20': (
-      font-size: amb-font-size('large'),
-      font-weight: amb-font-weight('bold'),
+    "heading20": (
+      font-size: amb-font-size("large"),
+      font-weight: amb-font-weight("bold"),
     ),
-    'heading24': (
-      font-size: amb-font-size('xlarge'),
-      font-weight: amb-font-weight('bold'),
+    "heading24": (
+      font-size: amb-font-size("xlarge"),
+      font-weight: amb-font-weight("bold"),
     ),
-    'bold14': (
-      font-size: amb-font-size('small'),
-      font-weight: amb-font-weight('bold'),
+    "bold14": (
+      font-size: amb-font-size("small"),
+      font-weight: amb-font-weight("bold"),
     ),
-    'bold16': (
-      font-size: amb-font-size('base'),
-      font-weight: amb-font-weight('bold'),
+    "bold16": (
+      font-size: amb-font-size("base"),
+      font-weight: amb-font-weight("bold"),
     ),
-    'regular14': (
-      font-size: amb-font-size('small'),
-      font-weight: amb-font-weight('regular'),
+    "regular14": (
+      font-size: amb-font-size("small"),
+      font-weight: amb-font-weight("regular"),
     ),
-    'regular16': (
-      font-size: amb-font-size('base'),
-      font-weight: amb-font-weight('regular'),
+    "regular16": (
+      font-size: amb-font-size("base"),
+      font-weight: amb-font-weight("regular"),
     ),
-    'caption12': (
-      font-size: amb-font-size('xsmall'),
-      font-weight: amb-font-weight('regular'),
+    "caption12": (
+      font-size: amb-font-size("xsmall"),
+      font-weight: amb-font-weight("regular"),
     ),
   ),
   $amb-typography-style-map
@@ -131,28 +146,28 @@ $amb-typography-style-map: map-merge(
 $amb-line-height-map: () !default;
 $amb-line-height-map: map-merge(
   (
-    'xsmall': 1,
-    'small': 1.25,
-    'base': 1.5,
-    'large': 1.75,
-    'xlarge': 2,
+    "xsmall": 1,
+    "small": 1.25,
+    "base": 1.5,
+    "large": 1.75,
+    "xlarge": 2,
   ),
   $amb-line-height-map
 );
-$amb-base-line-height: amb-line-height('base');
+$amb-base-line-height: amb-line-height("base");
 
 /// Letter spacings/Tracking
 $amb-letter-spacing: 0px !default;
 $amb-letter-spacing-map: () !default;
 $amb-letter-spacing-map: map-merge(
   (
-    '2xtight': rem(-2px),
-    'xtight': rem(-1px),
-    'tight': rem(-0.5px),
-    'base': 0,
-    'loose': rem(0.5px),
-    'xloose': rem(1px),
-    '2xloose': rem(2px),
+    "2xtight": rem(-2px),
+    "xtight": rem(-1px),
+    "tight": rem(-0.5px),
+    "base": 0,
+    "loose": rem(0.5px),
+    "xloose": rem(1px),
+    "2xloose": rem(2px),
   ),
   $amb-letter-spacing-map
 );
@@ -160,12 +175,12 @@ $amb-letter-spacing-map: map-merge(
 $amb-text-transform-map: () !default;
 $amb-text-transform-map: map-merge(
   (
-    'none': none,
-    'uppercase': uppercase,
-    'lowercase': lowercase,
-    'capitalize': capitalize,
+    "none": none,
+    "uppercase": uppercase,
+    "lowercase": lowercase,
+    "capitalize": capitalize,
   ),
   $amb-text-transform-map
 );
 
-$amb-text-alignment-map: ('left', 'center', 'right', 'justify') !default;
+$amb-text-alignment-map: ("left", "center", "right", "justify") !default;
