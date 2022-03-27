@@ -1,39 +1,13 @@
 @import '@amar-ui-web/core/helpers';
 @import './functions';
+@import './font-faces';
 
 /// Font families
-$font-url: '~@amar-ui-web/core/fonts';
-
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url($font-url + '/Roboto-Regular.eot');
-  src: url($font-url + '/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-    url($font-url + '/Roboto-Regular.woff2') format('woff2'),
-    url($font-url + '/Roboto-Regular.woff') format('woff'),
-    url($font-url + '/Roboto-Regular.ttf') format('truetype'),
-    url($font-url + '/Roboto-Regular.svg#Roboto-Regular') format('svg');
-  font-display: swap;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url($font-url + '/Roboto-Bold.eot');
-  src: url($font-url + '/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-    url($font-url + '/Roboto-Bold.woff2') format('woff2'),
-    url($font-url + '/Roboto-Bold.woff') format('woff'),
-    url($font-url + '/Roboto-Bold.ttf') format('truetype'),
-    url($font-url + '/Roboto-Bold.svg#Roboto-Bold') format('svg');
-  font-display: swap;
-  font-weight: 700;
-}
-
-$amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+$amb-font-family-sans-serif: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
   'Helvetica Neue', Arial, sans-serif !default;
 $amb-font-family-serif: Georgia, 'Times New Roman', serif !default;
 $amb-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono',
   'Liberation Mono', 'Courier New', monospace !default;
-$amb-font-family-roboto: 'Roboto', sans-serif !default;
 
 $amb-font-family-map: () !default;
 $amb-font-family-map: map-merge(
@@ -41,7 +15,6 @@ $amb-font-family-map: map-merge(
     'sans-serif': $amb-font-family-sans-serif,
     'serif': $amb-font-family-serif,
     'monospace': $amb-font-family-monospace,
-    'roboto': $amb-font-family-roboto,
   ),
   $amb-font-family-map
 );

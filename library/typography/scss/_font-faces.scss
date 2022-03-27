@@ -1,0 +1,25 @@
+$font-url: '~@amar-ui-web/core/fonts';
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url($font-url + '/Roboto-Regular.eot');
+  src: url($font-url + '/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url($font-url + '/Roboto-Regular.woff2') format('woff2'),
+    url($font-url + '/Roboto-Regular.woff') format('woff'),
+    url($font-url + '/Roboto-Regular.ttf') format('truetype'),
+    url($font-url + '/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url($font-url + '/Roboto-Bold.eot');
+  src: url($font-url + '/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url($font-url + '/Roboto-Bold.woff2') format('woff2'),
+    url($font-url + '/Roboto-Bold.woff') format('woff'),
+    url($font-url + '/Roboto-Bold.ttf') format('truetype'),
+    url($font-url + '/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-display: swap;
+  font-weight: 700;
+}

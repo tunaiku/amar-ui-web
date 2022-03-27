@@ -58,19 +58,6 @@ module.exports = env => {
             },
           ],
         },
-        {
-          test: /\.(ttf|eot|woff|woff2|svg)$/,
-          include: path.resolve(__dirname, './library/core/dist'),
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/',
-              publicPath: './library/core/dist',
-              esModule: false,
-            },
-          },
-        }
       ],
     },
     optimization: {
