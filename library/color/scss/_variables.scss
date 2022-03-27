@@ -20,8 +20,9 @@ $amb-neutral-40: tint($amb-neutral, 20%);
 $amb-neutral-50: $amb-neutral;
 $amb-neutral-60: shade($amb-neutral, 20%);
 $amb-neutral-70: shade($amb-neutral, 40%);
-$amb-neutral-80: shade($amb-neutral, 60%);
+$amb-neutral-80: $gray-dark;
 $amb-neutral-90: shade($amb-neutral, 80%);
+$amb-neutral-100: $gray-darker;
 
 /// Map variables for color themes.
 ///
@@ -40,6 +41,7 @@ $amb-color-theme-map: map-merge(
     'lighter': $amb-neutral-10,
     'dark': $amb-neutral-80,
     'darker': $amb-neutral-90,
+    'darkest': $amb-neutral-100,
   ),
   $amb-color-theme-map
 );
