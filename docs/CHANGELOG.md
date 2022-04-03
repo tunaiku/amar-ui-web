@@ -10,15 +10,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * add design system v1.2 adjustments and additions ([c29c750](https://github.com/tunaiku/amar-ui-web/commit/c29c7500294dc9eeb34087b58d144521d16aa884))
 * temp ([b5ff97b](https://github.com/tunaiku/amar-ui-web/commit/b5ff97b220499fe0f1da03b77afb4a752a9448b8))
-
-
-
-
-
-# [1.5.0](https://github.com/tunaiku/amar-ui-web/compare/v1.4.1...v1.5.0) (2022-01-17)
-
-
-### Features
-
-* prepare lerna version ([f4fe6d6](https://github.com/tunaiku/amar-ui-web/commit/f4fe6d69a4612efd00eba4cb18d21bdc6610a035))
-* temp ([b5ff97b](https://github.com/tunaiku/amar-ui-web/commit/b5ff97b220499fe0f1da03b77afb4a752a9448b8))

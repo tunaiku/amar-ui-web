@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/dkk94/amar-ui-web/compare/v1.4.1...v1.5.0) (2022-04-03)
+
+
+### Features
+
+* add design system v1.2 adjustments and additions ([c29c750](https://github.com/dkk94/amar-ui-web/commit/c29c7500294dc9eeb34087b58d144521d16aa884))
+* temp ([b5ff97b](https://github.com/dkk94/amar-ui-web/commit/b5ff97b220499fe0f1da03b77afb4a752a9448b8))
+
+
+
+
+
 ## [1.4.1](https://github.com/dkk94/amar-ui-web/compare/v1.4.0...v1.4.1) (2021-03-24)
 
 **Note:** Version bump only for package amar-ui-web

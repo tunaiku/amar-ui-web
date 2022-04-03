@@ -6,7 +6,7 @@
   "dependencies": {
     "@amar-ui-web/color": "^1.5.0",
     "@amar-ui-web/spacing": "^1.5.0",
-    "@amar-ui-web/typography": "^1.3.1"
+    "@amar-ui-web/typography": "^1.5.0"
   },
   "publishConfig": {
     "access": "public"
