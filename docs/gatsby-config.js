@@ -1,14 +1,21 @@
 module.exports = {
   siteMetadata: {
     title: 'Amar UI Web',
+    titleTemplate: '%s · Amar UI Web',
     description:
       '⚡️ CSS library of components, layouts and utilities based on Amar Design System ⚡️',
     author: `David Kurnia Kristiadi @dkk94`,
+    siteUrl: 'https://amar-ui.netlify.app',
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-mdx',
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
