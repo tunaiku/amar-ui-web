@@ -1,12 +1,11 @@
-import React from 'react';
-import { AppLayout } from '@layouts/app-layout';
+import React, { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
 const IndexPage = () => {
-  return (
-    <AppLayout>
-      <p>tes</p>
-    </AppLayout>
-  );
+  useEffect(() => {
+    navigate('/getting-started');
+  }, []);
+  return null;
 };
 
 export default IndexPage;
