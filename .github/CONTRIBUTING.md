@@ -1,6 +1,27 @@
-# Contributing to Amar UI Web
+Hi, welcome aboard! We are glad you've taken an interest in contributing to this project! Please
+take a time to read through this README to have a better understanding on how the project is
+structured.
 
-Hi, welcome aboard! We are glad you've taken an interest in contributing to this project!
+# Project Overview
+
+Amar UI Web is a collection of styles written in Sass (SCSS) which is split into two main folders
+`library/` and `docs/`.
+
+The `library/` folder is where you will find the styles for all components, utilities, layouts, or
+as we call them modules, each of which is split into **packages**.
+
+To manage these packages, Amar UI Web uses the combination of **Lerna** and **Yarn Workspaces**.
+
+- **Yarn Workspaces** will help in linking one package with another without directly adding the
+  dependency to each one during development if needed (although it will still need to be added to
+  the `package.json` of each module to avoid any missing dependencies when installed).
+- **Lerna** helps with managing and publishing the modules inside the `/library` folder to the npm
+  registry and control the versioning of each package.
+
+On the other hand, the `/docs` directory is the place in which you can find the source code of the
+documentation.
+
+# Start contributing
 
 You can contribute to the project in several ways:
 
