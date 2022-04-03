@@ -1,18 +1,20 @@
 ---
 path: '/getting-started/naming-convention'
 title: 'Naming Convention'
-description: 'Learn the naming convention that is better used for Amar UI.'
+description:
+  'Learn the naming convention used within the library and how you could apply it in creating new
+  things.'
 ---
 
 Amar UI's naming conventions are highly influenced from SUIT CSS and is adapted from them. It relies
 on structured class names and meaningful hyphens (i.e., not using hyphens merely to separate words).
 
-## Principles
+## Core principles
 
 Strictly adhere to the agreed-upon style guide listed below. The general principle is to develop
-**DRY (Don't Repeat Yourself)** SCSS, built around reusable components and patterns.
+**DRY (Don't Repeat Yourself)** SCSS, built around reusablity and maintainability.
 
-- All code should look like a single person has typed it.
+- All code should look as if a single person has coded it.
 - Don't try to prematurely optimize your code; keep it readable and understandable.
 - When building a component, always start by looking at existing patterns.
 - Break down complex components until they are made up of simple components.
@@ -41,7 +43,7 @@ The component name must be written in **pascal case**.
 #### `ComponentName-partName`
 
 Parts live in the descendant nodes of a component and are integral pieces that form the entirety of
-a component. Component parts must be written in **camel case** following a single hyphen.
+a component. Component parts must be written after a **single hyphen** and in `camelCase` syntax.
 
 ```html
 <div class="Card">
@@ -59,7 +61,8 @@ a component. Component parts must be written in **camel case** following a singl
 #### `ComponentName--modifierName`
 
 A component can have multiple modifiers; that is responsible in modifying the presentation of the
-base component. Component modifiers must be written in **camel case** following double hyphens.
+base component. Component modifiers must be written after **double hyphens** and in `camelCase`
+syntax.
 
 ```scss
 .Button { ... }
@@ -67,7 +70,6 @@ base component. Component modifiers must be written in **camel case** following 
 ```
 
 ```html
-<!-- Modifier to apply primary fill to a standard button -->
 <button class="Button Button--primary"></button>
 ```
 
@@ -76,17 +78,45 @@ base component. Component modifiers must be written in **camel case** following 
 Utility classes can be used in any elements and contexts as you see fit; they can be used in
 conjunction with component classes and can also be used together one another.
 
-To write a utility class, follow the syntax of `UtilityName-value`. Utility classes should be
-written in **pascal case**, similar to component classes, followed by its value in **camel case**.
-Non-value utility classes are implementable which apply the default value of the utility class.
+To write a utility class, follow the complete syntax of `ComponentName(-valueName)` which is broken
+up into 2 integral parts.
+
+#### `UtilityName`
+
+The utility name should be written in `PascalCase`. These apply the **base or default value** of the
+utility class. Utility name must convey the property or value that it wants to apply.
+
+```css
+.FontWeight {
+  font-weight: regular;
+}
+```
 
 ```html
-<!-- Without value = base value -->
-<div class="TextTransform">Use on its own</div>
+<div class="FontWeight">Applies the `font-weight: regular` which is the default weight.</div>
+```
 
-<!-- Has a single value -->
-<div class="FontWeight-bold">Has a single value</div>
+#### `UtilityName-value`
 
-<!-- Used in combination -->
-<div class="Flex JustifyContent-end AlignItems-end">...</div>
+The utility value must be written after a **single hyphen** and in `camelCase` syntax. Utility
+values can be alphanumerical.
+
+```scss
+// Font Weight
+.FontWeight-bold { ... }
+
+// Flex
+.Flex { ... }
+.JustifyContent-end { ... }
+.AlignItems-end { ... }
+
+// Grids
+.Grid
+.Grid-6 { ... }
+```
+
+```html
+<div class="FontWeight-bold">I'm bold!</div>
+<div class="Flex JustifyContent-end AlignItems-end">I'm aligned!</div>
+<div class="Grid Grid-6">I'm a grid layout!</div>
 ```

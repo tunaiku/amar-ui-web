@@ -4,21 +4,38 @@ title: 'Snackbar'
 description: 'Displays short messages to inform users about processes and feedbacks from an action.'
 ---
 
+import { CodePreviewDisplay, CodePreviewBlock } from '@components/code-preview';
+
 ## Usage
 
 Below is a static snackbar example (you will need to add the wrapper with `.Snackbar` class first
 since it provides necessary styles to make it appear fixed on screen, see live example below).
 
-```html size=compact
-<div class="Snackbar-dialog">
-  <div class="Snackbar-text">
-    A single line message.
-  </div>
-  <div class="Snackbar-actions">
-    <button class="Snackbar-action">Action</button>
+<div class="CodePreview">
+  <CodePreviewDisplay size="compact">
+    <div class="Snackbar-dialog">
+      <div class="Snackbar-text">A single line message.</div>
+      <div class="Snackbar-actions">
+        <button class="Snackbar-action">Action</button>
+      </div>
+    </div>
+  </CodePreviewDisplay>
+  <CodePreviewBlock
+    language={'html'}
+    codeString={`
+<div class="Snackbar">
+  <div class="Snackbar-dialog">
+    <div class="Snackbar-text">
+      A single line message.
+    </div>
+    <div class="Snackbar-actions">
+      <button class="Snackbar-action">Action</button>
+    </div>
   </div>
 </div>
-```
+`}
+  />
+</div>
 
 ## Longer Action Button
 

@@ -13,6 +13,11 @@
     border-radius: amb-border-radius('base');
     font-size: amb-font-size('small');
 
+    &-text {
+      display: flex;
+      align-items: center;
+    }
+
     &-text,
     &-action {
       padding: amb-spacing('base');

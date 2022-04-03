@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/tunaiku/amar-ui-web/compare/v1.4.1...v1.5.0) (2022-01-17)
+
+**Note:** Version bump only for package @amar-ui-web/radio
+
+
+
+
+
 # [1.3.0](https://github.com/tunaiku/amar-ui-web/compare/v1.2.2...v1.3.0) (2021-02-10)
 
 

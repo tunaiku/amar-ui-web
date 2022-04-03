@@ -1,0 +1,49 @@
+---
+path: '/components/dialog'
+title: 'Dialog'
+description: "A modal that interrupts and demands immediate response 
+from the user. It covers the whole front of the primary content until dismissed or confirmed."
+---
+
+import { CodePreviewDisplay, CodePreviewBlock } from '@components/code-preview';
+
+## Usage
+
+Below is a static dialog example. To be noted that you will need to **add the wrapper class
+`.Dialog` first** since it provides necessary styles to make it appear fixed on screen.
+
+<div class="CodePreview">
+  <CodePreviewDisplay bgColor="neutral.20">
+    <div class="Dialog-box Margin-auto">
+      <div class="Dialog-header">
+        <h5 class="Dialog-title">Dialog Title</h5>
+      </div>
+      <div class="Dialog-content">
+        <p>Description text here.</p>
+      </div>
+      <div class="Dialog-actions">
+        <button class="Button Button--text MarginRight-2xsmall Button--primary">Decline</button>
+        <button class="Button Button--primary">Submit</button>
+      </div>
+    </div>
+  </CodePreviewDisplay>
+  <CodePreviewBlock
+    language={'html'}
+    codeString={`
+<div class="Dialog">
+  <div class="Dialog-box Margin-auto">
+    <div class="Dialog-header">
+      <h5 class="Dialog-title">Dialog Title</h5>
+    </div>
+    <div class="Dialog-content">
+      <p>Description text here.</p>
+    </div>
+    <div class="Dialog-actions">
+      <button class="Button Button--text MarginRight-2xsmall Button--primary">Decline</button>
+      <button class="Button Button--primary">Submit</button>
+    </div>
+  </div>
+</div>
+`}
+  />
+</div>

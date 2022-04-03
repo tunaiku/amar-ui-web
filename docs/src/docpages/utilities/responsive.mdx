@@ -1,0 +1,51 @@
+---
+path: '/utilities/responsive'
+title: 'Responsive'
+description: 'Build responsive user interfaces with predetermined media breakpoints.'
+---
+
+## Breakpoints
+
+```scss
+// Small (sm) breakpoint.
+@media (min-width: 576px) {
+  /* ... */
+}
+
+// Medium (md) breakpoint.
+@media (min-width: 768px) {
+  /* ... */
+}
+
+// Large (lg) breakpoint.
+@media (min-width: 1024px) {
+  /* ... */
+}
+
+// Extra large (xl) breakpoint.
+@media (min-width: 1200px) {
+  /* ... */
+}
+```
+
+## Responsive mixins
+
+- You can set up properties that will only be applied in certain breakpoint.
+- Include `amb-responsive-media()` mixin with the preferred breakpoint.
+- Combine more than one breakpoints to achieve responsive design in multiple breakpoints.
+
+```scss
+@import '@amar-ui-web/responsive';
+
+.SomeElement {
+  // The rest of properties will be applied in all breakpoints unless overriden.
+
+  @include amb-responsive-media('sm') {
+    // Apply properties within 'sm' breakpoint here.
+  }
+
+  @include amb-responsive-media('lg') {
+    // Apply properties within 'lg' breakpoint here.
+  }
+}
+```

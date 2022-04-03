@@ -1,0 +1,25 @@
+@import '@amar-ui-web/typography/scss';
+@import '@amar-ui-web/color/scss';
+@import '@amar-ui-web/spacing/scss';
+
+@mixin amb-create-toast-classes() {
+  .Toast {
+    @include amb-typography-style('regular14');
+    display: inline-flex;
+    align-items: center;
+    color: amb-neutral(10);
+    border-radius: amb-border-radius('round');
+    background-color: rgba(black, 0.7);
+
+    &-icon {
+      @include amb-append-icon-core-styles();
+      @include amb-create-icon-size-variants();
+      padding: amb-spacing('xsmall');
+    }
+
+    &-text {
+      padding: amb-spacing('xsmall') 0;
+      padding-right: amb-spacing('base');
+    }
+  }
+}

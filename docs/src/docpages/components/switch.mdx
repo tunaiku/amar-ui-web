@@ -1,0 +1,19 @@
+---
+path: '/components/switch'
+title: 'Switch'
+description: 'Change a state of an input between two opposing states, like on or off.'
+---
+
+## Usage
+
+```html preview=true
+<div class="Switch">
+  <input class="Switch-input" type="checkbox" id="switchTest" />
+  <label class="Switch-thumb" for="switchTest"></label>
+  <label class="Switch-track" for="switchTest"></label>
+</div>
+```
+
+- In `.Switch-input` element, don't forget to provide the `id` attribute.
+- In `.Switch-thumb` and `.Switch-track` elements, the `for` attribute must be provided and **must
+  match** with the `id` in `.Switch-input` element.

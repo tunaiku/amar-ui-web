@@ -14,8 +14,8 @@
   "scripts": {
     "build": "webpack --mode=development --env.NODE_ENV=development --progress --colors --display=minimal",
     "build:all": "yarn build && yarn build:min",
-    "build:min": "webpack --mode=production --env.NODE_ENV=production --progress --colors --display=minimal",
     "build:docs": "lerna exec --scope=@amar-ui-web/docs -- yarn build",
+    "build:min": "webpack --mode=production --env.NODE_ENV=production --progress --colors --display=minimal",
     "start:docs": "lerna exec --scope=@amar-ui-web/docs -- yarn start"
   },
   "config": {
@@ -23,21 +23,22 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^9.7.3",
     "compression-webpack-plugin": "^3.1.0",
     "css-loader": "^3.4.1",
     "cz-conventional-changelog": "3.0.2",
+    "lerna": "^4.0.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "path": "^0.12.7",
     "postcss-cli": "^6.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.5",
     "prettier-webpack-plugin": "^1.2.0",
-    "react-jsx-parser": "^1.21.0",
+    "sass": "^1.49.7",
     "sass-loader": "^8.0.0",
+    "stylelint-scss": "^4.1.0",
     "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }

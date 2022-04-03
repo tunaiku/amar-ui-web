@@ -1,5 +1,6 @@
-@import '@amar-ui-web/spacing/scss/mixins';
-@import '@amar-ui-web/typography/scss/mixins';
+@import '@amar-ui-web/spacing/scss';
+@import '@amar-ui-web/typography/scss';
+@import '@amar-ui-web/color/scss';
 @import './variables';
 
 @mixin amb-circular-stepper-classes() {
@@ -15,9 +16,9 @@
       display: flex;
       flex-direction: row;
       background-image: conic-gradient(
-        amb-color-theme('secondary') 216deg,
-        amb-color-theme('secondary', 10) 216deg,
-        amb-color-theme('secondary', 10) 360deg
+        amb-color-accent('blue') 120deg,
+        amb-color-accent('lightblue') 120deg,
+        amb-color-accent('lightblue') 360deg
       );
 
       &::before {
@@ -138,7 +139,7 @@
 
     &-stepSubtitle {
       @include amb-typography-style('regular14');
-      color: amb-color-theme('neutral', 60);
+      color: amb-neutral(60);
     }
   }
 }

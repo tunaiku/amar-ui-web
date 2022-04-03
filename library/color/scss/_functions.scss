@@ -25,7 +25,41 @@
   @return amb-color-shade($color-hex, $shade-level);
 }
 
-/// Returns a different shade of the given color value.
+/// Returns the color value of the requested color accent.
+///
+/// @param {String} $color-accent
+/// @example amb-color-accent("lightblue")
+///
+@function amb-color-accent($color-accent, $shade-level: 50) {
+  @if not map-has-key($amb-color-accent-map, $color-accent) {
+    @error "The accent '#{$color-accent}' is not found in '$amb-color-accent-map' variable map!";
+  }
+
+  $color-hex: map-get($amb-color-accent-map, $color-accent);
+  @return amb-color-shade($color-hex, $shade-level);
+}
+
+/// Returns the hex value from the requested neutral level. Defaults to 50.
+///
+/// @param {String} $color-accent
+/// @example amb-color-accent("lightblue")
+///
+@function amb-neutral($neutral-level: 50) {
+  $temp-neutral-level: $neutral-level !default;
+
+  @if type_of($neutral-level) == 'string' {
+    $temp-neutral-level: unquote($neutral-level);
+  }
+
+  @if not map-has-key($amb-neutral-map, $temp-neutral-level) {
+    @error "The level #{$temp-neutral-level} is not found in '$amb-neutral-map' variable map!";
+  }
+
+  @return map-get($amb-neutral-map, $temp-neutral-level);
+}
+
+/// Returns another shade of the requested color value.
+/// Default $shade-level is 50 which is the original color value.
 ///
 /// @param {Number} $color-value
 /// @example amb-color-shade(#abc123, 50)
@@ -33,7 +67,7 @@
 @function amb-color-shade($color-value, $shade-level: 50) {
   // returns the absolute value of $shade-level and round it to the nearest multiplication of 10.
   @if $shade-level > 100 or $shade-level < 0 {
-    @error "$shade-level value cannot exceeds 100 or less than 0!";
+    @error "$shade-level value cannot exceed 100 or less than 0!";
   }
 
   @if $shade-level > 50 {
@@ -47,7 +81,7 @@
 
 /// The shorthand version of amb-color-theme and amb-color-shade functions.
 ///
-/// Gets the color value from the given color theme (e.g primary) and returns a different shade variant
+/// Gets the color value from the given color theme (e.g "primary") and returns a different shade variant
 /// of the color value using the tinter shader function of the specified shade level.
 ///
 /// Color theme should be available in $amb-color-theme-map variable map, otherwise it will return an error.
@@ -64,7 +98,7 @@
 }
 
 /// A shorthand function to get a specific opacity level of the selected color theme.
-/// This will also return an rgba value instead of raw hex value.
+/// Return the rgba value instead of hex value.
 ///
 /// @param {String} $color-theme
 /// @param {Number} $opacity-level
@@ -73,6 +107,19 @@
 @function amb-color-theme-opacity($color-theme, $opacity-level: 1) {
   $color-value: amb-color-theme($color-theme);
   @return rgba($color-value, $opacity-level);
+}
+
+/// A shorthand function to get a specific opacity level of the selected neutral level.
+/// Return the rgba value instead of hex value.
+///
+/// @param {String} $color-theme
+/// @param {Number} $opacity-level
+/// @example amb-neutral-opacity("primary", 0.9)
+///
+@function amb-neutral-opacity($neutral-level, $opacity-level: 1) {
+  $hex-value: amb-neutral($neutral-level);
+
+  @return rgba($hex-value, $opacity-level);
 }
 
 /// Returns an accessible contrasting color against the given color value.

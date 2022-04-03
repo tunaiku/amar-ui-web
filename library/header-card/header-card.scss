@@ -25,11 +25,12 @@
   }
 
   &-action {
-    @include amb-reset-button-appearance();
     color: amb-color-theme('secondary');
     text-transform: uppercase;
     font-size: amb-font-size('xsmall');
     letter-spacing: 0.4px;
-    font-weight: amb-font-weight('medium');
+    display: flex;
+    font-weight: amb-font-weight('semibold');
+    cursor: pointer;
   }
 }

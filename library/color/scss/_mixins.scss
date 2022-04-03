@@ -1,72 +1,84 @@
 @import './variables';
 
 @mixin amb-create-text-color-classes() {
-  $stylerules: ('Color');
-
-  @each $stylerule in $stylerules {
-    .#{$stylerule} {
-      @include amb-create-color-themes($color-type: 'text');
-      @include amb-create-color-helpers($color-type: 'text');
-    }
+  .Color {
+    @include amb-create-color-themes($property: 'color');
+    @include amb-create-color-accents($property: 'color');
+    @include amb-create-neutrals($property: 'color');
+    @include amb-create-color-helpers($property: 'color');
   }
 }
 
 @mixin amb-create-bg-color-classes() {
-  $stylerules: ('BgColor', 'BackgroundColor');
+  .BackgroundColor,
+  .BgColor {
+    @include amb-create-color-themes($property: 'background-color');
+    @include amb-create-color-accents($property: 'background-color');
+    @include amb-create-neutrals($property: 'background-color');
+    @include amb-create-color-helpers($property: 'background-color');
+  }
+}
 
-  @each $stylerule in $stylerules {
-    .#{$stylerule} {
-      @include amb-create-color-themes($color-type: 'background');
-      @include amb-create-color-helpers($color-type: 'background');
+@mixin amb-create-color-themes($property) {
+  @each $color-theme, $color-theme-value in $amb-color-theme-map {
+    &-#{$color-theme} {
+      #{$property}: $color-theme-value !important;
+
+      @if $property == 'background-color' {
+        color: amb-color-contrast($color-theme-value);
+      }
+
+      // Creates color variants for the color theme
+      @include amb-append-color-shade-variants($property, $color-theme-value);
     }
   }
 }
 
-@mixin amb-create-color-themes($color-type) {
-  $color-type-property: if($color-type == 'background', 'background-color', 'color');
+@mixin amb-create-color-accents($property) {
+  @each $color-accent, $color-accent-value in $amb-color-accent-map {
+    &-#{$color-accent} {
+      #{$property}: $color-accent-value !important;
 
-  @each $color-theme, $color-theme-value in $amb-color-theme-map {
-    &-#{$color-theme} {
-      @include amb-append-color-shade-variants($color-type, $color-theme);
+      @if $property == 'background-color' {
+        color: amb-color-contrast($color-accent-value);
+      }
 
-      #{$color-type-property}: $color-theme-value !important;
+      // Creates color variants for the color theme
+      @include amb-append-color-shade-variants($property, $color-accent-value);
+    }
+  }
+}
 
-      @if $color-type == 'background' {
-        color: amb-color-contrast($color-theme-value);
+@mixin amb-create-neutrals($property) {
+  @each $level, $color-hex in $amb-neutral-map {
+    &-neutral-#{$level} {
+      #{$property}: $color-hex !important;
+
+      @if $property == 'background-color' {
+        color: amb-color-contrast($color-hex);
       }
     }
   }
 }
 
-@mixin amb-append-color-shade-variants($color-type, $color-theme) {
-  @if not $color-theme {
-    @error 'You must pass $color-theme value to use this mixin!';
-  } @else if not $color-type {
-    @error 'You must pass $color-type value to use this mixin!';
-  }
-
-  $color-theme-value: amb-color-theme($color-theme);
-  $color-type-property: if($color-type == 'background', 'background-color', 'color');
-
+@mixin amb-append-color-shade-variants($property, $color-value) {
   @for $shade-index from 1 through 100 {
     @if $shade-index % 10 == 0 {
-      $color-value: amb-color-shade($color-theme-value, $shade-index);
+      $color-shade-value: amb-color-shade($color-value, $shade-index);
 
       &-#{$shade-index} {
-        #{$color-type-property}: $color-value !important;
+        #{$property}: $color-shade-value !important;
 
-        @if $color-type == 'background' {
-          color: amb-color-contrast($color-value);
+        @if $property == 'background-color' {
+          color: amb-color-contrast($color-shade-value);
         }
       }
     }
   }
 }
 
-@mixin amb-create-color-helpers($color-type) {
-  $color-type-property: if($color-type == 'background', 'background-color', 'color');
-
+@mixin amb-create-color-helpers($property) {
   &-transparent {
-    #{$color-type-property}: transparent !important;
+    #{$property}: transparent !important;
   }
 }

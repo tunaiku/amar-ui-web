@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { graphql, Link } from 'gatsby';
-import classNames from 'classnames';
 import { useLocation } from '@reach/router';
+import classNames from 'classnames';
 import AppContext from '@contexts/app.context';
+import { AppLayout } from '@layouts/app-layout';
 import { Markdown } from '@components/markdown';
+import { SEO } from '@components/seo';
 
-import { AppLayout } from '../app-layout';
 import './docpage-layout.scss';
 
 export const pageQuery = graphql`
@@ -40,6 +41,7 @@ const DocpageLayout = ({ data: { mdx, allMdx } }) => {
 
   return (
     <AppLayout>
+      <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.description} />
       <div className={classNames('Docpage', isMenuOpen && 'is-menu-open')}>
         <div className="Container Flex">
           <div className="Docpage-sidebar">
@@ -50,10 +52,10 @@ const DocpageLayout = ({ data: { mdx, allMdx } }) => {
                 const pathArray = frontmatter.path.split('/');
                 const categoryPath = pathArray[1];
 
-                if (!currentLocation.includes(categoryPath)) return;
+                if (!currentLocation.includes(categoryPath)) return null;
 
                 return (
-                  <div className="Sidenav-item">
+                  <div className="Sidenav-item" key={node.id}>
                     <Link
                       to={frontmatter.path}
                       onClick={() => setIsMenuOpen(!isMenuOpen)}

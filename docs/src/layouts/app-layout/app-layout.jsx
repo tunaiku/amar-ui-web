@@ -1,13 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import AppContext from '@contexts/app.context';
-import '@styles/index.scss';
 
 import './app-layout.scss';
 
 const AppLayout = ({ children }) => {
   const { isMenuOpen, setIsMenuOpen } = useContext(AppContext);
-  console.log(isMenuOpen);
 
   return (
     <div className="App">
@@ -42,6 +40,17 @@ const AppLayout = ({ children }) => {
               <div className="Navbar-link">
                 <Link to="/components" activeClassName="is-active" partiallyActive>
                   Components
+                </Link>
+              </div>
+              <div className="Navbar-link">
+                <Link to="/utilities" activeClassName="is-active" partiallyActive>
+                  Utilities
+                </Link>
+              </div>
+
+              <div className="Navbar-link">
+                <Link to="/foundations" activeClassName="is-active" partiallyActive>
+                  Foundations
                 </Link>
               </div>
             </div>

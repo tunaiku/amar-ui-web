@@ -1,0 +1,278 @@
+---
+path: '/foundations/color-system'
+title: 'Color System'
+description: 'The unified color language of Amar UI'
+---
+
+## Brand colors
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-3">
+    <div className="BgColor-primary Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Primary</p>
+      <code>#48a800</code>
+    </div>
+  </div>
+  <div className="Grid Grid-3">
+    <div className="BgColor-secondary Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Secondary</p>
+      <code>#005fff</code>
+    </div>
+  </div>
+</div>
+
+## Neutral colors
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-3">
+    <div className="BgColor-neutral Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Neutral</p>
+      <code>#cdd0d6</code>
+    </div>
+  </div>
+</div>
+
+## Accent colors
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-3">
+    <div className="BgColor-green Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Green</p>
+      <code>#007200</code>
+    </div>
+  </div>
+  <div className="Grid Grid-3">
+    <div className="BgColor-lightgreen Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Light Green</p>
+      <code>#eff9e6</code>
+    </div>
+  </div>
+</div>
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-3">
+    <div className="BgColor-yellow Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Yellow</p>
+      <code>#ffd500</code>
+    </div>
+  </div>
+  <div className="Grid Grid-3">
+    <div className="BgColor-lightyellow Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Light Yellow</p>
+      <code>#fef9e5</code>
+    </div>
+  </div>
+  <div className="Grid Grid-3">
+    <div className="BgColor-darkyellow Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Dark Yellow</p>
+      <code>#8e6a10</code>
+    </div>
+  </div>
+</div>
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-3">
+    <div className="BgColor-blue Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Blue</p>
+      <code>#1564ec</code>
+    </div>
+  </div>
+  <div className="Grid Grid-3">
+    <div className="BgColor-lightblue Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Light Blue</p>
+      <code>#e2f3ff</code>
+    </div>
+  </div>
+</div>
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-3">
+    <div className="BgColor-red Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Red</p>
+      <code>#dd1717</code>
+    </div>
+  </div>
+  <div className="Grid Grid-3">
+    <div className="BgColor-lightred Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Light Red</p>
+      <code>#ffeaec</code>
+    </div>
+  </div>
+</div>
+
+## Themes
+
+Based on accent colors but with context.
+
+<div className="Grids Grids--gapless MarginBottom">
+  <div className="Grid Grid-4">
+    <div className="BgColor-success Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Success, Positive</p>
+      <code>#08b800</code>
+    </div>
+  </div>
+  <div className="Grid Grid-4">
+    <div className="BgColor-warning Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Warning, Caution</p>
+      <code>#ffd500</code>
+    </div>
+  </div>
+  <div className="Grid Grid-4">
+    <div className="BgColor-danger Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Danger, Error, Negative</p>
+      <code>#dd1717</code>
+    </div>
+  </div>
+  <div className="Grid Grid-4">
+    <div className="BgColor-info Flex Flex-column JustifyContent-center AlignItems-center Padding">
+      <p className="Typography-regular16 FontWeight-semibold">Information</p>
+      <code>#0079ff</code>
+    </div>
+  </div>
+</div>
+
+## Shades
+
+Each color type be it a brand color, or an accent color **except neutral color** have shades that
+are automatically generated using a built-in tinter and shader function. These functions
+respectively mixes a color with a mixture of pure black (`#000000`) and white (`#ffffff`).
+
+Each shade is represented in an increment of 10 from 10 to 90. The lightest shade is represented by
+10, and 90 is for the darkest shade. The default shade is 50.
+
+#### Brand color shades
+
+<div className="Grids MarginBottom">
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-primary">Primary (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-10">Primary 10</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-20">Primary 20</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-30">Primary 30</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-40">Primary 40</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-50">Primary 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-60">Primary 60</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-70">Primary 70</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-80">Primary 80</div>
+    <div className="Padding FontWeight-semibold BgColor-primary-90">Primary 90</div>
+  </div>
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-secondary">Secondary (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-10">Secondary 10</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-20">Secondary 20</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-30">Secondary 30</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-40">Secondary 40</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-50">Secondary 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-60">Secondary 60</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-70">Secondary 70</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-80">Secondary 80</div>
+    <div className="Padding FontWeight-semibold BgColor-secondary-90">Secondary 90</div>
+  </div>
+</div>
+
+#### Accent color shades
+
+<div className="Grids MarginBottom">
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-green">Green (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-green-10">Green 10</div>
+    <div className="Padding FontWeight-semibold BgColor-green-20">Green 20</div>
+    <div className="Padding FontWeight-semibold BgColor-green-30">Green 30</div>
+    <div className="Padding FontWeight-semibold BgColor-green-40">Green 40</div>
+    <div className="Padding FontWeight-semibold BgColor-green-50">Green 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-green-60">Green 60</div>
+    <div className="Padding FontWeight-semibold BgColor-green-70">Green 70</div>
+    <div className="Padding FontWeight-semibold BgColor-green-80">Green 80</div>
+    <div className="Padding FontWeight-semibold BgColor-green-90">Green 90</div>
+  </div>
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-red">Red (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-red-10">Red 10</div>
+    <div className="Padding FontWeight-semibold BgColor-red-20">Red 20</div>
+    <div className="Padding FontWeight-semibold BgColor-red-30">Red 30</div>
+    <div className="Padding FontWeight-semibold BgColor-red-40">Red 40</div>
+    <div className="Padding FontWeight-semibold BgColor-red-50">Red 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-red-60">Red 60</div>
+    <div className="Padding FontWeight-semibold BgColor-red-70">Red 70</div>
+    <div className="Padding FontWeight-semibold BgColor-red-80">Red 80</div>
+    <div className="Padding FontWeight-semibold BgColor-red-90">Red 90</div>
+  </div>
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-yellow">Yellow (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-10">Yellow 10</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-20">Yellow 20</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-30">Yellow 30</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-40">Yellow 40</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-50">Yellow 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-60">Yellow 60</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-70">Yellow 70</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-80">Yellow 80</div>
+    <div className="Padding FontWeight-semibold BgColor-yellow-90">Yellow 90</div>
+  </div>
+
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-blue">Blue (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-10">Blue 10</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-20">Blue 20</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-30">Blue 30</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-40">Blue 40</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-50">Blue 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-60">Blue 60</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-70">Blue 70</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-80">Blue 80</div>
+    <div className="Padding FontWeight-semibold BgColor-blue-90">Blue 90</div>
+  </div>
+</div>
+
+#### Theme color shades
+
+<div className="Grids MarginBottom">
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-success">success (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-success-10">success 10</div>
+    <div className="Padding FontWeight-semibold BgColor-success-20">success 20</div>
+    <div className="Padding FontWeight-semibold BgColor-success-30">success 30</div>
+    <div className="Padding FontWeight-semibold BgColor-success-40">success 40</div>
+    <div className="Padding FontWeight-semibold BgColor-success-50">success 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-success-60">success 60</div>
+    <div className="Padding FontWeight-semibold BgColor-success-70">success 70</div>
+    <div className="Padding FontWeight-semibold BgColor-success-80">success 80</div>
+    <div className="Padding FontWeight-semibold BgColor-success-90">success 90</div>
+  </div>
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-danger">danger (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-10">danger 10</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-20">danger 20</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-30">danger 30</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-40">danger 40</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-50">danger 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-60">danger 60</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-70">danger 70</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-80">danger 80</div>
+    <div className="Padding FontWeight-semibold BgColor-danger-90">danger 90</div>
+  </div>
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-warning">warning (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-10">warning 10</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-20">warning 20</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-30">warning 30</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-40">warning 40</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-50">warning 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-60">warning 60</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-70">warning 70</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-80">warning 80</div>
+    <div className="Padding FontWeight-semibold BgColor-warning-90">warning 90</div>
+  </div>
+
+  <div className="Grid Grid-12 Grid-sm-6 Grid-md-3">
+    <div className="Padding FontWeight-semibold BgColor-info">info (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-info-10">info 10</div>
+    <div className="Padding FontWeight-semibold BgColor-info-20">info 20</div>
+    <div className="Padding FontWeight-semibold BgColor-info-30">info 30</div>
+    <div className="Padding FontWeight-semibold BgColor-info-40">info 40</div>
+    <div className="Padding FontWeight-semibold BgColor-info-50">info 50 (Base)</div>
+    <div className="Padding FontWeight-semibold BgColor-info-60">info 60</div>
+    <div className="Padding FontWeight-semibold BgColor-info-70">info 70</div>
+    <div className="Padding FontWeight-semibold BgColor-info-80">info 80</div>
+    <div className="Padding FontWeight-semibold BgColor-info-90">info 90</div>
+  </div>
+</div>

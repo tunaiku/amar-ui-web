@@ -4,20 +4,20 @@ $amb-alert-box-themes: () !default;
 $amb-alert-box-themes: map-merge(
   (
     'success': (
-      color: amb-color-pallete('green'),
-      background-color: amb-color-pallete('light-green'),
+      color: amb-color-accent('green'),
+      background-color: amb-color-accent('lightgreen'),
     ),
     'warning': (
-      color: amb-color-pallete('dark-yellow'),
-      background-color: amb-color-pallete('light-yellow'),
+      color: amb-color-accent('darkyellow'),
+      background-color: amb-color-accent('lightyellow'),
     ),
     'danger': (
-      color: amb-color-pallete('red'),
-      background-color: amb-color-pallete('light-red'),
+      color: amb-color-accent('red'),
+      background-color: amb-color-accent('lightred'),
     ),
     'info': (
-      color: amb-color-pallete('blue'),
-      background-color: amb-color-pallete('light-blue'),
+      color: amb-color-accent('blue'),
+      background-color: amb-color-accent('lightblue'),
     ),
   ),
   $amb-alert-box-themes

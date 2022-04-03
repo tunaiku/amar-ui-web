@@ -33,11 +33,11 @@
     }
 
     &--compact {
-      padding: amb-spacing('base');
+      padding: amb-spacing('large') amb-spacing('base');
 
       @include amb-responsive-media('lg') {
-        padding-left: 10em !important;
-        padding-right: 10em !important;
+        padding-left: 12.5em !important;
+        padding-right: 12.5em !important;
       }
     }
   }

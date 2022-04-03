@@ -1,9 +1,8 @@
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/color/scss';
+@import '@amar-ui-web/spacing/scss';
+@import '@amar-ui-web/shape/scss';
+@import './variables';
 
-/// Generates core, state and variant classes of checkbox component.
-///
 @mixin amb-create-checkbox-classes() {
   .Checkbox {
     display: flex;
@@ -17,9 +16,9 @@
     &-control {
       position: relative;
       appearance: none;
-      height: 20px;
-      width: 20px;
-      border: solid 2px amb-color-theme('neutral', 60);
+      height: $amb-checkbox-height;
+      width: $amb-checkbox-width;
+      border: solid 2px amb-neutral(60);
       border-radius: amb-border-radius('base');
       background-color: transparent;
       transition: all 100ms ease-in-out;
@@ -57,12 +56,12 @@
 
       &:focus,
       &.is-focused {
-        box-shadow: 0 0 0 5px amb-color-theme-opacity('primary', 0.2);
+        box-shadow: $amb-checkbox-focused-box-shadow;
       }
 
       &:active,
       &.is-active {
-        box-shadow: 0 0 0 5px amb-color-theme-opacity('primary', 0.2);
+        box-shadow: $amb-checkbox-focused-box-shadow;
       }
 
       &.is-indeterminate {
@@ -76,26 +75,6 @@
           width: 80%;
           border-bottom: solid 3px white;
           transform: translate(-50%, -50%);
-        }
-
-        &:checked,
-        &.is-checked {
-          background-color: amb-color-theme('neutral');
-          border-color: amb-color-theme('neutral');
-
-          &:after {
-            opacity: 1;
-          }
-        }
-
-        &:focus,
-        &.is-focused {
-          box-shadow: 0 0 0 5px amb-color-theme-opacity('neutral', 0.2);
-        }
-
-        &:active,
-        &.is-active {
-          box-shadow: 0 0 0 5px amb-color-theme-opacity('neutral', 0.2);
         }
       }
     }

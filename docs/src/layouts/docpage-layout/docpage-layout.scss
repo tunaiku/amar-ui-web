@@ -19,16 +19,15 @@ $app-docpage-sidebar-width: 200px;
     height: calc(100vh - #{$app-header-height});
     min-height: calc(100vh - #{$app-header-height});
     flex-shrink: 0;
-    padding: amb-spacing('base');
-    padding-left: 0;
     transform: translateX(#{-1 * $app-docpage-sidebar-width});
     transition: all 150ms ease-in-out;
     border-right: solid 1px amb-color-theme('light', 30);
     opacity: 0;
+    overflow-y: auto;
+    z-index: 1000;
 
     @include amb-responsive-media('md') {
       position: sticky;
-      top: $app-header-height;
       transform: translateX(0);
       opacity: 100%;
       border-right: 0;
@@ -41,6 +40,7 @@ $app-docpage-sidebar-width: 200px;
     width: 100%;
     transition: all 150ms ease-in-out;
     padding: 0 amb-spacing('large');
+    padding-bottom: amb-spacing('large');
 
     @include amb-responsive-media('md') {
       padding-top: amb-spacing('base');
@@ -79,6 +79,9 @@ $app-docpage-sidebar-width: 200px;
 }
 
 .Sidenav {
+  padding: amb-spacing('base');
+  padding-left: 0;
+
   &-item {
     > a {
       display: block;

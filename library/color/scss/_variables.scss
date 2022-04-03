@@ -1,44 +1,73 @@
 @import './color-palletes';
 @import './functions';
 
-///
-$amb-primary: $limeade !default;
-$amb-secondary: $blue-ribbon !default;
-$amb-tertiary: $trinidad !default;
-$amb-success: $green !default;
-$amb-danger: $red !default;
-$amb-warning: $yellow !default;
-$amb-info: $blue !default;
+$blue: #1564ec;
+$light-blue: #e2f3ff;
+$green: #007200;
+$light-green: #eff9e6;
+$red: #dd1717;
+$light-red: #ffeaec;
+$yellow: #ffd500;
+$light-yellow: #fef9e5;
+$dark-yellow: #8e6a10;
 
-/// Shade of neutral color.
-///
-$amb-neutral: $gray !default;
-$amb-neutral-10: tint($amb-neutral, 80%);
-$amb-neutral-20: tint($amb-neutral, 60%);
-$amb-neutral-30: tint($amb-neutral, 40%);
-$amb-neutral-40: tint($amb-neutral, 20%);
-$amb-neutral-50: $amb-neutral;
-$amb-neutral-60: shade($amb-neutral, 20%);
-$amb-neutral-70: shade($amb-neutral, 40%);
-$amb-neutral-80: shade($amb-neutral, 60%);
-$amb-neutral-90: shade($amb-neutral, 80%);
-/// Map variables for color themes.
-///
+$amb-color-accent-map: () !default;
+$amb-color-accent-map: map-merge(
+  (
+    'blue': $blue,
+    'lightblue': $light-blue,
+    'green': $green,
+    'lightgreen': $light-green,
+    'red': $red,
+    'lightred': $light-red,
+    'yellow': $yellow,
+    'darkyellow': $dark-yellow,
+    'lightyellow': $light-yellow,
+  ),
+  $amb-color-accent-map
+);
+
+$neutral-10: #fafafa !default;
+$neutral-20: #f0f0f1 !default;
+$neutral-40: amb-color-shade($neutral, 40) !default;
+$neutral-50: $neutral !default;
+$neutral-60: #a1a8ae !default;
+$neutral-80: #6d7278 !default;
+$neutral-100: #25282b !default;
+
+$amb-neutral-map: () !default;
+$amb-neutral-map: map-merge(
+  (
+    10: $neutral-10,
+    20: $neutral-20,
+    40: $neutral-40,
+    50: $neutral-50,
+    60: $neutral-60,
+    80: $neutral-80,
+    100: $neutral-100,
+  ),
+  $amb-neutral-map
+);
+
 $amb-color-theme-map: () !default;
 $amb-color-theme-map: map-merge(
   (
-    'primary': $amb-primary,
-    'secondary': $amb-secondary,
-    'tertiary': $amb-tertiary,
-    'success': $amb-success,
-    'warning': $amb-warning,
-    'danger': $amb-danger,
-    'info': $amb-info,
-    'neutral': $amb-neutral,
-    'light': $amb-neutral-30,
-    'lighter': $amb-neutral-10,
-    'dark': $amb-neutral-80,
-    'darker': $amb-neutral-90,
+    'primary': $primary,
+    'secondary': $secondary,
+    'tertiary': $tertiary,
+    'success': $green,
+    'positive': $green,
+    'warning': $yellow,
+    'caution': $yellow,
+    'alert': $red,
+    'danger': $red,
+    'negative': $red,
+    'info': $blue,
+    'neutral': $neutral,
+    'light': $neutral-40,
+    'lighter': $neutral-10,
+    'dark': $neutral-80,
+    'darker': $neutral-100,
   ),
   $amb-color-theme-map
 );

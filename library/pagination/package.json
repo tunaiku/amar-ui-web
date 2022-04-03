@@ -1,14 +1,14 @@
 {
   "name": "@amar-ui-web/pagination",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@amar-ui-web/color": "^1.2.0",
+    "@amar-ui-web/color": "^1.5.0",
     "@amar-ui-web/shape": "^1.1.1",
-    "@amar-ui-web/spacing": "^1.4.0"
+    "@amar-ui-web/spacing": "^1.5.0"
   }
 }
