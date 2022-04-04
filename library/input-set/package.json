@@ -4,7 +4,6 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@amar-ui-web/core": "^1.5.0",
     "@amar-ui-web/icons": "^1.5.0",
     "@amar-ui-web/spacing": "^1.5.0"
   },

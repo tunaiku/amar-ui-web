@@ -2,5 +2,8 @@
   "name": "@amar-ui-web/header-card",
   "version": "1.5.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

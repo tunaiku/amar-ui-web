@@ -17,6 +17,7 @@
     "@amar-ui-web/field": "^1.5.0",
     "@amar-ui-web/flex": "^1.5.0",
     "@amar-ui-web/grid": "^1.5.0",
+    "@amar-ui-web/header-card": "^1.5.0",
     "@amar-ui-web/icons": "^1.5.0",
     "@amar-ui-web/image": "^1.5.0",
     "@amar-ui-web/input": "^1.5.0",
@@ -34,6 +35,7 @@
     "@amar-ui-web/table": "^1.5.0",
     "@amar-ui-web/tabs": "^1.5.0",
     "@amar-ui-web/tips": "^1.5.0",
+    "@amar-ui-web/toast": "^1.5.0",
     "@amar-ui-web/top-bar": "^1.5.0",
     "@amar-ui-web/typography": "^1.5.0"
   },
