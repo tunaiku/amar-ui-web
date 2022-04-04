@@ -1,11 +1,11 @@
 {
   "name": "@amar-ui-web/table",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "@amar-ui-web/color": "^1.5.0",
-    "@amar-ui-web/spacing": "^1.5.0"
+    "@amar-ui-web/spacing": "^1.5.1"
   },
   "publishConfig": {
     "access": "public"

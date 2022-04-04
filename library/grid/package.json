@@ -1,11 +1,11 @@
 {
   "name": "@amar-ui-web/grid",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "@amar-ui-web/responsive": "^1.5.0",
-    "@amar-ui-web/spacing": "^1.5.0"
+    "@amar-ui-web/spacing": "^1.5.1"
   },
   "publishConfig": {
     "access": "public"
