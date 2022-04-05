@@ -8,10 +8,11 @@ of web projects and applications within Amar Bank.
 
 ## Important Links
 
-- [Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started)
-- [Naming Convention](https://amar-ui.tunaiku.com/introduction/naming-convention)
-- [Foundations](https://amar-ui.tunaiku.com/foundations)
-- [Components](https://amar-ui.tunaiku.com/components)
+- [Getting Started](https://amar-ui.netlify.app/getting-started)
+- [Naming Convention](https://amar-ui.netlify.app/getting-started/naming-convention)
+- [Components](https://amar-ui.netlify.app/components)
+- [Utilities](https://amar-ui.netlify.app/utilities)
+- [Foundations](https://amar-ui.netlify.app/foundations)
 
 ## Installation
 
@@ -24,30 +25,8 @@ $ yarn add @amar-ui-web/core
 
 ## Usage
 
-Make sure to resolve your `node_modules` path first in order to be able to use the library. You can
-find instructions about this at our
-[Getting Started](https://amar-ui.tunaiku.com/introduction/getting-started) page.
-
-Resolving `node_modules` path would make it possible to import Amar UI Web like so:
-
-```scss
-@import '@amar-ui-web/core/index.scss';
-```
-
-And if you would like to import an individual package/module:
-
-```scss
-@import '@amar-ui-web/color/index.scss';
-@import '@amar-ui-web/typography/index.scss';
-```
-
-Or if you'd like to import only some of a package's specific abstracts (variables, mixins, functions, etc.):
-
-```scss
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/color/scss/mixins';
-@import '@amar-ui-web/color/scss/functions';
-```
+Please check our [Getting Started](https://amar-ui.netlify.app/getting-started) documentation for
+more information on how to setup and use Amar UI Web.
 
 ## Contribute
 
