@@ -1,16 +1,6 @@
 @import './color-palletes';
 @import './functions';
 
-$blue: #1564ec;
-$light-blue: #e2f3ff;
-$green: #007200;
-$light-green: #eff9e6;
-$red: #dd1717;
-$light-red: #ffeaec;
-$yellow: #ffd500;
-$light-yellow: #fef9e5;
-$dark-yellow: #8e6a10;
-
 $amb-color-accent-map: () !default;
 $amb-color-accent-map: map-merge(
   (
@@ -27,24 +17,31 @@ $amb-color-accent-map: map-merge(
   $amb-color-accent-map
 );
 
-$neutral-10: #fafafa !default;
-$neutral-20: #f0f0f1 !default;
-$neutral-40: amb-color-shade($neutral, 40) !default;
-$neutral-50: $neutral !default;
-$neutral-60: #a1a8ae !default;
-$neutral-80: #6d7278 !default;
-$neutral-100: #25282b !default;
+$amb-neutral: $neutral;
+$amb-neutral-10: #fafafa !default;
+$amb-neutral-20: #f0f0f1 !default;
+$amb-neutral-30: amb-color-shade($amb-neutral, 30) !default;
+$amb-neutral-40: amb-color-shade($amb-neutral, 40) !default;
+$amb-neutral-50: $amb-neutral !default;
+$amb-neutral-60: #a1a8ae !default;
+$amb-neutral-70: amb-color-shade($amb-neutral, 70) !default;
+$amb-neutral-80: #6d7278 !default;
+$amb-neutral-90: amb-color-shade($amb-neutral, 90) !default;
+$amb-neutral-100: #25282b !default;
 
 $amb-neutral-map: () !default;
 $amb-neutral-map: map-merge(
   (
-    10: $neutral-10,
-    20: $neutral-20,
-    40: $neutral-40,
-    50: $neutral-50,
-    60: $neutral-60,
-    80: $neutral-80,
-    100: $neutral-100,
+    10: $amb-neutral-10,
+    20: $amb-neutral-20,
+    30: $amb-neutral-30,
+    40: $amb-neutral-40,
+    50: $amb-neutral-50,
+    60: $amb-neutral-60,
+    70: $amb-neutral-70,
+    80: $amb-neutral-80,
+    90: $amb-neutral-90,
+    100: $amb-neutral-100,
   ),
   $amb-neutral-map
 );
@@ -63,11 +60,11 @@ $amb-color-theme-map: map-merge(
     'danger': $red,
     'negative': $red,
     'info': $blue,
-    'neutral': $neutral,
-    'light': $neutral-40,
-    'lighter': $neutral-10,
-    'dark': $neutral-80,
-    'darker': $neutral-100,
+    'neutral': $amb-neutral,
+    'light': $amb-neutral-40,
+    'lighter': $amb-neutral-10,
+    'dark': $amb-neutral-80,
+    'darker': $amb-neutral-100,
   ),
   $amb-color-theme-map
 );

@@ -1,5 +1,5 @@
-@import '@amar-ui-web/shape/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/shape/scss';
+@import '@amar-ui-web/spacing/scss';
 
 $amb-dialog-border-radius: amb-border-radius('large') !default;
 $amb-dialog-backdrop-bg-color: rgba(black, 0.3) !default;

@@ -1,6 +1,6 @@
-@import '@amar-ui-web/elevation/scss/mixins';
-@import '@amar-ui-web/typography/scss/mixins';
-@import '@amar-ui-web/spacing/scss/variables';
+@import '@amar-ui-web/elevation/scss';
+@import '@amar-ui-web/typography/scss';
+@import '@amar-ui-web/spacing/scss';
 @import './variables';
 
 @mixin amb-create-dialog-classes() {

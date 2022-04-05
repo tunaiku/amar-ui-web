@@ -1,3 +1,6 @@
+@import '@amar-ui-web/color/scss';
+@import '@amar-ui-web/shape/scss';
+
 @mixin amb-create-radio-classes() {
   .Radio {
     display: flex;

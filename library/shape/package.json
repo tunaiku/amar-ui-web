@@ -5,5 +5,8 @@
   "main": "index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@amar-ui-web/color": "^1.5.0"
   }
 }

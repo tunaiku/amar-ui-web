@@ -1,7 +1,7 @@
-@import '@amar-ui-web/typography/scss/variables';
-@import '@amar-ui-web/spacing/scss/variables';
-@import '@amar-ui-web/color/scss/variables';
-@import '@amar-ui-web/shape/scss/variables';
+@import '@amar-ui-web/typography/scss';
+@import '@amar-ui-web/spacing/scss';
+@import '@amar-ui-web/color/scss';
+@import '@amar-ui-web/shape/scss';
 
 $amb-button-font-size: amb-font-size('base') !default;
 $amb-button-font-weight: amb-font-weight('medium') !default;
