@@ -1,3 +1,5 @@
+@import '@amar-ui-web/core/helpers';
+@import '@amar-ui-web/color/scss';
 @import './variables';
 
 @mixin amb-create-indicator-classes() {
@@ -10,7 +12,7 @@
     &-point {
       @include amb-indicator-point-size();
       display: inline-block;
-      background-color: $neutral;
+      background-color: amb-neutral();
       border-radius: 50px;
     }
   }
@@ -31,7 +33,7 @@
 
       &.is-active{
         @include amb-indicator-point-active-size($size);
-        background-color: $info;
+        background-color: amb-color-theme('info');
       }
     }
   }
