@@ -1,19 +1,22 @@
 @import '@amar-ui-web/core/helpers';
 @import '@amar-ui-web/color/scss';
+@import '@amar-ui-web/shape/scss';
+@import '@amar-ui-web/spacing/scss';
 @import './variables';
 
 @mixin amb-create-indicator-classes() {
   .Indicator{
     @include amb-indicator-alignment();
     display: flex !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
 
 
     &-point {
       @include amb-indicator-point-size();
       display: inline-block;
+      margin-right: amb-spacing('xsmall');
       background-color: amb-neutral();
-      border-radius: 50px;
+      border-radius: amb-border-radius('round');
     }
   }
 }
@@ -28,14 +31,13 @@
 
 @mixin amb-indicator-point-size() {
   @each $size, $properties in $amb-indicator-point-size-map {
-    &--#{$size} {
       @include create-properties($properties);
 
       &.is-active{
         @include amb-indicator-point-active-size($size);
         background-color: amb-color-theme('info');
+        border-radius: amb-border-radius('base');
       }
-    }
   }
 }
 

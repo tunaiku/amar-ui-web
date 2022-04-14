@@ -1,0 +1,51 @@
+---
+path: '/components/indicator'
+title: 'Indicator'
+description: 'For Carousel or other slide component.'
+---
+
+## Usage
+
+To implement Indicator just add class `.Indicator` as wrapper class,
+add `.Indicator-point` for create the dots.  
+Default Indicator position is in center of screen,
+but you can change **position Indicator** just add class below :
+
+1. `.Indicator--start` for change position to start of screen.
+2. `.Indicator--end` for change position to end of screen.
+
+`.is-active` use for declare which one the active Indicator.
+
+```html preview=true size=compact
+<div class="Indicator">
+  <div class="Indicator-point is-active"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+</div>
+```
+
+**Indicator Center of Screen**
+
+```html preview=true size=compact
+<div class="Indicator Indicator--start">
+  <div class="Indicator-point is-active"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+</div>
+```
+
+**Indicator End of Screen**
+
+```html preview=true size=compact
+<div class="Indicator Indicator--end">
+  <div class="Indicator-point is-active"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+  <div class="Indicator-point"></div>
+</div>
+```

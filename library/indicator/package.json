@@ -4,7 +4,9 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@amar-ui-web/color": "^1.5.2"
+    "@amar-ui-web/color": "^1.5.2",
+    "@amar-ui-web/shape": "^1.5.2",
+    "@amar-ui-web/spacing": "^1.5.2"
   },
   "publishConfig": {
     "access": "public"

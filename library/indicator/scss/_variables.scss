@@ -7,20 +7,9 @@ $amb-content-alignment-types: (
 $amb-indicator-point-size-map: () !default;
 $amb-indicator-point-size-map: map-merge(
   (
-    'regular': (
+    'base': (
       width: 4px,
       height: 4px,
-      margin-right: 3px,
-    ),
-    'large': (
-      width: 11px,
-      height: 10px,
-      margin-right: 5px,
-    ),
-    'xlarge': (
-      width: 14px,
-      height: 13px,
-      margin-right: 5px,
     ),
   ),
  $amb-indicator-point-size-map 
@@ -29,20 +18,9 @@ $amb-indicator-point-size-map: map-merge(
 $amb-indicator-point-active-size-map: () !default;
 $amb-indicator-point-active-size-map: map-merge(
   (
-    'regular': (
+    'base': (
       width: 10px,
       height: 4px,
-      border-radius: 3px
-    ),
-    'large': (
-      width: 25px,
-      height: 10px,
-      border-radius: 5px
-    ),
-    'xlarge': (
-      width: 50px,
-      height: 13px,
-      border-radius: 8px
     ),
   ),
  $amb-indicator-point-active-size-map 
