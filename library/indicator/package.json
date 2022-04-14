@@ -1,0 +1,12 @@
+{
+  "name": "@amar-ui-web/indicator",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@amar-ui-web/color": "^1.5.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

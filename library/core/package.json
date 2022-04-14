@@ -20,6 +20,7 @@
     "@amar-ui-web/header-card": "^1.5.2",
     "@amar-ui-web/icons": "^1.5.2",
     "@amar-ui-web/image": "^1.5.2",
+    "@amar-ui-web/indicator": "^1.0.0",
     "@amar-ui-web/input": "^1.5.2",
     "@amar-ui-web/input-set": "^1.5.2",
     "@amar-ui-web/layout": "^1.5.2",
