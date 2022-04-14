@@ -17,6 +17,7 @@
       margin-right: amb-spacing('xsmall');
       background-color: amb-neutral();
       border-radius: amb-border-radius('round');
+      cursor: pointer;
     }
   }
 }
@@ -33,10 +34,13 @@
   @each $size, $properties in $amb-indicator-point-size-map {
       @include create-properties($properties);
 
+      &:hover{
+        @include amb-indicator-point-active-size($size);
+      }
+
       &.is-active{
         @include amb-indicator-point-active-size($size);
-        background-color: amb-color-theme('info');
-        border-radius: amb-border-radius('base');
+        
       }
   }
 }
@@ -45,6 +49,8 @@
   @each $style, $properties in $amb-indicator-point-active-size-map {
     @if $style == $size {
       @include create-properties($properties);
+      background-color: amb-color-theme('info');
+      border-radius: amb-border-radius('base');
     }
   }
 }
