@@ -1,0 +1,48 @@
+@import '@amar-ui-web/core/helpers';
+@import '@amar-ui-web/color/scss';
+@import '@amar-ui-web/shape/scss';
+@import '@amar-ui-web/spacing/scss';
+@import './variables';
+
+@mixin amb-create-indicator-classes() {
+  .Indicator {
+    display: flex;
+    justify-content: center !important;
+
+    &--start {
+      justify-content: flex-start !important;
+    }
+
+    &--end {
+      justify-content: flex-end  !important;
+    }
+
+
+    &-point {
+      width: $amb-indicator-point-width;
+      height: $amb-indicator-point-height;
+      display: inline-block;
+      margin-right: amb-spacing('xsmall');
+      background-color: amb-neutral();
+      border-radius: amb-border-radius('round');
+      cursor: pointer;
+
+      &:hover{
+        @include amb-indicator-point-active();
+      }
+
+      &.is-active {
+        @include amb-indicator-point-active();
+      }
+    }
+  }
+}
+
+@mixin amb-indicator-point-active() {
+  background-color: amb-color-theme('info');
+  border-radius: amb-border-radius('base');
+  width: $amb-indicator-point-active-width;
+  height: $amb-indicator-point-active-height;
+}
+
+
