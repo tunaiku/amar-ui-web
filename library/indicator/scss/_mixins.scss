@@ -5,52 +5,44 @@
 @import './variables';
 
 @mixin amb-create-indicator-classes() {
-  .Indicator{
-    @include amb-indicator-alignment();
-    display: flex !important;
+  .Indicator {
+    display: flex;
     justify-content: center !important;
+
+    &--start {
+      justify-content: flex-start !important;
+    }
+
+    &--end {
+      justify-content: flex-end  !important;
+    }
 
 
     &-point {
-      @include amb-indicator-point-size();
+      width: $amb-indicator-point-width;
+      height: $amb-indicator-point-height;
       display: inline-block;
       margin-right: amb-spacing('xsmall');
       background-color: amb-neutral();
       border-radius: amb-border-radius('round');
       cursor: pointer;
-    }
-  }
-}
-
-@mixin amb-indicator-alignment() {
-  @each $alignment, $alignment-value in $amb-content-alignment-types {
-    &--#{$alignment} {
-      justify-content: $alignment-value !important;
-    }
-  }
-}
-
-@mixin amb-indicator-point-size() {
-  @each $size, $properties in $amb-indicator-point-size-map {
-      @include create-properties($properties);
 
       &:hover{
-        @include amb-indicator-point-active-size($size);
+        @include amb-indicator-point-active();
       }
 
-      &.is-active{
-        @include amb-indicator-point-active-size($size);
-        
+      &.is-active {
+        @include amb-indicator-point-active();
       }
-  }
-}
-
-@mixin amb-indicator-point-active-size($size) {
-  @each $style, $properties in $amb-indicator-point-active-size-map {
-    @if $style == $size {
-      @include create-properties($properties);
-      background-color: amb-color-theme('info');
-      border-radius: amb-border-radius('base');
     }
   }
 }
+
+@mixin amb-indicator-point-active() {
+  background-color: amb-color-theme('info');
+  border-radius: amb-border-radius('base');
+  width: $amb-indicator-point-active-width;
+  height: $amb-indicator-point-active-height;
+}
+
+

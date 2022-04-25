@@ -1,27 +1,4 @@
-$amb-content-alignment-types: (
-  'start': flex-start,
-  'center': center,
-  'end': flex-end,
-);
-
-$amb-indicator-point-size-map: () !default;
-$amb-indicator-point-size-map: map-merge(
-  (
-    'base': (
-      width: 4px,
-      height: 4px,
-    ),
-  ),
- $amb-indicator-point-size-map 
-);
-
-$amb-indicator-point-active-size-map: () !default;
-$amb-indicator-point-active-size-map: map-merge(
-  (
-    'base': (
-      width: 10px,
-      height: 4px,
-    ),
-  ),
- $amb-indicator-point-active-size-map 
-);
+$amb-indicator-point-width: 4px;
+$amb-indicator-point-height: 4px;
+$amb-indicator-point-active-width: 10px;
+$amb-indicator-point-active-height: 4px;
