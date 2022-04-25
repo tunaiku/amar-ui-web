@@ -2,8 +2,8 @@
 @import './functions';
 
 /// Font families
-$amb-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, sans-serif !default;
+$amb-font-family-sans-serif: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif !default;
 $amb-font-family-serif: Georgia, 'Times New Roman', serif !default;
 $amb-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono',
   'Liberation Mono', 'Courier New', monospace !default;
