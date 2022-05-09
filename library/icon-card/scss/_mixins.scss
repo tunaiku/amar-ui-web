@@ -1,0 +1,79 @@
+@import './variables';
+
+@mixin amb-create-icon-card-classes() {
+  .IconCard {
+    @include amb-icon-card-base-styles();
+    @include amb-create-icon-card-parts();
+  }
+}
+
+@mixin amb-icon-card-base-styles() {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: $amb-icon-card-padding;
+  border-radius: $amb-icon-card-border-radius;
+  box-shadow: $amb-icon-card-elevation;
+  background-color: $amb-icon-card-bg-color;
+} 
+
+@mixin amb-create-icon-card-parts() {
+  @include amb-icon-card-image-styles();
+  @include amb-icon-card-body();
+  @include amb-icon-card-action();
+}
+
+@mixin amb-icon-card-body() {
+  &-body{
+    flex-direction: column;
+  }
+}
+
+@mixin amb-icon-card-image-styles() {
+  &-image{
+    @include amb-icon-card-image-size();
+    overflow: hidden;
+    border-radius: $amb-icon-card-img-border-radius;
+    background-color: $amb-icon-card-img-bg-color;
+    margin-right: amb-spacing('small');
+
+    img{
+     @include amb-icon-card-image-size();
+      margin: 0 auto;
+      object-fit: cover;
+    }
+  }
+}
+
+@mixin amb-icon-card-image-size() {
+  width: $amb-icon-card-img-size;
+  height: $amb-icon-card-img-size;
+  flex: 0 0 56px;
+}
+
+@mixin amb-icon-card-action() {
+  &-action {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    cursor: pointer;
+
+    &--chevron{
+      @include amb-icon-card-chevron();
+    }
+
+  }
+}
+
+@mixin amb-icon-card-chevron() {
+  &::after{
+    content: ' ';
+    display: inline-block;
+    border-bottom: $amb-icon-card-action-border-width solid $amb-icon-card-action-color;
+    border-right: $amb-icon-card-action-border-width solid $amb-icon-card-action-color;
+    height: $amb-icon-card-action-size;
+    width: $amb-icon-card-action-size;
+    transform: $amb-icon-card-action-transform;
+  }
+}

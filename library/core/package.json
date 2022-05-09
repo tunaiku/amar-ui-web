@@ -18,6 +18,7 @@
     "@amar-ui-web/flex": "^2.0.0",
     "@amar-ui-web/grid": "^2.0.0",
     "@amar-ui-web/header-card": "^2.0.0",
+    "@amar-ui-web/icon-card": "^1.0.0",
     "@amar-ui-web/icons": "^2.0.0",
     "@amar-ui-web/image": "^2.0.0",
     "@amar-ui-web/input": "^2.0.0",

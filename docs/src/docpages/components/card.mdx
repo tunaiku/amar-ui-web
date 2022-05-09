@@ -1,8 +1,7 @@
 ---
 path: '/components/card'
 title: 'Card'
-description:
-  'A container component that displays information and actions about a particular subject.'
+description: 'A container component that displays information and actions about a particular subject.'
 ---
 
 ## Usage
@@ -71,6 +70,27 @@ useful if you want to incorporate the card component as a part of a larger compo
   </div>
   <div class="Card-footer">
     <button class="Button Button--primary Button--fullWidth">Button</button>
+  </div>
+</div>
+```
+
+## Card with Icon
+
+```html preview=true bgColor=lighter size=compact
+<div class="IconCard">
+  <div class="IconCard-image"></div>
+  <div class="IconCard-body">
+    <div class="IconCard-title">
+      <h5 class="Typography-bold16">Title Card here</h5>
+    </div>
+    <div class="IconCard-content">
+      <p class="Typography-regular14 Color-neutral-80">
+        Description text here. Contains various supporting text or content.
+      </p>
+    </div>
+  </div>
+  <div class="IconCard-action">
+    <div class="IconCard-action--chevron"></div>
   </div>
 </div>
 ```
