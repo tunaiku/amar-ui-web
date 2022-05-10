@@ -1,7 +1,7 @@
 ---
 path: '/components/icon-card'
 title: 'Icon Card'
-description: 'Component that display meaningful information, image and action icon (chevron) about a particular subject.'
+description: 'A variant of a card with horizontal layouting that is best used for call-to-action'
 ---
 
 ## Usage
@@ -12,8 +12,8 @@ Append class `.IconCard` consists of several elements that you can mix and match
 - `.IconCard-image`: Inside this class you can bind `img` element.
 - `.IconCard-title`: Contains the title and subtitle text of the card.
 - `.IconCard-body`: Contains the primary content of the card.
-- `.IconCard-action`: Contains the call-to-action elements of the card (e.g button, link, etc.).
-- `.IconCard-action--chevron`: Contains the icon chevron. This part you can take out and change it with other icon or button.
+- `.IconCard-action`: Is wrapper that contains to call-to-action elements of the card (e.g button, link, etc.).
+- `.IconCard-chevron`: Contains the icon (chevron). This part you can take out and change it with other icon or button.
 
 ## Without Image
 
@@ -31,7 +31,7 @@ Append class `.IconCard` consists of several elements that you can mix and match
     </div>
   </div>
   <div class="IconCard-action">
-    <div class="IconCard-action--chevron"></div>
+    <div class="IconCard-chevron"></div>
   </div>
 </div>
 ```
@@ -57,7 +57,7 @@ Append class `.IconCard` consists of several elements that you can mix and match
     </div>
   </div>
   <div class="IconCard-action">
-    <div class="IconCard-action--chevron"></div>
+    <div class="IconCard-chevron"></div>
   </div>
 </div>
 ```

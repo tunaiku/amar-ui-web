@@ -49,7 +49,7 @@
 @mixin amb-icon-card-image-size() {
   width: $amb-icon-card-img-size;
   height: $amb-icon-card-img-size;
-  flex: 0 0 56px;
+  flex: 0 0 $amb-icon-card-img-size;
 }
 
 @mixin amb-icon-card-action() {
@@ -58,22 +58,24 @@
     margin-bottom: auto;
     margin-left: auto;
     cursor: pointer;
-
-    &--chevron{
-      @include amb-icon-card-chevron();
-    }
+  }
+  
+  &-chevron {
+    @include amb-icon-card-chevron();
 
   }
 }
 
 @mixin amb-icon-card-chevron() {
   &::after{
-    content: ' ';
+    content: '';
     display: inline-block;
     border-bottom: $amb-icon-card-action-border-width solid $amb-icon-card-action-color;
     border-right: $amb-icon-card-action-border-width solid $amb-icon-card-action-color;
     height: $amb-icon-card-action-size;
     width: $amb-icon-card-action-size;
-    transform: $amb-icon-card-action-transform;
+    -webkit-transform: $amb-icon-card-action-transform;
+        -ms-transform: $amb-icon-card-action-transform;
+            transform: $amb-icon-card-action-transform;
   }
 }
