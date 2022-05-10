@@ -9,4 +9,5 @@ $amb-card-fg-color: amb-color-contrast($amb-card-bg-color);
 $amb-card-border-style: solid;
 $amb-card-border-width: 1px;
 $amb-card-border-color: amb-color-theme('neutral', 30);
-$amb-card-border-radius: amb-border-radius('xlarge');
+$amb-card-border-radius: 12px;
+$amb-card-elevation: rgba(0, 0, 0, 0.24) 0px 3px 8px;
