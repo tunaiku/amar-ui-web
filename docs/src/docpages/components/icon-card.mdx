@@ -1,0 +1,63 @@
+---
+path: '/components/icon-card'
+title: 'Icon Card'
+description: 'Component that display meaningful information, image and action icon (chevron) about a particular subject.'
+---
+
+## Usage
+
+Append class `.IconCard` consists of several elements that you can mix and match according to your needs.
+
+- `.IconCard`: Serves as the primary wrapper class for the other parts.
+- `.IconCard-image`: Inside this class you can bind `img` element.
+- `.IconCard-title`: Contains the title and subtitle text of the card.
+- `.IconCard-body`: Contains the primary content of the card.
+- `.IconCard-action`: Contains the call-to-action elements of the card (e.g button, link, etc.).
+- `.IconCard-action--chevron`: Contains the icon chevron. This part you can take out and change it with other icon or button.
+
+## Without Image
+
+```html preview=true bgColor=lighter size=compact
+<div class="IconCard">
+  <div class="IconCard-image"></div>
+  <div class="IconCard-body">
+    <div class="IconCard-title">
+      <h5 class="Typography-bold16">Title Card here</h5>
+    </div>
+    <div class="IconCard-content">
+      <p class="Typography-regular14 Color-neutral-80">
+        Description text here. Contains various supporting text or content.
+      </p>
+    </div>
+  </div>
+  <div class="IconCard-action">
+    <div class="IconCard-action--chevron"></div>
+  </div>
+</div>
+```
+
+## With Image
+
+```html preview=true bgColor=lighter size=compact
+<div class="IconCard">
+  <div class="IconCard-image">
+    <img
+      src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+      alt="dummyImage"
+    />
+  </div>
+  <div class="IconCard-body">
+    <div class="IconCard-title">
+      <h5 class="Typography-bold16">Title Card here</h5>
+    </div>
+    <div class="IconCard-content">
+      <p class="Typography-regular14 Color-neutral-80">
+        Description text here. Contains various supporting text or content.
+      </p>
+    </div>
+  </div>
+  <div class="IconCard-action">
+    <div class="IconCard-action--chevron"></div>
+  </div>
+</div>
+```
