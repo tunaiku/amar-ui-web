@@ -70,8 +70,8 @@
   &::after{
     content: '';
     display: inline-block;
-    border-bottom: $amb-icon-card-action-border-width solid $amb-icon-card-action-color;
-    border-right: $amb-icon-card-action-border-width solid $amb-icon-card-action-color;
+    border-bottom: $amb-icon-card-action-border;
+    border-right: $amb-icon-card-action-border;
     height: $amb-icon-card-action-size;
     width: $amb-icon-card-action-size;
     -webkit-transform: $amb-icon-card-action-transform;

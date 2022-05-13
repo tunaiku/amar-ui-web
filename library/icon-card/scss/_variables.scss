@@ -12,7 +12,6 @@ $amb-icon-card-img-bg-color: amb-color-theme('neutral');
 $amb-icon-card-img-size: 56px;
 $amb-icon-card-img-border-radius: amb-border-radius('round');
 
-$amb-icon-card-action-color: amb-color-theme('darker');
 $amb-icon-card-action-transform: rotate(-45deg);
 $amb-icon-card-action-size: 10px;
-$amb-icon-card-action-border-width: 3px;
+$amb-icon-card-action-border: 3px solid amb-color-theme('darker');
