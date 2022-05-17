@@ -35,7 +35,6 @@
 
 @mixin amb-create-card-modifiers() {
   &--elevated {
-    // @include amb-create-elevation($level: 3, $opacity: 0.15);  // TODO: ganti jadi box-shadow sesuai fixing zeroheight
     box-shadow: $amb-card-elevation;
   }
 
