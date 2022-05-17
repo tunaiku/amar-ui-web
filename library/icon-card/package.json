@@ -1,0 +1,14 @@
+{
+  "name": "@amar-ui-web/icon-card",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@amar-ui-web/color": "^2.0.0",
+    "@amar-ui-web/shape": "^2.0.0",
+    "@amar-ui-web/spacing": "^2.0.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

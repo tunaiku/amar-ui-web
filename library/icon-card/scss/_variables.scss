@@ -1,0 +1,17 @@
+@import '@amar-ui-web/spacing/scss';
+@import '@amar-ui-web/shape/scss';
+@import '@amar-ui-web/color/scss';
+
+$amb-icon-card-bg-color: $white;
+
+$amb-icon-card-padding: amb-spacing('base');
+$amb-icon-card-border-radius:amb-border-radius('xlarge');
+$amb-icon-card-elevation: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+$amb-icon-card-img-bg-color: amb-color-theme('neutral');
+$amb-icon-card-img-size: 56px;
+$amb-icon-card-img-border-radius: amb-border-radius('round');
+
+$amb-icon-card-action-transform: rotate(-45deg);
+$amb-icon-card-action-size: 10px;
+$amb-icon-card-action-border: 3px solid amb-color-theme('darker');
