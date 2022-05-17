@@ -55,6 +55,7 @@
 
 @mixin amb-icon-card-action() {
   &-action {
+    margin-left: amb-spacing('base');
     cursor: pointer;
   }
   
