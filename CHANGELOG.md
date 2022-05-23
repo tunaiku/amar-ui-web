@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/dkk94/amar-ui-web/compare/v1.5.2...v2.0.0) (2022-04-25)
+
+
+### chore
+
+* **color:** [IF-138] adjust light blue color hex ([1d041fa](https://github.com/dkk94/amar-ui-web/commit/1d041fa02c50a05a7afef56f5c19c0995df7dc5e))
+
+
+### Features
+
+* [IF-136] Add Roboto fonts and font-faces ([4d7ec13](https://github.com/dkk94/amar-ui-web/commit/4d7ec13730e7183a433a2d8957ad406e0974e8c4))
+
+
+### BREAKING CHANGES
+
+* **color:** Following the changes over design system v1.3, we need tooverride the primary font
+used in our library.
+
+
+
+
+
 ## [1.5.2](https://github.com/dkk94/amar-ui-web/compare/v1.5.1...v1.5.2) (2022-04-05)
 
 **Note:** Version bump only for package amar-ui-web

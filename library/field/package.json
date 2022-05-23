@@ -1,12 +1,12 @@
 {
   "name": "@amar-ui-web/field",
-  "version": "1.5.2",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@amar-ui-web/color": "^1.5.2",
-    "@amar-ui-web/spacing": "^1.5.2",
-    "@amar-ui-web/typography": "^1.5.2"
+    "@amar-ui-web/color": "^2.0.0",
+    "@amar-ui-web/spacing": "^2.0.0",
+    "@amar-ui-web/typography": "^2.0.0"
   },
   "publishConfig": {
     "access": "public"
