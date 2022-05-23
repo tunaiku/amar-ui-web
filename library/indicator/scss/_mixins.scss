@@ -7,14 +7,14 @@
 @mixin amb-create-indicator-classes() {
   .Indicator {
     display: flex;
-    justify-content: center !important;
+    justify-content: center;
 
     &--start {
-      justify-content: flex-start !important;
+      justify-content: flex-start;
     }
 
     &--end {
-      justify-content: flex-end  !important;
+      justify-content: flex-end;
     }
 
 
